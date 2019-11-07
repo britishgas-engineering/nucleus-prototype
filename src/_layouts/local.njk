@@ -1,0 +1,25 @@
+---
+title: Local development
+classhtml: p-tools
+---
+<!doctype html>
+<html class="{{classhtml}}" lang="en">
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/nucleus/dist/styles.min.css">
+</head>
+<body>
+  {% include 'p-header.njk' %}
+  <div class="ndsn">
+    <main>
+      {{content | safe}}
+    </main>
+  </div>
+  <script type="text/javascript" src="/nucleus/dist/polyfill.js"></script>
+  <script type="text/javascript" src="/nucleus/dist/components.js"></script>
+</body>
+</html>
