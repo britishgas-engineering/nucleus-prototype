@@ -1,5 +1,5 @@
 ---
-layout: basic.njk
+layout: live.njk
 title: Basic title
 heading: Basic heading
 ---
