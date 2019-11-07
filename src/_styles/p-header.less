@@ -1,0 +1,97 @@
+// p-header
+
+p-header {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  &::before {
+    padding: 0.5em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+  nav {
+    background-color: rgba(orange, 0.25);
+    background-image: url('https://andijcdn.sirv.com/nds/testcard-ruler.png');
+    background-position: top left;
+    min-height: 90px;
+    width: 100vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    a {
+      align-self: start;
+      padding: 0.25em 0.5em;
+      background-color: rgba(orange, 0.75);
+      color: black;
+      &:hover {
+        background-color: rgba(darkorange, 0.95);
+      }
+    }
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    nav {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+  }
+}
+
+// .reload
+.reload {
+  display: none;
+}
+
+// @squash-court
+p-header {
+  &::before {
+    content: "⚫️";
+  }
+}
+
+// @tennis-court
+@media only screen and (min-width: 30em) {
+  p-header {
+    &::before {
+      content: "🎾";
+    }
+  }
+}
+
+// @basketball-court
+@media only screen and (min-width: 45em) {
+  p-header {
+    &::before {
+      content: "🏀";
+    }
+  }
+}
+
+// @hockey-pitch
+@media only screen and (min-width: 67.5em) {
+  p-header {
+    &::before {
+      content: "🏑";
+    }
+  }
+}
+
+// @rugby-pitch
+@media only screen and (min-width: 101.25em) {
+  p-header {
+    &::before {
+      content: "🏉";
+    }
+  }
+}
+
+// @polo-field
+@media only screen and (min-width: 151.875em) {
+  p-header {
+    &::before {
+      content: "👕";
+    }
+  }
+}

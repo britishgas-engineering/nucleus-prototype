@@ -12,6 +12,7 @@ classhtml: p-tools
   <link rel="stylesheet" href="/main.css">
 </head>
 <body>
+  {% include 'p-header.njk' %}
   {{content | safe}}
 </body>
 </html>
