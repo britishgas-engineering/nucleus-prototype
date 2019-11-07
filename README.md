@@ -80,5 +80,14 @@ layout: live.njk
 ```
 Refreshing the browser will show the Nucleus font.
 
+### Developing Web Components using nucleus-prototype
 
+Introducing local development of Nucleus alongside this prototype environment is achieved by creating a symbolic link and changing the scripts.
 
+Assuming Nucleus https://github.com/ConnectedHomes/nucleus is installed and running locally with PaDL https://github.com/britishgas-engineering/padl.
+
+Create a symlink in the `/dist` folder with the name of `nucleus` pointing to `~/Projects/nucleus/dist` allows these two projects to adjoin.
+
+Switch the layout to `_layouts/local.njk` and refresh the browser.
+
+The addition of the symlink, and referencing the local Nucleus scripts it's now possible to include the local development of Web Component statically.
