@@ -1,9 +1,8 @@
 ---
 title: Live development
-classhtml: p-tools
 ---
 <!doctype html>
-<html class="{{classhtml}}" lang="en">
+<html lang="en">
 <head>
   <title>{{title}}</title>
   <meta charset="utf-8">
@@ -13,9 +12,11 @@ classhtml: p-tools
 </head>
 <body>
   <div class="ndsn">
+    <ns-header></ns-header>
     <main>
       {{content | safe}}
     </main>
+    <ns-footer></ns-footer>
   </div>
   <script type="text/javascript" src="https://nucleus.bgdigital.xyz/nucleus.min.js"></script>
 </body>
