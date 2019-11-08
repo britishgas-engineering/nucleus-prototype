@@ -1,11 +1,10 @@
 ---
 layout: local.njk
-title: Basic title
-heading: Basic heading
+title: Index
 classhtml: p-tools
 ---
 
-# {{heading}}
+# Heading
 
 Paragraph
 
