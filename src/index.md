@@ -1,6 +1,6 @@
 ---
-layout: local.njk
-title: Index
+layout: branch.njk
+title: Home
 ---
 
 # Heading

@@ -1,0 +1,24 @@
+---
+title: Branch development
+branch: epic/release-candidate
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class="ndsn">
+    <ns-header></ns-header>
+    <main>
+      {{content | safe}}
+    </main>
+    <ns-footer></ns-footer>
+  </div>
+  <script type="text/javascript" src="https://nucleus.bgdigital.xyz/{{branch}}/nucleus.min.js"></script>
+</body>
+</html>
