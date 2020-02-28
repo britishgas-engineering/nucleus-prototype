@@ -1,0 +1,20 @@
+---
+title: Page one
+---
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">{{givenname}} {{familyname}}.</span>
+    <span class="h1 enlighten">You're in the midst of <b>creating fantastic experiences</b></span>
+  </h1>
+  <div slot="paragraph">
+    <p>Continue prototyping here and when you're ready, move on.</p>
+  </div>
+  <ns-cta slot="cta" href="../page-02">Page two</ns-cta>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    {% include "./_includes/include-01.njk" %}
+    {% include "./_includes/include-02.njk" %}
+  </div>
+</ns-panel>
