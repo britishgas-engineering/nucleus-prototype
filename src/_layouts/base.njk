@@ -1,0 +1,20 @@
+---
+title: Nucleus prototype
+---
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{title}}">
+  <meta name="format-detection" content="telephone=no">
+  <title>{{title}}</title>
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+
+  {{content | safe}}
+
+  <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+  <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+</body>
+</html>

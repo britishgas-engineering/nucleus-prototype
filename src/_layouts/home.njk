@@ -1,0 +1,54 @@
+---
+layout: base.njk
+bodyClass: ndsn
+---
+<ns-header></ns-header>
+<main id="content">
+  <ns-landmark type="hillside" gradient="invert-ramp-yellow">
+    <h1 slot="heading">
+      <span class="h5">Congratulations.</span>
+      <span class="h1 enlighten">You're set to <b>create fantastic experiences</b></span>
+    </h1>
+    <p slot="paragraph">Let's begin prototyping. If you get stuck, reach out to us on Slack in the <b>#product-nucleus</b> channel.</p>
+  </ns-landmark>
+
+  {% set navPages = collections.all | eleventyNavigation %}
+  <ns-panel>
+    <div class="splash">
+      <h2>Your projects</h2>
+    </div>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{ entry.title }}</h3>
+          <p slot="paragraph">{{ entry.excerpt }}</p>
+          <ns-cta slot="cta" type="text" href="{{ entry.url | url }}">{{ entry.key }}</ns-cta>
+        </ns-card>
+      {%- endfor %}
+    </div>
+  </ns-panel>
+
+  <ns-panel>
+    <div class="splish">
+      <h2>Nucleus resources</h2>
+    </div>
+    <div class="splish triple">
+      <ns-card type="section" decoration="bulb">
+        <h3 slot="heading" role="heading" aria-level="3">Our components</h3>
+        <p slot="paragraph">View and see how our components work in Storybook.</p>
+        <ns-cta type="direct" slot="cta" href="https://library.britishgas.design">View Storybook</ns-cta>
+      </ns-card>
+      <ns-card type="section" decoration="clock">
+        <h3 slot="heading" role="heading" aria-level="3">Documentation</h3>
+        <p slot="paragraph">Understand what we do and how our components work.</p>
+        <ns-cta type="direct" slot="cta" href="https://docs.britishgas.design">View our docs</ns-cta>
+      </ns-card>
+      <ns-card type="section" decoration="protect">
+        <h3 slot="heading" role="heading" aria-level="3">The vision</h3>
+        <p slot="paragraph">Find out what we're trying to do and the principles we set against ourselves.</p>
+        <ns-cta type="direct" slot="cta" href="https://docs.britishgas.design/principles">Learn our principles</ns-cta>
+      </ns-card>
+    </div>
+  </ns-panel>
+</main>
+<nsx-footer id="footer"></nsx-footer>
