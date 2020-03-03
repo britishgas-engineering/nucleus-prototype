@@ -11,7 +11,7 @@ layout: base.njk
     <p slot="paragraph">Let's begin prototyping. If you get stuck, reach out to us on Slack in the <b>#product-nucleus</b> channel.</p>
   </ns-landmark>
 
-  {% set navPages = collections.all | eleventyNavigation %}
+  {% set navPages = collections.all | eleventyNavigation | reverse %}
   <ns-panel>
     <div class="splash">
       <h2>Your projects</h2>
