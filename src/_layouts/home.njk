@@ -21,7 +21,9 @@ layout: base.njk
         <ns-card type="support">
           <h3 slot="heading">{{ entry.title }}</h3>
           <p slot="paragraph">{{ entry.excerpt }}</p>
-          <ns-cta slot="cta" type="text" href="{{ entry.url | url }}">{{ entry.key }}</ns-cta>
+          <a slot="cta" href="{{ entry.url | url }}">
+            <ns-cta type="text">{{ entry.key }}</ns-cta>
+          </a>
         </ns-card>
       {%- endfor %}
     </div>
@@ -32,20 +34,26 @@ layout: base.njk
       <h2>Nucleus resources</h2>
     </div>
     <div class="splish triple">
-      <ns-card type="section" decoration="bulb">
-        <h3 slot="heading" role="heading" aria-level="3">Our components</h3>
+      <ns-card type="flat">
+        <h3 slot="heading">Our components</h3>
         <p slot="paragraph">View and see how our components work in Storybook.</p>
-        <ns-cta type="direct" slot="cta" href="https://library.britishgas.design">View Storybook</ns-cta>
+        <a slot="cta" href="https://library.britishgas.design">
+          <ns-cta type="text">View Storybook</ns-cta>
+        </a>
       </ns-card>
-      <ns-card type="section" decoration="clock">
-        <h3 slot="heading" role="heading" aria-level="3">Documentation</h3>
+      <ns-card type="flat">
+        <h3 slot="heading">Documentation</h3>
         <p slot="paragraph">Understand what we do and how our components work.</p>
-        <ns-cta type="direct" slot="cta" href="https://docs.britishgas.design">View our docs</ns-cta>
+        <a slot="cta" href="https://docs.britishgas.design">
+          <ns-cta type="text">View our docs</ns-cta>
+        </a>
       </ns-card>
-      <ns-card type="section" decoration="protect">
-        <h3 slot="heading" role="heading" aria-level="3">The vision</h3>
+      <ns-card type="flat">
+        <h3 slot="heading">The vision</h3>
         <p slot="paragraph">Find out what we're trying to do and the principles we set against ourselves.</p>
-        <ns-cta type="direct" slot="cta" href="https://docs.britishgas.design/principles">Learn our principles</ns-cta>
+        <a slot="cta" href="https://docs.britishgas.design/principles">
+          <ns-cta type="text">Learn our principles</ns-cta>
+        </a>
       </ns-card>
     </div>
   </ns-panel>
