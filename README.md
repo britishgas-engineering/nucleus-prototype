@@ -1,12 +1,10 @@
 # Nucleus prototype
 
-A Nucleus prototype environment using the eleventy static site generator published at: https://nucleus-prototype.drew-jones.com
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/90b95afb-1b42-47c5-8e81-4f4e03816e6d/deploy-status)](https://app.netlify.com/sites/keen-franklin-5ffbd4/deploys)
+A Nucleus prototype environment using the Eleventy static site generator.
 
 ## Installation
 
-Clone or download the GitHub repository: https://github.com/andij/nucleus-prototype
+Clone or download the GitHub repository: https://github.com/britishgas-engineering/nucleus-prototype
 
 Open the `/nucleus-prototype` folder using terminal.
 
@@ -28,75 +26,41 @@ $  npx @11ty/eleventy --serve
 
 ### View in your browser
 
-Open your browser at http://localhost:8080 to view the Nucleus prototype environment.
+Open your browser at http://localhost:8080 and take a look at **Project one**
 
-### Displaying a Nucleus page
+## Adding a project of your own
 
-In the `/src` folder we create a folder. Any name will do, let's use `/demo`.
+In the `/src` folder you'll find a folder called `/project`.
 
-create a file `index.njk` and include a `title` in the front matter.
+Duplicate this folder and give it a name `/my-demo`
+
+Open the `/my-demo` folder and rename `project.json` to be the same name as your folder `my-demo.json`.
+
+Edit `my-demo.json` to be something like:
+```json
+{
+  "layout": "nucleus.njk",
+  "tags": "my-demo",
+  "givenname": "Thomas",
+  "familyname": "Edison"
+}
+```
+
+Edit the Front matter within `index.njk` to be something like:
 
 ```json
 ---
-title: Page title
+title: My Demo
+eleventyNavigation:
+  key: My Demo
+  title: This is My Demo
+  excerpt: This is my first prototype and is the start of something beautiful
 ---
 ```
 
-We can then include any Nucleus components. Let's start with the Landmark:
+Refresh your browser at http://localhost:8080 and you should now see a new card titled **This is My Demo** and a link to My Demo.
 
-```html
-<ns-landmark type="hillside">
-  <h1 slot="heading">
-    <span class="h5">Hub umami locavore.</span>
-    <span class="h1 enlighten">Typewriter pin <b>chambray mixtape</b></span>
-  </h1>
-  <div slot="paragraph">
-    <p>Cred sartorial shaman pitchfork mumblecore braid cronut shaman gastropub taiyaki godard roof party. <a href="#caveat" aria-label="Additional information 1">1</a></p>
-  </div>
-</ns-landmark>
-```
-
-Then add some more stuff.
-
-```html
-<ns-panel>
-  <div class="splish">
-    <h2>Bushwick kitsch truffaut bespoke stumptown</h2>
-    <p class="p-feature">Coloring book palo santo drinking vinegar twee heirloom iceland la croix listicle.</p>
-  </div>
-  <div class="splish triple" role="list">
-    <ns-card role="listitem" type="section" decoration="gas">
-      <h3 slot="heading">Sriracha hashtag fixie neutra</h3>
-      <div slot="paragraph">
-        <p>Twee cronut iceland la croix party listicle shaman.</p>
-      </div>
-      <a slot="cta" href="#!">
-        <ns-cta type="direct">Distillery kinfolk</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card role="listitem" type="section" decoration="home">
-      <h3 slot="heading">Organic</h3>
-      <div slot="paragraph">
-        <p>Bushwick tumeric before they sold out.</p>
-      </div>
-      <a slot="cta" href="#!">
-        <ns-cta type="direct">Migas franzen drink</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card role="listitem" type="section" decoration="boiler">
-      <h3 slot="heading">Bespoke stumptown</h3>
-      <div slot="paragraph">
-        <p>Knausgaard flannel organic tote bag prism pug.</p>
-      </div>
-      <a slot="cta" href="#!">
-        <ns-cta type="direct">Art party</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
-```
-
-Repeat the process, create other pages etc.
+Repeat the process to create other prototypes.
 
 🤩
 
