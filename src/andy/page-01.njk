@@ -1,0 +1,64 @@
+---
+title: Page one
+---
+<ns-panel>
+  <div class="splash">
+    <ns-form-summary title="Personal details" >
+
+        <ns-form nf-model="model.details">
+          <ns-inputter validation="[&quot;isRequired&quot;]" name="title" value="">
+            <label slot="label">Title</label>
+
+            <select autocomplete="honorific-prefix" name="select">
+              <option value="">Please Select</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+              <option value="Sir">Sir</option>
+              <option value="Reverend">Reverend</option>
+              <option value="Dame">Dame</option>
+              <option value="Lady">Lady</option>
+              <option value="Professor">Professor</option>
+              <option value="Lord">Lord</option>
+            </select>
+          </ns-inputter>
+
+          <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+            <label slot="label">First name</label>
+            <input autocomplete="given-name" type="text">
+          </ns-inputter>
+
+          <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+            <label slot="label">Surname</label>
+            <input autocomplete="family-name" type="text">
+          </ns-inputter>
+
+          <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you a British Gas customer?" name="is-customer" value="">
+            <input type="radio" name="question" id="customer-yes" value="yes">
+            <label for="customer-yes">Yes</label>
+
+            <input type="radio" name="question" id="customer-no" value="no">
+            <label for="customer-no">No</label>
+          </ns-inputter>
+
+          <ns-inputter validation="[&quot;isRequired&quot;]" heading="Legal details" helper="" name="legal" value="">
+            <input type="checkbox" name="terms" id="agree-checkbox" value="true">
+            <label for="agree-checkbox">Please check to state that you agree to the terms and conditions.</label>
+          </ns-inputter>
+
+        </ns-form>
+      </ns-form-summary>
+
+      <ns-form-summary>
+        <ns-form nf-model="model.order" >
+            <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="order" value="">
+              <label slot="label">Order details</label>
+              <input type="text">
+            </ns-inputter>
+        </ns-form>
+      </ns-form-summary>
+
+  </div>
+</ns-panel>

@@ -8,13 +8,15 @@ title: Nucleus prototype
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{title}}">
   <meta name="format-detection" content="telephone=no">
-  <title>{{title}}</title>
+  <title>{{settings.siteName}}</title>
+  <link rel="stylesheet" href="http://localhost:9001/styles.min.css" type="text/css">
 </head>
 <body class="ndsn">
-
   {{content | safe}}
-
-  <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+  <script src="/proto.js"></script>
+  <script src="http://localhost:9001/polyfill.js"></script>
+  <script src="http://localhost:9001/components.js"></script>
+  
   <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
 </body>
 </html>
