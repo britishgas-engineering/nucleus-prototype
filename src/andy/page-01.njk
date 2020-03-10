@@ -1,11 +1,19 @@
 ---
 title: Page one
+message: Testing123
 ---
+
+{% from "./_includes/components.njk" import inputter %}
+
 <ns-panel>
   <div class="splash">
+
     <ns-form-summary title="Personal details" >
 
         <ns-form nf-model="model.details">
+
+           {# {{ inputter('user', label='This is a template input') }} #}
+
           <ns-inputter validation="[&quot;isRequired&quot;]" name="title" value="">
             <label slot="label">Title</label>
 
@@ -58,12 +66,12 @@ title: Page one
       <ns-form-summary title="Order Details">
         <ns-form nf-model="model.order" >
             <ns-inputter validation="[&quot;isRequired&quot;]" name="order" value="">
-              <label slot="label">Order details</label>
+              <label slot="label">Detail 1</label>
               <input type="text">
             </ns-inputter>
 
             <ns-inputter validation="[&quot;isRequired&quot;]" name="something" value="">
-              <label slot="label">Order details</label>
+              <label slot="label">Detail 2</label>
               <input type="text">
             </ns-inputter>
         </ns-form>

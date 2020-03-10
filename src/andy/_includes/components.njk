@@ -1,0 +1,11 @@
+
+
+{% macro inputter(name, label='label here', value='') %}
+<ns-inputter validation="[&quot;isRequired&quot;]" name="{{ name }}" value="{{ value }}">
+    <label slot="label">{{ label }}</label>
+    <input type="text">
+</ns-inputter>
+{% endmacro %}
+
+
+
