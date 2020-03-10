@@ -35,6 +35,11 @@ title: Page one
             <input autocomplete="family-name" type="text">
           </ns-inputter>
 
+        </ns-form>
+      </ns-form-summary>
+
+      <ns-form-summary title="Customer Type" >
+        <ns-form nf-model="model.account">
           <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you a British Gas customer?" name="is-customer" value="">
             <input type="radio" name="question" id="customer-yes" value="yes">
             <label for="customer-yes">Yes</label>
@@ -47,14 +52,37 @@ title: Page one
             <input type="checkbox" name="terms" id="agree-checkbox" value="true">
             <label for="agree-checkbox">Please check to state that you agree to the terms and conditions.</label>
           </ns-inputter>
-
         </ns-form>
       </ns-form-summary>
 
-      <ns-form-summary>
+      <ns-form-summary title="Order Details">
         <ns-form nf-model="model.order" >
-            <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="order" value="">
+            <ns-inputter validation="[&quot;isRequired&quot;]" name="order" value="">
               <label slot="label">Order details</label>
+              <input type="text">
+            </ns-inputter>
+
+            <ns-inputter validation="[&quot;isRequired&quot;]" name="something" value="">
+              <label slot="label">Order details</label>
+              <input type="text">
+            </ns-inputter>
+        </ns-form>
+      </ns-form-summary>
+
+      <ns-form-summary title="Payment Details">
+        <ns-form nf-model="model.banking" >
+            <ns-inputter mask="00-00-00" separator="-" validation="[&quot;isRequired&quot;]" name="order" value="">
+              <label slot="label">Sort code</label>
+              <input type="text">
+            </ns-inputter>
+
+            <ns-inputter mask="        " validation="[&quot;isRequired&quot;]" name="something" value="">
+              <label slot="label">Account Number</label>
+              <input type="text" maxlength="10">
+            </ns-inputter>
+
+            <ns-inputter mask="dd/mm/yyyy" separator="/" validation="[&quot;isDate&quot;]" name="date" value="">
+              <label slot="label">Payment Date</label>
               <input type="text">
             </ns-inputter>
         </ns-form>
