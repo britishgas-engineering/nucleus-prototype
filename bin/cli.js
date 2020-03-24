@@ -14,16 +14,26 @@ const command = args._[0];
 
 const project = 'my-demo';
 
-const projectPath = 'src/projects/' + project;
+// Delete dist
+shell.rm('-rf', 'dist/*')
+
+
+const projectPath = 'src/' + project;
 shell.rm('-rf', projectPath)
 shell.mkdir(projectPath);
-shell.cp('-rf', 'src/_templates/project/*', projectPath);
+shell.cp('-rf', '_templates/project/*', projectPath);
+
+// rename project.json
+shell.mv(projectPath + '/project.json', projectPath + '/' + project + '.json');
 
 shell.cd(projectPath);
 // shell.ls('*.*').forEach(function (file) {
 //   shell.sed('-i', 'PAGE_TITLE', 'New Title for ' + project, file);
 //   shell.sed('-i', 'SITE_NAME', project, file);
 // });
-shell.cd('..');
+shell.cd('../..');
 
-console.log('command ' + command);
+// Generate project
+shell.exec("npx @11ty/eleventy --serve");
+
+console.log('>>>>>> command ' + command);

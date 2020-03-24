@@ -1,0 +1,26 @@
+---
+title: Project one
+eleventyNavigation:
+  key: Project one
+  title: This is the example
+  excerpt: To start with, take a look at this project and use it to create one of your own.
+---
+<ns-landmark type="summit" image="https://user-images.githubusercontent.com/28779/75573555-00c74200-5a55-11ea-86db-66a1ff253b57.jpg">
+  <h1 slot="heading">
+    <span class="h5">How cool is this.</span>
+    <span class="h1 enlighten"><b>{{givenname}} {{familyname}}</b>, get ready to be awesome</span>
+  </h1>
+  <div slot="paragraph">
+    <p>This is the index page of <b>{{title}}</b>. When you're ready, move on.</p>
+  </div>
+  <a slot="cta" href="page-01">
+    <ns-cta>View the next page</ns-cta>
+  </a>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    {% include "./_includes/include-01.njk" %}
+    {% include "./_includes/include-02.njk" %}
+  </div>
+</ns-panel>
