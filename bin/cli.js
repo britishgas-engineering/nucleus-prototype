@@ -26,8 +26,6 @@ const questions = [
 
 const go = (response) => {
   
-  console.log('XXXXXXXXXX');
-  
   const command = args._[0] || 'g';
   const template = args._[1] || response.template;
   const project = args._[2] || response.project;
