@@ -16,9 +16,14 @@
   "bugs": {
     "url": "https://github.com/andij/nucleus-prototype/issues"
   },
+  "bin": {
+    "scaf": "bin/cli.js"
+  },
   "homepage": "https://github.com/andij/nucleus-prototype#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-navigation": "^0.1.5"
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "minimist": "^1.2.5",
+    "shelljs": "^0.8.3"
   }
 }
