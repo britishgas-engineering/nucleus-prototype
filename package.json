@@ -24,6 +24,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-navigation": "^0.1.5",
     "minimist": "^1.2.5",
+    "prompts": "^2.3.2",
     "shelljs": "^0.8.3"
   }
 }
