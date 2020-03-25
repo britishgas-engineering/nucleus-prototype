@@ -57,6 +57,16 @@ const go = (response) => {
   // rename project.json
   shell.mv(projectPath + '/project.json', projectPath + '/' + project + '.json');
 
+  shell.cd(projectPath);
+
+  // set front matter
+  shell.ls('*.njk').forEach(function (file) {
+    shell.sed('-i', 'PROJECT_NAME', project, file);
+    shell.sed('-i', 'PROJECT_TITLE', formatProjectName(project), file);
+  })
+
+  shell.cd('../..');
+
   // Generate project
   shell.exec("npx @11ty/eleventy --serve");
 
@@ -78,4 +88,14 @@ if (args._.length === 0) {
 } else {
   // Process with args
   go();
+}
+
+console.log(formatProjectName('andys-super-project'));
+
+function formatProjectName(project) {
+  return project.split('-').map((word) => {
+    const arr = word.split('');
+    arr[0] = arr[0].toUpperCase();
+    return arr.join('');
+  }).join(' ');
 }
