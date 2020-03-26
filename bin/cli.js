@@ -65,10 +65,11 @@ const go = (response) => {
   for (var i=0; i<numForms; i++) {
     var newFile = projectPath + '/page-' + (i + 1) + '.njk';
     var nextForm = i < numForms - 1 ? 'page-' + (i + 2) : 'summary';
-    shell.cp('-rf', '_templates/' + template + '/page-.njk', newFile);
+    shell.cp('-rf', '_templates/' + template + '/page.njk', newFile);
 
     shell.ls(newFile).forEach(function (file) {
       shell.sed('-i', 'SURNAME', 'Page ' + (i + 1), file);
+      shell.sed('-i', 'MODEL_PATH', 'model.question' + (i + 1), file);
       shell.sed('-i', 'NEXT_FORM', nextForm, file);
     });
 
