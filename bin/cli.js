@@ -11,10 +11,15 @@ const questions = [
     name: 'template',
     message: 'Pick a template to base your project on',
     choices: [
-        { title: 'Multi Part Form', description: 'A form with multi parts.', value: 'project' },
-        { title: 'Page Journey', description: 'A journey with pages.', value: 'project' },
+        { title: 'Multi Page Form', description: 'A form with multi parts.', value: 'multi-page-form' },
+        { title: 'Single Page Colapsable Form', description: 'A journey with pages.', value: 'project' },
         { title: 'Foo Journey', description: 'A foo journey.', value: 'project' }
     ]
+  },
+  {
+    type: 'number',
+    name: 'numForms',
+    message: 'How many forms do you want?'
   },
   {
     type: 'text',
@@ -29,8 +34,10 @@ const go = (response) => {
   const command = args._[0] || 'g';
   const template = args._[1] || response.template;
   const project = args._[2] || response.project;
+  const numForms = response.numForms || 1;
 
-  console.log('>>>>>> args ' + args._.length);
+  console.log('Template ' + template);
+
   const projectPath = 'src/' + project;
 
   if (!command) {
@@ -54,6 +61,19 @@ const go = (response) => {
   shell.mkdir(projectPath);
   shell.cp('-rf', '_templates/' + template + '/*', projectPath);
 
+  // Add numForms pages
+  for (var i=0; i<numForms; i++) {
+    var newFile = projectPath + '/page-' + (i + 1) + '.njk';
+    var nextForm = i < numForms - 1 ? 'page-' + (i + 2) : 'summary';
+    shell.cp('-rf', '_templates/' + template + '/page-.njk', newFile);
+
+    shell.ls(newFile).forEach(function (file) {
+      shell.sed('-i', 'SURNAME', 'Page ' + (i + 1), file);
+      shell.sed('-i', 'NEXT_FORM', nextForm, file);
+    });
+
+  }
+
   // rename project.json
   shell.mv(projectPath + '/project.json', projectPath + '/' + project + '.json');
 
@@ -66,6 +86,8 @@ const go = (response) => {
   })
 
   shell.cd('../..');
+
+  shell.cp('src/*.js', 'dist');
 
   // Generate project
   shell.exec("npx @11ty/eleventy --serve");
@@ -80,7 +102,7 @@ if (args._.length === 0) {
     const res = (async () => {
       const response = await prompts(questions);
       // Logic here
-      response.template = 'project';
+      //response.template = 'project';
       go(response);
       console.log(response); // => { value: 24 }
     })();
