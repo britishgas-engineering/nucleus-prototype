@@ -1,19 +1,87 @@
 #!/usr/bin/env node
 
+var forms = [{
+    title: 'Welcome to your electric vehicle charger installation',
+    description: 'This is a descripton',
+    fields: [{
+      name: 'title',
+      label: 'Title:',
+      type: 'select',
+      options: `['Mr', 'Mrs', 'Ms']`
+    }, {
+      name: 'bg-customer',
+      label: 'Are you a British Gas customer?:',
+      type: 'radio',
+      options: `['Yes', 'No']`
+    }, {
+      name: 'energy-type',
+      label: 'What type of energy do you want?:',
+      type: 'checkbox',
+      options: `['Gas', 'Electricity', 'Both']`
+    }, {
+      name: 'firstname',
+      label: 'First Name:',
+      type: 'text'
+    }, {
+      name: 'surname',
+      label: 'Surname:',
+      type: 'text'
+    }, {
+      name: 'email',
+      label: 'Email:',
+      type: 'text',
+      validation: `["isEmail"]`
+    }]
+  },
+  {
+    fields: [{
+      name: 'car-make',
+      label: 'Car Make:',
+      type: 'select',
+      options: `['Audi', 'BMW', 'Skoda']`
+    }, {
+      name: 'sort-code',
+      label: 'Sort code:',
+      type: 'text',
+      mask: '00-00-00',
+      separator: '-'
+    }, {
+      name: 'car-model',
+      label: 'Car Model',
+      type: 'text'
+    }, {
+      name: 'car-reg',
+      label: 'Car registration number:',
+      type: 'text'
+    }]
+  }
+];
+
+
 var shell = require("shelljs");
 var parseArgs = require("minimist")
 
 const prompts = require('prompts');
- 
-const questions = [
-  {
+
+const questions = [{
     type: 'select',
     name: 'template',
     message: 'Pick a template to base your project on',
-    choices: [
-        { title: 'Multi Page Form', description: 'A form with multi parts.', value: 'multi-page-form' },
-        { title: 'Single Page Colapsable Form', description: 'A journey with pages.', value: 'project' },
-        { title: 'Foo Journey', description: 'A foo journey.', value: 'project' }
+    choices: [{
+        title: 'Multi Page Form',
+        description: 'A form with multi parts.',
+        value: 'multi-page-form'
+      },
+      {
+        title: 'Single Page Colapsable Form',
+        description: 'A journey with pages.',
+        value: 'project'
+      },
+      {
+        title: 'Foo Journey',
+        description: 'A foo journey.',
+        value: 'project'
+      }
     ]
   },
   {
@@ -30,7 +98,7 @@ const questions = [
 ];
 
 const go = (response) => {
-  
+
   const command = args._[0] || 'g';
   const template = args._[1] || response.template;
   const project = args._[2] || response.project;
@@ -55,22 +123,46 @@ const go = (response) => {
 
   // Delete dist
   shell.rm('-rf', 'dist/*')
-  
+
   // Copy template project to new project
   shell.rm('-rf', projectPath)
   shell.mkdir(projectPath);
   shell.cp('-rf', '_templates/' + template + '/*', projectPath);
 
   // Add numForms pages
-  for (var i=0; i<numForms; i++) {
+  for (var i = 0; i < numForms; i++) {
+
+    // Generate custom form templates
+    if (forms[i]) {
+      console.log(' GENERATING FORM ' + i);
+      var content = `{% import "./../../inputters.njk" as inputter %}
+      `;
+      forms[i].fields.forEach((field) => {
+        content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}') }}
+        `;
+        console.log('CONTENT ' + content);
+      });
+      // write content to form file
+      var formFile = projectPath + '/_includes/form' + (i + 1) + '.njk';
+      shell.ShellString(content).to(formFile);
+
+    }
+
+
     var newFile = projectPath + '/page-' + (i + 1) + '.njk';
     var nextForm = i < numForms - 1 ? 'page-' + (i + 2) : 'summary';
     shell.cp('-rf', '_templates/' + template + '/page.njk', newFile);
 
     shell.ls(newFile).forEach(function (file) {
-      shell.sed('-i', 'SURNAME', 'Page ' + (i + 1), file);
-      shell.sed('-i', 'MODEL_PATH', 'model.question' + (i + 1), file);
+      shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
       shell.sed('-i', 'NEXT_FORM', nextForm, file);
+      // Only use custom form if it exists, otherwise just use page.njk template
+      if (forms[i]) {
+        shell.sed('-i', 'FORM_INCLUDE', `{% include "./_includes/form${i + 1}.njk" %}`, file);
+        shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
+        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
+
+      }
     });
 
   }
@@ -95,23 +187,33 @@ const go = (response) => {
 
 }
 
-// Get params
+// Hard code
+var mock = {
+  project: 'ev',
+  numForms: 3,
+  template: 'multi-page-form'
+};
 let args = parseArgs(process.argv.slice(2));
-// If no args then ask questions
-if (args._.length === 0) {
-  if (args._.length === 0) {
-    const res = (async () => {
-      const response = await prompts(questions);
-      // Logic here
-      //response.template = 'project';
-      go(response);
-      console.log(response); // => { value: 24 }
-    })();
-  }
-} else {
-  // Process with args
-  go();
-}
+go(mock);
+
+
+// // Get params
+// let args = parseArgs(process.argv.slice(2));
+// // If no args then ask questions
+// if (args._.length === 0) {
+//   if (args._.length === 0) {
+//     const res = (async () => {
+//       const response = await prompts(questions);
+//       // Logic here
+//       //response.template = 'project';
+//       go(response);
+//       console.log(response); // => { value: 24 }
+//     })();
+//   }
+// } else {
+//   // Process with args
+//   go();
+// }
 
 console.log(formatProjectName('andys-super-project'));
 

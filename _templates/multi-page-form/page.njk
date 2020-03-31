@@ -2,14 +2,11 @@
     <ns-landmark type="lakeside">
   <h1 slot="heading">
     <span class="h1">
-      Welcome to your electric vehicle charger installation
+      PAGE_TITLE
     </span>
   </h1>
   <p slot="paragraph">
-    Let's get you started.
-    Please
-    <b> enter the details below </b>to track the progress of your charger installation.
-
+    PAGE_TEXT
   </p>
 </ns-landmark>
 
@@ -19,13 +16,7 @@
 
     <ns-form class="loginForm" id="loginForm" nf-model="MODEL_PATH">
       
-      {% include "./_includes/inputter-text.njk" %}
-
-      {% include "./_includes/inputter-text.njk" %}
-
-      {% include "./_includes/inputter-select.njk" %}
-
-      {% include "./_includes/inputter-radio.njk" %}
+      FORM_INCLUDE
 
       <ns-cta data-test-helper="submit" role="button" loadingmessage="Loading..." nf-href="../NEXT_FORM">
         Next

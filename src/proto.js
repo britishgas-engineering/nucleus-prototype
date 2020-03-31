@@ -78,7 +78,6 @@ function minimise() {
 
 // If form isnt defined in model then create an entry
 function checkModel() {
-    // Populate UI from model json
     var forms = document.querySelectorAll('ns-form');
     forms.forEach((form) => {
         const path = form.getAttribute('nf-model');
@@ -104,14 +103,46 @@ function updateUI() {
             if(!formData) {
                 console.log('Auto generating model data for ' + path);
             }
-            formData.fields.forEach((field) => {
-                console.log(field.name, field.value);
-                const inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
-                if(inputter) {
-                    inputter.value = field.value;
+            // Update UI from data
+            // formData.fields.forEach((field) => {
+            //     console.log(field.name, field.value);
+            //     const inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
+            //     if(inputter) {
+            //         inputter.value = field.value;
+            //     }
+            // })
+
+            // Or we could update all fields, so you could have duplicate fields????
+            var inputters = form.querySelectorAll('ns-inputter').forEach((inputter) => {
+                var fieldName = inputter.getAttribute('name');
+                console.log('update field ' + fieldName + ' ' + formData);
+                var val = formData.fields && formData.fields.find((field) => {
+                    return (field.name === fieldName);
+                });
+                if (val) {
+                    console.log('Set inputter value ' + inputter + ' ' + val);
+                    inputter.setAttribute('value', val.value);
                 }
-            })
+            });
         }
+    });
+
+    // Update text with nf-model
+    var spans = document.querySelectorAll('[nf-model]');
+    
+    spans.forEach((span) => {
+        var path = span.getAttribute('nf-model').split('.');
+        var prop = path.pop();
+        var model = getModelData(path.join('.'));
+        var text = model.fields && model.fields.find((field) => {
+            return field.name === prop;
+        })
+
+        if(text && text.value) {
+            span.innerText = text.value;
+        }
+        
+        
     });
 }
 
