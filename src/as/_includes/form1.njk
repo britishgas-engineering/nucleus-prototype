@@ -1,0 +1,8 @@
+{% import "./../../inputters.njk" as inputter %}
+      {{ inputter.select('title', 'Title:', 'undefined', ['Mr', 'Mrs', 'Ms'], 'undefined', 'undefined') }}
+        {{ inputter.radio('bg-customer', 'Are you a British Gas customer?:', 'undefined', ['Yes', 'No'], 'undefined', 'undefined') }}
+        {{ inputter.checkbox('energy-type', 'What type of energy do you want?:', 'undefined', ['Gas', 'Electricity', 'Both'], 'undefined', 'undefined') }}
+        {{ inputter.text('firstname', 'First Name:', 'undefined', undefined, 'undefined', 'undefined') }}
+        {{ inputter.text('surname', 'Surname:', 'undefined', undefined, 'undefined', 'undefined') }}
+        {{ inputter.text('email', 'Email:', '["isEmail"]', undefined, 'undefined', 'undefined') }}
+        

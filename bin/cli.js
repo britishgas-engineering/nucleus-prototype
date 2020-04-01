@@ -188,32 +188,32 @@ const go = (response) => {
 }
 
 // Hard code
-var mock = {
-  project: 'ev',
-  numForms: 3,
-  template: 'multi-page-form'
-};
-let args = parseArgs(process.argv.slice(2));
-go(mock);
-
-
-// // Get params
+// var mock = {
+//   project: 'ev',
+//   numForms: 3,
+//   template: 'multi-page-form'
+// };
 // let args = parseArgs(process.argv.slice(2));
-// // If no args then ask questions
-// if (args._.length === 0) {
-//   if (args._.length === 0) {
-//     const res = (async () => {
-//       const response = await prompts(questions);
-//       // Logic here
-//       //response.template = 'project';
-//       go(response);
-//       console.log(response); // => { value: 24 }
-//     })();
-//   }
-// } else {
-//   // Process with args
-//   go();
-// }
+// go(mock);
+
+
+// Get params
+let args = parseArgs(process.argv.slice(2));
+// If no args then ask questions
+if (args._.length === 0) {
+  if (args._.length === 0) {
+    const res = (async () => {
+      const response = await prompts(questions);
+      // Logic here
+      //response.template = 'project';
+      go(response);
+      console.log(response); // => { value: 24 }
+    })();
+  }
+} else {
+  // Process with args
+  go();
+}
 
 console.log(formatProjectName('andys-super-project'));
 

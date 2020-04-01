@@ -37,7 +37,7 @@
 
 {% macro select(name, label, validation, options) %}
 <ns-inputter validation="{{ validation }}" name="{{ name }}">
-    <label slot="label">{{ label }} {{ options.length }}</label>
+    <label slot="label">{{ label }}</label>
     <select autocomplete="honorific-prefix" name="select">
         <option value="">Please Select</option>
         {% for option in options %}

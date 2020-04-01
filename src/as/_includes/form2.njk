@@ -1,0 +1,6 @@
+{% import "./../../inputters.njk" as inputter %}
+      {{ inputter.select('car-make', 'Car Make:', 'undefined', ['Audi', 'BMW', 'Skoda'], 'undefined', 'undefined') }}
+        {{ inputter.text('sort-code', 'Sort code:', 'undefined', undefined, '00-00-00', '-') }}
+        {{ inputter.text('car-model', 'Car Model', 'undefined', undefined, 'undefined', 'undefined') }}
+        {{ inputter.text('car-reg', 'Car registration number:', 'undefined', undefined, 'undefined', 'undefined') }}
+        
