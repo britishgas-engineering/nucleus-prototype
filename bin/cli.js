@@ -7,30 +7,35 @@ var forms = [{
       name: 'title',
       label: 'Title:',
       type: 'select',
-      options: `['Mr', 'Mrs', 'Ms']`
+      options: `['Mr', 'Mrs', 'Ms']`,
+      validation: `["isRequired"]`
     }, {
       name: 'bg-customer',
       label: 'Are you a British Gas customer?:',
       type: 'radio',
-      options: `['Yes', 'No']`
+      options: `['Yes', 'No']`,
+      validation: `["isRequired"]`
     }, {
       name: 'energy-type',
       label: 'What type of energy do you want?:',
       type: 'checkbox',
-      options: `['Gas', 'Electricity', 'Both']`
+      options: `['Gas', 'Electricity', 'Both']`,
+      validation: `["isRequired"]`
     }, {
       name: 'firstname',
       label: 'First Name:',
-      type: 'text'
+      type: 'text',
+      validation: `["isRequired"]`
     }, {
       name: 'surname',
       label: 'Surname:',
-      type: 'text'
+      type: 'text',
+      validation: `["isRequired"]`
     }, {
       name: 'email',
       label: 'Email:',
       type: 'text',
-      validation: `["isEmail"]`
+      validation: `["isRequired", "isEmail"]`
     }]
   },
   {
@@ -38,21 +43,25 @@ var forms = [{
       name: 'car-make',
       label: 'Car Make:',
       type: 'select',
-      options: `['Audi', 'BMW', 'Skoda']`
+      options: `['Audi', 'BMW', 'Skoda']`,
+      validation: `["isRequired"]`
     }, {
       name: 'sort-code',
       label: 'Sort code:',
       type: 'text',
       mask: '00-00-00',
-      separator: '-'
+      separator: '-',
+      validation: `["isRequired"]`
     }, {
       name: 'car-model',
       label: 'Car Model',
-      type: 'text'
+      type: 'text',
+      validation: `["isRequired"]`
     }, {
       name: 'car-reg',
       label: 'Car registration number:',
-      type: 'text'
+      type: 'text',
+      validation: `["isRequired"]`
     }]
   }
 ];
@@ -73,7 +82,7 @@ const questions = [{
         value: 'multi-page-form'
       },
       {
-        title: 'Single Page Colapsable Form',
+        title: 'Single Page Collapsible Form',
         description: 'A journey with pages.',
         value: 'project'
       },
@@ -102,7 +111,6 @@ const go = (response) => {
   const command = args._[0] || 'g';
   const template = args._[1] || response.template;
   const project = args._[2] || response.project;
-  const numForms = response.numForms || 1;
 
   console.log('Template ' + template);
 
@@ -129,39 +137,112 @@ const go = (response) => {
   shell.mkdir(projectPath);
   shell.cp('-rf', '_templates/' + template + '/*', projectPath);
 
-  // Add numForms pages
-  for (var i = 0; i < numForms; i++) {
+  // Multi page form puts each form on a new page
+  var multiPage = template.indexOf('multi') !== -1;
 
-    // Generate custom form templates
-    if (forms[i]) {
-      console.log(' GENERATING FORM ' + i);
-      var content = `{% import "./../../inputters.njk" as inputter %}
+  // NEW
+
+  // Generate individual Form Field templates
+  for (var i = 0; i < forms.length; i++) {
+    var content = `{% import "./../inputters.njk" as inputter %}
+    `;
+    // GENERATE FORM CONTENT
+    forms[i].fields.forEach((field) => {
+      content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}') }}
       `;
-      forms[i].fields.forEach((field) => {
-        content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}') }}
-        `;
-        console.log('CONTENT ' + content);
-      });
-      // write content to form file
-      var formFile = projectPath + '/_includes/form' + (i + 1) + '.njk';
-      shell.ShellString(content).to(formFile);
+      console.log('CONTENT ' + content);
+    });
 
+    // Always save each form to a new form template
+    var formFile = projectPath + '/form-fields' + (i + 1) + '.njk';
+    shell.ShellString(content).to(formFile);
+    // Reset content
+    content = `{% import "./../../inputters.njk" as inputter %}
+    `;
+  }
+
+
+  // Generate individual Form templates
+  if (multiPage) {
+    for (var i = 0; i < forms.length; i++) {
+      // Create a new form for each form
+      var pageTemplate = projectPath + '/form.njk';
+      var pagePath = projectPath + '/form' + (i + 1) + '.njk';
+      shell.cp('-rf', pageTemplate, pagePath);
+
+      // Add include to form
+      shell.ls(pagePath).forEach(function (file) {
+        shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
+        shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
+      });
+    }
+  } else {
+    // place all fields into FORM_FIELDS_PATH
+    // Create a new form for each form
+    // var pagePath = projectPath + '/form1.njk';
+    // var pageTemplate = projectPath + '/form.njk';
+    // shell.cp('-rf', pageTemplate, pagePath);
+
+    for (var i = 0; i < forms.length; i++) {
+      // Create a new form for each form
+      var pagePath = projectPath + '/form' + (i + 1) + '.njk';
+      var pageTemplate = projectPath + '/form.njk';
+      shell.cp('-rf', pageTemplate, pagePath);
+
+      // Add include to form
+      shell.ls(pagePath).forEach(function (file) {
+        shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
+        shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
+      });
     }
 
 
-    var newFile = projectPath + '/page-' + (i + 1) + '.njk';
-    var nextForm = i < numForms - 1 ? 'page-' + (i + 2) : 'summary';
-    shell.cp('-rf', '_templates/' + template + '/page.njk', newFile);
+    // Add form fields to eache form
+    shell.ls(pagePath).forEach(function (file) {
+      for (var i = 0; i < forms.length; i++) {
+        shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
+        shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
+      }
 
-    shell.ls(newFile).forEach(function (file) {
-      shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
-      shell.sed('-i', 'NEXT_FORM', nextForm, file);
-      // Only use custom form if it exists, otherwise just use page.njk template
-      if (forms[i]) {
-        shell.sed('-i', 'FORM_INCLUDE', `{% include "./_includes/form${i + 1}.njk" %}`, file);
+    });
+  }
+
+  // Generate individual Page templates
+  if (multiPage) {
+    for (var i = 0; i < forms.length; i++) {
+      // Create a new page for each form
+      var pagePath = projectPath + '/page-' + (i + 1) + '.njk';
+      var pageTemplate = projectPath + '/page.njk';
+      shell.cp('-rf', pageTemplate, pagePath);
+
+      var nextForm = i < forms.length - 1 ? 'page-' + (i + 2) : 'summary';
+
+      // Add include to form
+      shell.ls(pagePath).forEach(function (file) {
+        shell.sed('-i', 'FORM_INCLUDE_PATH', `{% include "./form${(i + 1)}.njk" %}`, file);
+        shell.sed('-i', 'NEXT_FORM', nextForm, file);
+      });
+
+    }
+  } else {
+    // Create a new page for each form
+    var pagePath = projectPath + '/page-1.njk';
+    var pageTemplate = projectPath + '/page.njk';
+    shell.cp('-rf', pageTemplate, pagePath);
+
+    var content = '';
+    // Add include to form
+    for (var i = 0; i < forms.length; i++) {
+      content += `{% include "./form${(i + 1)}.njk" %}\n`;
+    }
+
+    shell.ls(pagePath).forEach(function (file) {
+      shell.sed('-i', 'FORM_INCLUDE_PATH', content, file);
+      shell.sed('-i', 'NEXT_FORM', 'summary', file);
+      shell.sed('-i', 'MODEL_PATH', 'model.form1', file);
+      for (var i = 0; i < forms.length; i++) {
         shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
         shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
-
       }
     });
 
@@ -188,32 +269,31 @@ const go = (response) => {
 }
 
 // Hard code
-// var mock = {
-//   project: 'ev',
-//   numForms: 3,
-//   template: 'multi-page-form'
-// };
-// let args = parseArgs(process.argv.slice(2));
-// go(mock);
+var mock = {
+  project: 'ev',
+  template: 'expander-form'
+};
+let args = parseArgs(process.argv.slice(2));
+go(mock);
 
 
 // Get params
-let args = parseArgs(process.argv.slice(2));
-// If no args then ask questions
-if (args._.length === 0) {
-  if (args._.length === 0) {
-    const res = (async () => {
-      const response = await prompts(questions);
-      // Logic here
-      //response.template = 'project';
-      go(response);
-      console.log(response); // => { value: 24 }
-    })();
-  }
-} else {
-  // Process with args
-  go();
-}
+// let args = parseArgs(process.argv.slice(2));
+// // If no args then ask questions
+// if (args._.length === 0) {
+//   if (args._.length === 0) {
+//     const res = (async () => {
+//       const response = await prompts(questions);
+//       // Logic here
+//       //response.template = 'project';
+//       go(response);
+//       console.log(response); // => { value: 24 }
+//     })();
+//   }
+// } else {
+//   // Process with args
+//   go();
+// }
 
 console.log(formatProjectName('andys-super-project'));
 

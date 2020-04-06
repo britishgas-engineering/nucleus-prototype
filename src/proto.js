@@ -33,7 +33,8 @@ ctas.forEach((cta) => {
         cta.addEventListener('click', (event) => {
             var button = event.currentTarget;
             //Check if this is in a form
-            var form = button.closest('ns-form');
+            var form = button.parentElement.querySelector('ns-form');
+
             if (form) {
                 console.log('This is in a form!!!!');
                 if(form.isValid) {
