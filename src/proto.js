@@ -152,7 +152,7 @@ var forms = document.querySelectorAll('ns-form');
 forms.forEach((form, index) => {
     const formPath = form.getAttribute('nf-model');
     if (formPath) {
-        form.querySelectorAll('ns-inputter').forEach((inputter) => {
+        form.querySelectorAll('ns-inputter, nsx-address-selector').forEach((inputter) => {
             inputter.removeEventListener('change', changeHandler);
             inputter.setAttribute('nf-model-path', formPath + '.fields.' + inputter.getAttribute('name'));
             inputter.addEventListener('change', changeHandler);
@@ -227,3 +227,29 @@ function setModelData(path, value) {
         }  
     });
 }
+
+
+// Address Finder
+
+const addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+}];
+
+document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+        event.target.addresses = addresses;
+    }, 200);
+
+});
+
+document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    console.log('Address selected ' + event.detail.address.label);
+    //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    if(event.target.getAttribute('nf-model-path')) {
+        setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
+    }
+});

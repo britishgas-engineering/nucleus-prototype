@@ -17,6 +17,13 @@
 </ns-inputter>
 {% endmacro %}
 
+{% macro date(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter name="{{ name }}" validation="[&quot;isRequired&quot;,&quot;isDateOfBirth&quot;]" >
+    <label slot="label" for="date">{{ label }}</label>
+    <input id="date" autocomplete="family-name" type="date" aria-invalid="false">
+</ns-inputter>
+{% endmacro %}
+
 {% macro checkbox(name, label, validation, options) %}
 <ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
     {% for option in options %}
@@ -52,4 +59,8 @@
 {% macro xxx(text) %}
 {% endmacro %}
 
+
+{% macro address(name, label, validation, options, mask=null, separator=null) %}
+<nsx-address-selector name="address" required="true"></nsx-address-selector>
+{% endmacro %}
 

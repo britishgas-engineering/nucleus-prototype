@@ -1,25 +1,13 @@
 #!/usr/bin/env node
 
 var forms = [{
-    title: 'Welcome to your electric vehicle charger installation',
-    description: 'This is a descripton',
+    title: 'Personal details',
+    description: 'First we need to know a little bit about you',
     fields: [{
       name: 'title',
       label: 'Title:',
       type: 'select',
       options: `['Mr', 'Mrs', 'Ms']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'bg-customer',
-      label: 'Are you a British Gas customer?:',
-      type: 'radio',
-      options: `['Yes', 'No']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'energy-type',
-      label: 'What type of energy do you want?:',
-      type: 'checkbox',
-      options: `['Gas', 'Electricity', 'Both']`,
       validation: `["isRequired"]`
     }, {
       name: 'firstname',
@@ -32,25 +20,68 @@ var forms = [{
       type: 'text',
       validation: `["isRequired"]`
     }, {
+      name: 'address',
+      label: 'Address:',
+      type: 'address'
+    },
+    {
       name: 'email',
       label: 'Email:',
       type: 'text',
       validation: `["isRequired", "isEmail"]`
+    },
+    {
+      name: 'dob',
+      label: 'Date of Birth:',
+      type: 'date',
+      validation: `["isRequired"]`
+    }
+  ]
+  }, {
+    title: 'Customer information',
+    description: 'Let us know what type of energy you are interested in',
+    fields: [{
+      name: 'bg-customer',
+      label: 'Are you a British Gas customer?:',
+      type: 'radio',
+      options: `['Yes', 'No']`,
+      validation: `["isRequired"]`
+    }, {
+      name: 'energy-type',
+      label: 'What type of energy would you like?:',
+      type: 'checkbox',
+      options: `['Gas', 'Electricity', 'Both']`,
+      validation: `["isRequired"]`
     }]
   },
   {
+    title: 'Pick a date for your home visit?',
+    description: 'What date would you like an engineer to visit?',
+    fields: [{
+      name: 'appointment-date',
+      label: 'Pick a date:',
+      type: 'date'
+    }]
+  },
+  {
+    title: 'Your appointment',
+    description: 'What time slot would you like to choose on ${model.form2.appointment-date}',
+    fields: [{
+      name: 'appointment-slot',
+      label: 'Pick a time slot?:',
+      type: 'radio',
+      options: `['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']`,
+      validation: `["isRequired"]`
+    }]
+  },
+  {
+    title: 'Your Vehicle',
+    description: 'Tell us about your vehicle',
     fields: [{
       name: 'car-make',
       label: 'Car Make:',
       type: 'select',
       options: `['Audi', 'BMW', 'Skoda']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'sort-code',
-      label: 'Sort code:',
-      type: 'text',
-      mask: '00-00-00',
-      separator: '-',
       validation: `["isRequired"]`
     }, {
       name: 'car-model',
@@ -63,6 +94,27 @@ var forms = [{
       type: 'text',
       validation: `["isRequired"]`
     }]
+  },
+  {
+    title: 'Payment Details',
+    description: 'In order for us to set up this account we need your payment details',
+    fields: [{
+      title: 'Banking Details',
+      description: 'This is a descripton',
+      name: 'sort-code',
+      label: 'Sort code:',
+      type: 'text',
+      mask: '00-00-00',
+      separator: '-',
+      validation: `["isRequired"]`
+    },{
+      name: 'account-number',
+      label: 'Account number:',
+      type: 'text',
+      mask: '00000000',
+      separator: '',
+      validation: `["isRequired"]`
+    },]
   }
 ];
 
@@ -193,6 +245,8 @@ const go = (response) => {
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
+        shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
+        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
       });
     }
 
@@ -221,6 +275,8 @@ const go = (response) => {
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_INCLUDE_PATH', `{% include "./form${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'NEXT_FORM', nextForm, file);
+        shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
+        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
       });
 
     }
@@ -270,8 +326,8 @@ const go = (response) => {
 
 // Hard code
 var mock = {
-  project: 'ev',
-  template: 'expander-form'
+  project: 'andy001',
+  template: 'multi-page-form'
 };
 let args = parseArgs(process.argv.slice(2));
 go(mock);
@@ -294,8 +350,6 @@ go(mock);
 //   // Process with args
 //   go();
 // }
-
-console.log(formatProjectName('andys-super-project'));
 
 function formatProjectName(project) {
   return project.split('-').map((word) => {
