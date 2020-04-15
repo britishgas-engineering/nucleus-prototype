@@ -1,5 +1,50 @@
 #!/usr/bin/env node
 
+var helpandsupport = [{
+  title: 'Help and Support: Meters',
+  description: 'How do you pay for your electricity?',
+  fields: [{
+    name: 'energy-type',
+    label: 'How do you pay for your electricity?',
+    type: 'selector',
+    options: `[{
+      label: 'Monthly Bill',
+      value: 'monthly',
+      description: 'You pay your bill monthly'
+    }, {
+      label: 'Top up (pay as you go)',
+      value: 'pay-as-you-go',
+      description: 'You pay your bill as you go'
+    }]`,
+    validation: `["isRequired"]`
+  }]
+},
+  {
+    title: 'Help and Support: Meters',
+    description: 'Which type of meter do you have?',
+    fields: [{
+      name: 'meter-type',
+      label: 'How do you pay for your electricity?',
+      type: 'selector',
+      options: `[{
+        label: 'Smart',
+        value: 'smart',
+        description: 'Smart meters are really smart'
+      }, {
+        label: 'Non Smart',
+        value: 'non-smart',
+        description: 'These are not very smart'
+      }]`,
+      validation: `["isRequired"]`
+    }]
+}];
+
+
+// Options
+
+
+
+
 var forms = [{
     title: 'Personal details',
     description: 'First we need to know a little bit about you',
@@ -290,6 +335,14 @@ var mock = {
   project: 'andy001',
   template: 'multi-page-form'
 };
+
+// Help and support
+forms = helpandsupport;
+var mock = {
+  project: 'help-and-support',
+  template: 'help-and-support-multi'
+};
+
 let args = parseArgs(process.argv.slice(2));
 go(mock);
 

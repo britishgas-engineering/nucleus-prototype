@@ -68,3 +68,20 @@
 <nsx-address-selector name="address" required="true"></nsx-address-selector>
 {% endmacro %}
 
+
+{% macro selector(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter heading="What product do you want?" name="gas" value="">
+  {% for option in options %}
+      <ns-selector decoration="" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
+    <input type="radio" name="question" value="gas" id="{{ option.value }}">
+    <label for="{{ option.value }}">{{ option.label }}</label>
+    <div slot="description" id="selector-nsid-rqsagueiju8">
+
+      <h3 class="h5 enlighten">About gas tariff</h3>
+      {{ option.description }}
+
+    </div>
+  </ns-selector>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}
