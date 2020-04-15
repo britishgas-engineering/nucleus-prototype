@@ -12,6 +12,12 @@ if (configFile) {
 let data = fs.readFileSync(`${configFile}.json`);
 let journey = JSON.parse(data);
 
+// Help and support
+var mock = {
+  project: journey.name,
+  template: journey.template
+};
+
 // var helpandsupport2 = [{
 //   title: 'Help and Support: Meters',
 //   description: 'How do you pay for your electricity?',
@@ -307,17 +313,13 @@ const go = (response) => {
 
 }
 
-// Hard code
-var mock = {
-  project: 'andy001',
-  template: 'multi-page-form'
-};
+// // Hard code
+// var mock = {
+//   project: 'andy001',
+//   template: 'multi-page-form'
+// };
 
-// Help and support
-var mock = {
-  project: 'help-and-support',
-  template: 'help-and-support-multi'
-};
+
 
 var args = parseArgs(process.argv.slice(2));
 go(mock);

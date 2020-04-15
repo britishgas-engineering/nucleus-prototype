@@ -1,4 +1,6 @@
 {
+    "name" : "nucleus",
+    "template" : "multi-page-form",
     "pages": [{
             "title": "Personal details",
             "description": "First we need to know a little bit about you",

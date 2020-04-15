@@ -1,4 +1,6 @@
 {
+   "name" : "help",
+   "template" : "help-and-support-multi",
    "pages": [{
          "title": "Help and Support: Meters",
          "description": "How do you pay for your electricity?",
