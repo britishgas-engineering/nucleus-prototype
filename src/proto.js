@@ -114,7 +114,7 @@ function updateUI() {
             // })
 
             // Or we could update all fields, so you could have duplicate fields????
-            var inputters = form.querySelectorAll('ns-inputter').forEach((inputter) => {
+            var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach((inputter) => {
                 var fieldName = inputter.getAttribute('name');
                 console.log('update field ' + fieldName + ' ' + formData);
                 var val = formData.fields && formData.fields.find((field) => {
@@ -152,7 +152,7 @@ var forms = document.querySelectorAll('ns-form');
 forms.forEach((form, index) => {
     const formPath = form.getAttribute('nf-model');
     if (formPath) {
-        form.querySelectorAll('ns-inputter, nsx-address-selector').forEach((inputter) => {
+        form.querySelectorAll('ns-inputter, nsx-address-selector, ns-datepicker').forEach((inputter) => {
             inputter.removeEventListener('change', changeHandler);
             inputter.setAttribute('nf-model-path', formPath + '.fields.' + inputter.getAttribute('name'));
             inputter.addEventListener('change', changeHandler);
@@ -239,17 +239,21 @@ const addresses = [{
     "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
 }];
 
-document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
-    setTimeout(() => {
-        event.target.addresses = addresses;
-    }, 200);
+var addressSelector = document.querySelector('nsx-address-selector');
+if(addressSelector) {
+    addressSelector.addEventListener('postcode-selected', (event) => {
+        setTimeout(() => {
+            event.target.addresses = addresses;
+        }, 200);
+    });
+}
 
-});
-
-document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
-    console.log('Address selected ' + event.detail.address.label);
-    //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
-    if(event.target.getAttribute('nf-model-path')) {
-        setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
-    }
-});
+if(addressSelector) {
+    addressSelector.addEventListener('address-selected', (event) => {
+        console.log('Address selected ' + event.detail.address.label);
+        //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+        if(event.target.getAttribute('nf-model-path')) {
+            setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
+        }
+    });
+}

@@ -3,37 +3,17 @@
 var forms = [{
     title: 'Personal details',
     description: 'First we need to know a little bit about you',
-    fields: [{
-      name: 'title',
-      label: 'Title:',
-      type: 'select',
-      options: `['Mr', 'Mrs', 'Ms']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'firstname',
-      label: 'First Name:',
-      type: 'text',
-      validation: `["isRequired"]`
-    }, {
-      name: 'surname',
-      label: 'Surname:',
-      type: 'text',
-      validation: `["isRequired"]`
-    }, {
-      name: 'address',
-      label: 'Address:',
-      type: 'address'
-    },
-    {
-      name: 'email',
-      label: 'Email:',
-      type: 'text',
-      validation: `["isRequired", "isEmail"]`
-    },
+    fields: [
     {
       name: 'dob',
       label: 'Date of Birth:',
       type: 'date',
+      validation: `["isRequired"]`
+    },
+    {
+      name: 'dob-date',
+      label: 'Pick a date:',
+      type: 'datePicker',
       validation: `["isRequired"]`
     }
   ]
@@ -60,38 +40,17 @@ var forms = [{
     fields: [{
       name: 'appointment-date',
       label: 'Pick a date:',
-      type: 'date'
+      type: 'datePicker'
     }]
   },
   {
     title: 'Your appointment',
-    description: 'What time slot would you like to choose on ${model.form2.appointment-date}',
+    description: 'What time slot would you like to choose [XXX] on ${model.form2.appointment-date}',
     fields: [{
       name: 'appointment-slot',
       label: 'Pick a time slot?:',
       type: 'radio',
       options: `['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']`,
-      validation: `["isRequired"]`
-    }]
-  },
-  {
-    title: 'Your Vehicle',
-    description: 'Tell us about your vehicle',
-    fields: [{
-      name: 'car-make',
-      label: 'Car Make:',
-      type: 'select',
-      options: `['Audi', 'BMW', 'Skoda']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'car-model',
-      label: 'Car Model',
-      type: 'text',
-      validation: `["isRequired"]`
-    }, {
-      name: 'car-reg',
-      label: 'Car registration number:',
-      type: 'text',
       validation: `["isRequired"]`
     }]
   },
@@ -313,6 +272,8 @@ const go = (response) => {
   shell.ls('*.njk').forEach(function (file) {
     shell.sed('-i', 'PROJECT_NAME', project, file);
     shell.sed('-i', 'PROJECT_TITLE', formatProjectName(project), file);
+    shell.sed('-i', 'START_JOURNEY_BUTTON', 'Start your quote!!!!', file);
+    
   })
 
   shell.cd('../..');

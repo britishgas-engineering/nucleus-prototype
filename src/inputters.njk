@@ -60,6 +60,10 @@
 {% endmacro %}
 
 
+{% macro datePicker(name, label, validation, options, mask=null, separator=null) %}
+<ns-datepicker name="date-picker" year="2020" month="3"></ns-datepicker>
+{% endmacro %}
+
 {% macro address(name, label, validation, options, mask=null, separator=null) %}
 <nsx-address-selector name="address" required="true"></nsx-address-selector>
 {% endmacro %}
