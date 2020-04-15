@@ -1,0 +1,82 @@
+{
+    "pages": [{
+            "title": "Personal details",
+            "description": "First we need to know a little bit about you",
+            "fields": [{
+                    "name": "dob",
+                    "label": "Date of Birth:",
+                    "type": "date",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "dob-date",
+                    "label": "Pick a date:",
+                    "type": "datePicker",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "title": "Customer information",
+            "description": "Let us know what type of energy you are interested in",
+            "fields": [{
+                    "name": "bg-customer",
+                    "label": "Are you a British Gas customer?:",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "energy-type",
+                    "label": "What type of energy would you like?:",
+                    "type": "checkbox",
+                    "options": "['Gas', 'Electricity', 'Both']",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "title": "Pick a date for your home visit?",
+            "description": "What date would you like an engineer to visit?",
+            "fields": [{
+                "name": "appointment-date",
+                "label": "Pick a date:",
+                "type": "datePicker"
+            }]
+        },
+        {
+            "title": "Your appointment",
+            "description": "What time slot would you like to choose [XXX] on ${model.form2.appointment-date}",
+            "fields": [{
+                "name": "appointment-slot",
+                "label": "Pick a time slot?:",
+                "type": "radio",
+                "options": "['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']",
+                "validation": "[\"isRequired\"]"
+            }]
+        },
+        {
+            "title": "Payment Details",
+            "description": "In order for us to set up this account we need your payment details",
+            "fields": [{
+                    "title": "Banking Details",
+                    "description": "This is a descripton",
+                    "name": "sort-code",
+                    "label": "Sort code:",
+                    "type": "text",
+                    "mask": "00-00-00",
+                    "separator": "-",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "account-number",
+                    "label": "Account number:",
+                    "type": "text",
+                    "mask": "00000000",
+                    "separator": "",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        }
+    ]
+}

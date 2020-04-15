@@ -1,43 +1,57 @@
 #!/usr/bin/env node
+var shell = require("shelljs");
+var parseArgs = require("minimist");
+const fs = require('fs');
 
-var helpandsupport = [{
-  title: 'Help and Support: Meters',
-  description: 'How do you pay for your electricity?',
-  fields: [{
-    name: 'energy-type',
-    label: 'How do you pay for your electricity?',
-    type: 'selector',
-    options: `[{
-      label: 'Monthly Bill',
-      value: 'monthly',
-      description: 'You pay your bill monthly'
-    }, {
-      label: 'Top up (pay as you go)',
-      value: 'pay-as-you-go',
-      description: 'You pay your bill as you go'
-    }]`,
-    validation: `["isRequired"]`
-  }]
-},
-  {
-    title: 'Help and Support: Meters',
-    description: 'Which type of meter do you have?',
-    fields: [{
-      name: 'meter-type',
-      label: 'How do you pay for your electricity?',
-      type: 'selector',
-      options: `[{
-        label: 'Smart',
-        value: 'smart',
-        description: 'Smart meters are really smart'
-      }, {
-        label: 'Non Smart',
-        value: 'non-smart',
-        description: 'These are not very smart'
-      }]`,
-      validation: `["isRequired"]`
-    }]
-}];
+var args = parseArgs(process.argv.slice(2));
+const configFile = args._[0];
+if (configFile) {
+  console.log('Arg ' + configFile);
+}
+
+let data = fs.readFileSync(`${configFile}.json`);
+let journey = JSON.parse(data);
+
+// var helpandsupport2 = [{
+//   title: 'Help and Support: Meters',
+//   description: 'How do you pay for your electricity?',
+//   fields: [{
+//     name: 'energy-type',
+//     label: 'How do you pay for your electricity?',
+//     type: 'selector',
+//     options: `[{
+//       label: 'Monthly Bill',
+//       value: 'monthly',
+//       description: 'You pay your bill monthly'
+//     }, {
+//       label: 'Top up (pay as you go)',
+//       value: 'pay-as-you-go',
+//       description: 'You pay your bill as you go'
+//     }]`,
+//     validation: `["isRequired"]`
+//   }]
+// },
+//   {
+//     title: 'Help and Support: Meters',
+//     description: 'Which type of meter do you have?',
+//     fields: [{
+//       name: 'meter-type',
+//       label: 'How do you pay for your electricity?',
+//       type: 'selector',
+//       options: `[{
+//         label: 'Smart',
+//         value: 'smart',
+//         description: 'Smart meters are really smart'
+//       }, {
+//         label: 'Non Smart',
+//         value: 'non-smart',
+//         description: 'These are not very smart'
+//       }]`,
+//       validation: `["isRequired"]`
+//     }]
+// }];
+
+
 
 
 // Options
@@ -45,124 +59,87 @@ var helpandsupport = [{
 
 
 
-var forms = [{
-    title: 'Personal details',
-    description: 'First we need to know a little bit about you',
-    fields: [
-    {
-      name: 'dob',
-      label: 'Date of Birth:',
-      type: 'date',
-      validation: `["isRequired"]`
-    },
-    {
-      name: 'dob-date',
-      label: 'Pick a date:',
-      type: 'datePicker',
-      validation: `["isRequired"]`
-    }
-  ]
-  }, {
-    title: 'Customer information',
-    description: 'Let us know what type of energy you are interested in',
-    fields: [{
-      name: 'bg-customer',
-      label: 'Are you a British Gas customer?:',
-      type: 'radio',
-      options: `['Yes', 'No']`,
-      validation: `["isRequired"]`
-    }, {
-      name: 'energy-type',
-      label: 'What type of energy would you like?:',
-      type: 'checkbox',
-      options: `['Gas', 'Electricity', 'Both']`,
-      validation: `["isRequired"]`
-    }]
-  },
-  {
-    title: 'Pick a date for your home visit?',
-    description: 'What date would you like an engineer to visit?',
-    fields: [{
-      name: 'appointment-date',
-      label: 'Pick a date:',
-      type: 'datePicker'
-    }]
-  },
-  {
-    title: 'Your appointment',
-    description: 'What time slot would you like to choose [XXX] on ${model.form2.appointment-date}',
-    fields: [{
-      name: 'appointment-slot',
-      label: 'Pick a time slot?:',
-      type: 'radio',
-      options: `['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']`,
-      validation: `["isRequired"]`
-    }]
-  },
-  {
-    title: 'Payment Details',
-    description: 'In order for us to set up this account we need your payment details',
-    fields: [{
-      title: 'Banking Details',
-      description: 'This is a descripton',
-      name: 'sort-code',
-      label: 'Sort code:',
-      type: 'text',
-      mask: '00-00-00',
-      separator: '-',
-      validation: `["isRequired"]`
-    },{
-      name: 'account-number',
-      label: 'Account number:',
-      type: 'text',
-      mask: '00000000',
-      separator: '',
-      validation: `["isRequired"]`
-    },]
-  }
-];
+// var forms = [{
+//     title: 'Personal details',
+//     description: 'First we need to know a little bit about you',
+//     fields: [
+//     {
+//       name: 'dob',
+//       label: 'Date of Birth:',
+//       type: 'date',
+//       validation: `["isRequired"]`
+//     },
+//     {
+//       name: 'dob-date',
+//       label: 'Pick a date:',
+//       type: 'datePicker',
+//       validation: `["isRequired"]`
+//     }
+//   ]
+//   }, {
+//     title: 'Customer information',
+//     description: 'Let us know what type of energy you are interested in',
+//     fields: [{
+//       name: 'bg-customer',
+//       label: 'Are you a British Gas customer?:',
+//       type: 'radio',
+//       options: `['Yes', 'No']`,
+//       validation: `["isRequired"]`
+//     }, {
+//       name: 'energy-type',
+//       label: 'What type of energy would you like?:',
+//       type: 'checkbox',
+//       options: `['Gas', 'Electricity', 'Both']`,
+//       validation: `["isRequired"]`
+//     }]
+//   },
+//   {
+//     title: 'Pick a date for your home visit?',
+//     description: 'What date would you like an engineer to visit?',
+//     fields: [{
+//       name: 'appointment-date',
+//       label: 'Pick a date:',
+//       type: 'datePicker'
+//     }]
+//   },
+//   {
+//     title: 'Your appointment',
+//     description: 'What time slot would you like to choose [XXX] on ${model.form2.appointment-date}',
+//     fields: [{
+//       name: 'appointment-slot',
+//       label: 'Pick a time slot?:',
+//       type: 'radio',
+//       options: `['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']`,
+//       validation: `["isRequired"]`
+//     }]
+//   },
+//   {
+//     title: 'Payment Details',
+//     description: 'In order for us to set up this account we need your payment details',
+//     fields: [{
+//       title: 'Banking Details',
+//       description: 'This is a descripton',
+//       name: 'sort-code',
+//       label: 'Sort code:',
+//       type: 'text',
+//       mask: '00-00-00',
+//       separator: '-',
+//       validation: `["isRequired"]`
+//     },{
+//       name: 'account-number',
+//       label: 'Account number:',
+//       type: 'text',
+//       mask: '00000000',
+//       separator: '',
+//       validation: `["isRequired"]`
+//     },]
+//   }
+// ];
 
-
-var shell = require("shelljs");
-var parseArgs = require("minimist")
-
-const prompts = require('prompts');
-
-const questions = [{
-    type: 'select',
-    name: 'template',
-    message: 'Pick a template to base your project on',
-    choices: [{
-        title: 'Multi Page Form',
-        description: 'A form with multi parts.',
-        value: 'multi-page-form'
-      },
-      {
-        title: 'Single Page Collapsible Form',
-        description: 'A journey with pages.',
-        value: 'project'
-      },
-      {
-        title: 'Foo Journey',
-        description: 'A foo journey.',
-        value: 'project'
-      }
-    ]
-  },
-  {
-    type: 'number',
-    name: 'numForms',
-    message: 'How many forms do you want?'
-  },
-  {
-    type: 'text',
-    name: 'project',
-    message: 'Enter the name for your new project?  Use lowercase letters, separate words with hyphens, eg: "my-project"',
-    validate: (value) => value.length > 0 ? true : `Ypou didn't enter a name for your project`
-  }
-];
 
 const go = (response) => {
+
+  forms = journey.pages;
 
   const command = args._[0] || 'g';
   const template = args._[1] || response.template;
@@ -337,13 +314,12 @@ var mock = {
 };
 
 // Help and support
-forms = helpandsupport;
 var mock = {
   project: 'help-and-support',
   template: 'help-and-support-multi'
 };
 
-let args = parseArgs(process.argv.slice(2));
+var args = parseArgs(process.argv.slice(2));
 go(mock);
 
 

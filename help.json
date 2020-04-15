@@ -1,0 +1,25 @@
+{
+   "pages": [{
+         "title": "Help and Support: Meters",
+         "description": "How do you pay for your electricity?",
+         "fields": [{
+            "name": "energy-type",
+            "label": "How do you pay for your electricity?",
+            "type": "selector",
+            "options": "[{label: 'Monthly Bill',value: 'monthly',description: 'You pay your bill monthly'\n    }, {label: 'Top up (pay as you go)',value: 'pay-as-you-go',description: 'You pay your bill as you go'\n    }]",
+            "validation": "[\"isRequired\"]"
+         }]
+      },
+      {
+         "title": "Help and Support: Meters",
+         "description": "Which type of meter do you have?",
+         "fields": [{
+            "name": "meter-type",
+            "label": "How do you pay for your electricity?",
+            "type": "selector",
+            "options": "[{  label: 'Smart',  value: 'smart',  description: 'Smart meters are really smart'}, {  label: 'Non Smart',  value: 'non-smart',  description: 'These are not very smart'}]",
+            "validation": "[\"isRequired\"]"
+         }]
+      }
+   ]
+}
