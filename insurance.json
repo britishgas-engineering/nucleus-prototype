@@ -1,0 +1,146 @@
+{
+    "name" : "home-insurance",
+    "title" : "Home Insurance",
+    "template" : "multi-page-form",
+    "pages": [{
+            "title": "Get a Home Insurance quote",
+            "description": "",
+            "fields": [{
+                    "name": "rental",
+                    "label": "Are you a landlord looking to cover your rental property?",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "info-correct",
+                    "label": "The information in the box above is correct.",
+                    "type": "checkbox",
+                    "options": "['I agree']",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "title": "Get a Home Insurance quote",
+            "description": "The address of the home you want to insure is",
+            "fields": [{
+                    "name": "ownership",
+                    "label": "When would you like your cover to start?",
+                    "type": "radio",
+                    "options": "['Own', 'Mortgage', 'Rent']",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "living",
+                    "label": "Are you currently living there?",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "start-date",
+                    "label": "Do you own or rent your home?",
+                    "type": "datePicker",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "title": "Your details",
+            "description": "",
+            "fields": [{
+                "name": "title",
+                "label": "Title",
+                "type": "select",
+                "options": "['Mr', 'Mrs']",
+                "validation": "[\"isRequired\"]"
+            },{
+                "name": "first-name",
+                "label": "First Name",
+                "type": "text",
+                "validation": "[\"isRequired\"]"
+            },{
+                "name": "surname",
+                "label": "Surname",
+                "type": "text",
+                "validation": "[\"isRequired\"]"
+            },{
+                "name": "email",
+                "label": "Email",
+                "type": "text",
+                "validation": "[\"isRequired\", \"isEmail\"]"
+            },
+            {
+                "name": "phone",
+                "label": "Phone",
+                "type": "text",
+                "validation": "[\"isRequired\"]"
+            },
+            {
+                "name": "dob",
+                "label": "Date of birth",
+                "type": "datePicker",
+                "validation": "[\"isRequired\"]"
+            },
+            {
+                "name": "dob2",
+                "label": "Date of birth",
+                "type": "text",
+                "validation": "[\"isRequired\"]",
+                "mask": "dd/mm/yyyy",
+                "separator": "/"
+            },
+            {
+                "name": "phone",
+                "label": "Phone",
+                "type": "text",
+                "validation": "[\"isRequired\"]"
+            }
+            ]
+        },
+        {
+            "title": "Your previous Home Insurance",
+            "description": "",
+            "fields": [{
+                    "name": "previous-buildings",
+                    "label": "Have you had Buildings Insurance in the past?",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "previous-contents",
+                    "label": "Have you had Contents Insurance in the past?",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "title": "Personal Possessions Cover for items away from the home",
+            "description": "",
+            "fields": [
+                {
+                    "name": "item-cover",
+                    "label": "Type of cover?",
+                    "type": "selector",
+                    "options": "[{label: 'Unspecified Item Cover',value: 'unspecified',description: 'Add cover for personal possessions (e.g. phone, laptop, watch) away from your home that are worth up to £2000 each and £10,000 in total.'\n    }, {label: 'Specified Item Cover',value: 'specified',description: 'Add cover for personal possessions away from your home that are worth more than £2000 each and up to £20,000 in total (e.g. jewellery, watches, cameras etc.)'\n    }]",
+                    "validation": "[\"isRequired\"]"
+                 }
+            ]
+        },
+        {
+            "title": "Your appointment",
+            "description": "What time slot would you like to choose [XXX] on ${model.form2.appointment-date}",
+            "fields": [{
+                "name": "appointment-slot",
+                "label": "Pick a time slot?:",
+                "type": "radio",
+                "options": "['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']",
+                "validation": "[\"isRequired\"]"
+            }]
+        }
+    ]
+}

@@ -15,7 +15,8 @@ let journey = JSON.parse(data);
 // Help and support
 var mock = {
   project: journey.name,
-  template: journey.template
+  template: journey.template,
+  title: journey.title
 };
 
 // var helpandsupport2 = [{
@@ -298,7 +299,7 @@ const go = (response) => {
 
   // set front matter
   shell.ls('*.njk').forEach(function (file) {
-    shell.sed('-i', 'PROJECT_NAME', project, file);
+    shell.sed('-i', 'PROJECT_NAME', response.title, file);
     shell.sed('-i', 'PROJECT_TITLE', formatProjectName(project), file);
     shell.sed('-i', 'START_JOURNEY_BUTTON', 'Start your quote!!!!', file);
     

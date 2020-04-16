@@ -27,8 +27,8 @@
 {% macro checkbox(name, label, validation, options) %}
 <ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
     {% for option in options %}
-      <input type="checkbox" id="radio-question-{{ option }}" name="radio-question" value="{{ option }}">
-      <label for="radio-question-{{ option }}">{{ option }}</label>
+      <input type="checkbox" id="checkbox-question-{{ option }}" name="radio-question" value="{{ option }}">
+      <label for="checkbox-question-{{ option }}">{{ option }}</label>
     {% endfor %}
 </ns-inputter>
 {% endmacro %}
@@ -36,8 +36,8 @@
 {% macro radio(name, label, validation, options) %}
 <ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
     {% for option in options %}
-      <input type="radio" id="radio-question-{{ option }}" name="radio-question" value="{{ option }}">
-      <label for="radio-question-{{ option }}">{{ option }}</label>
+      <input type="radio" id="radio-{{ name }}-{{ option }}" name="radio-{{ name }}" value="{{ option }}">
+      <label for="radio-{{ name }}-{{ option }}">{{ option }}</label>
     {% endfor %}
 </ns-inputter>
 {% endmacro %}
