@@ -1,0 +1,3 @@
+{% import "./../inputters.njk" as inputter %}
+    {{ inputter.selector('meter-type', 'How do you pay for your electricity?', '["isRequired"]', [{  label: 'Smart',  value: 'smart',  description: 'Smart meters are really smart'}, {  label: 'Non Smart',  value: 'non-smart',  description: 'These are not very smart'}], 'undefined', 'undefined') }}
+      
