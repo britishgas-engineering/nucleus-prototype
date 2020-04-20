@@ -154,7 +154,7 @@ const go = (response) => {
 
   console.log('Template ' + template);
 
-  const projectPath = 'src/' + project;
+  const projectPath = 'cli-build/' + project;
 
   if (!command) {
     console.log('No command was entered.  Supported commands are: g (generate) only.');
@@ -258,6 +258,7 @@ const go = (response) => {
       shell.cp('-rf', pageTemplate, pagePath);
 
       var nextForm = i < forms.length - 1 ? 'page-' + (i + 2) : 'summary';
+      var customPageScript = 'custom-page-script' + (i + 1);
 
       // Add include to form
       shell.ls(pagePath).forEach(function (file) {
@@ -265,6 +266,7 @@ const go = (response) => {
         shell.sed('-i', 'NEXT_FORM', nextForm, file);
         shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
         shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
+        shell.sed('-i', 'CUSTOM_PAGE_SCRIPT', customPageScript, file);
       });
 
     }
@@ -307,7 +309,7 @@ const go = (response) => {
 
   shell.cd('../..');
 
-  shell.cp('src/*.js', 'dist');
+  shell.cp('cli-build/*.js', 'dist');
 
   // Generate project
   shell.exec("npx @11ty/eleventy --serve");

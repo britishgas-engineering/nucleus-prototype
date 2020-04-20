@@ -19,6 +19,12 @@
                     "options": "['I agree']",
                     "validation": "[\"isRequired\"]"
                 }
+                ,{
+                    "name": "date-picker",
+                    "label": "Pick a date",
+                    "type": "date",
+                    "validation": "[\"isRequired\"]"
+                }
             ]
         },
         {

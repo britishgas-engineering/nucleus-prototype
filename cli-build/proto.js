@@ -34,14 +34,13 @@ ctas.forEach((cta) => {
             var button = event.currentTarget;
             //Check if this is in a form
             var form = button.parentElement.querySelector('ns-form');
-
             if (form) {
                 console.log('This is in a form!!!!');
                 if(form.isValid) {
-                    console.log('Form is valid lets move to next page: ' + cta.getAttribute('nf-href'));
                     button.setAttribute('loading', 'true');
                     saveModel(model);
-                    loadURL(cta.getAttribute('nf-href'));
+                    const nextURL = cta.getAttribute('nf-href') === 'DYNAMIC' ? getDynamicURL() : cta.getAttribute('nf-href');
+                    loadURL(nextURL);
                 }
             } else {
                 console.log('This is NOT in a form!!!!');
@@ -49,6 +48,10 @@ ctas.forEach((cta) => {
         });
     }
 });
+
+// function getDynamicURL() {
+//     return 'default dynamic url';
+// }
 
 function loadURL(url) {
     setTimeout(() => {
