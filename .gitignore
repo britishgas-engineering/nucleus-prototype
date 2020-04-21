@@ -1,8 +1,6 @@
 # compiled output
 /dist
 
-/cli-build
-
 # dependencies
 /node_modules
 

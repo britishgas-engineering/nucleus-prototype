@@ -49,6 +49,8 @@ const go = (response) => {
   // Delete dist
   shell.rm('-rf', 'dist/*')
 
+  // shell.mkdir('dist');
+
   // Copy template project to new project
   shell.rm('-rf', projectPath)
   shell.mkdir(projectPath);
