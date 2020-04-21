@@ -70,7 +70,7 @@
 
 
 {% macro selector(name, label, validation, options, mask=null, separator=null) %}
-<ns-inputter heading="{{ label }}" name="{{ name }}" value="">
+<ns-inputter heading="{{ label }}" validation="{{ validation }}" name="{{ name }}" value="">
   {% for option in options %}
       <ns-selector decoration="" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
     <input type="radio" name="question" value="{{ option.value }}" id="{{ option.value }}">
