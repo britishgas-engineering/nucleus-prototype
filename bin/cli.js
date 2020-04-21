@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var shell = require("shelljs");
 var parseArgs = require("minimist");
 const fs = require('fs');
@@ -136,7 +137,7 @@ const go = (response) => {
 
       // Copy script to relevant folder
       shell.cp('-rf', `src/${project}/scripts/${pageName}.js`, `${projectPath}`);
-      
+
       // Add include to form
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_INCLUDE_PATH', `{% include "./form${(i + 1)}.njk" %}`, file);
@@ -181,7 +182,7 @@ const go = (response) => {
     shell.sed('-i', 'PROJECT_NAME', response.title, file);
     shell.sed('-i', 'PROJECT_TITLE', formatProjectName(project), file);
     shell.sed('-i', 'START_JOURNEY_BUTTON', 'Start your quote!!!!', file);
-    
+
   })
 
   shell.cd('../..');
@@ -189,17 +190,16 @@ const go = (response) => {
   shell.cp('cli-build/*.js', 'dist');
 
   // Generate project
+  shell.exec("npx @11ty/eleventy");
+
+  shell.ls(`${projectPath}/*.js`).forEach(function (file) {
+    console.log('COPY JS ' + file);
+    shell.cp('-rf', file, 'dist/help');
+  })
+
   shell.exec("npx @11ty/eleventy --serve");
 
 }
-
-// // Hard code
-// var mock = {
-//   project: 'andy001',
-//   template: 'multi-page-form'
-// };
-
-
 
 var args = parseArgs(process.argv.slice(2));
 go(mock);
