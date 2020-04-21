@@ -3,6 +3,7 @@
     "title" : "Home Insurance",
     "template" : "multi-page-form",
     "pages": [{
+            "name": "intro",
             "title": "Get a Home Insurance quote",
             "description": "",
             "fields": [{
@@ -28,6 +29,7 @@
             ]
         },
         {
+            "name": "ownership",
             "title": "Get a Home Insurance quote",
             "description": "The address of the home you want to insure is",
             "fields": [{
@@ -53,6 +55,7 @@
             ]
         },
         {
+            "name": "personal",
             "title": "Your details",
             "description": "",
             "fields": [{
@@ -106,6 +109,7 @@
             ]
         },
         {
+            "name": "previous",
             "title": "Your previous Home Insurance",
             "description": "",
             "fields": [{
@@ -125,6 +129,7 @@
             ]
         },
         {
+            "name": "possessions",
             "title": "Personal Possessions Cover for items away from the home",
             "description": "",
             "fields": [
@@ -138,6 +143,7 @@
             ]
         },
         {
+            "name": "appointment",
             "title": "Your appointment",
             "description": "What time slot would you like to choose [XXX] on ${model.form2.appointment-date}",
             "fields": [{
