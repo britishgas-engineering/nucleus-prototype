@@ -9,7 +9,7 @@ if (configFile) {
   console.log('Arg ' + configFile);
 }
 
-let data = fs.readFileSync(`${configFile}.json`);
+let data = fs.readFileSync(`src/${configFile}/config.json`);
 let journey = JSON.parse(data);
 
 // Help and support
@@ -18,130 +18,6 @@ var mock = {
   template: journey.template,
   title: journey.title
 };
-
-// var helpandsupport2 = [{
-//   title: 'Help and Support: Meters',
-//   description: 'How do you pay for your electricity?',
-//   fields: [{
-//     name: 'energy-type',
-//     label: 'How do you pay for your electricity?',
-//     type: 'selector',
-//     options: `[{
-//       label: 'Monthly Bill',
-//       value: 'monthly',
-//       description: 'You pay your bill monthly'
-//     }, {
-//       label: 'Top up (pay as you go)',
-//       value: 'pay-as-you-go',
-//       description: 'You pay your bill as you go'
-//     }]`,
-//     validation: `["isRequired"]`
-//   }]
-// },
-//   {
-//     title: 'Help and Support: Meters',
-//     description: 'Which type of meter do you have?',
-//     fields: [{
-//       name: 'meter-type',
-//       label: 'How do you pay for your electricity?',
-//       type: 'selector',
-//       options: `[{
-//         label: 'Smart',
-//         value: 'smart',
-//         description: 'Smart meters are really smart'
-//       }, {
-//         label: 'Non Smart',
-//         value: 'non-smart',
-//         description: 'These are not very smart'
-//       }]`,
-//       validation: `["isRequired"]`
-//     }]
-// }];
-
-
-
-
-// Options
-
-
-
-
-// var forms = [{
-//     title: 'Personal details',
-//     description: 'First we need to know a little bit about you',
-//     fields: [
-//     {
-//       name: 'dob',
-//       label: 'Date of Birth:',
-//       type: 'date',
-//       validation: `["isRequired"]`
-//     },
-//     {
-//       name: 'dob-date',
-//       label: 'Pick a date:',
-//       type: 'datePicker',
-//       validation: `["isRequired"]`
-//     }
-//   ]
-//   }, {
-//     title: 'Customer information',
-//     description: 'Let us know what type of energy you are interested in',
-//     fields: [{
-//       name: 'bg-customer',
-//       label: 'Are you a British Gas customer?:',
-//       type: 'radio',
-//       options: `['Yes', 'No']`,
-//       validation: `["isRequired"]`
-//     }, {
-//       name: 'energy-type',
-//       label: 'What type of energy would you like?:',
-//       type: 'checkbox',
-//       options: `['Gas', 'Electricity', 'Both']`,
-//       validation: `["isRequired"]`
-//     }]
-//   },
-//   {
-//     title: 'Pick a date for your home visit?',
-//     description: 'What date would you like an engineer to visit?',
-//     fields: [{
-//       name: 'appointment-date',
-//       label: 'Pick a date:',
-//       type: 'datePicker'
-//     }]
-//   },
-//   {
-//     title: 'Your appointment',
-//     description: 'What time slot would you like to choose [XXX] on ${model.form2.appointment-date}',
-//     fields: [{
-//       name: 'appointment-slot',
-//       label: 'Pick a time slot?:',
-//       type: 'radio',
-//       options: `['9am - 1pm', '1pm - 6pm', '10am - 2pm', '8am - 6pm']`,
-//       validation: `["isRequired"]`
-//     }]
-//   },
-//   {
-//     title: 'Payment Details',
-//     description: 'In order for us to set up this account we need your payment details',
-//     fields: [{
-//       title: 'Banking Details',
-//       description: 'This is a descripton',
-//       name: 'sort-code',
-//       label: 'Sort code:',
-//       type: 'text',
-//       mask: '00-00-00',
-//       separator: '-',
-//       validation: `["isRequired"]`
-//     },{
-//       name: 'account-number',
-//       label: 'Account number:',
-//       type: 'text',
-//       mask: '00000000',
-//       separator: '',
-//       validation: `["isRequired"]`
-//     },]
-//   }
-// ];
 
 
 const go = (response) => {
@@ -180,8 +56,6 @@ const go = (response) => {
   // Multi page form puts each form on a new page
   var multiPage = template.indexOf('multi') !== -1;
 
-  // NEW
-
   // Generate individual Form Field templates
   for (var i = 0; i < forms.length; i++) {
     var content = `{% import "./../inputters.njk" as inputter %}
@@ -200,7 +74,6 @@ const go = (response) => {
     content = `{% import "./../../inputters.njk" as inputter %}
     `;
   }
-
 
   // Generate individual Form templates
   if (multiPage) {
@@ -253,13 +126,17 @@ const go = (response) => {
   if (multiPage) {
     for (var i = 0; i < forms.length; i++) {
       // Create a new page for each form
-      var pagePath = projectPath + '/page-' + (i + 1) + '.njk';
+      var pageName = forms[i].name;
+      var pagePath = projectPath + `/${pageName}.njk`;
       var pageTemplate = projectPath + '/page.njk';
       shell.cp('-rf', pageTemplate, pagePath);
 
-      var nextForm = i < forms.length - 1 ? 'page-' + (i + 2) : 'summary';
-      var customPageScript = 'custom-page-script' + (i + 1);
+      var nextForm = i < forms.length - 1 ? forms[i + 1].name : 'summary';
+      var customPageScript = `../${pageName}.js`;
 
+      // Copy script to relevant folder
+      shell.cp('-rf', `src/${project}/scripts/${pageName}.js`, `${projectPath}`);
+      
       // Add include to form
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_INCLUDE_PATH', `{% include "./form${(i + 1)}.njk" %}`, file);

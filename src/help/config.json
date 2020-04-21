@@ -2,6 +2,7 @@
    "name" : "help",
    "template" : "help-and-support-multi",
    "pages": [{
+         "name" : "energy",
          "title": "Help and Support: Meters",
          "description": "How do you pay for your electricity?",
          "fields": [{
@@ -13,6 +14,7 @@
          }]
       },
       {
+         "name" : "meter",
          "title": "Help and Support: Meters",
          "description": "Which type of meter do you have?",
          "fields": [{
