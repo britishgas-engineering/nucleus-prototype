@@ -1,0 +1,87 @@
+{% macro attributes(mask, separator) %}
+{% if mask == 'undefined'  %}
+{% else %}
+  mask="{{mask}}"
+{% endif %}
+{% if separator == 'undefined'  %}
+{% else %}
+  separator="{{separator}}"
+{% endif %}
+{% endmacro %}
+
+
+{% macro text(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter validation="{{ validation }}" name="{{ name }}" {{attributes(mask, separator)}} >
+    <label slot="label" for="surname">{{ label }}</label>
+    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false">
+</ns-inputter>
+{% endmacro %}
+
+{% macro date(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter name="{{ name }}" validation="[&quot;isRequired&quot;,&quot;isDateOfBirth&quot;]" >
+    <label slot="label" for="date">{{ label }}</label>
+    <input id="date" autocomplete="family-name" type="date" aria-invalid="false">
+</ns-inputter>
+{% endmacro %}
+
+{% macro checkbox(name, label, validation, options) %}
+<ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
+    {% for option in options %}
+      <input type="checkbox" id="checkbox-question-{{ option }}" name="radio-question" value="{{ option }}">
+      <label for="checkbox-question-{{ option }}">{{ option }}</label>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}
+
+{% macro radio(name, label, validation, options) %}
+<ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
+    {% for option in options %}
+      <input type="radio" id="radio-{{ name }}-{{ option }}" name="radio-{{ name }}" value="{{ option }}">
+      <label for="radio-{{ name }}-{{ option }}">{{ option }}</label>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}
+
+{% macro select(name, label, validation, options) %}
+<ns-inputter validation="{{ validation }}" name="{{ name }}">
+    <label slot="label">{{ label }}</label>
+    <select autocomplete="honorific-prefix" name="select">
+        <option value="">Please Select</option>
+        {% for option in options %}
+        <div class="module">
+           <option value="{{ option }}">{{ option }}</option>
+        </div>
+        {% endfor %}
+    </select>
+</ns-inputter>
+{% endmacro %}
+
+{% macro xxx(text) %}
+{% endmacro %}
+
+
+{% macro datePicker(name, label, validation, options, mask=null, separator=null) %}
+<ns-datepicker name="date-picker" year="2020" month="3"></ns-datepicker>
+{% endmacro %}
+
+{% macro address(name, label, validation, options, mask=null, separator=null) %}
+<nsx-address-selector name="address" required="true"></nsx-address-selector>
+{% endmacro %}
+
+
+{% macro selector(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter heading="{{ label }}" name="{{ name }}" value="">
+  {% for option in options %}
+      <ns-selector decoration="" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
+    <input type="radio" name="question" value="{{ option.value }}" id="{{ option.value }}">
+    <label for="{{ option.value }}">{{ option.label }}</label>
+    <div slot="description" id="selector-nsid-rqsagueiju8">
+
+      <h3 class="h5 enlighten">{{ option.description }}</h3>
+      {{ option.description }}
+
+    </div>
+  </ns-selector>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}

@@ -187,15 +187,15 @@ const go = (response) => {
 
   shell.cd('../..');
 
-  shell.cp('cli-build/*.js', 'dist');
+  // shell.cp('cli-build/*.js', 'dist');
 
-  // Generate project
-  shell.exec("npx @11ty/eleventy");
+  // // Generate project
+  // shell.exec("npx @11ty/eleventy");
 
-  shell.ls(`${projectPath}/*.js`).forEach(function (file) {
-    console.log('COPY JS ' + file);
-    shell.cp('-rf', file, 'dist/help');
-  })
+  // shell.ls(`${projectPath}/*.js`).forEach(function (file) {
+  //   console.log('COPY JS ' + file);
+  //   shell.cp('-rf', file, 'dist/help');
+  // })
 
   shell.exec("npx @11ty/eleventy --serve");
 
