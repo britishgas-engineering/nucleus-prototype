@@ -31,6 +31,7 @@ var ctas = document.querySelectorAll('ns-cta');
 ctas.forEach((cta) => {
     if (cta.getAttribute('nf-href')) {
         cta.addEventListener('click', (event) => {
+            doHide();
             var button = event.currentTarget;
             //Check if this is in a form
             var form = button.parentElement.querySelector('ns-form');

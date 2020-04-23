@@ -61,7 +61,7 @@
 
 
 {% macro datePicker(name, label, validation, options, mask=null, separator=null) %}
-<ns-datepicker name="date-picker" year="2020" month="3"></ns-datepicker>
+<ns-datepicker name="{{ name }}" year="2020" month="3" label="{{ label }}"></ns-datepicker>
 {% endmacro %}
 
 {% macro address(name, label, validation, options, mask=null, separator=null) %}

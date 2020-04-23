@@ -1,0 +1,55 @@
+{% macro attributes(mask, separator) %}
+{% if mask == 'undefined'  %}
+{% else %}
+  mask="{{mask}}"
+{% endif %}
+{% if separator == 'undefined'  %}
+{% else %}
+  separator="{{separator}}"
+{% endif %}
+{% endmacro %}
+
+
+{% macro text(name, label, validation, options, mask=null, separator=null) %}
+<ns-inputter validation="{{ validation }}" name="{{ name }}" {{attributes(mask, separator)}} ns-visible="xxx">
+    <label slot="label" for="surname">{{ label }}</label>
+    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false">
+</ns-inputter>
+{% endmacro %}
+
+{% macro checkbox(name, label, validation, options) %}
+<ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
+    {% for option in options %}
+      <input type="checkbox" id="radio-question-{{ option }}" name="radio-question" value="{{ option }}">
+      <label for="radio-question-{{ option }}">{{ option }}</label>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}
+
+{% macro radio(name, label, validation, options) %}
+<ns-inputter validation="[&quot;isRequired&quot;]" heading="{{ label }}" name="{{ name }}">
+    {% for option in options %}
+      <input type="radio" id="radio-question-{{ option }}" name="radio-question" value="{{ option }}">
+      <label for="radio-question-{{ option }}">{{ option }}</label>
+    {% endfor %}
+</ns-inputter>
+{% endmacro %}
+
+{% macro select(name, label, validation, options) %}
+<ns-inputter validation="{{ validation }}" name="{{ name }}">
+    <label slot="label">{{ label }} {{ options.length }}</label>
+    <select autocomplete="honorific-prefix" name="select">
+        <option value="">Please Select</option>
+        {% for option in options %}
+        <div class="module">
+           <option value="{{ option }}">{{ option }}</option>
+        </div>
+        {% endfor %}
+    </select>
+</ns-inputter>
+{% endmacro %}
+
+{% macro xxx(text) %}
+{% endmacro %}
+
+

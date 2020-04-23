@@ -1,0 +1,45 @@
+{
+    "name" : "home-move",
+    "title" : "Home Move",
+    "template" : "multi-page-form",
+    "pages": [{
+            "name": "intro",
+            "title": "Moving Home",
+            "description": "Just let us know within 28 days of your moving out date. If your move is much later, visit us again nearer the time.",
+            "fields": [
+                {
+                    "name": "move-date",
+                    "label": "What date are you moving out?",
+                    "type": "datePicker",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "name": "address",
+            "title": "Moving Home",
+            "description": "Just let us know within 28 days of your moving out date. If your move is much later, visit us again nearer the time.",
+            "fields": [
+                {
+                    "name": "address",
+                    "label": "What is your new address?",
+                    "type": "address",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
+            "name": "moveday",
+            "title": "Moving Home",
+            "description": "",
+            "fields": [
+                {
+                    "name": "same-day",
+                    "label": "Are you moving in and out on the same day?",
+                    "type": "radio",
+                    "options": "['Yes', 'No']",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        }]
+}
