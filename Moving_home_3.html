@@ -1,0 +1,171 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Moving home_3.html</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <div class="ndsn">
+      
+<!-- HEADER -->
+      
+<ns-header>
+  <ul>
+    <li>
+      <h2><a href="/energy.html">Energy</a></h2>
+          <li>
+      <h2><a href="/home-services.html">Home services</a></h2>
+         <li>
+      <h2><a href="/smart-home.html">Smart home</a></h2>
+          <li>
+      <h2><a href="/my-account.html">My account</a></h2>
+        </li>
+      </ul>
+     </ns-header>
+
+<!-- ns-header needs skip links -->
+<div id="content"></div>
+<div id="footer"></div>
+<!-- skip links end -->
+  
+
+              
+  
+  <!-- Move in address -->      
+              
+            <ns-panel>
+                <div class="splash">
+                      <div><ns-cta id="new-address-button" type="text" href="/MOLAS_01_date.html" icon="arrow-left">Go back</ns-cta></div>
+                    <br/>
+                    
+                    <h3 class="h3">What is your new address?</h3>
+                    <p class="p-normal">This is the address that you’d like to set up your products.</p>   
+                   
+                    <div class="", id="postcode">
+        
+                        <ns-form id="postcode-form">
+                            <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" value="" helper="" name="postcode">
+                            <label slot="label" for="nsid-0tty0w9eiy5-input">Postcode</label>
+                            <input type="text" autocomplete="postal-code" id="nsid-0tty0w9eiy5-input">
+                            </ns-inputter>
+                            <ns-cta onclick="find()" type="direct" id="find-address-button" icon="arrow-right" loading="undefined" loadingmessage="Loading...">Find your address</ns-cta>
+                        </ns-form><ns-form id="selected-address-form"></ns-form>
+                    </div>  
+                
+                
+                 <div class="", id="pick", onload="hide()">
+        
+                        <ns-form id="selected-address-form"><ns-inputter validation="[&quot;isRequired&quot;]" heading="Select an address" helper="" name="address" value="">
+                        <label slot="label" for="nsid-rvf8gd5f1xi-input">Select an address</label>
+                            <select name="select" id="nsid-rvf8gd5f1xi-input">
+                    <option value="">Please Select</option>
+                                <option value="0">18 Woodmill Court, Ascot, SL5 8FF</option><option value="1">19 Woodmill Court, Ascot, SL5 8FF</option><option value="2">20 Woodmill Court, Ascot, SL5 8FF</option><option value="3">21 Woodmill Court, Ascot, SL5 8FF</option><option value="4">22 Woodmill Court, Ascot, SL5 8FF</option><option value="5">23 Woodmill Court, Ascot, SL5 8FF</option><option value="6">24 Woodmill Court, Ascot, SL5 8FF</option><option value="7">25 Woodmill Court, Ascot, SL5 8FF</option><option value="8">26 Woodmill Court, Ascot, SL5 8FF</option><option value="9">27 Woodmill Court, Ascot, SL5 8FF</option>
+                            </select>
+                            </ns-inputter><ns-cta id="show-manual-form-button" type="text" icon="arrow-right" loading=false onclick="man()" loadingmessage="Loading...">Can't find your address?</ns-cta><ns-cta id="submit-selected-address-button" href="./Moving_home_4.html" type="direct" icon="arrow-right" loading="false" loadingmessage="Loading...">Select this address</ns-cta></ns-form>
+        
+                    </div> 
+            
+            <div class="", id="manual", onload="hide()">
+<br>    
+                    <ns-form id="manual-address-form">
+                        <ns-inputter validation="[&quot;isRequired&quot;]" value="" name="houseNumber" id="houseNumber">
+                            <label slot="label" for="nsid-thkt4ggwirh-input">
+                                House name / number
+                            </label>
+                        <input type="text" name="houseNumber" id="nsid-thkt4ggwirh-input">
+                        </ns-inputter>
+                        
+                        <ns-inputter validation="[&quot;isRequired&quot;]" value="" name="addressLine1" id="addressLine1">
+                            <label slot="label" for="nsid-w57hfoznru-input">
+                                Street
+                            </label>
+                            
+                            <input type="text" name="addressLine1" id="nsid-w57hfoznru-input">
+                        </ns-inputter>
+                        
+                        <ns-inputter validation="[&quot;isRequired&quot;]" value="" name="postalTown" id="postalTown">
+                            <label slot="label" for="nsid-i812h8002yr-input">
+                                Postal town
+                            </label>
+                            <input type="text" name="postalTown" id="nsid-i812h8002yr-input">
+                        </ns-inputter>
+                        
+                        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" value="" name="postcode" id="postcode">
+                            <label slot="label" for="nsid-59hw8rqrnhm-input">
+                                Postcode
+                            </label>
+                            
+                            <input type="text" name="postcode" autocomplete="postal-code" id="nsid-59hw8rqrnhm-input">
+                        </ns-inputter>
+                        <ns-cta id="submit-manual-address-button" href="./Moving_home_4.html" type="direct" icon="arrow-right" loading="false" loadingmessage="Loading...">Continue to next step</ns-cta>
+                </ns-form>
+                       
+                          </div>
+                </div>
+                <br/><br><br/><br>  
+      </ns-panel>
+
+
+    
+<!-- FOOTER --> 
+
+
+        <ns-footer></ns-footer>
+      
+      
+      <script type="text/javascript">document.getElementById("pick").style.display = 'none';</script>  
+            <script type="text/javascript">document.getElementById("manual").style.display = 'none';</script>  
+            
+            
+            
+<script>function find() {
+            var x =
+            document.getElementById("postcode"); {
+                x.style.display = "none";
+            };
+          var y =
+            document.getElementById("pick"); {
+                y.style.display = "block";
+            };
+       
+    };
+            </script> 
+      
+      <script>function man() {
+            var x =
+            document.getElementById("pick"); {
+                x.style.display = "none";
+            };
+          var y =
+            document.getElementById("manual"); {
+                y.style.display = "block";
+            };
+    };
+            </script> 
+      
+     <script>function postcode() {
+            var x =
+            document.getElementById("postcode"); {
+                x.style.display = "block";
+            };
+          var y =
+            document.getElementById("manual"); {
+                y.style.display = "none";
+            };
+             
+             
+        var a =
+            document.getElementById("manual"); {
+                a.style.display = "none";
+            };
+    };
+            </script> 
+      
+      
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+
+</body>
+</html>

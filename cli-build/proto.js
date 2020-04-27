@@ -31,10 +31,10 @@ var ctas = document.querySelectorAll('ns-cta');
 ctas.forEach((cta) => {
     if (cta.getAttribute('nf-href')) {
         cta.addEventListener('click', (event) => {
-            doHide();
+            //doHide();
             var button = event.currentTarget;
             //Check if this is in a form
-            var form = button.parentElement.querySelector('ns-form');
+            var form = button.parentElement.nodeName === 'NS-FORM' ? button.parentElement : button.parentElement.querySelector('ns-form');
             if (form) {
                 console.log('This is in a form!!!!');
                 if(form.isValid) {
@@ -253,6 +253,8 @@ if(addressSelector) {
 }
 
 if(addressSelector) {
+    // Hide submit button
+    document.querySelector('#submit-button').setAttribute('style', 'display: none');
     addressSelector.addEventListener('address-selected', (event) => {
         console.log('Address selected ' + event.detail.address.label);
         //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
@@ -261,3 +263,11 @@ if(addressSelector) {
         }
     });
 }
+
+document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+        document.querySelector('#submit-button').setAttribute('style', 'display: block');
+    } else {
+        document.querySelector('#submit-button').setAttribute('style', 'display: none');
+    }
+});

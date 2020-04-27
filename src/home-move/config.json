@@ -4,8 +4,8 @@
     "template" : "multi-page-form",
     "pages": [{
             "name": "intro",
-            "title": "Moving Home",
-            "description": "Just let us know within 28 days of your moving out date. If your move is much later, visit us again nearer the time.",
+            "title": "Moving out date",
+            "description": "We need to know these dates.",
             "fields": [
                 {
                     "name": "move-date",
@@ -16,9 +16,30 @@
             ]
         },
         {
+            "name": "meter-read",
+            "title": "Move out meter readings",
+            "description": "We’ll estimate any meter readings that you don’t fill in.",
+            "fields": [
+                {
+                    "name": "gas-meter",
+                    "label": "Gas meter reading",
+                    "type": "text",
+                    "mask": "00---",
+                    "validation": "[\"isRequired\"]"
+                },
+                {
+                    "name": "electricity-meter",
+                    "label": "Electricity meter reading",
+                    "type": "text",
+                    "mask": "00---",
+                    "validation": "[\"isRequired\"]"
+                }
+            ]
+        },
+        {
             "name": "address",
-            "title": "Moving Home",
-            "description": "Just let us know within 28 days of your moving out date. If your move is much later, visit us again nearer the time.",
+            "title": "What is your new address?",
+            "description": "This is the address that you’d like to set up your products.",
             "fields": [
                 {
                     "name": "address",

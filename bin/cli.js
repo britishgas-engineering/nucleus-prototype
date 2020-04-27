@@ -56,6 +56,14 @@ const go = (response) => {
   shell.mkdir(projectPath);
   shell.cp('-rf', '_templates/' + template + '/*', projectPath);
 
+
+  // Copy custom tempates for this journey
+  //shell.cp('-rf', `src/${project}/*.njk`, projectPath);
+  shell.ls(`src/${project}/*.njk`).forEach(function (file) {
+    console.log('CUSTOM... ' + file);
+    shell.cp('-rf', file, projectPath);
+  });
+
   // Multi page form puts each form on a new page
   var multiPage = template.indexOf('multi') !== -1;
 
@@ -82,6 +90,7 @@ const go = (response) => {
   if (multiPage) {
     for (var i = 0; i < forms.length; i++) {
       // Create a new form for each form
+      var nextForm = i < forms.length - 1 ? forms[i + 1].name : 'summary';
       var pageTemplate = projectPath + '/form.njk';
       var pagePath = projectPath + '/form' + (i + 1) + '.njk';
       shell.cp('-rf', pageTemplate, pagePath);
@@ -90,6 +99,7 @@ const go = (response) => {
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
+        shell.sed('-i', 'NEXT_FORM', nextForm, file);
       });
     }
   } else {
@@ -104,13 +114,14 @@ const go = (response) => {
       var pagePath = projectPath + '/form' + (i + 1) + '.njk';
       var pageTemplate = projectPath + '/form.njk';
       shell.cp('-rf', pageTemplate, pagePath);
+      
 
       // Add include to form
       shell.ls(pagePath).forEach(function (file) {
         shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
         shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
-        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
+        shell.sed('-i', 'PAGE_DESCRIPTION', forms[i].description || '', file);
       });
     }
 
@@ -145,7 +156,7 @@ const go = (response) => {
         shell.sed('-i', 'FORM_INCLUDE_PATH', `{% include "./form${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'NEXT_FORM', nextForm, file);
         shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
-        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
+        shell.sed('-i', 'PAGE_DESCRIPTION', forms[i].description || '', file);
         shell.sed('-i', 'CUSTOM_PAGE_SCRIPT', customPageScript, file);
       });
 
@@ -168,7 +179,7 @@ const go = (response) => {
       shell.sed('-i', 'MODEL_PATH', 'model.form1', file);
       for (var i = 0; i < forms.length; i++) {
         shell.sed('-i', 'PAGE_TITLE', forms[i].title || '', file);
-        shell.sed('-i', 'PAGE_TEXT', forms[i].description || '', file);
+        shell.sed('-i', 'PAGE_DESCRIPTION', forms[i].description || '', file);
       }
     });
 

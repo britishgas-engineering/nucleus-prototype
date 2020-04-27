@@ -1,0 +1,57 @@
+---
+title: Nucleus prototype
+---
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{title}}">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="http://localhost:9001/styles.min.css">
+  <title>{{title}}</title>
+</head>
+<body class="ndsn">
+
+  
+  <!-- ns-header needs skip links -->
+  <div id="content"></div>
+  <div id="footer"></div>
+  <!-- skip links end -->
+
+       
+
+    <ns-panel>
+        <div class="splish">
+            <h1>Your previous bills</h1>
+            <p>Below you can download any of your previous bills from the past 12 months</p>
+            <ul class="download-list">
+                <li>
+                    <ns-download href="this-text-gets-ignored.pdf" filesize="123MB">April 2020</ns-download>
+                </li>
+                <li>
+                    <ns-download href="this-text-gets-ignored.pdf" filesize="123MB">March 2020</ns-download>
+                </li>
+                <li>
+                    <ns-download href="this-text-gets-ignored.pdf" filesize="123MB">February 2020</ns-download>
+                </li>
+                <li>
+                    <ns-download href="this-text-gets-ignored.pdf" filesize="123MB">January 2020</ns-download>
+                </li>
+                <li>
+                    <ns-download href="this-text-gets-ignored.pdf" filesize="123MB">December 2019</ns-download>
+                </li>
+            </ul>
+        </div>
+    </ns-panel>
+
+  <script src="http://localhost:9001/polyfill.js"></script>
+  <script src="http://localhost:9001/components.js"></script>
+  <script src="http://localhost:9002/only.components.min.js"></script>
+
+  <!--<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>-->
+  <!--<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>-->
+  <script src="/proto.js"></script>
+</body>
+</html>
+

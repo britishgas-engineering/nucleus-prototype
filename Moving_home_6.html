@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Moving home Hub page.html</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <div class="ndsn">
+      
+<!-- HEADER -->
+      
+<ns-header>
+  <ul>
+    <li>
+      <h2><a href="/energy.html">Energy</a></h2>
+          <li>
+      <h2><a href="/home-services.html">Home services</a></h2>
+         <li>
+      <h2><a href="/smart-home.html">Smart home</a></h2>
+          <li>
+      <h2><a href="/my-account.html">My account</a></h2>
+        </li>
+      </ul>
+     </ns-header>
+
+<!-- ns-header needs skip links -->
+<div id="content"></div>
+<div id="footer"></div>
+<!-- skip links end -->
+  
+
+    <!-- LANDMARK -->
+
+            <ns-landmark type="hillside" gradient="invert-ramp-cyan">
+                <h1 slot="heading">
+                <span class="h5">Thank you. We hope your move goes well. </span>
+                <span class="h1 enlighten"> <b>We’ve received your moving details</b></span>
+                </h1>
+                <p slot="paragraph">Keep your eyes peeled for an email containing all your moving details.</p>
+                <p slot="paragraph">We’ll email over your final statements within the next couple of days.</p>
+            </ns-landmark>
+
+
+    <!-- BILLING CARDS -->
+
+            <ns-panel decoration="">
+                <div class="splish">
+                    <h2>We’ve estimated your final balances</h2>
+                    <p class="p-feature">We’ll collect the outstanding balance from your Direct Debit within ten to fourteen days and place the refund into your account within five days of the bill being produced.</p>
+                </div>
+
+                <div class="splish triple" role="list">
+                    <ns-card role="listitem" type="section" decoration="gas">
+                        <h3 slot="heading" role="heading" aria-level="3">Gas balance</h3>
+                        <p slot="paragraph">We estimate <b>you’ll owe us</b> <ns-price pence="12250"></ns-price>.</p>
+                    </ns-card>
+
+                    <ns-card role="listitem" type="section" decoration="bulb">
+                        <h3 slot="heading" role="heading" aria-level="3">Electricity balance</h3>
+                        <p slot="paragraph">We estimate <b>we’ll owe you</b> <ns-price pence="3276"></ns-price>.</p>
+                    </ns-card>
+                    <ns-card role="listitem" type="section" decoration="home">
+                        <h3 slot="heading" role="heading" aria-level="3">Your recent bills</h3>
+                        <p slot="paragraph">Review all of your recent energy bills in your account.</p>
+                            <a slot="cta" href="#!">
+    <ns-cta type="direct">View my bills</ns-cta>
+                            </a>              
+                </div>
+            </ns-panel>
+
+      
+<!-- LOCKUP -->
+      
+ <br>             
+ <br>              
+ <br>
+ <br>             
+ <br>              
+ <br>
+
+    
+<!-- FOOTER -->    
+
+        <ns-footer></ns-footer>
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+
+</body>
+</html>

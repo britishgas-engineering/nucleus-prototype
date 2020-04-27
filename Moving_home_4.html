@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Moving home Hub page.html</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <div class="ndsn">
+      
+<!-- HEADER -->
+      
+<ns-header>
+  <ul>
+    <li>
+      <h2><a href="/energy.html">Energy</a></h2>
+          <li>
+      <h2><a href="/home-services.html">Home services</a></h2>
+         <li>
+      <h2><a href="/smart-home.html">Smart home</a></h2>
+          <li>
+      <h2><a href="/my-account.html">My account</a></h2>
+        </li>
+      </ul>
+     </ns-header>
+
+<!-- ns-header needs skip links -->
+<div id="content"></div>
+<div id="footer"></div>
+<!-- skip links end -->
+  
+      
+
+
+
+  <!-- Move in DATE -->      
+      <ns-panel>
+         <div class="splash", id="MIDate">
+
+         <div><ns-cta id="new-address-button" type="text" href="/MOLAS_01_date.html" icon="arrow-left">Go back</ns-cta></div>       
+             
+             <br>
+             
+            <ns-form>
+
+                <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Are you moving in and out on the same day?" helper="" name="Date" value="Yes">
+
+                    <input id="Yes" type="radio" name="Date" checked="" value="Yes" onclick="toggle()">
+                    <label for="Yes">Yes</label>
+
+                    <input id="No" type="radio" name="Date" value="No" onclick="toggle()">
+                    <label for="No">No</label>
+                </ns-inputter>
+                
+                        <ns-highlighter type="warning" id=28days>
+                    <h2 slot="heading">
+                          Moving out after 30th March 2020?
+                    </h2>
+                        Just let us know within 28 days of your moving in date. If your move is much later, visit us again nearer the time.
+                </ns-highlighter>
+                 
+                <div id=Newdate>
+                    <ns-inputter mask="DD/MM/YY" separator="/" ignoreseparator="true" validation="[&quot;isRequired&quot;,&quot;minLength(6)&quot;]" value="20/02/20" helper="" name="what-date-are-you-moving-out?">
+                    <label slot="label">What date are you moving in?</label>
+                    <input type="text" inputmode="numeric">
+                </ns-inputter>
+                </div>
+                <ns-cta type="direct" href="./Moving_home_6.html" icon="arrow-right" loading="false" loadingmessage="Loading...">Continue to next step</ns-cta>
+
+            </ns-form>
+        </div>
+</ns-panel>   
+      
+        <br/><br><br/><br> 
+
+    
+<!-- FOOTER -->    
+
+        <ns-footer></ns-footer>
+      
+      <script type="text/javascript">document.getElementById("Newdate").style.display = 'none';</script>      
+      <script type="text/javascript">document.getElementById("28days").style.display = 'none';</script>      
+
+      
+      
+      
+     <script>  function toggle() {
+  var x = document.getElementById("Newdate");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+             
+ var y = document.getElementById("28days");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+      </script>
+
+      
+   
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+    </div>
+</body>
+</html>

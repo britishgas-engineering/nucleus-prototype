@@ -1,0 +1,5 @@
+{% import "./../inputters.njk" as inputter %}
+    {{ inputter.selector('energy-type', 'How do you pay for your electricity?', '["isRequired"]', [{label: 'Monthly Bill',value: 'monthly',description: 'You pay your bill monthly'
+    }, {label: 'Top up (pay as you go)',value: 'pay-as-you-go',description: 'You pay your bill as you go'
+    }], 'undefined', 'undefined') }}
+      

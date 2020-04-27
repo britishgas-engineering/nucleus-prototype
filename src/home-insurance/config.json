@@ -4,8 +4,8 @@
     "template" : "multi-page-form",
     "pages": [{
             "name": "intro",
-            "title": "Get a Home Insurance quote",
-            "description": "",
+            "title": "What is the postcode of your home?",
+            "description": "This is the address of the home your want to insure.",
             "fields": [{
                     "name": "address",
                     "label": "Your Address",
@@ -15,49 +15,49 @@
             ]
         },
         {
-            "name": "product",
-            "title": "Get a Home Insurance quote",
+            "name": "ownership",
+            "title": "Do you own or rent your home?",
             "description": "",
             "fields": [
                 {
                     "name": "ownership",
                     "label": "Do you own your own home?",
                     "type": "radio",
-                    "options": "['Yes', 'No']",
-                    "validation": "[\"isRequired\"]"
-                },
-                {
-                    "name": "start-date",
-                    "label": "What date would you like the cover to start?",
-                    "type": "datePicker",
-                    "validation": "[\"isRequired\",\"isDate\"]"
-                },
-                {
-                    "name": "cover-type",
-                    "label": "What type of cover do you require?",
-                    "type": "radio",
-                    "options": "['Building Insurance only', 'Building and Contentd insurance']",
+                    "options": "['Own', 'Mortgage', 'Rent']",
                     "validation": "[\"isRequired\"]"
                 }
             ]
         },
         {
-            "name": "policy",
+            "name": "start-date",
             "title": "Get a Home Insurance quote",
-            "description": "The address of the home you want to insure is",
+            "description": "",
             "fields": [
                 {
-                    "name": "policy-documents",
-                    "label": "How would you like to receive your policy documents?",
+                    "name": "start-date",
+                    "label": "When would you like your cover to start?",
+                    "type": "datePicker",
+                    "validation": "[\"isRequired\",\"isDate\"]"
+                }
+            ]
+        },
+        {
+            "name": "cover",
+            "title": "Get a Home Insurance quote",
+            "description": "",
+            "fields": [
+                {
+                    "name": "cover-type",
+                    "label": "What type of cover do you need?",
                     "type": "radio",
-                    "options": "['Mail', 'Email', 'Both']",
+                    "options": "['Buildings and contents', 'Contents', 'Building']",
                     "validation": "[\"isRequired\"]"
                 }
             ]
         },
         {
             "name": "personal",
-            "title": "Your details",
+            "title": "Your personal details",
             "description": "",
             "fields": [{
                 "name": "title",
@@ -95,6 +95,20 @@
                 "separator": "/",
                 "validation": "[\"isRequired\",\"isDate\"]"
             }
+            ]
+        },
+        {
+            "name": "cover",
+            "title": "",
+            "description": "",
+            "fields": [
+                {
+                    "name": "cover-type",
+                    "label": "How would you like to receive your policy documents?",
+                    "type": "radio",
+                    "options": "['Email', 'Post']",
+                    "validation": "[\"isRequired\"]"
+                }
             ]
         }
     ]
