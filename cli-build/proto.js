@@ -273,24 +273,3 @@ if(addressSelector) {
         }
     });
 }
-
-function getFormData(form, field) {
-    var obj = this.model[form];
-    if (obj && obj.fields) {
-        return obj.fields.find((obj) => {
-            return obj.name === field;
-        }).value;
-    }
-    return null;
-}
-
-
-
-var value = getFormData('form4', 'same-day');
-
-var imgURL = 'https://i.dailymail.co.uk/1s/2020/03/11/14/25838736-0-image-a-7_1583935881549.jpg'
-if (value === 'Yes') {
-    imgURL = 'https://cdn.vox-cdn.com/thumbor/1ZPuV80n_PVUARYlkcCorFG_Frk=/0x0:3000x3000/1200x800/filters:focal(1260x1260:1740x1740)/cdn.vox-cdn.com/uploads/chorus_image/image/50911339/electricity.0.jpg';
-}
-
-document.querySelector('#my-image').setAttribute('src', imgURL);
