@@ -26,7 +26,6 @@ forms.forEach((form, index) => {
 });
 
 // CTA actions
-
 var ctas = document.querySelectorAll('ns-cta');
 ctas.forEach((cta) => {
     cta.setAttribute('loading', 'false');
