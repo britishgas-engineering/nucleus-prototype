@@ -8,12 +8,17 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("*.js");
   //eleventyConfig.addPassthroughCopy({ "cli-build/help/*.js": "help" });
   
-  templateFormats: ["njk", "js"];
+  // eleventyConfig.setTemplateFormats([
+  //   "njk",
+  //   "js"
+  // ]);
 
   eleventyConfig.setBrowserSyncConfig({
     // https://www.browsersync.io/docs/options
     codeSync: false
   });
+
+  eleventyConfig.addPassthroughCopy({ "cli-build/**/*.js" : ""});
 
   return {
     dir: {
