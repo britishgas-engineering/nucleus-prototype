@@ -1,5 +1,7 @@
 ---
 title: Nucleus prototype
+nucleusbranch: 36dd5551533fa9c8912e9cb2498bd0cf58696b5e
+experiencebranch: 06c355ba427258402a5fa749b5979931135ac413
 ---
 <!doctype html>
 <html lang="en" dir="ltr">
@@ -8,7 +10,7 @@ title: Nucleus prototype
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{title}}">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="http://localhost:9001/styles.min.css">
+  <link rel="stylesheet" href="https://www5.bgo.bgdigitaltest.co.uk/nucleus/{{ nucleusbranch }}/styles.min.css">
   <title>{{title}}</title>
 </head>
 <body class="ndsn">
@@ -21,9 +23,17 @@ title: Nucleus prototype
   
   {{content | safe}}
 
+<!-- Local
   <script src="http://localhost:9001/polyfill.js"></script>
   <script src="http://localhost:9001/components.js"></script>
   <script src="http://localhost:9002/only.components.min.js"></script>
+-->
+  
+  <!-- Branch -->
+  <script src="https://www5.bgo.bgdigitaltest.co.uk/nucleus/{{ nucleusbranch }}/polyfill.js"></script>
+  <script src="https://www5.bgo.bgdigitaltest.co.uk/nucleus/{{ nucleusbranch }}/components.js"></script>
+  <script src="https://www5.bgo.bgdigitaltest.co.uk/nucleus-experiences/{{ experiencebranch }}/only.components.min.js"></script>
+
 
   <!--<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>-->
   <!--<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>-->
