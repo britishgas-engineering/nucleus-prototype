@@ -29,6 +29,7 @@ forms.forEach((form, index) => {
 
 var ctas = document.querySelectorAll('ns-cta');
 ctas.forEach((cta) => {
+    cta.setAttribute('loading', 'false');
     if (cta.getAttribute('nf-href')) {
         cta.addEventListener('click', (event) => {
             //doHide();
