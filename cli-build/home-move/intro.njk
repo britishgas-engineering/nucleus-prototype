@@ -4,7 +4,9 @@ description:
 ---
 <ns-panel>
   <div class="splash">
-    <h1 class="h3">{{ title }}</h1>
+    {% if title %}
+    <h1 class="h2">{{ title }}</h1>
+    {% endif %}
     {% if description %}
     <p>{{ description }}</p>
     {% endif %}
