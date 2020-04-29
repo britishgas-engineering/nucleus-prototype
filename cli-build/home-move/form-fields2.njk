@@ -1,4 +1,8 @@
 {% import "./../inputters.njk" as inputter %}
-    {{ inputter.text('gas-meter', 'Gas meter reading', '["isRequired"]', undefined, '00---', 'undefined') }}
-      {{ inputter.text('electricity-meter', 'Electricity meter reading', '["isRequired"]', undefined, '00---', 'undefined') }}
+    {{ inputter.highlighter('info', 'Your previous meter readings', 'Here are your previous meter readings if you need to refer to them.
+
+Gas: 00874, given on 2nd February 2020.
+
+Electricity: 00765, estimated on 6th February 2020.') }}{{ inputter.text('gas-meter', 'Gas meter reading', '["isRequired"]', undefined, '00---', 'undefined', 'How do I give my gas meter reading?', 'Enter your gas meter reading into the box below, including any zeros at the beginning. Dont worry about the red numbers or anything after the decimal point.') }}
+      {{ inputter.text('electricity-meter', 'Electricity meter reading', '["isRequired"]', undefined, '00---', 'undefined', 'How do I give my electricity meter reading?', 'Enter your electricity meter reading into the box below, including any zeros at the beginning. Don’t worry about the red numbers or anything after the decimal point.') }}
       

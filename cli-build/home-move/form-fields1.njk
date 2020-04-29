@@ -1,3 +1,3 @@
 {% import "./../inputters.njk" as inputter %}
-    {{ inputter.datePicker('move-date', 'What date are you moving out?', '["isRequired"]', undefined, 'undefined', 'undefined') }}
+    {{ inputter.highlighter('warning', 'Moving out after 31st May 2020?', 'If you are moving after this date please visit us again nearer the time. We need to know 28 days or less before your move date.') }}{{ inputter.datePicker('move-date', 'What date are you moving out?', '["isRequired"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined') }}
       

@@ -10,49 +10,37 @@ eleventyNavigation:
     <h1 slot="heading">
         <span class="h1 enlighten"><b>Get a quote</b> for Home Insurance</span>
     </h1>
-    <p slot="paragraph">Lorem ipsum dolor sit amet, erat accusam ei vis, no eruditi corrumpit vix. </p>
+    <p slot="paragraph">Protect the things you love with home insurance from the people who've been taking care of Britain's homes for over 200 years.</p>
 </ns-landmark>
 
 <ns-panel>
 
   <div class="splosh">
       
-      <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Before we get started, please confirm:" helper="" name="gas" value="">
+      <ns-form>
 
-      <ul class="ul-ticked">
-        <li>Your home doesn’t have any ongoing building work</li>
-        <li>There are no trees within 5m of your home that are taller than 10m</li>
-        <li>Your home is not marketed and rented out as a holiday home</li>
-        <li>Business use at your home is for administrative purposes only</li>
-        <li>Your home is not let, sub-let or shared by non-family members</li>
-        <li>Your home is not marketed and rented out as a holiday home</li>
-        <li>Business use at your home is for administrative purposes only</li>
-        <li>Your home is not let, sub-let or shared by non-family members</li>
-        <li>Your home meets the additional criteria in our <a>Terms and Conditions</a></li> 
-      </ul>
-          
-      <input type="checkbox" name="correct" id="correct">
-      <label for="correct">The information above is correct</label>
-      </ns-inputter>
-      <br>
-      
-    <ns-cta id="start" slot="cta" type="direct" href="intro">Get a quote</ns-cta>
-      
-      
+        <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Before we get started, please confirm:" helper="" name="gas" value="">
+
+        <ul class="ul-ticked">
+          <li>Your home doesn’t have any ongoing building work</li>
+          <li>There are no trees within 5m of your home that are taller than 10m</li>
+          <li>Your home is not marketed and rented out as a holiday home</li>
+          <li>Business use at your home is for administrative purposes only</li>
+          <li>Your home is not let, sub-let or shared by non-family members</li>
+          <li>Your home is not marketed and rented out as a holiday home</li>
+        </ul>
+            
+        <input type="checkbox" name="correct" id="correct" value="agree">
+        <label for="correct">The information above is correct</label>
+        </ns-inputter>
+        <br>
+        
+        <ns-cta id="submit-button" role="button" loadingmessage="Loading..." nf-href="intro">
+        Let's get started
+        </ns-cta>
+      </ns-form>
+
   </div>
 </ns-panel>
 
-
-<!--<ns-landmark type="summit" image="https://user-images.githubusercontent.com/28779/75573555-00c74200-5a55-11ea-86db-66a1ff253b57.jpg">
-  <h1 slot="heading">
-    <span class="h5">{{title}}.</span>
-    <span class="h1 enlighten"><b>Welcome</b>, to the protoype journey for {{title}}</span>
-  </h1>
-  <div slot="paragraph">
-    <p>This is the index page of <b>{{title}}</b>.</p>
-  </div>
-  <a slot="cta" href="intro">
-    <ns-cta>Start your quote!!!!</ns-cta>
-  </a>
-</ns-landmark>
--->
+<script src="/proto.js"></script>

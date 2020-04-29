@@ -1,3 +1,3 @@
 {% import "./../inputters.njk" as inputter %}
-    {{ inputter.datePicker('start-date', 'When would you like your cover to start?', '["isRequired","isDate"]', undefined, 'undefined', 'undefined') }}
+    {{ inputter.highlighter('info', 'About your start date', 'You can start your insurance cover any time within the next 60 days. You cant backdate the start of your policy.') }}{{ inputter.datePicker('start-date', 'What date would you like your cover to start?', '["isRequired","isDate"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined') }}
       

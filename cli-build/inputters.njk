@@ -1,17 +1,25 @@
-{% macro attributes(mask, separator) %}
+{% macro attributes(mask, separator, helper) %}
 {% if mask == 'undefined'  %}
+  mask=""
 {% else %}
   mask="{{mask}}"
 {% endif %}
 {% if separator == 'undefined'  %}
+  separator=""
 {% else %}
   separator="{{separator}}"
+{% endif %}
+{% if helper == 'undefined'  %}
+  helper=""
+{% else %}
+  helper="{{helper}}"
 {% endif %}
 {% endmacro %}
 
 
-{% macro text(name, label, validation, options, mask=null, separator=null) %}
-<ns-inputter validation="{{ validation }}" name="{{ name }}" {{attributes(mask, separator)}} >
+{% macro text(name, label, validation, options, mask, separator, helper, tipDetails) %}
+<ns-inputter validation="{{ validation }}" name="{{ name }}" {{ attributes(mask, separator, helper) }} >
+    {% if tipDetails %} <div slot="tip-details">{{ tipDetails }}</div>{% endif %}
     <label slot="label" for="surname">{{ label }}</label>
     <input id="surname" autocomplete="family-name" type="text" aria-invalid="false">
 </ns-inputter>
@@ -84,4 +92,14 @@
   </ns-selector>
     {% endfor %}
 </ns-inputter>
+{% endmacro %}
+
+
+{% macro highlighter(icon, heading, message) %}
+<ns-highlighter type="{{ icon }}" role="alert">
+    <h2 slot="heading" role="heading" aria-level="2">
+    {{ heading }}
+    </h2>
+    {{ message }}
+</ns-highlighter>
 {% endmacro %}

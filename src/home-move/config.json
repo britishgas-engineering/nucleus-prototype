@@ -4,9 +4,16 @@
     "template" : "multi-page-form",
     "pages": [{
             "name": "intro",
-            "title": "Moving out date",
-            "description": "We need to know these dates.",
+            "title": "Your move date",
+            "description": "",
+            "submitLabel": "Next",
             "fields": [
+                {
+                    "type": "highlighter",
+                    "icon": "warning",
+                    "heading": "Moving out after 31st May 2020?",
+                    "message": "If you are moving after this date please visit us again nearer the time. We need to know 28 days or less before your move date."
+                },
                 {
                     "name": "move-date",
                     "label": "What date are you moving out?",
@@ -17,48 +24,46 @@
         },
         {
             "name": "meter-read",
-            "title": "Move out meter readings",
-            "description": "We’ll estimate any meter readings that you don’t fill in.",
+            "title": "Your final meter readings",
+            "description": "Please give us your last meter reading in your old home. We’ll estimate any meter readings that you don’t fill in.",
+            "submitLabel": "Confirm your meter readings",
             "fields": [
+                {
+                    "type": "highlighter",
+                    "icon": "info",
+                    "heading": "Your previous meter readings",
+                    "message": "Here are your previous meter readings if you need to refer to them.\n\nGas: 00874, given on 2nd February 2020.\n\nElectricity: 00765, estimated on 6th February 2020."
+                },
                 {
                     "name": "gas-meter",
                     "label": "Gas meter reading",
                     "type": "text",
                     "mask": "00---",
-                    "validation": "[\"isRequired\"]"
+                    "validation": "[\"isRequired\"]",
+                    "tip": "How do I give my gas meter reading?",
+                    "tipDetails" : "Enter your gas meter reading into the box below, including any zeros at the beginning. Dont worry about the red numbers or anything after the decimal point."
                 },
                 {
                     "name": "electricity-meter",
                     "label": "Electricity meter reading",
                     "type": "text",
                     "mask": "00---",
-                    "validation": "[\"isRequired\"]"
+                    "validation": "[\"isRequired\"]",
+                    "tip": "How do I give my electricity meter reading?",
+                    "tipDetails" : "Enter your electricity meter reading into the box below, including any zeros at the beginning. Don’t worry about the red numbers or anything after the decimal point."
                 }
             ]
         },
         {
             "name": "address",
-            "title": "What is your new address?",
+            "title": "Your new address",
             "description": "This is the address that you’d like to set up your products.",
+            "submitLabel": "Confirm address",
             "fields": [
                 {
                     "name": "address",
                     "label": "What is your new address?",
                     "type": "address",
-                    "validation": "[\"isRequired\"]"
-                }
-            ]
-        },
-        {
-            "name": "moveday",
-            "title": "Moving Home",
-            "description": "",
-            "fields": [
-                {
-                    "name": "same-day",
-                    "label": "Are you moving in and out on the same day?",
-                    "type": "radio",
-                    "options": "['Yes', 'No']",
                     "validation": "[\"isRequired\"]"
                 }
             ]

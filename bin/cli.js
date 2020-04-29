@@ -73,8 +73,12 @@ const go = (response) => {
     `;
     // GENERATE FORM CONTENT
     forms[i].fields.forEach((field) => {
-      content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}') }}
-      `;
+      if (field.type === 'highlighter') {
+        content += `{{ inputter.highlighter('${field.icon}', '${field.heading}', '${field.message}') }}`;
+      } else {
+        content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}', '${field.tip}', '${field.tipDetails}') }}
+      `
+      }
       console.log('CONTENT ' + content);
     });
 
@@ -100,6 +104,7 @@ const go = (response) => {
         shell.sed('-i', 'FORM_FIELDS_PATH', `{% include "./form-fields${(i + 1)}.njk" %}`, file);
         shell.sed('-i', 'MODEL_PATH', 'model.form' + (i + 1), file);
         shell.sed('-i', 'NEXT_FORM', nextForm, file);
+        shell.sed('-i', 'SUBMIT_LABEL', forms[i].submitLabel || 'Next', file);
       });
     }
   } else {
