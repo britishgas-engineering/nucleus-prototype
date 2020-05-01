@@ -17,11 +17,11 @@
 {% endmacro %}
 
 
-{% macro text(name, label, validation, options, mask, separator, helper, tipDetails) %}
+{% macro text(name, label, validation, options, mask, separator, helper, tipDetails, placeholder) %}
 <ns-inputter validation="{{ validation }}" name="{{ name }}" {{ attributes(mask, separator, helper) }} >
     {% if tipDetails %} <div slot="tip-details">{{ tipDetails }}</div>{% endif %}
     <label slot="label" for="surname">{{ label }}</label>
-    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false">
+    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}>
 </ns-inputter>
 {% endmacro %}
 

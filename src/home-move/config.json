@@ -32,7 +32,7 @@
                     "type": "highlighter",
                     "icon": "info",
                     "heading": "Your previous meter readings",
-                    "message": "Here are your previous meter readings if you need to refer to them.\n\nGas: 00874, given on 2nd February 2020.\n\nElectricity: 00765, estimated on 6th February 2020."
+                    "message": "Here are your previous meter readings if you need to refer to them.\r\nGas: 00874, given on 2nd February 2020.\n\nElectricity: 00765, estimated on 6th February 2020."
                 },
                 {
                     "name": "gas-meter",

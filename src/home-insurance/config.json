@@ -75,7 +75,8 @@
                 "name": "first-name",
                 "label": "First Name",
                 "type": "text",
-                "validation": "[\"isRequired\"]"
+                "validation": "[\"isRequired\"]",
+                "placeholder": "John"
             },{
                 "name": "surname",
                 "label": "Surname",
@@ -85,7 +86,8 @@
                 "name": "email",
                 "label": "Email",
                 "type": "text",
-                "validation": "[\"isRequired\", \"isEmail\"]"
+                "validation": "[\"isRequired\", \"isEmail\"]",
+                "placeholder": "email@address.com"
             },
             {
                 "name": "phone",

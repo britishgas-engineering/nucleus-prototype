@@ -76,7 +76,7 @@ const go = (response) => {
       if (field.type === 'highlighter') {
         content += `{{ inputter.highlighter('${field.icon}', '${field.heading}', '${field.message}') }}`;
       } else {
-        content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}', '${field.tip}', '${field.tipDetails}') }}
+        content += `{{ inputter.${field.type}('${field.name}', '${field.label}', '${field.validation}', ${field.options}, '${field.mask}', '${field.separator}', '${field.tip}', '${field.tipDetails}', '${field.placeholder}') }}
       `
       }
       console.log('CONTENT ' + content);
