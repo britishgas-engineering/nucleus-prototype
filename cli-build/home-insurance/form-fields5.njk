@@ -1,8 +1,8 @@
 {% import "./../inputters.njk" as inputter %}
     {{ inputter.select('title', 'Title', '["isRequired"]', ['Mr', 'Mrs'], 'undefined', 'undefined', 'undefined', 'undefined', 'undefined') }}
-      {{ inputter.text('first-name', 'First Name', '["isRequired"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'John') }}
+      {{ inputter.text('first-name', 'First Name', '["isRequired"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'undefined') }}
       {{ inputter.text('surname', 'Surname', '["isRequired"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'undefined') }}
       {{ inputter.text('email', 'Email', '["isRequired", "isEmail"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'email@address.com') }}
-      {{ inputter.text('phone', 'Phone', '["isRequired"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'undefined') }}
+      {{ inputter.text('phone', 'Phone', '["isRequired", "isPhoneNumber"]', undefined, 'undefined', 'undefined', 'undefined', 'undefined', 'undefined') }}
       {{ inputter.text('dob', 'Date of birth', '["isRequired","isDate"]', undefined, 'dd/mm/yyyy', '/', 'undefined', 'undefined', 'undefined') }}
       
