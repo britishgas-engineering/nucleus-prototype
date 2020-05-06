@@ -175,6 +175,11 @@ function loadModel() {
     return JSON.parse(localStorage.getItem('nf-model'));
 }
 
+function clearStorage() {
+    var localStorage = window.localStorage;
+    localStorage.removeItem('nf-model');
+}
+
 function saveModel(model) {
     var json = JSON.stringify(model);
     var localStorage = window.localStorage;
@@ -272,4 +277,10 @@ if(addressSelector) {
             document.querySelector('#submit-button').setAttribute('style', 'display: none');
         }
     });
+}
+
+//Check for clear storage attribute
+var clearNode = document.querySelector('[nf-clear]');
+if (clearNode) {
+    clearStorage();
 }
