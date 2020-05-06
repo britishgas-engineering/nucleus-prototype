@@ -100,7 +100,7 @@
                 "type": "text",
                 "mask": "dd/mm/yyyy",
                 "separator": "/",
-                "validation": "[\"isRequired\",\"isDate\"]"
+                "validation": "[\"isRequired\",\"isDate\",\"isAdult\"]"
             }
             ]
         }
