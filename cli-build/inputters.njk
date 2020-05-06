@@ -21,7 +21,7 @@
 <ns-inputter validation="{{ validation }}" name="{{ name }}" {{ attributes(mask, separator, helper) }} >
     {% if tipDetails %} <div slot="tip-details">{{ tipDetails }}</div>{% endif %}
     <label slot="label" for="surname">{{ label }}</label>
-    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}>
+    <input id="surname" autocomplete="family-name" type="text" aria-invalid="false" {% if placeholder != 'undefined' %}placeholder="{{ placeholder }}"{% endif %}>
 </ns-inputter>
 {% endmacro %}
 
