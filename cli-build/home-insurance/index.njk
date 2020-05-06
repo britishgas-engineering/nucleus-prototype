@@ -17,9 +17,9 @@ eleventyNavigation:
 
   <div class="splosh">
       
-      <ns-form>
+      <ns-form nf-model="model.intro">
 
-        <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Before we get started, please confirm:" helper="" name="gas" value="">
+        <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Before we get started, please confirm:" helper="" name="agree" value="">
 
         <ul class="ul-ticked">
           <li>Your home doesn’t have any ongoing building work</li>
@@ -30,7 +30,7 @@ eleventyNavigation:
           <li>Your home is not marketed and rented out as a holiday home</li>
         </ul>
             
-        <input type="checkbox" name="correct" id="correct" value="agree">
+        <input type="checkbox" name="correct" id="correct" value="yes">
         <label for="correct">The information above is correct</label>
         </ns-inputter>
         <ns-cta id="submit-button" role="button" loadingmessage="Loading..." nf-href="intro">
