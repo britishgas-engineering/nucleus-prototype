@@ -11,14 +11,15 @@
                 {
                     "type": "highlighter",
                     "icon": "warning",
-                    "heading": "Moving out after 31st May 2020?",
+                    "heading": "Moving out after 8th June 2020?",
                     "message": "If you are moving after this date please visit us again nearer the time. We need to know 28 days or less before your move date."
                 },
                 {
                     "name": "move-date",
                     "label": "What date are you moving out?",
                     "type": "datePicker",
-                    "validation": "[\"isRequired\"]"
+                    "validation": "[\"isRequired\"]",
+                    "maxDays": 28
                 }
             ]
         },
