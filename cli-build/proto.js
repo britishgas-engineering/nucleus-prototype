@@ -284,3 +284,41 @@ var clearNode = document.querySelector('[nf-clear]');
 if (clearNode) {
     clearStorage();
 }
+
+
+// Hard code AB test
+// Very quick last minute hacky sulution
+console.log('AB test ' + window.location.href);
+var url = window.location.href;
+var querystring = window.location.search;
+
+// save cookie if variant is present
+if (querystring.indexOf('variant=a') !== -1) {
+    document.cookie = "variant=a";
+}
+if (querystring.indexOf('variant=b') !== -1) {
+    variant = 'b';
+    document.cookie = "variant=b";
+}
+
+
+// Hide calendar for variants
+
+if (document.cookie.indexOf('variant=a') !== -1) {
+    if(url.indexOf('intro') !== -1) {
+        hideCalendar();
+    }
+}
+
+if(document.cookie.indexOf('variant=b') !== -1) {
+    if(url.indexOf('start-date') !== -1) {
+        hideCalendar();
+    }
+}
+
+function hideCalendar() {
+    var dp = document.querySelector('ns-datepicker');
+    if (dp) {
+        dp.setAttribute('hascalendar', 'false');
+    }
+}
