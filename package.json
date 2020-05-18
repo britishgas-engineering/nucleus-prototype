@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andij/nucleus-prototype.git"
+    "url": "git+https://github.com/britishgas-engineering/nucleus-prototype.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andij/nucleus-prototype/issues"
+    "url": "https://github.com/britishgas-engineering/nucleus-prototype/issues"
   },
-  "homepage": "https://github.com/andij/nucleus-prototype#readme",
+  "homepage": "https://github.com/britishgas-engineering/nucleus-prototype#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.5"
   }
 }
