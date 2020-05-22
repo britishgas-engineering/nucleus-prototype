@@ -238,7 +238,19 @@ function setModelData(path, value) {
 }
 
 
-// Address Finder
+const manyAddresses = [{
+    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "135 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "137 Queenstown Rd, Battersea, London SW8 3RH"
+}, {
+    "label": "139 Queenstown Rd, Battersea, London SW8 3RH"
+}];
 
 const addresses = [{
     "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
@@ -252,7 +264,11 @@ var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
     addressSelector.addEventListener('postcode-selected', (event) => {
         setTimeout(() => {
-            event.target.addresses = addresses;
+            if (event.detail.postcode.indexOf('A') !== -1) {
+                event.target.addresses = manyAddresses;
+            } else {
+                event.target.addresses = addresses;
+            }
         }, 200);
     });
 }
@@ -301,6 +317,12 @@ if (querystring.indexOf('variant=b') !== -1) {
     document.cookie = "variant=b";
 }
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 
 // Hide calendar for variants
 
@@ -321,4 +343,37 @@ function hideCalendar() {
     if (dp) {
         dp.setAttribute('hascalendar', 'false');
     }
+}
+
+
+// Address selector prototype
+
+
+
+const multiPremise = [{
+    "label": "11 Fox Close, Woking, GU22 8LP"
+}, {
+    "label": "64 Martinsyde, Woking, GU22 8HT"
+}, {
+    "label": "11 Warewell Road, Guildford, GU1 8AA"
+}];
+
+// Logged in multi premise
+
+const userLoggedIn = getCookie('userLoggedIn') === 'true';
+const userMultiPremise = getCookie('userMultiPremise') === 'true';
+const allowManualAddress = getCookie('allowManualAddress') === 'true';
+
+
+var addressSelector = document.querySelector('nsx-address-selector');
+if(addressSelector) {
+    if(userLoggedIn) {
+        if(userMultiPremise) {
+            addressSelector.addresses = multiPremise;
+        } else {
+            addressSelector.addresses = [multiPremise[0]];
+        }
+    }
+
+    addressSelector.allowManualAddress = allowManualAddress;
 }

@@ -76,7 +76,6 @@
 <nsx-address-selector name="address" required="true"></nsx-address-selector>
 {% endmacro %}
 
-
 {% macro selector(name, label, validation, options, mask=null, separator=null) %}
 <ns-inputter heading="{{ label }}" validation="{{ validation }}" name="{{ name }}" value="">
   {% for option in options %}
