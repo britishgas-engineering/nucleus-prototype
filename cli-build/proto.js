@@ -238,27 +238,23 @@ function setModelData(path, value) {
 }
 
 
-const manyAddresses = [{
-    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "135 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "137 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "139 Queenstown Rd, Battersea, London SW8 3RH"
-}];
+const createAddress = (houseNumber) => {
+    const addressLine1 = `${houseNumber} Kings Road`;
+    const address = {
+      addressLine1: addressLine1,
+      addressLine2: `Little Village`,
+      postalTown: `Townsville`,
+      county: `Surrey`,
+      postcode: `AA1 2BB`
+    };
+    const label = `${address.addressLine1}, ${address.addressLine2}, ${address.postalTown}, ${address.county}, ${address.postcode}`;
+    address.label = label;
+    return address;
+  };
 
-const addresses = [{
-    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
-}];
+const manyAddresses = [createAddress(10), createAddress(11), createAddress(12), createAddress(13), createAddress(14), createAddress(15)];
+
+const addresses = [createAddress(10), createAddress(11), createAddress(12)];
 
 var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
@@ -350,19 +346,24 @@ function hideCalendar() {
 
 
 
-const multiPremise = [{
-    "label": "11 Fox Close, Woking, GU22 8LP"
-}, {
-    "label": "64 Martinsyde, Woking, GU22 8HT"
-}, {
-    "label": "11 Warewell Road, Guildford, GU1 8AA"
-}];
+const multiPremise = [createAddress(1), createAddress(101), createAddress(202)];
 
 // Logged in multi premise
 
 const userLoggedIn = getCookie('userLoggedIn') === 'true';
 const userMultiPremise = getCookie('userMultiPremise') === 'true';
 const allowManualAddress = getCookie('allowManualAddress') === 'true';
+
+// Set defaults if not set
+if (!userLoggedIn) {
+    document.cookie = "userLoggedIn=false";
+}
+if (!userMultiPremise) {
+    document.cookie = "userMultiPremise=false";
+}
+if (!allowManualAddress) {
+    document.cookie = "allowManualAddress=false";
+}
 
 
 var addressSelector = document.querySelector('nsx-address-selector');
