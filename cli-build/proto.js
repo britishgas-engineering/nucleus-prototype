@@ -265,7 +265,7 @@ if(addressSelector) {
             } else {
                 event.target.addresses = addresses;
             }
-        }, 200);
+        }, 2000);
     });
 }
 
