@@ -1,0 +1,27 @@
+/* .np-toggled
+This is used in `ns-inputter` to show the `.np-toggled` when the checkbox is checked.
+
+```markup
+<input type="checkbox" id="my-checkbox" class="np-toggler">
+<label for="my-checkbox">My checkbox</label>
+<div class="np-toggled">
+  <p>This div can be any element with the .np-toggled class
+</div>
+```
+*/
+
+/*
+[1] When the associated checkbox is checked, show the element with the `.np-toggled` class
+*/
+.np-toggler:checked+label+.np-toggled {
+  display: block; /* [1] */
+}
+
+/*
+[1] By default. hide the element with the `.np-toggled` class
+[2] Apply some margin top and bottom
+*/
+.np-toggled {
+  display: none; /* [1] */
+  margin: 1em 0; /* [2] */
+}
