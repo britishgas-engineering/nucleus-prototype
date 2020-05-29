@@ -1,4 +1,7 @@
 {
-  "layout": "nucleus.njk",
-  "tags": "vulnerable"
+  "layout": "nucleus",
+  "project": "vulnerable",
+  "jquery": false,
+  "script": false,
+  "style": true
 }
