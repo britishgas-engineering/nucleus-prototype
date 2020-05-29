@@ -1,0 +1,7 @@
+{
+  "layout": "nucleus",
+  "project": "book-track-manage",
+  "jquery": false,
+  "script": false,
+  "style": false
+}
