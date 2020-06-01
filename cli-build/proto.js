@@ -355,13 +355,13 @@ const userMultiPremise = getCookie('userMultiPremise') === 'true';
 const allowManualAddress = getCookie('allowManualAddress') === 'true';
 
 // Set defaults if not set
-if (!userLoggedIn) {
+if (getCookie('userLoggedIn') === undefined) {
     document.cookie = "userLoggedIn=false";
 }
-if (!userMultiPremise) {
+if (getCookie('userMultiPremise') === undefined) {
     document.cookie = "userMultiPremise=false";
 }
-if (!allowManualAddress) {
+if (getCookie('allowManualAddress') === undefined) {
     document.cookie = "allowManualAddress=false";
 }
 
