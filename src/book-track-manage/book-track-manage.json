@@ -3,5 +3,10 @@
   "project": "book-track-manage",
   "jquery": false,
   "script": false,
-  "style": false
+  "style": false,
+  "original": false,
+  "hasBookingCodeError": true,
+  "errors": {
+    "bookingCode": "Booking code starts with a letter and six numbers."
+  }
 }

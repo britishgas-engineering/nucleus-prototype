@@ -1,33 +1,101 @@
-<ns-landmark type="lakeside">
-  <h1 slot="heading">
-    <span class="h5">Step 1 of 4</span>
-    <span class="h1">Let's book your annual service</span>
-  </h1>
-</ns-landmark>
+---
+title: Step 1
+step: 1
+heading: Let's book your annual service
+---
 
+{% include "./_includes/ns-landmark.njk" %}
+
+{% if original %}
 <ns-panel>
+  {% if hasBookingCodeError %}
+    <div class="splash">
+      <ns-highlighter type="warning" class="error-msg-panel" name="data-error-panel">
+        <!-- NOTE: @drew-jones - 2020-05-29 - it's not necessary to punctuate the heading, the `ns-highlighter` should provide enough affordance -->
+        <!-- NOTE: @drew-jones - 2020-05-29 - the heading does not sound natural, consider rewording it -->
+        <h2 slot="heading">
+        Invalid booking code please check..!
+      </h2>
+        <p>{{errors.bookingCode}}</p>
+      </ns-highlighter>
+    </div>
+  {% endif %}
+  <!-- NOTE: @drew-jones - 2020-05-29 - the `splash` class can go directly on the `<ns-form>` and remove the need for the additional `<div>` -->
   <div class="splash">
-    <ns-highlighter type="warning">
-      <h2 slot="heading">Invalid booking code please check..!</h2>
-      <p>Booking code starts with a letter and six numbers.</p>
-    </ns-highlighter>
+    <ns-form>
+      <!-- NOTE: @drew-jones - 2020-05-29 - remove the unused `mask=""` and `separator=""` attributes -->
+      <!-- NOTE: @drew-jones - 2020-05-29 - place a full stop at the end of the helper -->
+      <ns-inputter helper="You'll find your booking code on either your reminder letter or email" mask="" separator=""
+        validation="[&quot;isRequired&quot;]" value="{{bookingCode}}" name="booking-code">
+        <label slot="label" for="booking-code-input" value="{{bookingCode}}">Booking code</label>
+        <!-- NOTE: @drew-jones - 2020-05-29 - I would advise against using `type=`tel` here as it's not a telephone and may pre-fill from the browser, try using `pattern="[0-9]*" to raise the number pad in a touch device -->
+        <!-- NOTE: @drew-jones - 2020-05-29 - lowercase the e.g. in the placeholder -->
+        <!-- NOTE: @drew-jones - 2020-06-01 - let's try and use the masked inputter here -->
+        <input type="tel" id="booking-code-input" placeholder="E.g 12344">
+      </ns-inputter>
+      <ns-inputter value="{{postcode}}" name="postcode" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]">
+        <label slot="label" for="postcode-input">Confirm postcode</label>
+        <!-- NOTE: @drew-jones - 2020-05-29 - the placeholder should represent the expected input and not replicate the label `e.g.TW18 3AR` -->
+        <input type="text" id="postcode-input" autocomplete="postal-code" placeholder="Postcode" value="{{postcode}}">
+      </ns-inputter>
+      <!-- NOTE: @drew-jones - 2020-04-29 - the `<ns-cta>` can belong directly in `<ns-form>`, it's not necessary to be placed within an `<ns-card>` -->
+      <ns-card type="flat" alt="">
+        <a slot="cta" href="../step-02">
+          <ns-cta class="cta-book-service" type="direct" loading="{{isLoading}}" loadingmessage="Please wait...">
+            Confirm
+          </ns-cta>
+        </a>
+      </ns-card>
+    </ns-form>
   </div>
-
-  <ns-form class="splash">
-    <ns-inputter helper="You'll find your booking code on either your reminder letter or email" validation="[&quot;isRequired&quot;]">
-      <label slot="label" for="booking-code-input">Booking code</label>
-      <input type="tel" id="booking-code-input" placeholder="e.g B12344">
-    </ns-inputter>
-    <ns-inputter name="postcode" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]">
-      <label slot="label" for="postcode-input">Confirm postcode</label>
-      <input type="text" id="postcode-input" autocomplete="postal-code" placeholder="e.g. TW12 3RS">
-    </ns-inputter>
-    <ns-cta href="../step-02" type="direct">Confirm</ns-cta>
-  </ns-form>
-
   <div class="splash">
-    <a href="../step-02">
-      <ns-cta type="text">If you don’t have a booking code, you can access your online account to book an engineer.</ns-cta>
-    </a>
+    <!-- NOTE: @drew-jones - 2020-05-29 - remove the empty `alt=""` -->
+    <ns-card type="flat" alt="">
+      <a slot="cta" href="#!">
+        <!-- NOTE: @drew-jones - 2020-05-29 - the copy on this call to action is way too long, consider splitting it out into a heading, paragraph and a link and using the card as intended -->
+        <ns-cta type="text">If you don’t have a booking code, you can access your online account to book an engineer.
+        </ns-cta>
+      </a>
+    </ns-card>
   </div>
 </ns-panel>
+{% else %}
+<ns-panel>
+  {% if hasBookingCodeError %}
+    <div class="splash">
+      <ns-highlighter type="warning" class="error-msg-panel" name="data-error-panel">
+        <h2 slot="heading">
+        Please check your booking code
+      </h2>
+        <p>{{errors.bookingCode}}</p>
+      </ns-highlighter>
+    </div>
+  {% endif %}
+  <ns-form class="splash">
+    <ns-inputter helper="You'll find your booking code on either your reminder letter or email."
+      validation="[&quot;isRequired&quot;]" value="{{bookingCode}}" name="booking-code" mask="-----">
+      <label slot="label" for="booking-code-input" value="{{bookingCode}}">Booking code</label>
+      <input type="text" pattern="[0-9]*" id="booking-code-input">
+    </ns-inputter>
+    <ns-inputter value="{{postcode}}" name="postcode" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]">
+      <label slot="label" for="postcode-input">Confirm postcode</label>
+      <input type="text" id="postcode-input" autocomplete="postal-code" placeholder="e.g. TW18 3AR" value="{{postcode}}">
+    </ns-inputter>
+    <ns-cta href="../step-02" class="cta-book-service" type="direct" loading="{{isLoading}}"
+      loadingmessage="Please wait...">
+      Confirm
+    </ns-cta>
+  </ns-form>
+</ns-panel>
+<ns-panel>
+  <div class="splash">
+    <ns-card type="flat">
+      <h3 slot="heading">Don't have a booking code?</h3>
+      <p slot="paragraph">You can access your online account to book an engineer and return here with your booking code.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">book an engineer</ns-cta>
+      </a>
+    </ns-card>
+  </div>
+</ns-panel>
+{% endif %}

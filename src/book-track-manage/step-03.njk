@@ -1,21 +1,21 @@
-<ns-landmark type="lakeside">
-  <h1 slot="heading">
-    <span class="h5">Step 3 of 4</span>
-    <span class="h1">Keeping you updated</span>
-  </h1>
-  <p slot="paragraph">
-        To keep you posted about your appointment, we need your email address and mobile phone number.
-        We won't share or use your details for anything else.
-      </p>
-</ns-landmark>
+---
+title: Step 3
+step: 3
+heading: Keeping you updated
+paragraph1: To keep you posted about your appointment, we need your email address and mobile phone number.
+paragraph2: We won't share or use your details for anything else.
+---
+
+{% include "./_includes/ns-landmark.njk" %}
+
 <ns-panel>
   <div class="splash">
     <ns-form name="contact-form">
-      <ns-inputter validation="[&quot;isEmail&quot;]" helper="We'll email your booking confirmation." name="contact-email">
+      <ns-inputter validation="[&quot;isEmail&quot;]" helper="We'll email your booking confirmation" name="contact-email">
         <label slot="label">Email address</label>
         <input type="email">
       </ns-inputter>
-      <ns-inputter validation="[&quot;isMobileNumber&quot;]" helper="We'll send you reminder messages and call when we're on our way." name="contact-mobile">
+      <ns-inputter validation="[&quot;isMobileNumber&quot;]" helper="We'll send you reminder messages and call when we're on our way" name="contact-mobile">
         <label slot="label">Mobile phone number</label>
         <input type="tel">
       </ns-inputter>
