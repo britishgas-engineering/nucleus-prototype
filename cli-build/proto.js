@@ -8,14 +8,14 @@ minimise();
 
 // Add validation listeners to forms to keep track of index
 var forms = document.querySelectorAll('ns-form-summary');
-forms.forEach((form, index) => {
+forms.forEach(function(form, index) {
     form.setAttribute('nf-form-index', index);
-    form.addEventListener('edit', (event) => {
+    form.addEventListener('edit', function (event) {
         currentFormIndex = parseInt(event.currentTarget.getAttribute('nf-form-index'), 10);
         model.currentFormIndex = currentFormIndex;
         minimise();
     })
-    form.addEventListener('validated', (event) => {
+    form.addEventListener('validated', function (event) {
         if (event.detail.validation.isValid) {
             currentFormIndex = parseInt(event.currentTarget.getAttribute('nf-form-index'), 10) + 1;
             model.currentFormIndex = currentFormIndex;
@@ -27,10 +27,10 @@ forms.forEach((form, index) => {
 
 // CTA actions
 var ctas = document.querySelectorAll('ns-cta');
-ctas.forEach((cta) => {
+ctas.forEach(function (cta) {
     cta.setAttribute('loading', 'false');
     if (cta.getAttribute('nf-href')) {
-        cta.addEventListener('click', (event) => {
+        cta.addEventListener('click', function (event) {
             //doHide();
             var button = event.currentTarget;
             //Check if this is in a form
@@ -55,14 +55,14 @@ ctas.forEach((cta) => {
 // }
 
 function loadURL(url) {
-    setTimeout(() => {
+    setTimeout(function () {
         window.location.href = url;
     }, 500);
 }
 
 function minimise() {
     var forms = document.querySelectorAll('ns-form-summary');
-    forms.forEach((form, index) => {
+    forms.forEach(function (form, index) {
 
         if(index === currentFormIndex - 1) {
             form.scrollIntoView();
@@ -70,7 +70,7 @@ function minimise() {
 
         if (index <= currentFormIndex) { 
             form.style.display = 'block';
-            setTimeout(() => {
+            setTimeout(function () {
                 form.formVisible = index === currentFormIndex;
             }, 0);
             
@@ -84,7 +84,7 @@ function minimise() {
 // If form isnt defined in model then create an entry
 function checkModel() {
     var forms = document.querySelectorAll('ns-form');
-    forms.forEach((form) => {
+    forms.forEach(function (form) {
         const path = form.getAttribute('nf-model');
         if (path) {
             var page = path.split('.')[1];
@@ -101,7 +101,7 @@ function checkModel() {
 function updateUI() {
     // Populate UI from model json
     var forms = document.querySelectorAll('ns-form');
-    forms.forEach((form) => {
+    forms.forEach(function (form) {
         const path = form.getAttribute('nf-model');
         if (path) {
             var formData = getModelData(path);
@@ -118,10 +118,10 @@ function updateUI() {
             // })
 
             // Or we could update all fields, so you could have duplicate fields????
-            var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach((inputter) => {
+            var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach(function (inputter) {
                 var fieldName = inputter.getAttribute('name');
                 console.log('update field ' + fieldName + ' ' + formData);
-                var val = formData.fields && formData.fields.find((field) => {
+                var val = formData.fields && formData.fields.find(function (field) {
                     return (field.name === fieldName);
                 });
                 if (val) {
@@ -135,11 +135,11 @@ function updateUI() {
     // Update text with nf-model
     var spans = document.querySelectorAll('[nf-model]');
     
-    spans.forEach((span) => {
+    spans.forEach(function (span) {
         var path = span.getAttribute('nf-model').split('.');
         var prop = path.pop();
         var model = getModelData(path.join('.'));
-        var text = model.fields && model.fields.find((field) => {
+        var text = model.fields && model.fields.find(function (field) {
             return field.name === prop;
         })
 
@@ -153,10 +153,10 @@ function updateUI() {
 
 // Add event listenrs to ALL inputters
 var forms = document.querySelectorAll('ns-form');
-forms.forEach((form, index) => {
+forms.forEach(function (form, index) {
     const formPath = form.getAttribute('nf-model');
     if (formPath) {
-        form.querySelectorAll('ns-inputter, nsx-address-selector, ns-datepicker').forEach((inputter) => {
+        form.querySelectorAll('ns-inputter, nsx-address-selector, ns-datepicker').forEach(function (inputter) {
             inputter.removeEventListener('change', changeHandler);
             inputter.setAttribute('nf-model-path', formPath + '.fields.' + inputter.getAttribute('name'));
             inputter.addEventListener('change', changeHandler);
@@ -193,7 +193,7 @@ function getModelData(path) {
     }
     var obj = model;
     arr.shift();
-    arr.forEach((prop) => {
+    arr.forEach(function (prop) {
         if (obj.hasOwnProperty(prop)) {
             obj = obj[prop];
         } else {
@@ -211,7 +211,7 @@ function setModelData(path, value) {
     }
     var obj = model;
     arr.shift();
-    arr.forEach((prop, index) => {
+    arr.forEach(function (prop, index) {
         if (index < arr.length -1) {
             if (obj.hasOwnProperty(prop)) {
                 obj = obj[prop];
@@ -223,7 +223,7 @@ function setModelData(path, value) {
         if (index === arr.length -1) {
             // We are in fields array here so find record
             const fieldsArray = obj;
-            const fieldObject = fieldsArray.find((field) => {
+            const fieldObject = fieldsArray.find(function (field) {
                 return field.name === prop;
             });
 
@@ -238,7 +238,7 @@ function setModelData(path, value) {
 }
 
 
-const createAddress = (houseNumber) => {
+const createAddress = function (houseNumber) {
     const addressLine1 = `${houseNumber} Kings Road`;
     const address = {
       addressLine1: addressLine1,
@@ -258,8 +258,8 @@ const addresses = [createAddress(10), createAddress(11), createAddress(12)];
 
 var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
-    addressSelector.addEventListener('postcode-selected', (event) => {
-        setTimeout(() => {
+    addressSelector.addEventListener('postcode-selected', function (event) {
+        setTimeout(function () {
             var arr;
             if (event.detail.postcode.indexOf('A') !== -1) {
                 arr = manyAddresses;
@@ -267,7 +267,7 @@ if(addressSelector) {
                 arr = addresses;
             }
             // Customise addresses to match postcode
-            arr.forEach((obj) => {
+            arr.forEach(function (obj) {
                 obj.postcode = event.detail.postcode;
                 obj.label = `${obj.addressLine1}, ${obj.addressLine2}, ${obj.postalTown}, ${obj.county}, ${obj.postcode}`;
             });
@@ -279,7 +279,7 @@ if(addressSelector) {
 if(addressSelector) {
     // Hide submit button
     document.querySelector('#submit-button').setAttribute('style', 'display: none');
-    addressSelector.addEventListener('address-selected', (event) => {
+    addressSelector.addEventListener('address-selected', function (event) {
         console.log('Address selected ' + event.detail.address.label);
         //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
         if(event.target.getAttribute('nf-model-path')) {
@@ -289,7 +289,7 @@ if(addressSelector) {
 }
 
 if(addressSelector) {
-    addressSelector.addEventListener('address-selected', (event) => {
+    addressSelector.addEventListener('address-selected', function (event) {
         if (event.detail.address) {
             document.querySelector('#submit-button').setAttribute('style', 'display: block');
         } else {
