@@ -108,14 +108,6 @@ function updateUI() {
             if(!formData) {
                 console.log('Auto generating model data for ' + path);
             }
-            // Update UI from data
-            // formData.fields.forEach((field) => {
-            //     console.log(field.name, field.value);
-            //     var inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
-            //     if(inputter) {
-            //         inputter.value = field.value;
-            //     }
-            // })
 
             // Or we could update all fields, so you could have duplicate fields????
             var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach(function (inputter) {
@@ -239,15 +231,15 @@ function setModelData(path, value) {
 
 
 var createAddress = function (houseNumber) {
-    var addressLine1 = `${houseNumber} Kings Road`;
+    var addressLine1 = houseNumber + 'Kings Road';
     var address = {
       addressLine1: addressLine1,
-      addressLine2: `Little Village`,
-      postalTown: `Townsville`,
-      county: `Surrey`,
-      postcode: `AA1 2BB`
+      addressLine2: 'Little Village',
+      postalTown: 'Townsville',
+      county: 'Surrey',
+      postcode: 'AA1 2BB'
     };
-    var label = `${address.addressLine1}, ${address.addressLine2}, ${address.postalTown}, ${address.county}, ${address.postcode}`;
+    var label = address.addressLine1 + ', ' + address.addressLine2 + ', ' + address.postalTown + ', ' + address.county + ', ' + address.postcode;
     address.label = label;
     return address;
   };
@@ -269,7 +261,7 @@ if(addressSelector) {
             // Customise addresses to match postcode
             arr.forEach(function (obj) {
                 obj.postcode = event.detail.postcode;
-                obj.label = `${obj.addressLine1}, ${obj.addressLine2}, ${obj.postalTown}, ${obj.county}, ${obj.postcode}`;
+                obj.label = obj.addressLine1 + ', ' + obj.addressLine2 + ', ' + obj.postalTown + ', ' + obj.county + ', ' + obj.postcode;
             });
             event.target.addresses = arr;
         }, 1000);
@@ -321,8 +313,8 @@ if (querystring.indexOf('variant=b') !== -1) {
 }
 
 function getCookie(name) {
-    var value = `; ${document.cookie}`;
-    var parts = value.split(`; ${name}=`);
+    var value = '; ' + document.cookie;
+    var parts = value.split('; ' + name + '=');
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
