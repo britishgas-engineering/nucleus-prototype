@@ -260,12 +260,19 @@ var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
     addressSelector.addEventListener('postcode-selected', (event) => {
         setTimeout(() => {
+            var arr;
             if (event.detail.postcode.indexOf('A') !== -1) {
-                event.target.addresses = manyAddresses;
+                arr = manyAddresses;
             } else {
-                event.target.addresses = addresses;
+                arr = addresses;
             }
-        }, 2000);
+            // Customise addresses to match postcode
+            arr.forEach((obj) => {
+                obj.postcode = event.detail.postcode;
+                obj.label = `${obj.addressLine1}, ${obj.addressLine2}, ${obj.postalTown}, ${obj.county}, ${obj.postcode}`;
+            });
+            event.target.addresses = arr;
+        }, 1000);
     });
 }
 
