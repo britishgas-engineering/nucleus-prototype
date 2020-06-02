@@ -40,7 +40,7 @@ ctas.forEach(function (cta) {
                 if(form.isValid) {
                     button.setAttribute('loading', 'true');
                     saveModel(model);
-                    const nextURL = cta.getAttribute('nf-href') === 'DYNAMIC' ? getDynamicURL() : cta.getAttribute('nf-href');
+                    var nextURL = cta.getAttribute('nf-href') === 'DYNAMIC' ? getDynamicURL() : cta.getAttribute('nf-href');
                     loadURL(nextURL);
                 }
             } else {
@@ -85,7 +85,7 @@ function minimise() {
 function checkModel() {
     var forms = document.querySelectorAll('ns-form');
     forms.forEach(function (form) {
-        const path = form.getAttribute('nf-model');
+        var path = form.getAttribute('nf-model');
         if (path) {
             var page = path.split('.')[1];
             if(!model[page]) {
@@ -102,7 +102,7 @@ function updateUI() {
     // Populate UI from model json
     var forms = document.querySelectorAll('ns-form');
     forms.forEach(function (form) {
-        const path = form.getAttribute('nf-model');
+        var path = form.getAttribute('nf-model');
         if (path) {
             var formData = getModelData(path);
             if(!formData) {
@@ -111,7 +111,7 @@ function updateUI() {
             // Update UI from data
             // formData.fields.forEach((field) => {
             //     console.log(field.name, field.value);
-            //     const inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
+            //     var inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
             //     if(inputter) {
             //         inputter.value = field.value;
             //     }
@@ -154,7 +154,7 @@ function updateUI() {
 // Add event listenrs to ALL inputters
 var forms = document.querySelectorAll('ns-form');
 forms.forEach(function (form, index) {
-    const formPath = form.getAttribute('nf-model');
+    var formPath = form.getAttribute('nf-model');
     if (formPath) {
         form.querySelectorAll('ns-inputter, nsx-address-selector, ns-datepicker').forEach(function (inputter) {
             inputter.removeEventListener('change', changeHandler);
@@ -222,8 +222,8 @@ function setModelData(path, value) {
 
         if (index === arr.length -1) {
             // We are in fields array here so find record
-            const fieldsArray = obj;
-            const fieldObject = fieldsArray.find(function (field) {
+            var fieldsArray = obj;
+            var fieldObject = fieldsArray.find(function (field) {
                 return field.name === prop;
             });
 
@@ -238,23 +238,23 @@ function setModelData(path, value) {
 }
 
 
-const createAddress = function (houseNumber) {
-    const addressLine1 = `${houseNumber} Kings Road`;
-    const address = {
+var createAddress = function (houseNumber) {
+    var addressLine1 = `${houseNumber} Kings Road`;
+    var address = {
       addressLine1: addressLine1,
       addressLine2: `Little Village`,
       postalTown: `Townsville`,
       county: `Surrey`,
       postcode: `AA1 2BB`
     };
-    const label = `${address.addressLine1}, ${address.addressLine2}, ${address.postalTown}, ${address.county}, ${address.postcode}`;
+    var label = `${address.addressLine1}, ${address.addressLine2}, ${address.postalTown}, ${address.county}, ${address.postcode}`;
     address.label = label;
     return address;
   };
 
-const manyAddresses = [createAddress(10), createAddress(11), createAddress(12), createAddress(13), createAddress(14), createAddress(15)];
+var manyAddresses = [createAddress(10), createAddress(11), createAddress(12), createAddress(13), createAddress(14), createAddress(15)];
 
-const addresses = [createAddress(10), createAddress(11), createAddress(12)];
+var addresses = [createAddress(10), createAddress(11), createAddress(12)];
 
 var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
@@ -321,8 +321,8 @@ if (querystring.indexOf('variant=b') !== -1) {
 }
 
 function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
@@ -353,13 +353,13 @@ function hideCalendar() {
 
 
 
-const multiPremise = [createAddress(1), createAddress(101), createAddress(202)];
+var multiPremise = [createAddress(1), createAddress(101), createAddress(202)];
 
 // Logged in multi premise
 
-const userLoggedIn = getCookie('userLoggedIn') === 'true';
-const userMultiPremise = getCookie('userMultiPremise') === 'true';
-const allowManualAddress = getCookie('allowManualAddress') === 'true';
+var userLoggedIn = getCookie('userLoggedIn') === 'true';
+var userMultiPremise = getCookie('userMultiPremise') === 'true';
+var allowManualAddress = getCookie('allowManualAddress') === 'true';
 
 // Set defaults if not set
 if (getCookie('userLoggedIn') === undefined) {
