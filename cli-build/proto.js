@@ -113,9 +113,9 @@ function updateUI() {
             var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach(function (inputter) {
                 var fieldName = inputter.getAttribute('name');
                 console.log('update field ' + fieldName + ' ' + formData);
-                var val = formData.fields && formData.fields.find(function (field) {
+                var val = formData.fields && formData.fields.filter(function (field) {
                     return (field.name === fieldName);
-                });
+                })[0];
                 if (val) {
                     console.log('Set inputter value ' + inputter + ' ' + val);
                     inputter.setAttribute('value', val.value);
@@ -131,9 +131,9 @@ function updateUI() {
         var path = span.getAttribute('nf-model').split('.');
         var prop = path.pop();
         var model = getModelData(path.join('.'));
-        var text = model.fields && model.fields.find(function (field) {
+        var text = model.fields && model.fields.filter(function (field) {
             return field.name === prop;
-        })
+        })[0];
 
         if(text && text.value) {
             span.innerText = text.value;
@@ -215,9 +215,9 @@ function setModelData(path, value) {
         if (index === arr.length -1) {
             // We are in fields array here so find record
             var fieldsArray = obj;
-            var fieldObject = fieldsArray.find(function (field) {
+            var fieldObject = fieldsArray.filter(function (field) {
                 return field.name === prop;
-            });
+            })[0];
 
             if(fieldObject) {
                 fieldObject.value = value;
