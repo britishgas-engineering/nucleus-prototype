@@ -4,9 +4,10 @@ step: 1
 heading: Let's book your annual service
 ---
 
+<pre>Original</pre>
+
 {% include "./_includes/ns-landmark.njk" %}
 
-{% if original %}
 <ns-panel>
   {% if hasBookingCodeError %}
     <div class="splash">
@@ -59,7 +60,11 @@ heading: Let's book your annual service
     </ns-card>
   </div>
 </ns-panel>
-{% else %}
+
+<pre>Suggestion</pre>
+
+{% include "./_includes/ns-landmark.njk" %}
+
 <ns-panel>
   {% if hasBookingCodeError %}
     <div class="splash">
@@ -87,15 +92,15 @@ heading: Let's book your annual service
     </ns-cta>
   </ns-form>
 </ns-panel>
+
 <ns-panel>
   <div class="splash">
     <ns-card type="flat">
       <h3 slot="heading">Don't have a booking code?</h3>
       <p slot="paragraph">You can access your online account to book an engineer and return here with your booking code.</p>
       <a slot="cta" href="#!">
-        <ns-cta type="text">book an engineer</ns-cta>
+        <ns-cta type="text">Book an engineer</ns-cta>
       </a>
     </ns-card>
   </div>
 </ns-panel>
-{% endif %}

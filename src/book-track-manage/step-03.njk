@@ -6,6 +6,36 @@ paragraph1: To keep you posted about your appointment, we need your email addres
 paragraph2: We won't share or use your details for anything else.
 ---
 
+<pre>Original</pre>
+
+{% include "./_includes/ns-landmark.njk" %}
+
+<ns-panel>
+  <div class="splash">
+    <ns-form name="contact-form">
+      <!-- NOTE: @drew-jones - 2020-05-29 - remove the full stop from the end of the helper -->
+      <ns-inputter validation="[&quot;isEmail&quot;]" helper="We'll email your booking confirmation." name="contact-email">
+        <label slot="label">Email address</label>
+        <!-- NOTE: @drew-jones - 2020-05-29 - introduce the placeholder if it proves to be useful -->
+        <input type="email">
+      </ns-inputter>
+      <!-- NOTE: @drew-jones - 2020-05-29 - remove the full stop from the end of the helper -->
+      <ns-inputter validation="[&quot;isMobileNumber&quot;]" helper="We'll send you reminder messages and call when we're on our way." name="contact-mobile">
+        <label slot="label">Mobile phone number</label>
+        <!-- NOTE: @drew-jones - 2020-05-29 - introduce the placeholder if it proves to be useful -->
+        <input type="tel">
+      </ns-inputter>
+      <ns-card type="flat">
+        <a slot="cta" href="../step-04">
+          <ns-cta type="direct">Next</ns-cta>
+        </a>
+      </ns-card>
+    </ns-form>
+  </div>
+</ns-panel>
+
+<pre>Suggestion</pre>
+
 {% include "./_includes/ns-landmark.njk" %}
 
 <ns-panel>
@@ -13,11 +43,11 @@ paragraph2: We won't share or use your details for anything else.
     <ns-form name="contact-form">
       <ns-inputter validation="[&quot;isEmail&quot;]" helper="We'll email your booking confirmation" name="contact-email">
         <label slot="label">Email address</label>
-        <input type="email">
+        <input type="email" placeholder="e.g. email@address.com">
       </ns-inputter>
       <ns-inputter validation="[&quot;isMobileNumber&quot;]" helper="We'll send you reminder messages and call when we're on our way" name="contact-mobile">
         <label slot="label">Mobile phone number</label>
-        <input type="tel">
+        <input type="tel" placeholder="e.g. 07770777777">
       </ns-inputter>
       <ns-card type="flat">
         <a slot="cta" href="../step-04">
