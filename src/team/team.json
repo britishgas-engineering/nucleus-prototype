@@ -1,0 +1,9 @@
+{
+  "layout": "nucleus",
+  "project": "team",
+  "jquery": false,
+  "script": false,
+  "style": false,
+  "givenname": "Team",
+  "familyname": "Amazing"
+}
