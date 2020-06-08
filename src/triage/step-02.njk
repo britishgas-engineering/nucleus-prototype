@@ -1,0 +1,19 @@
+---
+title: Triage
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-inputter validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="question" id="question-a" value="question-a">
+      <label for="question-a">I have some unexpected outgoings and I want to pay my balance in the next 14 days</label>
+      <input type="radio" name="question" id="question-b" value="question-b">
+      <label for="question-b">I want to explore other options</label>
+      <input type="radio" name="question" id="question-c" value="question-c">
+      <label for="question-c">There is a problem with my bill</label>
+    </ns-inputter>
+    <ns-cta href="../step-03" onclick="submitForm()">Continue</ns-cta>
+  </ns-form>
+</ns-panel>

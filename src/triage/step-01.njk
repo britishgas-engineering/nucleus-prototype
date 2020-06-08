@@ -1,0 +1,17 @@
+---
+title: Triage
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Can I pay in full today?" value="">
+      <input type="radio" name="question" id="question-a" value="question-a">
+      <label for="question-a">No</label>
+      <input type="radio" name="question" id="question-b" value="question-b">
+      <label for="question-b">Yes</label>
+    </ns-inputter>
+    <ns-cta href="../step-02" onclick="submitForm()">Continue</ns-cta>
+  </ns-form>
+</ns-panel>

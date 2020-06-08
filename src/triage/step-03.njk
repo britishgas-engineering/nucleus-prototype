@@ -1,0 +1,18 @@
+---
+title: Triage
+heading: "<b>I can't pay</b> today because"
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-inputter validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="question" id="question-a" value="question-a">
+      <label for="question-a">Me or a member of my household is experiencing financial difficulty</label>
+      <input type="radio" name="question" id="question-b" value="question-b">
+      <label for="question-b">Me or a member of my household have a health issue that affects the household income</label>
+    </ns-inputter>
+    <ns-cta href="../step-04" onclick="submitForm()">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
