@@ -5,15 +5,35 @@ title: Triage
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
-  <ns-form class="splash">
-    <ns-inputter validation="[&quot;isRequired&quot;]" value="">
-      <input type="radio" name="question" id="question-a" value="question-a">
-      <label for="question-a">I have some unexpected outgoings and I want to pay my balance in the next 14 days</label>
-      <input type="radio" name="question" id="question-b" value="question-b">
-      <label for="question-b">I want to explore other options</label>
-      <input type="radio" name="question" id="question-c" value="question-c">
-      <label for="question-c">There is a problem with my bill</label>
+  <ns-form class="splash" nf-model="model.pay-options">
+    <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="radio" id="radio-a" value="Unexpected">
+      <label for="radio-a">I have some unexpected outgoings and I want to pay my balance in the next 14 days</label>
+      <input type="radio" name="radio" id="radio-b" value="Options">
+      <label for="radio-b">I want to explore other options</label>
+      <input type="radio" name="radio" id="radio-c" value="Problem">
+      <label for="radio-c">There is a problem with my bill</label>
     </ns-inputter>
-    <ns-cta href="../step-03" onclick="submitForm()">Continue</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
   </ns-form>
 </ns-panel>
+
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="question-a"]').value;
+
+    if (data === 'Unexpected') {
+      return '../pay-promise';
+    }
+
+    if (data === 'Options') {
+      return '../step-03';
+    }
+
+    if (data === 'Problem') {
+      return 'https://www.britishgas.co.uk/help-and-support/bills-and-payments/if-your-bills-wrong';
+    }
+
+  }
+</script>
