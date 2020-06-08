@@ -16,8 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     "njk",
     "html",
-    "js",
-    "css"
+    "script.js",
+    "style.css"
   ]);
 
   return {
