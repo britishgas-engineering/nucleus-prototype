@@ -6,13 +6,28 @@ heading: "<b>I can't pay</b> today because"
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
-  <ns-form class="splash">
-    <ns-inputter validation="[&quot;isRequired&quot;]" value="">
-      <input type="radio" name="question" id="question-a" value="question-a">
-      <label for="question-a">Me or a member of my household is experiencing financial difficulty</label>
-      <input type="radio" name="question" id="question-b" value="question-b">
-      <label for="question-b">Me or a member of my household have a health issue that affects the household income</label>
+  <ns-form class="splash" nf-model="model.pay-reason">
+    <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="radio" id="radio-a" value="Difficulty">
+      <label for="radio-a">Me or a member of my household is experiencing financial difficulty</label>
+      <input type="radio" name="radio" id="radio-b" value="Health">
+      <label for="radio-b">Me or a member of my household have a health issue that affects the household income</label>
     </ns-inputter>
-    <ns-cta href="../step-04" onclick="submitForm()">Continue</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
   </ns-form>
 </ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="question-a"]').value;
+
+    if (data === 'Difficulty') {
+      return '../step-04a';
+    }
+
+    if (data === 'Health') {
+      return '../step-04b';
+    }
+
+  }
+</script>
