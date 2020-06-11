@@ -1,0 +1,33 @@
+---
+title: Triage
+heading: "Please <b>select an option</b>"
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.pay-arrangement">
+    <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="radio" id="radio-a" value="Installments">
+      <label for="radio-a">I'd like to set up an arrangement to pay the balance in installments</label>
+      <input type="radio" name="radio" id="radio-b" value="pay as you go">
+      <label for="radio-b">I'd like to switch to a Pay As You Go meter</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="question-a"]').value;
+
+    if (data === 'Installments') {
+      return '../step-06';
+    }
+
+    if (data === 'pay as you go') {
+      return '../step-07b';
+    }
+
+  }
+</script>

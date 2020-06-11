@@ -5,7 +5,7 @@ title: Triage
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
-  <ns-form class="splash" nf-model="model.pay-options">
+  <ns-form class="splash" nf-model="model.health-issues">
     <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
       <input type="radio" name="radio" id="radio-a" value="Carer">
       <label for="radio-a">I or a member of my household have a carer or support worker to help manage day to day tasks</label>
@@ -24,15 +24,15 @@ title: Triage
     var data = document.querySelector('ns-inputter[name="question-a"]').value;
 
     if (data === 'Carer') {
-      return '../step-00';
+      return '../step-05';
     }
 
     if (data === 'Medical') {
-      return '../step-00';
+      return '../step-05';
     }
 
     if (data === 'Other') {
-      return '../step-00';
+      return '../step-04c';
     }
 
   }
