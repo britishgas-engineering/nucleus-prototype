@@ -6,9 +6,10 @@ heading: "Now we need to <b>identify</b> you"
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
+  {% include "./_includes/go-back.njk" -%}
   <ns-form class="splash" nf-model="model.identify">
 
-    <ns-inputter mask="85-  -  -  -  -  " separator="-" validation="[&quot;isRequired&quot;]" helper="You can find your customer reference number at the top of any letter or email we have sent" name="account-number">
+    <ns-inputter mask="85-  -  -  -  -  " separator="-" validation='["isRequired"]' helper="You can find your customer reference number at the top of any letter or email we have sent" name="account-number">
       <div slot="tip-details">
         <p>Your customer reference number should be a minimum of 12 numbers starting "85".</p>
       </div>
@@ -17,28 +18,27 @@ heading: "Now we need to <b>identify</b> you"
     </ns-inputter>
 
     <ns-fieldset legend="Personal information">
-      <ns-inputter value="" validation="[&quot;isRequired", "isTitle&quot;]">
+      <ns-inputter value="" validation='["isRequired" , "isTitle"]'>
         <label slot="label">Title</label>
         <input type="text" name="title" autocomplete="honorific-prefix" spellcheck="false">
       </ns-inputter>
 
-      <ns-inputter value="" validation="[&quot;isRequired", "isFirstName&quot;]">
+      <ns-inputter value="" validation='["isRequired" , "isFirstName"]'>
         <label slot="label">First name</label>
         <input type="text" name="first-name" autocomplete="given-name" spellcheck="false">
       </ns-inputter>
 
-      <ns-inputter value="" validation="[&quot;isRequired", "isLastName&quot;]" helper="">
+      <ns-inputter value="" validation='["isRequired" , "isLastName"]' helper="">
         <label slot="label">Last name</label>
         <input type="text" name="last-name" autocomplete="family-name" spellcheck="false">
       </ns-inputter>
 
-      <ns-inputter validation="[&quot;isRequired", "isPostcode&quot;]">
+      <ns-inputter validation='["isRequired" , "isPostcode"]'>
         <label slot="label">Postcode</label>
         <input type="text" name="postcode" autocomplete="postal-code" spellcheck="false">
       </ns-inputter>
       <p>We only ask for this information so we can <b>identify you</b>. We will not use any of these details <b>for marketing purposes.</b></p>
       <ns-cta href="../step-09">Continue</ns-cta>
-      {% include "./_includes/go-back.njk" -%}
     </ns-fieldset>
   </ns-form>
 </ns-panel>

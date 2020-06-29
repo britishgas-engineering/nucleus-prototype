@@ -5,6 +5,7 @@ title: Triage
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
+  {% include "./_includes/go-back.njk" -%}
   <ns-form class="splash" nf-model="model.financial-difficulty">
     <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
       <input type="radio" name="radio" id="radio-a" value="Change">
@@ -17,7 +18,6 @@ title: Triage
       <label for="radio-d">Other</label>
     </ns-inputter>
     <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-    {% include "./_includes/go-back.njk" -%}
   </ns-form>
 </ns-panel>
 

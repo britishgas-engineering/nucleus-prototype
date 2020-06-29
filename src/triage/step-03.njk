@@ -6,6 +6,7 @@ heading: "<b>I can't pay</b> today because"
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
+  {% include "./_includes/go-back.njk" -%}
   <ns-form class="splash" nf-model="model.pay-reason">
     <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
       <input type="radio" name="radio" id="radio-a" value="financial difficulty">
@@ -14,7 +15,6 @@ heading: "<b>I can't pay</b> today because"
       <label for="radio-b">Me or a member of my household have a health issue that affects the household income</label>
     </ns-inputter>
     <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-    {% include "./_includes/go-back.njk" -%}
   </ns-form>
 </ns-panel>
 
