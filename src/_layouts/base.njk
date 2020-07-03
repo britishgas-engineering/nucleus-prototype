@@ -6,24 +6,43 @@ title: Nucleus prototype
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ title }}">
+    <meta name="description" content="{{title}}">
     <meta name="format-detection" content="telephone=no">
+
+    {%- if local %}
+    <link rel="stylesheet" href="/nucleus/styles.min.css">
+    {%- elif branch %}
+    <link rel="stylesheet" href="https://www5.bgo.bgdigitaltest.co.uk/nucleus/{{branch}}/styles.min.css">
+    {%- endif -%}
+
     {%- if jquery %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     {%- endif -%}
+
     {%- if script %}
-    <script src="/{{ project }}/script.js"></script>
+    <script src="/{{project}}/script.js"></script>
     {%- endif -%}
+
     {%- if style %}
-    <link rel="stylesheet" href="/{{ project }}/style.css">
+    <link rel="stylesheet" href="/{{project}}/style.css">
     {%- endif -%}
+
     <title>{{title}}</title>
   </head>
   <body class="ndsn">
 
-    {{ content | safe }}
+    {{content | safe}}
 
+    {%- if local %}
+    <script src="/nucleus/polyfill.js"></script>
+    <script src="/nucleus/components.js"></script>
+    {%- elif branch %}
+    <script type="text/javascript" src="https://www5.bgo.bgdigitaltest.co.uk/nucleus/{{branch}}/nucleus.min.js"></script>
+    <script src="https://www.britishgas.co.uk/nucleus-experiences/components.min.js"></script>
+    {%- else -%}
     <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
     <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+    {%- endif -%}
+
   </body>
 </html>
