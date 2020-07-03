@@ -1,5 +1,6 @@
 ---
 title: Priority services register
+branch: 0dad7b31af2c6cf1db9613921ab7fb40378fd5fb
 eleventyNavigation:
   key: Vulnerability project
   title: Priority services register
@@ -26,11 +27,7 @@ eleventyNavigation:
       </div>
       <div>
         <dt>Correspondence address</dt>
-        <dd>
-          11 Coombe Pine<br>
-          Bracknell<br>
-          RG12 0TJ
-        </dd>
+        <dd>11 Coombe Pine<br>Bracknell<br>ßRG12 0TJ</dd>
         <dd>
           <a href="#!">Change address</a>
         </dd>
@@ -74,56 +71,54 @@ eleventyNavigation:
 <ns-panel>
   <div class="splash">
     <h2 class="h2">Household vulnerabilities</h2>
-    <p>If you or someone living with you has specific needs, you maybe eligible for additional services, <b>priority treatment</b> or advanced warning when there's a planned interruption of supply:</p>
+    <h3 class="enlighten">What does <b>vulnerable</b> mean?</h3>
+    <p>A wide range of circumstances could be deemed as a vulnerable situation such as:</p>
     <ul class="ul-bullet">
-      <li>Supply Interruption Advance Warnings</li>
-      <li>Free annual gas safety checks</li>
-      <li>Require bill formats like braille, large print or talking bills</li>
-      <li>Your meters moved and quarterly meter readings</li>
-      <li>Peace of mind through our and nominee scheme</li>
+      <li>People with certain mental health conditions which impact understanding of a bill.</li>
+      <li>People who cannot top up their pre-payment meter due to injury.</li>
+      <li>Temporary circumstances, where you might need extra support for a limited tamount of time.</li>
+      <li>If you live with a child under five years old.</li>
     </ul>
   </div>
-  <ns-form class="splash">
+  <!-- <ns-form class="splash">
     <ns-inputter validation="[&quot;isRequired&quot;]" heading="Which address would you like to use?" name="name-a">
-      <input type="radio" id="answer-a" name="name-a" value="a">
-      <label for="answer-a">22 Woodmill Court, Ascot, SL5 8FF</label>
-      <input type="radio" id="answer-b" name="name-a" value="b">
-      <label for="answer-b">11 Coombe Pine, Bracknell, RG12 0TJ</label>
+      <input type="radio" id="answer-1a" name="name-a" value="a">
+      <label for="answer-1a">22 Woodmill Court, Ascot, SL5 8FF</label>
+      <input type="radio" id="answer-1b" name="name-a" value="b">
+      <label for="answer-1b">11 Coombe Pine, Bracknell, RG12 0TJ</label>
     </ns-inputter>
-  </ns-form>
-</ns-panel>
+  </ns-form> -->
 
-<ns-panel>
   <div class="splash">
     <ns-accordion>
       <h2 slot="heading">Is anyone in your household affected by any of these?</h2>
       <ns-expander>
-        <h3 slot="heading">Sensory and mobility</h3>
         {% include "./_includes/01-sensory-mobility.njk" %}
       </ns-expander>
       <ns-expander>
-        <h3 slot="heading">Cognitive and learning</h3>
         {% include "./_includes/02-cognitive-learning.njk" %}
       </ns-expander>
       <ns-expander>
-        <h3 slot="heading">Medical and illnesses</h3>
         {% include "./_includes/03-medical-illnesses.njk" %}
       </ns-expander>
       <ns-expander>
-        <h3 slot="heading">Elderly and support</h3>
         {% include "./_includes/04-elderly-support.njk" %}
       </ns-expander>
       <ns-expander>
-        <h3 slot="heading">Communication and language</h3>
         {% include "./_includes/05-communication.njk" %}
       </ns-expander>
       <ns-expander>
-        <h3 slot="heading">Personal circumstances</h3>
         {% include "./_includes/06-personal-circumstance.njk" %}
       </ns-expander>
     </ns-accordion>
   </div>
+</ns-panel>
+
+<ns-panel>
   <div class="splash">
-    <ns-cta type="direct">Confirm household vulnerabilities</ns-cta>
+    {% include "./_includes/extra-help.njk" %}
   </div>
+  <!-- <div class="splash">
+    {% include "./_includes/psr-promise.njk" %}
+  </div> -->
 </ns-panel>
