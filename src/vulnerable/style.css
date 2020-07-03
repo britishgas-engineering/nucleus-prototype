@@ -12,16 +12,57 @@ This is used in `ns-inputter` to show the `.np-toggled` when the checkbox is che
 
 /*
 [1] When the associated checkbox is checked, show the element with the `.np-toggled` class
+[2] Apply some margin top and bottom
 */
-.np-toggler:checked+label+.np-toggled {
+.np-toggler:checked + label + .np-toggled {
   display: block; /* [1] */
+  margin: 1.5em 0; /* [2] */
 }
 
 /*
 [1] By default. hide the element with the `.np-toggled` class
-[2] Apply some margin top and bottom
 */
 .np-toggled {
   display: none; /* [1] */
-  margin: 1em 0; /* [2] */
+}
+
+/* .np-swap
+This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checked.
+
+```markup
+<input type="checkbox" id="my-checkbox" class="np-swapper">
+<label for="my-checkbox">My checkbox</label>
+<div class="np-swap-a">
+  <p>This div can be any element with the .np-swap class
+</div>
+<div class="np-swap-b">
+  <p>This div can be any element with the .np-swap class
+</div>
+```
+*/
+
+/*
+[1] When the associated checkbox is checked, show the element with the `.np-swap` class
+*/
+.np-swapper:checked  ~ .np-swap-b {
+  display: block; /* [1] */
+}
+
+.np-swapper:checked ~ .np-swap-a {
+  display: none;
+}
+
+/*
+[1] Apply some padding top and bottom
+*/
+.np-swap-a,
+.np-swap-b {
+  padding: 1.5em 0; /* [1] */
+}
+
+/*
+[1] By default. hide the element with the `.np-swap-b` class
+*/
+.np-swap-b {
+  display: none; /* [1] */
 }

@@ -1,50 +1,73 @@
-<ns-inputter validation="[]" heading="Communication" helper="" name="communication">
-  <input type="checkbox" id="speech" name="speech" value="speech">
-  <label for="speech">Speech difficulties</label>
-  <input type="checkbox" id="sign" name="sign" value="sign">
-  <label for="sign">Sign language</label>
-</ns-inputter>
-<ns-inputter validation="[]" heading="Language" helper="" name="language">
-  <input type="checkbox" id="arabic" value="arabic">
-  <label for="arabic">Arabic</label>
-  <input type="checkbox" id="bengali" value="bengali">
-  <label for="bengali">Bengali (with Sylheti and Chatgaya)</label>
-  <input type="checkbox" id="french" value="french">
-  <label for="french">French</label>
-  <input type="checkbox" id="german" value="german">
-  <label for="german">German</label>
-  <input type="checkbox" id="fujarati" value="fujarati">
-  <label for="fujarati">Gujarati</label>
-  <input type="checkbox" id="italian" value="italian">
-  <label for="italian">Italian</label>
-  <input type="checkbox" id="lithuanian" value="lithuanian">
-  <label for="lithuanian">Lithuanian</label>
-  <input type="checkbox" id="mandarin" value="mandarin">
-  <label for="mandarin">Mandarin or other Chinese dialect</label>
-  <input type="checkbox" id="persian" value="persian">
-  <label for="persian">Persian or Farsi</label>
-  <input type="checkbox" id="polish" value="polish">
-  <label for="polish">Polish</label>
-  <input type="checkbox" id="portuguese" value="portuguese">
-  <label for="portuguese">Portuguese</label>
-  <input type="checkbox" id="punjabi" value="punjabi">
-  <label for="punjabi">Punjabi</label>
-  <input type="checkbox" id="romanian" value="romanian">
-  <label for="romanian">Romanian</label>
-  <input type="checkbox" id="somali" value="somali">
-  <label for="somali">Somali</label>
-  <input type="checkbox" id="spanish" value="spanish">
-  <label for="spanish">Spanish</label>
-  <input type="checkbox" id="filipino" value="filipino">
-  <label for="filipino">Tagalog or Filipino</label>
-  <input type="checkbox" id="tamil" value="tamil">
-  <label for="tamil">Tamil</label>
-  <input type="checkbox" id="turkish" value="turkish">
-  <label for="turkish">Turkish</label>
-  <input type="checkbox" id="urdu" value="urdu">
-  <label for="urdu">Urdu</label>
-  <input type="checkbox" id="welsh" value="welsh">
-  <label for="welsh">Welsh</label>
-  <input type="checkbox" id="other" value="other">
-  <label for="other">Other</label>
-</ns-inputter>
+<h3 slot="heading">Communication and language</h3>
+<ns-form>
+  <ns-inputter validation="[]" heading="Communication" helper="" name="communication">
+    <input type="checkbox" id="speech" name="speech" value="speech">
+    <label for="speech">Speech difficulties</label>
+    <input type="checkbox" id="sign" name="sign" value="sign">
+    <label for="sign">Sign language</label>
+  </ns-inputter>
+  <ns-inputter helper="What are my options?">
+    <div slot="tip-details">
+      <p>We can send you bills, letters and booklets in large print, Braille or on CD. Or we can call you every quarter to talk you through your bills.</p>
+    </div>
+    <label slot="label">How would you like to receive communications for your gas account?</label>
+    <select name="select">
+      <option>Standard/Default</option>
+    </select>
+  </ns-inputter>
+  <ns-inputter helper="What are my options?">
+    <div slot="tip-details">
+      <p>We can send you bills, letters and booklets in large print, Braille or on CD. Or we can call you every quarter to talk you through your bills.</p>
+    </div>
+    <label slot="label">How would you like to receive communications for your electricity account?</label>
+    <select name="select">
+      <option>Standard/Default</option>
+    </select>
+  </ns-inputter>
+  <ns-inputter validation="[]" heading="Language" helper="" name="language">
+    <input type="checkbox" id="arabic" value="arabic">
+    <label for="arabic">Arabic</label>
+    <input type="checkbox" id="bengali" value="bengali">
+    <label for="bengali">Bengali (with Sylheti and Chatgaya)</label>
+    <input type="checkbox" id="french" value="french">
+    <label for="french">French</label>
+    <input type="checkbox" id="german" value="german" class="np-toggler">
+    <label for="german">German</label>
+    {% include "./ns-highlighter-german.njk" %}
+    <input type="checkbox" id="fujarati" value="fujarati">
+    <label for="fujarati">Gujarati</label>
+    <input type="checkbox" id="italian" value="italian">
+    <label for="italian">Italian</label>
+    <input type="checkbox" id="lithuanian" value="lithuanian">
+    <label for="lithuanian">Lithuanian</label>
+    <input type="checkbox" id="mandarin" value="mandarin">
+    <label for="mandarin">Mandarin or other Chinese dialect</label>
+    <input type="checkbox" id="persian" value="persian">
+    <label for="persian">Persian or Farsi</label>
+    <input type="checkbox" id="polish" value="polish">
+    <label for="polish">Polish</label>
+    <input type="checkbox" id="portuguese" value="portuguese">
+    <label for="portuguese">Portuguese</label>
+    <input type="checkbox" id="punjabi" value="punjabi">
+    <label for="punjabi">Punjabi</label>
+    <input type="checkbox" id="romanian" value="romanian">
+    <label for="romanian">Romanian</label>
+    <input type="checkbox" id="somali" value="somali">
+    <label for="somali">Somali</label>
+    <input type="checkbox" id="spanish" value="spanish">
+    <label for="spanish">Spanish</label>
+    <input type="checkbox" id="filipino" value="filipino">
+    <label for="filipino">Tagalog or Filipino</label>
+    <input type="checkbox" id="tamil" value="tamil">
+    <label for="tamil">Tamil</label>
+    <input type="checkbox" id="turkish" value="turkish">
+    <label for="turkish">Turkish</label>
+    <input type="checkbox" id="urdu" value="urdu">
+    <label for="urdu">Urdu</label>
+    <input type="checkbox" id="welsh" value="welsh" class="np-toggler">
+    <label for="welsh">Welsh</label>
+    {% include "./ns-highlighter-welsh.njk" %}
+    <input type="checkbox" id="other" value="other">
+    <label for="other">Other</label>
+  </ns-inputter>
+</ns-form>
