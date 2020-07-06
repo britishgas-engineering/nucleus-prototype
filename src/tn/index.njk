@@ -24,6 +24,10 @@ eleventyNavigation:
     <div class="splash triple">
       {%- for entry in navPages %}
         <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
           </a>
         </ns-card>
       {%- endfor %}
