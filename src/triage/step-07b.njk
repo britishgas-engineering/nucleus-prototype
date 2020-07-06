@@ -1,0 +1,42 @@
+---
+title: Triage - step-07b
+heading: "<b>Pay As You Go</b> meter"
+paragraph: "<p>A pay as you go meter is a great way to <b>pay for your energy before you use it</b>, at the same time as <b>paying something towards the money you owe</b>.</p>
+<p>We'll need one of our team to get in touch to <b>agree an affordable repayment rate</b> and <b>book an appointment</b> for us to change your meter.</p>"
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  {% include "./_includes/go-back.njk" -%}
+  <ns-form class="splash" nf-model="model.contact-preference">
+    <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="" heading="Please let us know how you'd like us to contact you">
+      <input type="radio" name="radio" id="radio-a" value="Text">
+      <label for="radio-a">By text</label>
+      <input type="radio" name="radio" id="radio-b" value="Phone">
+      <label for="radio-b">By phone</label>
+      <input type="radio" name="radio" id="radio-c" value="Call">
+      <label for="radio-c">I want to call British Gas</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="question-a"]').value;
+
+    if (data === 'Text') {
+      return '../step-08';
+    }
+
+    if (data === 'Phone') {
+      return '../step-08';
+    }
+
+    if (data === 'Call') {
+      return '../step-08';
+    }
+
+  }
+</script>

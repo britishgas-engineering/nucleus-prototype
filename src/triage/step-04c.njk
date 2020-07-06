@@ -1,0 +1,16 @@
+---
+title: Triage - step-04c
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  {% include "./_includes/go-back.njk" -%}
+  <ns-form class="splash" nf-model="model.pay-other">
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="">
+      <label slot="label">Please tell us more about your <span nf-model="model.pay-reason.question-a">[HERE]</span></label>
+      <textarea></textarea>
+    </ns-inputter>
+    <ns-cta nf-href="../step-05">Continue</ns-cta>
+  </ns-form>
+</ns-panel>

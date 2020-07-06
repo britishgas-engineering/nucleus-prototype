@@ -1,0 +1,9 @@
+{
+  "layout": "nucleus",
+  "project": "triage",
+  "jquery": false,
+  "script": true,
+  "style": false,
+  "subheading": "Struggling to pay.",
+  "heading": "Please select what best describes <b>your situation</b>"
+}

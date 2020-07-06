@@ -1,0 +1,33 @@
+---
+title: Triage - step-01
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  {% include "./_includes/go-back.njk" -%}
+  <ns-form class="splash" nf-model="model.pay-now">
+    <ns-inputter name="question-a" validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="radio" id="radio-a" value="No">
+      <label for="radio-a">I can't pay in full today</label>
+      <input type="radio" name="radio" id="radio-b" value="Yes">
+      <label for="radio-b">I can pay now</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="question-a"]').value;
+
+    if (data === 'No') {
+      return '../step-02';
+    }
+
+    if (data === 'Yes') {
+      return 'https://www.britishgas.co.uk/my-account.html';
+    }
+
+  }
+</script>
