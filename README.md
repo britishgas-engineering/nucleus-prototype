@@ -41,8 +41,7 @@ Edit `my-demo.json` to be something like:
 {
   "layout": "nucleus.njk",
   "tags": "my-demo",
-  "givenname": "Thomas",
-  "familyname": "Edison"
+  "teamname": "Project Team Name"
 }
 ```
 
@@ -63,4 +62,3 @@ Refresh your browser at http://localhost:8080 and you should now see a new card 
 Repeat the process to create other prototypes.
 
 🤩
-
