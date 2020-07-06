@@ -1,9 +1,9 @@
 ---
-title: Team Nucleus
+title: Billings Payments
 eleventyNavigation:
-  key: nucleus
-  title: Team Nucleus title
-  excerpt: Team Nucleus excerpt
+  key: bp
+  title: Billings Payments title
+  excerpt: Billings Payments excerpt
 ---
 
 <ns-landmark type="summit" image="https://user-images.githubusercontent.com/28779/75573555-00c74200-5a55-11ea-86db-66a1ff253b57.jpg">
@@ -16,10 +16,10 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-  {% set navPages = collections.all | eleventyNavigation("nucleus") | reverse %}
+  {% set navPages = collections.all | eleventyNavigation("bp") | reverse %}
   <ns-panel>
     <div class="splash">
-      <h2>Your projects</h2>
+      <h2>{{givenname}} {{familyname}} projects</h2>
     </div>
     <div class="splash triple">
       {%- for entry in navPages %}

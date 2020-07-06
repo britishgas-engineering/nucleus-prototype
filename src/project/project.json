@@ -1,9 +1,0 @@
-{
-  "layout": "nucleus",
-  "project": "project",
-  "jquery": true,
-  "script": true,
-  "style": true,
-  "givenname": "Drew",
-  "familyname": "Jones"
-}

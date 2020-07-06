@@ -1,9 +1,9 @@
 {
   "layout": "nucleus",
-  "project": "team",
+  "project": "bp",
   "jquery": false,
   "script": false,
   "style": false,
-  "givenname": "Team",
-  "familyname": "Amazing"
+  "givenname": "Billings and",
+  "familyname": "Payment"
 }

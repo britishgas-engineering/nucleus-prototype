@@ -1,6 +1,6 @@
 {
   "layout": "nucleus",
-  "project": "book-track-manage",
+  "project": "btm",
   "jquery": false,
   "script": false,
   "style": true,

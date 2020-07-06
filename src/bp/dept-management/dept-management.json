@@ -1,6 +1,6 @@
 {
   "layout": "nucleus",
-  "project": "triage",
+  "project": "bp",
   "jquery": false,
   "script": true,
   "style": false,
