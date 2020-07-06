@@ -12,6 +12,12 @@ module.exports = function (eleventyConfig) {
   // copy `src/assets` to `dist/assets`
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // copy style.css
+  eleventyConfig.addPassthroughCopy("src/**/style.css");
+
+  // copy script.js
+  eleventyConfig.addPassthroughCopy("src/**/script.js");
+
   // setting the TemplateFormats to include the following this helps to pass through the project level `style.css` and `script.js` files
   eleventyConfig.setTemplateFormats([
     "njk",
