@@ -44,7 +44,7 @@ This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checke
 /*
 [1] When the associated checkbox is checked, show the element with the `.np-swap` class
 */
-.np-swapper:checked  ~ .np-swap-b {
+.np-swapper:checked ~ .np-swap-b {
   display: block; /* [1] */
 }
 
@@ -65,4 +65,36 @@ This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checke
 */
 .np-swap-b {
   display: none; /* [1] */
+}
+
+
+/* .psr-option
+When adding the `.psr-option` class to the `<ns-panel>` the `.psr-promise` container displays and the `.psr-option` container is hidden. 
+
+```markup
+<ns-panel class="psr-option">
+  <div class="splash extra-help">
+    {% include "./_includes/extra-help.njk" %}
+  </div>
+  <div class="splash psr-promise">
+    {% include "./_includes/psr-promise.njk" %}
+  </div>
+</ns-panel>
+```
+*/
+
+.psr-promise {
+  display: none;
+}
+
+.extra-help {
+  display: block;
+}
+
+.psr-option .psr-promise {
+  display: block;
+}
+
+.psr-option .extra-help {
+  display: none;
 }
