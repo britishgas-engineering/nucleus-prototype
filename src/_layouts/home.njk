@@ -14,45 +14,45 @@ layout: base.njk
   {% set navPages = collections.all | eleventyNavigation | reverse %}
   <ns-panel>
     <div class="splash">
-      <h2>Projects</h2>
+      <h2>Prototypes</h2>
     </div>
     <div class="splash triple">
       {%- for entry in navPages %}
-        <ns-card type="support">
-          <h3 slot="heading">{{entry.title}}</h3>
-          <p slot="paragraph">{{entry.excerpt}}</p>
-          <a slot="cta" href="{{entry.url | url}}">
-            <ns-cta type="text">{{entry.title}} prototypes</ns-cta>
-          </a>
-        </ns-card>
+      <ns-card type="support">
+        <h3 slot="heading">{{entry.title}}</h3>
+        <p slot="paragraph">{{entry.excerpt}}</p>
+        <a slot="cta" href="{{entry.url | url}}">
+          <ns-cta type="text">{{entry.title}} prototypes</ns-cta>
+        </a>
+      </ns-card>
       {%- endfor %}
     </div>
   </ns-panel>
 
-  <ns-panel decoration="invert-concave-grey-light">
-    <div class="splash">
-      <h2>Nucleus resources</h2>
+  <ns-panel>
+    <div class="splish">
+      <h2>Deep dive into Nucleus</h2>
     </div>
-    <div class="splash triple">
-      <ns-card type="flat">
+    <div class="splish triple">
+      <ns-card type="section" decoration="bulb">
         <h3 slot="heading">Our components</h3>
         <p slot="paragraph">View and see how our components work in Storybook.</p>
         <a slot="cta" href="https://library.britishgas.design">
-          <ns-cta type="text">View Storybook</ns-cta>
+          <ns-cta type="direct">View Storybook</ns-cta>
         </a>
       </ns-card>
-      <ns-card type="flat">
+      <ns-card type="section" decoration="clock">
         <h3 slot="heading">Documentation</h3>
         <p slot="paragraph">Understand what we do and how our components work.</p>
         <a slot="cta" href="https://docs.britishgas.design">
-          <ns-cta type="text">View our docs</ns-cta>
+          <ns-cta type="direct">View our docs</ns-cta>
         </a>
       </ns-card>
-      <ns-card type="flat">
+      <ns-card type="section" decoration="protect">
         <h3 slot="heading">The vision</h3>
         <p slot="paragraph">Find out what we're trying to do and the principles we set against ourselves.</p>
         <a slot="cta" href="https://docs.britishgas.design/principles">
-          <ns-cta type="text">Learn our principles</ns-cta>
+          <ns-cta type="direct">Learn our principles</ns-cta>
         </a>
       </ns-card>
     </div>
