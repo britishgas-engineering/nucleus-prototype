@@ -19,10 +19,6 @@ title: Nucleus prototype
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     {%- endif -%}
 
-    {%- if script %}
-    <script src="/{{project}}/script.js"></script>
-    {%- endif -%}
-
     {%- if style %}
     <link rel="stylesheet" href="/{{project}}/style.css">
     {%- endif -%}
@@ -45,5 +41,9 @@ title: Nucleus prototype
 
     <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
     <script src="/assets/proto.js"></script>
+
+    {%- if script %}
+    <script src="/{{project}}/script.js"></script>
+    {%- endif -%}
   </body>
 </html>
