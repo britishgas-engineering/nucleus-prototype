@@ -1,6 +1,18 @@
+/* .psr-option
+When an item is chosen in the `#choice-options` add the class `.psr-option` class to the `#psr-option`.
 
-
-var inputs = document.querySelectorAll('input[type="checkbox"]');
+```markup
+<ns-panel id="psr-option">
+  <div class="splash extra-help">
+    {% include "./_includes/extra-help.njk" %}
+  </div>
+  <div class="splash psr-promise">
+    {% include "./_includes/psr-promise.njk" %}
+  </div>
+</ns-panel>
+```
+*/
+var inputs = document.querySelectorAll('#choice-options input[type="checkbox"]');
 var psr = [];
 
 inputs.forEach((input) => {
@@ -15,12 +27,11 @@ inputs.forEach((input) => {
 
     console.log('PSR - User has selected: ' + psr);
     
-    // TODO - Drew, this should probably have an ID rather than the 3rd panel
-    var finalPanel = document.querySelectorAll('ns-panel')[2];
+    var psrOption = document.querySelector('#psr-option');
     if (psr.length > 0) {
-      finalPanel.classList.add('psr-option');
+      psrOption.classList.add('psr-option');
     } else {
-      finalPanel.classList.remove('psr-option');
+      psrOption.classList.remove('psr-option');
     }
 
   });
