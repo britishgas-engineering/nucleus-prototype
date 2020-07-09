@@ -8,23 +8,20 @@ This is used in `ns-inputter` to show the `.np-toggled` when the checkbox is che
   <p>This div can be any element with the .np-toggled class
 </div>
 ```
-*/
 
-/*
 [1] When the associated checkbox is checked, show the element with the `.np-toggled` class
 [2] Apply some margin top and bottom
+[3] By default. hide the element with the `.np-toggled` class
 */
 .np-toggler:checked + label + .np-toggled {
   display: block; /* [1] */
   margin: 1.5em 0; /* [2] */
 }
 
-/*
-[1] By default. hide the element with the `.np-toggled` class
-*/
 .np-toggled {
-  display: none; /* [1] */
+  display: none; /* [3] */
 }
+
 
 /* .np-swap
 This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checked.
@@ -39,10 +36,10 @@ This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checke
   <p>This div can be any element with the .np-swap class
 </div>
 ```
-*/
 
-/*
 [1] When the associated checkbox is checked, show the element with the `.np-swap` class
+[2] Apply some padding top and bottom
+[3] By default. hide the element with the `.np-swap-b` class
 */
 .np-swapper:checked ~ .np-swap-b {
   display: block; /* [1] */
@@ -52,19 +49,13 @@ This is used in `ns-inputter` to show the `.np-swap` when the checkbox is checke
   display: none;
 }
 
-/*
-[1] Apply some padding top and bottom
-*/
 .np-swap-a,
 .np-swap-b {
-  padding: 1.5em 0; /* [1] */
+  padding: 1.5em 0; /* [2] */
 }
 
-/*
-[1] By default. hide the element with the `.np-swap-b` class
-*/
 .np-swap-b {
-  display: none; /* [1] */
+  display: none; /* [3] */
 }
 
 
@@ -81,20 +72,45 @@ When adding the `.psr-option` class to the `<ns-panel>` the `.psr-promise` conta
   </div>
 </ns-panel>
 ```
+
+[1] Hide the `.psr-promise` class initially
+[2] Ensure that the `.extra-help` element is displayed
+[3] Show `.psr-promise` when `.psr-option` is present
+[4] Hide `.extra-help` when `.psr-promise` is present
 */
 
 .psr-promise {
-  display: none;
+  display: none; /* [1] */
 }
 
 .extra-help {
-  display: block;
+  display: block; /* [2] */
 }
 
-.psr-option .psr-promise {
-  display: block;
+.continue {
+  display: none;
 }
 
 .psr-option .extra-help {
-  display: none;
+  display: none; /* [4] */
+}
+
+.psr-option2 .psr-promise {
+  display: none; /* [3] */
+}
+
+.psr-option2 .extra-help {
+  display: none; /* [4] */
+}
+
+.psr-option .psr-promise {
+  display: block; /* [3] */
+}
+
+.psr-option2 .continue {
+  display: block; /* [4] */
+}
+
+.psr-option.psr-option2 .continue {
+  display: none; /* [4] */
 }
