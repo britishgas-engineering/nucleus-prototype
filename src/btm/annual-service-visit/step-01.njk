@@ -18,10 +18,13 @@ heading: Let's book your annual service
     </div>
   {% endif %}
   <ns-form class="splash">
-    <ns-inputter helper="You'll find your booking code on either your reminder letter or email."
-      validation="[&quot;isRequired&quot;]" value="{{bookingCode}}" name="booking-code" mask="-----">
-      <label slot="label" for="booking-code-input" value="{{bookingCode}}">Booking code</label>
-      <input type="text" pattern="[0-9]*" id="booking-code-input">
+    <ns-inputter mask="A------" validation="[&quot;isRequired&quot;]" helper="You'll find your booking code on either your reminder letter or email" name="booking-reference">
+      <div slot="tip-details">
+        <p>Your booking reference format starts with a letter followed by six numbers.</p>
+        <p>An example would be <b>A123456</b>.</p>
+      </div>
+      <label slot="label">Booking reference</label>
+      <input type="text" pattern="(?=.*\d)(?=.*[a-zA-Z]).{7,}">
     </ns-inputter>
     <ns-inputter value="{{postcode}}" name="postcode" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]">
       <label slot="label" for="postcode-input">Confirm postcode</label>
