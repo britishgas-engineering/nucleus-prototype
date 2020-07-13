@@ -1,4 +1,5 @@
 ---
+branch: f9f530ba782c8ed42b629604aea0cccae43f6668
 title: Step 2
 step: 2
 heading: Pick a time slot that suits you
@@ -7,10 +8,12 @@ heading: Pick a time slot that suits you
 {% include "./_includes/ns-landmark.njk" %}
 
 <ns-panel>
-  <div class="splash">
-    <p>Slot picker</p>
+  <div class="splash triple">
+    <ns-calendar month="7" year="2020" mindate="2020-07-24" maxdate="2020-09-11"></ns-calendar>
   </div>
+</ns-panel>
 
+<ns-panel>
   <div class="splash">
     <a href="../step-03">
       <ns-cta type="direct">Continue to next step</ns-cta>
