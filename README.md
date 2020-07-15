@@ -4,7 +4,7 @@ A Nucleus prototype environment using the Eleventy static site generator.
 
 ## Installation
 
-Clone or download the GitHub repository: https://github.com/britishgas-engineering/nucleus-prototype
+Clone this GitHub repository: https://github.com/britishgas-engineering/nucleus-prototype
 
 Open the `/nucleus-prototype` folder using terminal.
 
@@ -21,44 +21,31 @@ $  npm i
 Launch Eleventy with this terminal command.
 
 ```bash
-$  npx @11ty/eleventy --serve
+$  npm start
 ```
+
+Once the server has compiled the pages and is running you'll be presented with a list of URLs:
 
 ### View in your browser
 
-Open your browser at http://localhost:8080 and take a look at **Project one**
+Open your browser at http://localhost:8080 and you'll be presented with the Prototype homepage.
 
-## Adding a project of your own
+Take a look around and check out the existing prototypes. 😎
 
-In the `/src` folder you'll find a folder called `/project`.
+## Adding a prototype of your own
 
-Duplicate this folder and give it a name `/my-demo`
+Open the `/nucleus-prototype` folder in your favourite text editor.
 
-Open the `/my-demo` folder and rename `project.json` to be the same name as your folder `my-demo.json`.
+In `/src` you'll find a number of folders with the initials for product teams.
 
-Edit `my-demo.json` to be something like:
-```json
-{
-  "layout": "nucleus.njk",
-  "tags": "my-demo",
-  "teamname": "Project Team Name"
-}
-```
+`/bp` - Billings and payments
+`/btm` - Book track and manage
+`/hs` - Home services
+`/mh` - Moving home
+`/tn` - Team Nucleus
 
-Edit the Front matter within `index.njk` to be something like:
+This list will continue to grow as more teams build prototypes.
 
-```json
----
-title: My Demo
-eleventyNavigation:
-  key: My Demo
-  title: This is My Demo
-  excerpt: This is my first prototype and is the start of something beautiful
----
-```
+Take a look in the `/tn` folder, here we provide a few prototype examples.
 
-Refresh your browser at http://localhost:8080 and you should now see a new card titled **This is My Demo** and a link to My Demo.
-
-Repeat the process to create other prototypes.
-
-🤩
+Open `tn.json`. This is where the defaults for each prototype are set.
