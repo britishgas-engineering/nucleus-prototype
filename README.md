@@ -38,11 +38,11 @@ Open the `/nucleus-prototype` folder in your favourite text editor.
 
 In `/src` you'll find a number of folders with the initials for product teams.
 
-`/bp` - Billings and payments
-`/btm` - Book track and manage
-`/hs` - Home services
-`/mh` - Moving home
-`/tn` - Team Nucleus
+* `/bp` - Billings and payments
+* `/btm` - Book track and manage
+* `/hs` - Home services
+* `/mh` - Moving home
+* `/tn` - Team Nucleus
 
 This list will continue to grow as more teams build prototypes.
 
