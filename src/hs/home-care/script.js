@@ -23,11 +23,10 @@ window.hc = function () {
   }
 
   // Add giftcard banner
-  const bannerLockup = document.querySelector('ns-lockup').querySelector(':not(:defined)');
   customElements.whenDefined('ns-panel').then(() => {
     customElements.whenDefined('ns-lockup').then(() => {
       customElements.whenDefined('ns-image').then(() => {
-        const image = bannerLockup.shadowRoot;
+        const image = document.querySelector('ns-image');
         let p = document.createElement("p");
         p.className = 'banner';
         p.innerHTML = `
@@ -50,9 +49,29 @@ window.hc = function () {
               }
             }
           </style>
-          ${document.querySelector('ns-image').innerHTML}`;
-        image.appendChild(p)
+          ${image.innerHTML}`;
+        image.shadowRoot.appendChild(p);
       });
     });
   });
-}()
+
+  // Add expander highlights
+  customElements.whenDefined('ns-panel').then(() => {
+    customElements.whenDefined('ns-column').then(() => {
+      customElements.whenDefined('ns-product-card').then(() => {
+        customElements.whenDefined('ns-expander').then(() => {
+          const expanders = document.querySelectorAll('ns-expander[highlight="focus"]');
+          expanders.forEach((expander) => {
+            let style = document.createElement("style");
+            style.innerHTML = `
+              :host .heading-title {
+                background: #FFDD57;
+              }
+            `;
+            expander.shadowRoot.appendChild(style);
+          });
+        });
+      });
+    });
+  });
+}();

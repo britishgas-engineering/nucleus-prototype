@@ -115,10 +115,15 @@ ns-expander[highlight="hidden"] {
   max-width: 100% !important;
 }
 
-ns-product-card div[slot="description"] .ul-ticked li::before{
+ns-product-card div[slot="description"] .ul-ticked li::before,
+ns-panel.banner .ul-ticked li::before {
   border-color: #0099FF !important;
   width: 1em;
-  left: -15px;
+}
+
+ns-panel.banner .ul-ticked li::before {
+  left: -0.85em;
+  top: .7em;
 }
 
 ns-product-card .ul-crossed li::before {
