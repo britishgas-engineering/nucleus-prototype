@@ -114,3 +114,17 @@ ns-expander[highlight="hidden"] {
 .trustpilot p.no-margin {
   max-width: 100% !important;
 }
+
+ns-product-card div[slot="description"] .ul-ticked li::before{
+  border-color: #0099FF !important;
+  width: 1em;
+  left: -15px;
+}
+
+ns-product-card .ul-crossed li::before {
+  position: absolute;
+  top: 0.75em;
+  left: -0.75em;
+  content: "\2715";
+  transform: translate(-50%, -50%);
+}
