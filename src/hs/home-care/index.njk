@@ -1,6 +1,6 @@
 ---
 title: HomeCare product
-branch: 2d7cbcedcb9b1231cbd44b3940ac2e952b004f09
+branch: b0e3b644030c733578887673b0afdd03d0e0714d
 eleventyNavigation:
   key: HomeCare product
   parent: hs
@@ -8,35 +8,37 @@ eleventyNavigation:
   excerpt: HomeCare product excerpt
 ---
 
-<ns-panel>
-  <ns-lockup ratio="4x3" type="lockjaw">
+<ns-panel class="banner"> 
+  <ns-lockup ratio="4x3" type="lockjaw" banner="gift-card">
     <h1 slot="heading">
       <span class="h5">HomeCare.</span>
       <span class="h1 enlighten"><b>Boiler and heating cover</b> for your home</span>
     </h1>
     <div slot="paragraph">
-      <p>Keep it covered with HomeCare and we’ll be there when you need us.</p>
+      <p>Get the peace of mind you need with complete protection from our HomeCare range or choose a single-cover product. All our cover includes:</p>
     </div>
     <div slot="paragraph">
       <ul class="ul-ticked">
-        <li>Unlimited call outs</li>
-        <li>A 24/hr customer helpline</li>
+        <li>Engineer expertise as a standard</li>
+        <li>Unlimited callouts</li>
         <li>Parts and labour cost included</li>
-        <li>14 day cooling off period if you cancel</li>
-        <li>Annual Boiler service included</li>
+        <li>A 24/hr customer helpline</li>
+        <li>Easy cancellation</li>
       </ul>
     </div>
-    <ns-image slot="image" ratio="4x3" src="https://andijcdn.sirv.com/nds/testcard-4x3.png?scale.width&#x3D;768&amp;text.0.text&#x3D;768x576&amp;text.0.position&#x3D;center&amp;text.0.outline.width&#x3D;2"></ns-image>
+    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-1.jpg">
+      Join HomeCare before 24th August and we’ll send you a giftcard worth £75
+    </ns-image>
   </ns-lockup>
 </ns-panel>
 
-<ns-panel decoration="invert-concave-grey-light">
+<ns-panel decoration="invert-concave-grey-light" class="homecare-packages">
   <div class="splash">
     <h2>Our HomeCare packages</h2>
-    <p class="p-normal">Avoid the unexpected costs of breakdowns with our range of HomeCare products lorem ipsum lorem.</p>
+    <p class="p-normal">With cover for your boiler, central heating, plumbing, drains and electrics, our HomeCare range protects you against unwelcome surprises.</p>
   </div>
   <ns-form class="splash">
-    <ns-inputter heading="Choose your excess" helper="What does excess mean?">
+    <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess">
       <div slot="tip-details">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Rerum delectus velit illo, placeat eum expedita debitis minus omnis eligendi eveniet ipsum tenetur veniam molestias iste cum numquam cumque libero in.</p>
@@ -47,20 +49,29 @@ eleventyNavigation:
       <label for="excess-2"><ns-price pence="0"></ns-price></label>
     </ns-inputter>
   </ns-form>
-  <div class="splash triple">
+  <ns-column squashcourt="1" tenniscourt="2" basketballcourt="4" hockeypitch="4" rugbypitch="4" polofield="4">
     <ns-product-card keyline="green-light">
       <h2 slot="name">Essentials</h2>
       <h3 slot="price-heading">Estimated price</h3>
       <div slot="price">
         <p><b><ns-price pence="1400"></ns-price></b> / month</p>
-        <p><ns-price pence="156"></ns-price> / year</p>
+        <p><ns-price pence="15600"></ns-price> / year</p>
       </div>
       <div slot="description">
         <ul class="ul-ticked">
-          <li>Annual boiler service</li>
+          <li>Full boiler service</li>
           <li>Boiler and controls</li>
         </ul>
       </div>
+      <ns-expander slot="expander" highlight="hidden">
+        <h3 slot="heading">Get a £25 gift card</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
       <ns-expander slot="expander">
         <h3 slot="heading">What's included?</h3>
         <p>Expander details</p>
@@ -82,18 +93,28 @@ eleventyNavigation:
       <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
     </ns-product-card>
     <ns-product-card keyline="blue">
-      <h2 slot="name">Essentials</h2>
+      <h2 slot="name">Standard</h2>
       <h3 slot="price-heading">Estimated price</h3>
       <div slot="price">
-        <p><b><ns-price pence="1400"></ns-price></b> / month</p>
-        <p><ns-price pence="156"></ns-price> / year</p>
+        <p><b><ns-price pence="1700"></ns-price></b> / month</p>
+        <p><ns-price pence="19200"></ns-price> / year</p>
       </div>
       <div slot="description">
         <ul class="ul-ticked">
           <li>Annual boiler service</li>
           <li>Boiler and controls</li>
+          <li>Central heating</li>
         </ul>
       </div>
+      <ns-expander slot="expander" highlight="focus">
+        <h3 slot="heading">Get a £25 gift card</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
       <ns-expander slot="expander">
         <h3 slot="heading">What's included?</h3>
         <p>Expander details</p>
@@ -115,18 +136,30 @@ eleventyNavigation:
       <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
     </ns-product-card>
     <ns-product-card keyline="yellow">
-      <h2 slot="name">Essentials</h2>
+      <h2 slot="name">Plus</h2>
       <h3 slot="price-heading">Estimated price</h3>
       <div slot="price">
-        <p><b><ns-price pence="1400"></ns-price></b> / month</p>
-        <p><ns-price pence="156"></ns-price> / year</p>
+        <p><b><ns-price pence="2100"></ns-price></b> / month</p>
+        <p><ns-price pence="24000"></ns-price> / year</p>
       </div>
       <div slot="description">
         <ul class="ul-ticked">
           <li>Annual boiler service</li>
           <li>Boiler and controls</li>
+          <li>Central heating</li>
+          <li>Plumbing</li>
+          <li>Drains</li>
         </ul>
       </div>
+      <ns-expander slot="expander" highlight="focus">
+        <h3 slot="heading">Get a £50 gift card</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
       <ns-expander slot="expander">
         <h3 slot="heading">What's included?</h3>
         <p>Expander details</p>
@@ -147,11 +180,54 @@ eleventyNavigation:
       </ns-expander>
       <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
     </ns-product-card>
-  </div>
-</ns-panel>
-
-<ns-panel>
-  <div class="splash">
+    <ns-product-card keyline="red">
+      <h2 slot="name">Premier</h2>
+      <h3 slot="price-heading">Estimated price</h3>
+      <div slot="price">
+        <p><b><ns-price pence="2350"></ns-price></b> / month</p>
+        <p><ns-price pence="27000"></ns-price> / year</p>
+      </div>
+      <div slot="description">
+        <ul class="ul-ticked">
+          <li>Annual boiler service</li>
+          <li>Boiler and controls</li>
+          <li>Central heating</li>
+          <li>Plumbing</li>
+          <li>Drains</li>
+          <li>Home electrics</li>
+        </ul>
+      </div>
+      <ns-expander slot="expander" highlight="focus">
+        <h3 slot="heading">Get a £75 gift card</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
+      <ns-expander slot="expander">
+        <h3 slot="heading">What's included?</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
+      <ns-expander slot="expander">
+        <h3 slot="heading">What's not included?</h3>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+        <p>Expander details</p>
+      </ns-expander>
+      <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
+    </ns-product-card>
+  </ns-column>
+  <div class="splash important-documents">
     <h2 class="h4">Some important documents to read</h2>
     <ul class="download-list">
       <li><ns-download href="?.pdf" filesize="2MB">Terms and Conditions</ns-download></li>
@@ -163,32 +239,35 @@ eleventyNavigation:
 <ns-panel decoration="invert-bridge-blue">
   <ns-lockup reverse ratio="4x3" type="lockbox">
     <h2 slot="heading">
-      <span class="h5">Wooden coloring book.</span>
-      <span class="h1 enlighten"><b>Green juice irony</b> single-origin coffee</span>
+      <span class="h5">You're in good hands.</span>
+      <span class="h1 enlighten"><b>HomeCare starts with a visit</b></span>
     </h2>
     <div slot="paragraph">
-      <p>Mustache cronut leggings offal tote bag. Twee vaporware organic distillery trust fund kinfolk gentrify letterpress freegan.</p>
+      <p>When you join HomeCare, one of our expert engineers will pop in to make sure everything's in good working order with a First Visit.</p>
     </div>
-    <ns-image slot="image" ratio="4x3" src="https://andijcdn.sirv.com/nds/testcard-4x3.png?scale.width&#x3D;768&amp;text.0.text&#x3D;768x576&amp;text.0.position&#x3D;center&amp;text.0.outline.width&#x3D;2"></ns-image>
+    <div slot="paragraph">
+      <p>And to make sure that your system continues to run safely and efficiently, we’ll follow up with a Service Visit later in that year.</p>
+    </div>
+    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-2.jpg"></ns-image>
   </ns-lockup>
 </ns-panel>
 
 <ns-panel>
   <div class="splash">
-    <h2>Our simple cover products</h2>
-    <p class="p-normal">If you don't need a package and just want us to repair your boiler or heating if it stops working, then choose from our simple breakdown cover products. You can also buy once a year service of your boiler.</p>
+    <h2>Our breakdown protection</h2>
+    <p class="p-normal">If you don’t need a package, and just want protection for your Boiler and Controls or Central Heating, we’ve got you covered. Not to mention, you can buy a service for your boiler and we’ll make sure it ticks all the boxes.</p>
   </div>
   <div class="splash triple">
     <ns-product-card keyline="blue">
-      <h2 slot="name">Essentials</h2>
+      <h2 slot="name">Boiler and Controls</h2>
       <h3 slot="price-heading">Estimated price (<ns-price pence="9900"></ns-price> excess)</h3>
       <div slot="price">
         <p><b><ns-price pence="250"></ns-price></b> / month</p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
-          <li>Includes all repairs to your gas boiler and controls, including your thermostat and programmer, all parts and labour</li>
-          <li>No annual boiler service</li>
+          <li>All repairs to your gas boiler and controls, including your thermostat and programmer, all parts and labour</li>
+          <li>No boiler service</li>
         </ul>
       </div>
       <ns-expander slot="expander">
@@ -212,15 +291,15 @@ eleventyNavigation:
       <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
     </ns-product-card>
     <ns-product-card keyline="blue">
-      <h2 slot="name">Essentials</h2>
+      <h2 slot="name">Central Heating</h2>
       <h3 slot="price-heading">Estimated price (<ns-price pence="9900"></ns-price> excess)</h3>
       <div slot="price">
-        <p><b><ns-price pence="250"></ns-price></b> / month</p>
+        <p><b><ns-price pence="550"></ns-price></b> / month</p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
-          <li>Includes all repairs to your gas boiler and controls, including your thermostat and programmer, all parts and labour</li>
-          <li>No annual boiler service</li>
+          <li>All repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
+          <li>No boiler service</li>
         </ul>
       </div>
       <ns-expander slot="expander">
@@ -244,15 +323,15 @@ eleventyNavigation:
       <ns-cta href="#!" slot="cta">Get a quote</ns-cta>
     </ns-product-card>
     <ns-product-card keyline="blue">
-      <h2 slot="name">Essentials</h2>
-      <h3 slot="price-heading">Estimated price (<ns-price pence="9900"></ns-price> excess)</h3>
+      <h2 slot="name">Boiler Service</h2>
+      <h3 slot="price-heading">Estimated price</h3>
       <div slot="price">
-        <p><b><ns-price pence="250"></ns-price></b> / month</p>
+        <p><b><ns-price pence="8500"></ns-price></b></p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
-          <li>Includes all repairs to your gas boiler and controls, including your thermostat and programmer, all parts and labour</li>
-          <li>No annual boiler service</li>
+          <li>One off service for your gas boiler to make sure its running safely and efficiently</li>
+          <li>Pressure and carbon monoxide checks included</li>
         </ul>
       </div>
       <ns-expander slot="expander">
@@ -278,13 +357,28 @@ eleventyNavigation:
   </div>
 </ns-panel>
 
-<ns-panel>
+<ns-panel class="trustpilot">
   <div class="splash">
     <h2>What our customers think?</h2>
-    <div style="padding: 10em; background-color: lightgreen;">
-      <h3>Trustpilot</h3>
-    </div>
   </div>
+  <div class="splash triple trustpilot" role="list">
+    <ns-card role="listitem" type="flat" class="five-stars six-mins">
+      <h3 slot="heading" role="heading" aria-level="3">Excellent work.</h3>
+      <p slot="paragraph" class="paragraph">I've always had first class service from British Gas. Appointments are always kept on time and the engineers are friendly and efficient</p>
+      <p slot="paragraph" class="name">Teresa Sykala</p>
+    </ns-card>
+    <ns-card role="listitem" type="flat" class="four-stars six-mins">
+      <h3 slot="heading" role="heading" aria-level="3">Well organised</h3>
+      <p slot="paragraph" class="paragraph">I have been a loyal customer since 1969 and will stay loyal. I have always had excellent service when needed by professional, friendly engineers.</p>
+      <p slot="paragraph" class="name">Mrs Jane Vlitos</p>
+    </ns-card>
+    <ns-card role="listitem" type="flat" class="four-stars twelve-mins">
+      <h3 slot="heading" role="heading" aria-level="3">Great service</h3>
+      <p slot="paragraph" class="paragraph">The service you provide is excellent, as I phoned in the morning re no hot water and your engineer was calling that afternoon</p>
+      <p slot="paragraph" class="name">Jane Pierce</p>
+    </ns-card>
+  </div>
+  <p class="h5 enlighten rating">Rated <b>3.7</b> out of 5 based on <b><u>38,290 reviews</u></b> on <span class="trustpilot-logo"></span></p>
 </ns-panel>
 
 <ns-panel decoration="circle-yellow-left">
@@ -299,7 +393,7 @@ eleventyNavigation:
     <a slot="cta" href="#!">
       <ns-cta type="direct">Book an engineer</ns-cta>
     </a>
-    <ns-image slot="image" ratio="4x3" src="https://andijcdn.sirv.com/nds/testcard-4x3.png?scale.width&#x3D;768&amp;text.0.text&#x3D;768x576&amp;text.0.position&#x3D;center&amp;text.0.outline.width&#x3D;2"></ns-image>
+    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-3.jpg"></ns-image>
   </ns-lockup>
 </ns-panel>
 

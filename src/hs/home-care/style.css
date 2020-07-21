@@ -1,0 +1,116 @@
+ns-product-card[keyline="red"] {
+  position: relative;
+}
+
+ns-product-card[keyline="red"]::before {
+  content: "";
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(205deg, rgb(255, 0, 0), rgb(180, 0, 0) 150%) !important;
+}
+
+ns-panel .important-documents {
+  margin-top: 40px;
+}
+
+ns-expander[highlight="hidden"] {
+  visibility: hidden;
+}
+
+/* ns-inputter input[type=radio]+label {
+  display: inline-block !important;
+  margin-right: 30px;
+} */
+
+.trustpilot ns-card {
+  position: relative;
+  background-color: #f0f0f0 !important;
+  border-bottom: 1px solid #cccccc !important;
+  padding: 20px !important;
+}
+
+.trustpilot ns-card.six-mins::before {
+  position: absolute;
+  content: "6 minutes ago";
+  right: 20px;
+  top: 20px;
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.trustpilot ns-card.twelve-mins::before {
+  position: absolute;
+  content: "12 minutes ago";
+  right: 20px;
+  top: 20px;
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.trustpilot ns-card.four-stars::after {
+  content: "";
+  width: 163px;
+  background-image: url(/assets/hs/home-care/4-star-rating.png);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 30px;
+}
+
+.trustpilot ns-card.five-stars::after {
+  content: "";
+  width: 163px;
+  background-image: url(/assets/hs/home-care/5-star-rating.png);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 30px;
+}
+
+.trustpilot ns-card h3 {
+  margin: 50px 0 10px !important;
+  font-size: 24px !important;
+}
+
+.trustpilot ns-card .paragraph {
+  font-size: 16px !important;
+}
+
+.trustpilot ns-card .name {
+  margin: 25px 0 0 !important;
+  font-size: 18px !important;
+  color: #1a1a1a;
+}
+
+.trustpilot p.rating {
+  position: relative;
+  color: #1a1a1a !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  width: auto !important;
+  line-height: 37px !important;
+}
+  
+.trustpilot .trustpilot-logo {
+  width: 132px;
+  position: relative;
+  top: -28px;
+  display: inline-block;
+}
+
+.trustpilot .trustpilot-logo::after {
+  content: "";
+  width: 132px;
+  height: 50px;
+  position: absolute;
+  background: url(/assets/hs/home-care/trustpilot.png) no-repeat;
+  height: 37px;
+}
+
+.trustpilot p.no-margin {
+  max-width: 100% !important;
+}
