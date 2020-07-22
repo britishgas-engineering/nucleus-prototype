@@ -136,6 +136,7 @@ ns-product-card .ul-crossed li::before {
 
 ns-product-card div[slot="price"]:first-of-type {
   word-break: break-all;
+  width: 110%;
 }
 
 ns-product-card div[slot="price"]:first-of-type p:first-child b {
@@ -144,4 +145,20 @@ ns-product-card div[slot="price"]:first-of-type p:first-child b {
 
 ns-product-card div[slot="price"]:first-of-type p:first-child span {
   font-size: 0.6em !important;
+}
+
+@media (max-width: 719px) {
+  ns-product-card div[slot="price"] {
+    font-size: 1.1em !important;
+  }
+
+  ns-product-card div[slot="price"]:first-of-type p:first-child span {
+    font-size: 0.7em !important;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1079px) {
+  ns-product-card div[slot="price"] {
+    font-size: 0.9em !important;
+  }
 }

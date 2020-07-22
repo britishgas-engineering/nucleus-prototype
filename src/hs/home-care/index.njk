@@ -38,13 +38,13 @@ eleventyNavigation:
     <p class="p-normal">One of our friendly, expert engineers will pop in to make sure everything’s in tip-top condition once a year, alongside your cover to protect you against any unwanted surprises.</p>
   </div>
   <ns-form class="splash">
-    <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess">
+    <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess" value="60">
       <div slot="tip-details">
         <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
       </div>
       <input type="radio" id="excess-1" name="excess" value="60">
       <label for="excess-1"><ns-price pence="6000"></ns-price></label>
-      <input type="radio" id="excess-2" name="excess" value="0" checked>
+      <input type="radio" id="excess-2" name="excess" value="zero">
       <label for="excess-2"><ns-price pence="0"></ns-price></label>
     </ns-inputter>
   </ns-form>
