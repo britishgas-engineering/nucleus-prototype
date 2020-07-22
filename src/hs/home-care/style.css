@@ -133,3 +133,15 @@ ns-product-card .ul-crossed li::before {
   content: "\2715";
   transform: translate(-50%, -50%);
 }
+
+ns-product-card div[slot="price"]:first-of-type {
+  word-break: break-all;
+}
+
+ns-product-card div[slot="price"]:first-of-type p:first-child b {
+  font-size: 1em !important;
+}
+
+ns-product-card div[slot="price"]:first-of-type p:first-child span {
+  font-size: 0.6em !important;
+}
