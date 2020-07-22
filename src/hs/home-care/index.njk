@@ -26,7 +26,7 @@ eleventyNavigation:
         <li>Change your cover anytime</li>
       </ul>
     </div>
-    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-1.jpg">
+    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-4.jpg">
       Join HomeCare before 24th August and we’ll send you a giftcard worth up to £75
     </ns-image>
   </ns-lockup>
@@ -35,19 +35,25 @@ eleventyNavigation:
 <ns-panel decoration="invert-concave-grey-light" class="homecare-packages">
   <div class="splash">
     <h2>Our HomeCare packages</h2>
-    <p class="p-normal">One of our friendly, expert engineers will pop in to make sure everything’s in tip-top condition once a year, alongside your cover to protect you against any unwanted surprises.</p>
   </div>
-  <ns-form class="splash">
-    <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess" value="60">
-      <div slot="tip-details">
-        <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
-      </div>
-      <input type="radio" id="excess-1" name="excess" value="60">
-      <label for="excess-1"><ns-price pence="6000"></ns-price></label>
-      <input type="radio" id="excess-2" name="excess" value="zero">
-      <label for="excess-2"><ns-price pence="0"></ns-price></label>
-    </ns-inputter>
-  </ns-form>
+  <div class="splash triple">
+    <div class="splash">
+      <h3>Why choose HomeCare?</h3>
+      <p class="p-normal">One of our friendly, expert engineers will pop in to make sure everything’s in tip-top condition once a year, alongside your cover to protect you against any unwanted surprises.</p>
+    </div>
+    <ns-form class="splash">
+      <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess" value="60">
+        <div slot="tip-details">
+          <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
+        </div>
+        <input type="radio" id="excess-1" name="excess" value="60">
+        <label for="excess-1"><ns-price pence="6000"></ns-price></label>
+        <input type="radio" id="excess-2" name="excess" value="zero">
+        <label for="excess-2"><ns-price pence="0"></ns-price></label>
+      </ns-inputter>
+    </ns-form>
+  </div>
+
   <ns-column squashcourt="1" tenniscourt="2" basketballcourt="4" hockeypitch="4" rugbypitch="4" polofield="4">
     <ns-product-card keyline="green-light">
       <h2 slot="name">Essentials</h2>
