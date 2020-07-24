@@ -59,3 +59,13 @@ inputs2.forEach((input) => {
     }
   });
 });
+
+/* .np-show-comms */
+
+jQuery('.np-show-comms').change(function () {
+  if (jQuery(this).is(":checked")) {
+    jQuery('.np-comms').addClass('np-show').removeClass('np-hide');
+  } else {
+    jQuery('.np-comms').removeClass('np-show').addClass('np-hide');
+  }
+});

@@ -114,3 +114,14 @@ When adding the `.psr-option` class to the `<ns-panel>` the `.psr-promise` conta
 .psr-option.psr-option2 .continue {
   display: none; /* [4] */
 }
+
+
+/* .np-show-comms 
+
+Show or hide an element.
+
+*/
+
+.ndsn .np-hide {
+  display: none;
+}
