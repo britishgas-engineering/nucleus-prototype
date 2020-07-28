@@ -36,192 +36,191 @@ eleventyNavigation:
   <div class="splash">
     <h2>Our HomeCare packages</h2>
   </div>
-  <div class="splash triple">
-    <div class="splash">
-      <h3>Why choose HomeCare?</h3>
-      <p class="p-normal">One of our friendly, expert engineers will pop in to make sure everything’s in tip-top condition once a year, alongside your cover to protect you against any unwanted surprises.</p>
-    </div>
-    <ns-form class="splash">
-      <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess" value="60">
-        <div slot="tip-details">
-          <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
-        </div>
-        <input type="radio" id="excess-1" name="excess" value="60">
-        <label for="excess-1"><ns-price pence="6000"></ns-price></label>
-        <input type="radio" id="excess-2" name="excess" value="zero">
-        <label for="excess-2"><ns-price pence="0"></ns-price></label>
-      </ns-inputter>
-    </ns-form>
+  <div class="splash">
+    <h3>Why choose HomeCare?</h3>
+    <p class="p-normal">One of our friendly, expert engineers will pop in to make sure everything’s in tip-top condition once a year, alongside your cover to protect you against any unwanted surprises.</p>
   </div>
-
-  <ns-column squashcourt="1" tenniscourt="2" basketballcourt="4" hockeypitch="4" rugbypitch="4" polofield="4">
-    <ns-product-card keyline="green-light">
-      <h2 slot="name">Essentials</h2>
-      <h3 slot="price-heading">Estimated price</h3>
-      <div slot="price">
-        <p><b><ns-price pence="1400"></ns-price></b><span> / month</span></p>
-        <p><ns-price pence="15600"></ns-price> / year</p>
+  <ns-form class="splash">
+    <ns-inputter heading="Choose your excess" helper="What does excess mean?" class="excess" value="60">
+      <div slot="tip-details">
+        <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
       </div>
-      <div slot="description">
-        <ul class="ul-ticked">
-          <li>Full boiler service</li>
-          <li>Boiler and controls</li>
-        </ul>
-      </div>
-      <ns-expander slot="expander" highlight="hidden">
-        <h3 slot="heading">Get a £25 gift card</h3>
-        <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
-          you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's included?</h3>
-        <ul class="ul-ticked">
-          <li>Repairs to your gas boiler and controls , including your thermostat and programmer</li>
-          <li>Full service of your boiler to make sure it's running safely and efficiently</li>
-          <li>Accidental Damage</li>
-          <li>Up to £1,000 to gain access and make good for each repair</li>
-        </ul>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's not included?</h3>
-        <ul class="ul-crossed">
-          <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
-          <li>Showers or taps</li>
-          <li>Repairs to the central heating system, including radiators</li>
-          <li>Faults caused by someone else you used for repairs or design faults</li>
-        </ul>
-      </ns-expander>
-      <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
-    </ns-product-card>
-    <ns-product-card keyline="blue">
-      <h2 slot="name">Standard</h2>
-      <h3 slot="price-heading">Estimated price</h3>
-      <div slot="price">
-        <p><b><ns-price pence="1700"></ns-price></b><span> / month</span></p>
-        <p><ns-price pence="19200"></ns-price> / year</p>
-      </div>
-      <div slot="description">
-        <ul class="ul-ticked">
-          <li>Full boiler service</li>
-          <li>Boiler and controls</li>
-          <li>Central heating</li>
-        </ul>
-      </div>
-      <ns-expander slot="expander" highlight="focus">
-        <h3 slot="heading">Get a £25 gift card</h3>
-        <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
-          you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's included?</h3>
-        <ul class="ul-ticked">
-          <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
-          <li>Full service of your boiler to make sure it's running safely and efficiently</li>
-          <li>Accidental Damage</li>
-          <li>Up to £1,000 to gain access and make good for each repair</li>
-        </ul>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's not included?</h3>
-        <ul class="ul-crossed">
-          <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
-          <li>Showers or taps</li>
-          <li>Faults caused by someone else you used for repairs or design faults</li>
-        </ul>
-      </ns-expander>
-      <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
-    </ns-product-card>
-    <ns-product-card keyline="yellow">
-      <h2 slot="name">Plus</h2>
-      <h3 slot="price-heading">Estimated price</h3>
-      <div slot="price">
-        <p><b><ns-price pence="2100"></ns-price></b><span> / month</span></p>
-        <p><ns-price pence="24000"></ns-price> / year</p>
-      </div>
-      <div slot="description">
-        <ul class="ul-ticked">
-          <li>Full boiler service</li>
-          <li>Boiler and controls</li>
-          <li>Central heating</li>
-          <li>Plumbing</li>
-          <li>Drains</li>
-        </ul>
-      </div>
-      <ns-expander slot="expander" highlight="focus">
-        <h3 slot="heading">Get a £50 gift card</h3>
-        <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
-          you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's included?</h3>
-        <ul class="ul-ticked">
-          <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
-          <li>Full service of your boiler to make sure it's running safely and efficiently</li>
-          <li>Repairs to the plumbing system in your home and outbuildings and the water supply pipe within the boundary of your property.</li>
-          <li>Unblocking and repairing your drains and waste pipes to restore flow</li>
-          <li>Accidental Damage</li>
-          <li>Up to £1,000 to gain access and make good for each repair</li>
-        </ul>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's not included?</h3>
-        <ul class="ul-crossed">
-          <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
-          <li>Showers and their parts, shower pumps, sanitary ware and sealant</li>
-          <li>Shared drains</li>
-          <li>Faults caused by someone else you used for repairs or design faults</li>
-        </ul>
-      </ns-expander>
-      <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
-    </ns-product-card>
-    <ns-product-card keyline="red">
-      <h2 slot="name">Premier</h2>
-      <h3 slot="price-heading">Estimated price</h3>
-      <div slot="price">
-        <p><b><ns-price pence="2350"></ns-price></b><span> / month</span></p>
-        <p><ns-price pence="27000"></ns-price> / year</p>
-      </div>
-      <div slot="description">
-        <ul class="ul-ticked">
-          <li>Full boiler service</li>
-          <li>Boiler and controls</li>
-          <li>Central heating</li>
-          <li>Plumbing</li>
-          <li>Drains</li>
-          <li>Home electrics</li>
-        </ul>
-      </div>
-      <ns-expander slot="expander" highlight="focus">
-        <h3 slot="heading">Get a £75 gift card</h3>
-        <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
-          you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's included?</h3>
-        <ul class="ul-ticked">
-          <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
-          <li>Full service of your boiler to make sure it's running safely and efficiently</li>
-          <li>Repairs to the plumbing system in your home and outbuildings and the water supply pipe within the boundary of your property.</li>
-          <li>Unblocking and repairing your drains and waste pipes to restore flow</li>
-          <li>Repairs to the mains electrical system and wiring in your home and outbuildings</li>
-          <li>Accidental Damage</li>
-          <li>Up to £1,000 to gain access and make good for each repair</li>
-        </ul>
-      </ns-expander>
-      <ns-expander slot="expander">
-        <h3 slot="heading">What's not included?</h3>
-        <ul class="ul-crossed">
-          <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
-          <li>Showers and their parts, shower pumps, sanitary ware and sealant</li>
-          <li>Shared drains</li>
-          <li>Faults caused by someone else you used for repairs or design faults</li>
-          <li>Electrical appliances, cooker hoods or extractor fans over 15cm diameter</li>
-        </ul>
-      </ns-expander>
-      <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
-    </ns-product-card>
-  </ns-column>
-  <div class="splash important-documents">
+      <input type="radio" id="excess-1" name="excess" value="60">
+      <label for="excess-1"><ns-price pence="6000"></ns-price></label>
+      <input type="radio" id="excess-2" name="excess" value="zero">
+      <label for="excess-2"><ns-price pence="0"></ns-price></label>
+    </ns-inputter>
+  </ns-form>
+  <div class="splash">
+    <ns-column squashcourt="1" tenniscourt="1" basketballcourt="2" hockeypitch="3" rugbypitch="4" polofield="4">
+      <ns-product-card keyline="green-light">
+        <h2 slot="name">Essentials</h2>
+        <h3 slot="price-heading">Estimated price</h3>
+        <div slot="price">
+          <p><b><ns-price pence="1400"></ns-price></b><span> / month</span></p>
+          <p><ns-price pence="15600"></ns-price> / year</p>
+        </div>
+        <div slot="description">
+          <ul class="ul-ticked">
+            <li>Full boiler service</li>
+            <li>Boiler and controls</li>
+          </ul>
+        </div>
+        <ns-expander slot="expander" highlight="hidden">
+          <h3 slot="heading">Get a £25 gift card</h3>
+          <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
+            you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's included?</h3>
+          <ul class="ul-ticked">
+            <li>Repairs to your gas boiler and controls , including your thermostat and programmer</li>
+            <li>Full service of your boiler to make sure it's running safely and efficiently</li>
+            <li>Accidental Damage</li>
+            <li>Up to £1,000 to gain access and make good for each repair</li>
+          </ul>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's not included?</h3>
+          <ul class="ul-crossed">
+            <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
+            <li>Showers or taps</li>
+            <li>Repairs to the central heating system, including radiators</li>
+            <li>Faults caused by someone else you used for repairs or design faults</li>
+          </ul>
+        </ns-expander>
+        <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
+      </ns-product-card>
+      <ns-product-card keyline="blue">
+        <h2 slot="name">Standard</h2>
+        <h3 slot="price-heading">Estimated price</h3>
+        <div slot="price">
+          <p><b><ns-price pence="1700"></ns-price></b><span> / month</span></p>
+          <p><ns-price pence="19200"></ns-price> / year</p>
+        </div>
+        <div slot="description">
+          <ul class="ul-ticked">
+            <li>Full boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+        </div>
+        <ns-expander slot="expander" highlight="focus">
+          <h3 slot="heading">Get a £25 gift card</h3>
+          <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
+            you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's included?</h3>
+          <ul class="ul-ticked">
+            <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
+            <li>Full service of your boiler to make sure it's running safely and efficiently</li>
+            <li>Accidental Damage</li>
+            <li>Up to £1,000 to gain access and make good for each repair</li>
+          </ul>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's not included?</h3>
+          <ul class="ul-crossed">
+            <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
+            <li>Showers or taps</li>
+            <li>Faults caused by someone else you used for repairs or design faults</li>
+          </ul>
+        </ns-expander>
+        <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
+      </ns-product-card>
+      <ns-product-card keyline="yellow">
+        <h2 slot="name">Plus</h2>
+        <h3 slot="price-heading">Estimated price</h3>
+        <div slot="price">
+          <p><b><ns-price pence="2100"></ns-price></b><span> / month</span></p>
+          <p><ns-price pence="24000"></ns-price> / year</p>
+        </div>
+        <div slot="description">
+          <ul class="ul-ticked">
+            <li>Full boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+        </div>
+        <ns-expander slot="expander" highlight="focus">
+          <h3 slot="heading">Get a £50 gift card</h3>
+          <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
+            you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's included?</h3>
+          <ul class="ul-ticked">
+            <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
+            <li>Full service of your boiler to make sure it's running safely and efficiently</li>
+            <li>Repairs to the plumbing system in your home and outbuildings and the water supply pipe within the boundary of your property.</li>
+            <li>Unblocking and repairing your drains and waste pipes to restore flow</li>
+            <li>Accidental Damage</li>
+            <li>Up to £1,000 to gain access and make good for each repair</li>
+          </ul>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's not included?</h3>
+          <ul class="ul-crossed">
+            <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
+            <li>Showers and their parts, shower pumps, sanitary ware and sealant</li>
+            <li>Shared drains</li>
+            <li>Faults caused by someone else you used for repairs or design faults</li>
+          </ul>
+        </ns-expander>
+        <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
+      </ns-product-card>
+      <ns-product-card keyline="red">
+        <h2 slot="name">Premier</h2>
+        <h3 slot="price-heading">Estimated price</h3>
+        <div slot="price">
+          <p><b><ns-price pence="2350"></ns-price></b><span> / month</span></p>
+          <p><ns-price pence="27000"></ns-price> / year</p>
+        </div>
+        <div slot="description">
+          <ul class="ul-ticked">
+            <li>Full boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+            <li>Plumbing</li>
+            <li>Drains</li>
+            <li>Home electrics</li>
+          </ul>
+        </div>
+        <ns-expander slot="expander" highlight="focus">
+          <h3 slot="heading">Get a £75 gift card</h3>
+          <p>Get a Gift Card to spend at Amazon.co.uk, John Lewis & Partners, Sainsbury's, Argos or on a gift experience when
+            you purchase this product online. Offer ends 24th August 2020. <a href="#caveat" data-di-id="di-id-4a73271b-82f5c">1</a></p>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's included?</h3>
+          <ul class="ul-ticked">
+            <li>Repairs to your gas central heating system, including boiler, controls, radiators and hot water cylinder</li>
+            <li>Full service of your boiler to make sure it's running safely and efficiently</li>
+            <li>Repairs to the plumbing system in your home and outbuildings and the water supply pipe within the boundary of your property.</li>
+            <li>Unblocking and repairing your drains and waste pipes to restore flow</li>
+            <li>Repairs to the mains electrical system and wiring in your home and outbuildings</li>
+            <li>Accidental Damage</li>
+            <li>Up to £1,000 to gain access and make good for each repair</li>
+          </ul>
+        </ns-expander>
+        <ns-expander slot="expander">
+          <h3 slot="heading">What's not included?</h3>
+          <ul class="ul-crossed">
+            <li>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</li>
+            <li>Showers and their parts, shower pumps, sanitary ware and sealant</li>
+            <li>Shared drains</li>
+            <li>Faults caused by someone else you used for repairs or design faults</li>
+            <li>Electrical appliances, cooker hoods or extractor fans over 15cm diameter</li>
+          </ul>
+        </ns-expander>
+        <ns-cta href="/hs" slot="cta">Get a quote</ns-cta>
+      </ns-product-card>
+    </ns-column>
+  </div>
+  <div class="splash">
     <h2 class="h4">Some important documents to read</h2>
     <ul class="download-list">
       <li><ns-download href="//www.britishgas.co.uk/content/dam/british-gas/documents/home_services/HomeCare_Range_Terms_and_Conditions.pdf" filesize="2MB">Terms and Conditions</ns-download></li>
@@ -460,4 +459,3 @@ eleventyNavigation:
     </ol>
   </div>
 </ns-caveat>
-
