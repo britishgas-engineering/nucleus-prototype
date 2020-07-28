@@ -1,3 +1,4 @@
+/* NOTE: @drew-jones - 2020-07-28 - a ticket has been raised to introduce this red gradient: https://github.com/ConnectedHomes/nucleus/issues/1510 */
 ns-product-card[keyline="red"] {
   position: relative;
 }
@@ -11,18 +12,21 @@ ns-product-card[keyline="red"]::before {
   background-image: linear-gradient(205deg, rgb(255, 0, 0), rgb(180, 0, 0) 150%) !important;
 }
 
-ns-panel .important-documents {
+/* NOTE: @drew-jones - 2020-07-24 - specific margins are unavailable, the solution was to wrap `ns-column` with `<div class="splash">` */
+/* ns-panel .important-documents {
   margin-top: 40px;
-}
+} */
 
 ns-expander[highlight="hidden"] {
   visibility: hidden;
 }
 
-.homecare-packages > div:first-of-type {
+/* NOTE: @drew-jones - 2020-07-24 - specific margins are unavailable, the issue of the heading being close to the edge of the decoration is known */
+/* .homecare-packages > div:first-of-type {
   margin-top: 1em;
-}
+} */
 
+/* NOTE: @drew-jones - 2020-07-24 - radio buttons are always stacked */
 /* ns-inputter input[type=radio]+label {
   display: inline-block !important;
   margin-right: 30px;
@@ -115,21 +119,26 @@ ns-expander[highlight="hidden"] {
   height: 37px;
 }
 
-.trustpilot p.no-margin {
+/* NOTE: @drew-jones - 2020-07-24 - this class does not appear to be on the page */
+/* .trustpilot p.no-margin {
   max-width: 100% !important;
-}
+} */
 
+/* NOTE: @drew-jones - 2020-07-24 - removing inconsistent colour and size of ul-ticked */
+/* 
 ns-product-card div[slot="description"] .ul-ticked li::before,
 ns-panel.banner .ul-ticked li::before {
   border-color: #0099FF !important;
   width: 1em;
-}
+} */
 
-ns-panel.banner .ul-ticked li::before {
+/* NOTE: @drew-jones - 2020-07-24 - the position of the ticked icon is not to be adjusted */
+/* ns-panel.banner .ul-ticked li::before {
   left: -0.85em;
   top: .7em;
-}
+} */
 
+/* NOTE: @drew-jones - 2020-07-24 - there is an RFC for a `ul-crossed` list style: https://github.com/ConnectedHomes/nucleus/issues/1453 */
 ns-product-card .ul-crossed li::before {
   position: absolute;
   top: 0.75em;
@@ -138,6 +147,7 @@ ns-product-card .ul-crossed li::before {
   transform: translate(-50%, -50%);
 }
 
+/* NOTE: @drew-jones - 2020-07-24 - adjusting font sizing and attending to responsive behaviour issues */
 ns-product-card div[slot="price"]:first-of-type {
   word-break: break-all;
   width: 110%;
