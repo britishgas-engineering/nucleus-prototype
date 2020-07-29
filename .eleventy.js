@@ -18,6 +18,9 @@ module.exports = function (eleventyConfig) {
   // copy script.js
   eleventyConfig.addPassthroughCopy("src/**/script.js");
 
+  // copy _redirects
+  eleventyConfig.addPassthroughCopy('src/_redirects');
+
   // setting the TemplateFormats to include the following this helps to pass through the project level `style.css` and `script.js` files
   eleventyConfig.setTemplateFormats([
     "njk",
