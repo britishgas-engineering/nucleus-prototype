@@ -1,0 +1,8 @@
+{
+  "layout": "nucleus",
+  "project": "oam",
+  "jquery": false,
+  "script": false,
+  "style": false,
+  "teamname": "OAM Manage"
+}

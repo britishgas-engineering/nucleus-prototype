@@ -1,0 +1,67 @@
+---
+title: Register for your online account
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My Account Online</span>
+    <span class="h1">Please register</span>
+  </h1>
+  <p slot="paragraph">We couldn’t find the email <strong>manage@team.com</strong>. Please check it’s the right one or register it for an account by entering your details as they appear on any bills or correspondence we've sent.</p>
+
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+  <ns-cta type="text" href="../login-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Use a different email</ns-cta><ns-form onsubmit="submittedForm(event)">
+</div>
+</ns-panel>
+
+ 
+ <ns-panel>
+  <div class="splash">
+  <ns-form onsubmit="submittedForm(event)">
+<ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+          <label slot="label" for="nsid-wbvohsny2nq-input">First name</label>
+          <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
+        </ns-inputter>
+
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+          <label slot="label" for="nsid-u343r4exbz-input">Surname</label>
+          <input autocomplete="family-name" type="text" id="nsid-u343r4exbz-input">
+        </ns-inputter>
+
+
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="Mobile number" value="">
+          <p>This will only be used to match you against our records and send you a verification code.
+</p>
+
+          <label slot="label" for="nsid-wbvohsny2nq-input">Mobile number (optional)</label>
+          <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
+        </ns-inputter>
+
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+          <label slot="label" for="nsid-u343r4exbz-input">Postcode</label>
+          <input autocomplete="family-name" type="text" id="nsid-u343r4exbz-input">
+        </ns-inputter>
+
+ <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the enviroment and choose to print at home though.</p>
+
+<p>If you’re a HomeCare customer, you can also ask us to send your policy documents by post from the ‘Service Documents’ area of your account. 
+</p>
+
+
+<ns-inputter validation="[&quot;isRequired&quot;]"  helper="" name="legal" value="">
+        <input type="checkbox" id="terms-agree" name="terms" value="true">
+        <label for="terms-agree">Please check to state that you agree to the <a>terms and conditions</a>.</label>
+        <ns-download href="url/to/terms.pdf" filesize="1MB">Terms and conditions</ns-download>
+      </ns-inputter>
+
+
+<ns-cta>Next step</ns-cta>
+
+
+    </ns-form>
+
+</div>
+</ns-panel>
