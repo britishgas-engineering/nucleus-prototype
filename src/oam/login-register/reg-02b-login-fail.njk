@@ -4,7 +4,7 @@ title: Register for your online account
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h5">My Account Online</span>
+    <span class="h5">My Account Online.</span>
     <span class="h1">Please register</span>
   </h1>
   <p slot="paragraph">We couldn’t find the email <strong>un-known@address.com</strong>. Please check it’s the right one or register it for an account by entering your details as they appear on any bills or correspondence we've sent.</p>
@@ -20,7 +20,7 @@ title: Register for your online account
  
  <ns-panel>
   <div class="splash">
- <ns-form onsubmit="submittedForm(event)">
+<ns-form onsubmit="submittedForm(event)">
 <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
           <label slot="label" for="nsid-wbvohsny2nq-input">First name</label>
           <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
@@ -32,15 +32,14 @@ title: Register for your online account
         </ns-inputter>
 
 
-        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="Mobile number" value="">
-          <p>This will only be used to match you against our records and send you a verification code.
-</p>
+        <ns-inputter mask="" separator="" validation="" value="e.g. 079.." helper="This will only be used to match you against our records and send you a verification code." name="mobile-number">
 
-          <label slot="label" for="nsid-wbvohsny2nq-input">Mobile number (optional)</label>
-          <input autocomplete="given-name" type="text" value="e.g.  079.." id="nsid-wbvohsny2nq-input">
-        </ns-inputter>
+  <label slot="label" for="tel-input">Mobile number (optional)</label>
+  <input type="tel" id="tel-input">
+</ns-inputter>
 
-        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="postcode" value="">
           <label slot="label" for="nsid-u343r4exbz-input">Postcode</label>
           <input autocomplete="family-name" type="text" id="nsid-u343r4exbz-input">
         </ns-inputter>
@@ -58,9 +57,23 @@ title: Register for your online account
       </ns-inputter>
  <ns-cta type="text" href="#!" icon="info-outline" ">Terms and conditions</ns-cta>
 
-<ns-cta type="direct" href="../reg-03" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
+<ns-cta nf-href="DYNAMIC">Next step</ns-cta>
 
 
     </ns-form>
 </div>
 </ns-panel>
+
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="mobile-number"]').value;
+    if (data === '07831234567') {
+      return '../reg-04b-sms';
+    } 
+    else {
+      return '../reg-03';
+    }
+  }
+</script>
+
