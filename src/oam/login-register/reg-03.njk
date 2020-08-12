@@ -14,16 +14,17 @@ title: Register for your online account
 
  <ns-panel>
   <div class="splash">
- <ns-form onsubmit="submittedForm(event)">
-<ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
-          <label slot="label" for="nsid-wbvohsny2nq-input">Reference number</label>
-          <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
-        </ns-inputter>
 
-<ns-cta>Next step</ns-cta>
+
+    <ns-form onsubmit="submittedForm(event)">
+<ns-fieldset>
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="Reference number">  <label slot="label" for="email-input">Reference number</label>  <input type="email" id="email-input"></ns-inputter>
+</ns-fieldset>
+<ns-cta type="direct" href="../reg-02a" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
 
 
     </ns-form>
+
 </div>
 </ns-panel>
 
