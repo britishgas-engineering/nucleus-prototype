@@ -28,10 +28,15 @@ title: Log in to your account
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="email-address"]').value;
-    if (data === 'email@address.com') {
+    if (data === 'known@address.com') {
       return '../login-02';
-    } else {
+    } 
+     if (data === 'un-known@address.com') {
       return '../reg-02b-login-fail';
+    }
+    else {
+      return '#';
     }
   }
 </script>
+

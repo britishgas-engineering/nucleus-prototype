@@ -17,8 +17,8 @@ title: Register for your online account
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="email-address">  <label slot="label" for="email-input">Email address</label>  <input type="email" id="email-input"></ns-inputter>
 </ns-fieldset>
 <!-- <ns-cta>Next step</ns-cta> -->
-<ns-cta type="direct" href="../reg-02a" icon="arrow-right" loading="false" loadingmessage="Loading...">Register me</ns-cta>
-<ns-cta href="../login-02">!!!Register me (Email recognised)</ns-cta>
+<ns-cta type="direct" nf-href="DYNAMIC" icon="arrow-right" loading="false" loadingmessage="Loading...">Register me</ns-cta>
+
 
     </ns-form>
 </div>
@@ -41,3 +41,19 @@ title: Register for your online account
     </div>
     
   </ns-panel>
+
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="email-address"]').value;
+    if (data === 'known@address.com') {
+      return '../login-02';
+    } 
+    if (data === 'un-known@address.com') {
+      return '../reg-02a';
+    }
+    else {
+      return '#';
+    }
+  }
+</script>
