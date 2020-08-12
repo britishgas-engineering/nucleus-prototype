@@ -1,0 +1,40 @@
+---
+title: Set your password
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Registration step 3 of 3</span>
+    <span class="h1">Set your password</span>
+  </h1>
+  <p slot="paragraph">Setting a security password will give you added security and help you get into your account faster next time.</p>
+
+</ns-landmark>
+
+
+
+<ns-panel>
+  <div class="splash">
+
+
+    <ns-form onsubmit="submittedForm(event)">
+<ns-fieldset>
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="password">
+
+  <label slot="label" for="password-input">Password</label>
+  <input type="password" id="password-input">
+</ns-inputter>
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="password">
+
+  <label slot="label" for="password-input">Confirm Password</label>
+  <input type="password" id="password-input">
+</ns-inputter>
+</ns-fieldset>
+<ns-cta type="direct" href="../login-04-success" icon="arrow-right" loading="false" loadingmessage="Loading...">Set password</ns-cta>
+
+
+    </ns-form>
+
+</div>
+</ns-panel>
+
