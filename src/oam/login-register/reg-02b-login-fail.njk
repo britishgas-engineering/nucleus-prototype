@@ -20,7 +20,7 @@ title: Register for your online account
  
  <ns-panel>
   <div class="splash">
-  <ns-form onsubmit="submittedForm(event)">
+ <ns-form onsubmit="submittedForm(event)">
 <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
           <label slot="label" for="nsid-wbvohsny2nq-input">First name</label>
           <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
@@ -37,7 +37,7 @@ title: Register for your online account
 </p>
 
           <label slot="label" for="nsid-wbvohsny2nq-input">Mobile number (optional)</label>
-          <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
+          <input autocomplete="given-name" type="text" value="e.g.  079.." id="nsid-wbvohsny2nq-input">
         </ns-inputter>
 
         <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
@@ -53,15 +53,14 @@ title: Register for your online account
 
 <ns-inputter validation="[&quot;isRequired&quot;]"  helper="" name="legal" value="">
         <input type="checkbox" id="terms-agree" name="terms" value="true">
-        <label for="terms-agree">Please check to state that you agree to the <a>terms and conditions</a>.</label>
-        <ns-download href="url/to/terms.pdf" filesize="1MB">Terms and conditions</ns-download>
+        <label for="terms-agree">Please check to state that you agree to the terms and conditions</label>
+       
       </ns-inputter>
-
+ <ns-cta type="text" href="#!" icon="info-outline" ">Terms and conditions</ns-cta>
 
 <ns-cta>Next step</ns-cta>
 
 
     </ns-form>
-
 </div>
 </ns-panel>

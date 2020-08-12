@@ -1,0 +1,31 @@
+---
+title: Register for your online account
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Registration step 1 of 3</span>
+    <span class="h1">Verify your account</span>
+  </h1>
+  <p slot="paragraph">As a final security check, please confirm your reference number. You’ll find this on some of our emails, and any bills or headed letters we’ve sent you. If you’re not sure where to find it, simply click below for more help.</p>
+
+</ns-landmark>
+
+
+ <ns-panel>
+  <div class="splash">
+ <ns-form onsubmit="submittedForm(event)">
+<ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+          <label slot="label" for="nsid-wbvohsny2nq-input">Reference number</label>
+          <input autocomplete="given-name" type="text" id="nsid-wbvohsny2nq-input">
+        </ns-inputter>
+
+<ns-cta>Next step</ns-cta>
+
+
+    </ns-form>
+</div>
+</ns-panel>
+
+
+{% include "./_includes/ns-accordion-reference-number.njk" -%}

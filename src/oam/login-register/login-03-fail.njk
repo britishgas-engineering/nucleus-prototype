@@ -12,22 +12,17 @@ title: Log in to your account
 
 
 <ns-panel>
-  <div class="splash">
 
+  <div class="splash">
   <ns-highlighter type="warning">
   <h2 slot="heading">
    Wrong password
   </h2>
   <p>Please try again. If you're having some issues accessing your account, choose email me a login link, or you can <a href="#">reset your password</a>.  There is also additional help at the bottom of this page.</p>
-  
 </ns-highlighter>
-
 </div>
-</ns-panel>
 
- <ns-panel>
   <div class="splash">
-
    <ns-form onsubmit="submittedForm(event)">
 <ns-fieldset>
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="password">
@@ -36,12 +31,10 @@ title: Log in to your account
   <input type="password" id="password-input">
 </ns-inputter></ns-fieldset>
 
-<ns-cta>Log in to my account</ns-cta>
+<ns-cta href="../login-04-success">Log in to my account</ns-cta>
+<ns-cta href="../reg-02b-login-fail">!! Log in to my account (to reg flow)</ns-cta>
 <ns-cta type="text" href="#" icon="arrow-right" loading="false" loadingmessage="Loading...">Email me a login link</ns-cta>
-
-
     </ns-form>
-
 </div>
 </ns-panel>
 
