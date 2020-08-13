@@ -1,0 +1,67 @@
+---
+layout: base.njk
+emailDetail:
+  avatar: BG
+  from: British Gas
+  title: Title of the email
+  addressee: email@address.com
+---
+<style>
+  .email {
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 1em;
+  }
+
+  .email .date {
+    float: right;
+    color: grey;
+    font-size: 0.8em;
+  }
+
+  .email .avatar {
+    float: right;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    margin-left: 1em;
+  }
+
+  .email .from {
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  .email .title {
+    font-size: 0.9em;
+  }
+
+  .email .addressee .to {
+    font-size: 0.9em;
+    margin-right: 1em;
+  }
+
+  .email .addressee .address {
+    font-size: 0.8em;
+  }
+
+</style>
+
+<ns-panel>
+  <div class="splash email">
+    <div class="avatar">{{emailDetail.avatar}}</div>
+    <div class="date">{{page.date.toUTCString()}}</div>
+    <div class="from">{{emailDetail.from}}</div>
+    <div class="title">{{emailDetail.title}}</div>
+    <div class="addressee"><span class="to">To:</span><span class="address">{{emailDetail.addressee}}</span></div>
+  </div>
+</ns-panel>
+
+<main id="content">
+  {{content | safe}}
+</main>
