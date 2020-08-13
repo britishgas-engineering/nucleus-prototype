@@ -33,16 +33,16 @@ title: Register for your online account
         </ns-inputter>
 
 
-        <ns-inputter mask="" separator="" validation="" value="e.g. 079.." helper="This will only be used to match you against our records and send you a verification code." name="mobile-number">
+        <ns-inputter mask="" separator="" validation="" helper="This will only be used to match you against our records and send you a verification code." name="mobile-number">
 
   <label slot="label" for="tel-input">Mobile number (optional)</label>
-  <input type="tel" id="tel-input">
+  <input type="tel" placeholder="e.g. 0798123456" id="tel-input">
 </ns-inputter>
 
 
-        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="postcode" value="">
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
           <label slot="label" for="nsid-u343r4exbz-input">Postcode</label>
-          <input autocomplete="family-name" type="text" id="nsid-u343r4exbz-input">
+          <input autocomplete="postal-code" type="text" id="nsid-u343r4exbz-input">
         </ns-inputter>
 
  <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the enviroment and choose to print at home though.</p>
@@ -78,4 +78,3 @@ title: Register for your online account
     }
   }
 </script>
-
