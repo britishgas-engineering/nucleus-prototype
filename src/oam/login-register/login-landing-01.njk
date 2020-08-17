@@ -4,7 +4,7 @@ title: Log in to your account
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h5">My Account</span>
+    <span class="h5">My Account.</span>
     <span class="h1">Log in to your account</span>
   </h1>
   <p slot="paragraph">We’re here to solve and provide extra help where we can.</p>
@@ -18,8 +18,8 @@ title: Log in to your account
 </ns-fieldset>
 
 <ns-cta>Continue</ns-cta>
-<ns-cta type="text" href="../login-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Forgotten your password?</ns-cta>
-<ns-cta type="text" href="../login-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Email me a login link</ns-cta>
+<ns-cta type="text" href="../login-01-landing" icon="arrow-right" loading="false" loadingmessage="Loading...">Forgotten your password?</ns-cta>
+<ns-cta type="text" href="../login-01-landing" icon="arrow-right" loading="false" loadingmessage="Loading...">Email me a login link</ns-cta>
 
 
     </ns-form>
@@ -28,40 +28,6 @@ title: Log in to your account
 </ns-panel>
 
 
-<ns-panel>
+{% include "./_includes/ns-accordion-login.njk" -%}
 
-            <div class="splash">
 
-              <ns-accordion>
-
-                <h3 slot="heading">Having trouble accessing your account?</h3>
-
-                <ns-expander open="false">
-                  <h4 slot="heading">I’ve accessed my account online before</h4>
-                  <p>Paragraph for the expander content.</p>
-                </ns-expander>
-
-                <ns-expander open="false">
-                  <h4 slot="heading">I am an existing customer but haven't accessed my account online before</h4>
-                  <p>It’s possible that you had joined us pre-digital days or had just never wanted a digital account, but now you do. You’ll need to register for an online account.<br>
-                  <ns-cta type="text" href="../reg-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Register for an online account</ns-cta>
-                  <br>
-                  <ns-cta type="text" href="../login-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Benefits of an online account</ns-cta>
-</p>
-                </ns-expander>
-
-                <ns-expander open="false">
-                  <h4 slot="heading">I am not yet a customer of British Gas </h4>
-                  <p>Paragraph for the expander content.</p>
-                </ns-expander>
-
-                <ns-expander open="false">
-                  <h4 slot="heading">I am moving into a new property already supplied by British Gas</h4>
-                  <p>Paragraph for the expander content.</p>
-                </ns-expander>
-
-              </ns-accordion>
-
-            </div>
-
-          </ns-panel>

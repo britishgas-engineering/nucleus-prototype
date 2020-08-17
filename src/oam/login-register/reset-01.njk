@@ -1,0 +1,28 @@
+---
+title: Forgotten your password?
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My Account Online.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">Please enter the email address you use to access your account. We'll send you a link to change your password.</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+  <ns-form onsubmit="submittedForm(event)">
+<ns-fieldset>
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="email-address">  <label slot="label" for="email-input">Email address</label>  <input type="email" id="email-input"></ns-inputter>
+</ns-fieldset>
+<!-- <ns-cta>Next step</ns-cta> -->
+<ns-cta type="direct" href="../reset-02" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
+
+
+    </ns-form>
+</div>
+
+
+</ns-panel>
+

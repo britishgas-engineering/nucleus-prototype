@@ -1,0 +1,42 @@
+---
+title: Log in to your account
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My Account.</span>
+    <span class="h1">Log in to your account</span>
+  </h1>
+  <p slot="paragraph">Stay in control with easy access to your British Gas account.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-fieldset>
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="email-address">
+        <label slot="label">Email address</label>
+        <input type="email">
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+    <ns-cta type="text" href="../magic-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Email me a login link</ns-cta>
+  </ns-form>
+</ns-panel>
+
+{% include "./_includes/ns-accordion-login.njk" -%}
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="email-address"]').value;
+    if (data === 'known@address.com') {
+      return '../login-02';
+    } 
+     if (data === 'un-known@address.com') {
+      return '../reg-02b-login-fail';
+    }
+    else {
+      return '#';
+    }
+  }
+</script>
+

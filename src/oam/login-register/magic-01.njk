@@ -1,0 +1,35 @@
+---
+title: Email me a login link
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My Account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph"><strong>manage@team.com</strong> Please confirm your details.</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+  <ns-form onsubmit="submittedForm(event)">
+
+<ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+          <label slot="label" for="nsid-u343r4exbz-input">Surname</label>
+          <input autocomplete="family-name" type="text" id="nsid-u343r4exbz-input">
+        </ns-inputter>
+
+
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
+          <label slot="label" for="nsid-u343r4exbz-input">Postcode</label>
+          <input autocomplete="postal-code" type="text" id="nsid-u343r4exbz-input">
+        </ns-inputter>
+
+<ns-cta type="direct" href="../magic-02" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
+<ns-cta type="text" href="../login-01-landing" icon="arrow-right" loading="false" loadingmessage="Loading...">Login using password</ns-cta>
+
+    </ns-form>
+
+    
+  </ns-panel>
+

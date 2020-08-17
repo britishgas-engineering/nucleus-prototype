@@ -4,7 +4,7 @@ title: Register for your online account
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h5">My Account Online</span>
+    <span class="h5">My Account Online.</span>
     <span class="h1">Let’s register you</span>
   </h1>
   <p slot="paragraph">Registering for an online account will only take a few minutes.</p>
@@ -17,14 +17,16 @@ title: Register for your online account
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="email-address">  <label slot="label" for="email-input">Email address</label>  <input type="email" id="email-input"></ns-inputter>
 </ns-fieldset>
 <!-- <ns-cta>Next step</ns-cta> -->
-<ns-cta type="direct" href="../reg-02" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
+<ns-cta type="direct" nf-href="DYNAMIC" icon="arrow-right" loading="false" loadingmessage="Loading...">Register me</ns-cta>
+
+
     </ns-form>
 </div>
 
  <div class="splash">
        <br><br>
       <h5>Already got an online account?</h5>
-<ns-cta type="text" href="../login-landing-01" icon="arrow-right" loading="false" loadingmessage="Loading...">Log in here</ns-cta>
+<ns-cta type="text" href="../login-01-landing" icon="arrow-right" loading="false" loadingmessage="Loading...">Log in here</ns-cta>
  </div>
 </ns-panel>
 
@@ -39,3 +41,19 @@ title: Register for your online account
     </div>
     
   </ns-panel>
+
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="email-address"]').value;
+    if (data === 'known@address.com') {
+      return '../login-02b';
+    } 
+    if (data === 'un-known@address.com') {
+      return '../reg-02a';
+    }
+    else {
+      return '#';
+    }
+  }
+</script>
