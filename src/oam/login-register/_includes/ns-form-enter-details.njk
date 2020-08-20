@@ -1,0 +1,32 @@
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam">
+    <ns-fieldset legend="Enter your details">
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+        <label slot="label">First name</label>
+        <input autocomplete="given-name" type="text">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+        <label slot="label">Surname</label>
+        <input autocomplete="family-name" type="text">
+      </ns-inputter>
+      <ns-inputter helper="This will only be used to match you against our records and send you a verification code." name="mobile-number" value="">
+        <label slot="label">Mobile number (optional)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
+        <label slot="label">Postcode</label>
+        <input autocomplete="postal-code" type="text">
+      </ns-inputter>
+    </ns-fieldset>
+    <div>
+      <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the enviroment and choose to print at home though.</p>
+      <p>If you’re a HomeCare customer, you can also ask us to send your policy documents by post from the ‘Service Documents’ area of your account.</p>
+    </div>
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="terms" value="">
+      <input type="checkbox" id="terms-agree" value="true">
+      <label for="terms-agree">Please check to state that you agree to the terms and conditions</label>
+    </ns-inputter>
+    <ns-cta type="text" href="#!" icon="info-outline">Terms and conditions</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
+  </ns-form>
+</ns-panel>
