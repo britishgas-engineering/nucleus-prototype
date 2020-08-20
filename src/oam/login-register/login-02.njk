@@ -26,11 +26,11 @@ title: Enter your password
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="password"]').value;
-    if (data === 'incorrect') {
-      return '../login-03-fail';
+    if (data === 'correct') {
+      return '../login-04-success';
     }
     else {
-      return '../login-04-success';
+      return '../login-03-fail';
     }
   }
 </script>
