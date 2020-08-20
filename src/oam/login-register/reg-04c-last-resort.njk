@@ -10,17 +10,13 @@ title: Register for your online account
   <p slot="paragraph">We can’t find your account using the information that you’ve just provided.</p>
 </ns-landmark>
 
-
 <ns-panel>
-
   <div class="splash">
-  <ns-highlighter type="info">
-  <h2 slot="heading">Details need to be consistent
-  </h2>
-  <p>To help us find your account, please ensure your information appears exactly as it’s shown on any bills or letter we’ve sent you. You can edit your information below.</p>
-</ns-highlighter>
-</div>
-
+    <ns-highlighter type="info">
+      <h2 slot="heading">Details need to be consistent</h2>
+      <p>To help us find your account, please ensure your information appears exactly as it’s shown on any bills or letter we’ve sent you. You can edit your information below.</p>
+    </ns-highlighter>
+  </div>
 </ns-panel>
 
 <ns-panel>
@@ -28,50 +24,42 @@ title: Register for your online account
     <dl class="dl-row">
       <div>
         <dt>Email address</dt>
-        <dd>un-known@address.com</dd>
+        <dd><span nf-model="model.oam.email-address">un-known@address.com</span></dd>
         <dd>
           <a href="../reg-01-landing">Edit email</a>
         </dd>
       </div>
       <div>
         <dt>First name</dt>
-        <dd>Manage</dd>
+        <dd><span nf-model="model.oam.first-name">Manage</span></dd>
         <dd>
           <a href="../reg-02a">Edit first name</a>
         </dd>
       </div>
       <div>
         <dt>Surname</dt>
-        <dd>
-          Team
-        </dd>
+        <dd><span nf-model="model.oam.surname">Known</span></dd>
         <dd>
           <a href="../reg-02a">Edit surname</a>
         </dd>
       </div>
       <div>
         <dt>Mobile number</dt>
-        <dd>
-          07831234567
-        </dd>
+        <dd><span nf-model="model.oam.mobile-number">Unavailable</span></dd>
         <dd>
           <a href="../reg-02a">Edit mobile number</a>
         </dd>
       </div>
       <div>
         <dt>Postcode</dt>
-        <dd>
-          NW1 234
-        </dd>
+        <dd><span nf-model="model.oam.postcode">W1W 1WW</span></dd>
         <dd>
           <a href="../reg-02a">Edit postcode</a>
         </dd>
       </div>
       <div>
         <dt>Reference number</dt>
-        <dd>
-          85123456789
-        </dd>
+        <dd><span nf-model="model.oam.reference-number">W1W 1WW</span></dd>
         <dd>
           <a href="../reg-03">Edit reference number</a>
         </dd>
@@ -79,5 +67,3 @@ title: Register for your online account
     </dl>
   </div>
 </ns-panel>
-
-
