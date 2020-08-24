@@ -11,33 +11,24 @@ title: Register for your online account
 
 </ns-landmark>
 
-
- <ns-panel>
-  <div class="splash">
-
-
-    <ns-form onsubmit="submittedForm(event)">
-<ns-fieldset>
-<ns-inputter mask="            " separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="reference-number">  <label slot="label" for="email-input">Reference number</label>  <input type="text" id="mask-input"></ns-inputter>
-</ns-fieldset>
-<ns-cta type="direct" nf-href="DYNAMIC"" icon="arrow-right" loading="false" loadingmessage="Loading...">Next step</ns-cta>
-
-
-    </ns-form>
-
-</div>
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam">
+    <ns-inputter mask="              " separator="" validation="[&quot;isRequired&quot;,&quot;minLength(11)&quot;,&quot;maxLength(14)&quot;]" name="reference-number" value="">
+      <label slot="label">Reference number</label>
+      <input type="text">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
+  </ns-form>
 </ns-panel>
 
-
 {% include "./_includes/ns-accordion-reference-number.njk" -%}
-
 
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="reference-number"]').value;
     if (data === '85123456789') {
       return '../reg-04';
-    } 
+    }
     else {
       return '../reg-04c-last-resort';
     }

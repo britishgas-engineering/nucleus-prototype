@@ -8,39 +8,35 @@ title: Set your password
     <span class="h1">Set your password</span>
   </h1>
   <p slot="paragraph">Setting a security password will give you added security and help you get into your account faster next time.</p>
-
 </ns-landmark>
 
-
-
 <ns-panel>
-  <div class="splash">
-
-
-    <ns-form onsubmit="submittedForm(event)">
-<ns-fieldset>
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="password">
-
-  <label slot="label" for="password-input">Password</label>
-  <input type="password" id="password-input">
-</ns-inputter>
-
-<ul class="ul-ticked">
+  <ns-form class="splash">
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;]" name="password" value="">
+      <label slot="label">Password</label>
+      <input type="password">
+    </ns-inputter>
+    <ul class="ul-ticked" style="margin-bottom: 0;">
       <li>One letter</li>
       <li>One number</li>
       <li>8-20 characters</li>
-      </ul>
-
-    <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="password">
-  <label slot="label" for="password-input">Confirm Password</label>
-  <input type="password" id="password-input">
-</ns-inputter>
-</ns-fieldset>
-<ns-cta type="direct" href="../login-04-success" icon="arrow-right" loading="false" loadingmessage="Loading...">Set password</ns-cta>
-
-
-    </ns-form>
-
-</div>
+    </ul>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;]" name="confirm-password" value="">
+      <label slot="label">Confirm Password</label>
+      <input type="password">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Set password</ns-cta>
+  </ns-form>
 </ns-panel>
 
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="password"]').value;
+    if (data === '') {
+      return '';
+    }
+    else {
+      return '../login-04-success';
+    }
+  }
+</script>

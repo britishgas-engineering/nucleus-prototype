@@ -5,23 +5,37 @@ emailDetail:
   avatar: BG
   from: British Gas
   title: Your login link
-  addressee: known@address.com
+  addressee: manage@team.com
 ---
 
-<ns-editorial>
-  <p>
-    <img style="width: 8em;" src="https://www.britishgas.co.uk/nucleus/images/logo.svg">
-  </p>
-  <h1 class="h3">Your magic login link</h1>
-  <p>Hello <span nf-model="model.oam.first-name">,</p>
-  <p>Use the magic link below to access your account. <strong>It’s available for 10 minutes and can be used just once to get in.</strong></p>
-  <p><ns-cta type="direct" href="../login-04-success">Access your account</ns-cta></p>
-  <p>If you’re not expecting to get an email from us, we’ll tell you how to spot a genuine British Gas email from a fake one.</p>
-  <p>Click this link or copy and paste it into your browser to find out more: <a href="#">britishgas.co.uk/unexpected-email</a></p>
-  <p>Thanks</p>
-  <p><strong>David Kirwan</strong></p>
-  <p>Managing Director, Customer Operations</p>
-</ns-editorial>
+<ns-panel>
+  <div class="splash">
+    <img style="width: 10em;" src="https://www.britishgas.co.uk/nucleus/images/logo.svg">
+  </div>
+</ns-panel>
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Your magic login link</span>
+  </h1>
+  <p slot="paragraph">Hello Mr Manage,</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <p class="p-normal">Use the magic link below to access your account. <strong>It’s available for 10 minutes and can be used just once to get in.</strong></p>
+    <ns-cta type="direct" href="../login-04-success" icon="arrow-right" loading="false" loadingmessage="Loading...">Access your account</ns-cta>
+  </div>
+  <div class="splash">
+    <p class="p-normal">If you’re not expecting to get an email from us, we’ll tell you how to spot a genuine British Gas email from a fake one. Copy and paste this link into your browser to find out more:</p>
+    <p class="p-normal"> <a href="#">britishgas.co.uk/unexpected-email</a> </p>
+  </div>
+  <div class="splash">
+    <p class="p-normal">Thanks</p>
+    <p class="p-normal"><strong>David Kirwan</strong></p>
+    <p class="p-normal">Managing Director, Customer Operations</p>
+  </div>
+</ns-panel>
 
 <ns-caveat>
   <div slot="caveat">
