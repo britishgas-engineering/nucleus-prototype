@@ -1,0 +1,50 @@
+---
+title: hs-category-meter-L8-barcode
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My meter help.</span>
+    <span class="h1 enlighten"><b>How many barcodes</b> do you have on your <b>smart meter</b>?</span>
+  </h1>
+  <div slot="paragraph">
+    <p>Your smart meter may be located outside your property or in a cupboard inside your dwelling.</p>
+  </div>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.formL8">
+
+      <ns-inputter validation='["isRequired"]' name="inputter-a">
+        <input type="radio" name="radio" value="radio-a" id="radio-a">
+        <label for="radio-a">Two</label>
+        <input type="radio" name="radio" value="radio-b" id="radio-b">
+        <label for="radio-b">Three</label>
+        <input type="radio" name="radio" value="radio-c" id="radio-c">
+        <label for="radio-c">I do not know</label>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'radio-a') {
+      return '../hs-category-meter-L9-summary/';
+    }
+
+    if (data === 'radio-b') {
+      return '../hs-category-meter-L9-summary/';
+    }
+
+    if (data === 'radio-c') {
+      return '../hs-category-meter-L9-summary/';
+    }
+  }
+</script>

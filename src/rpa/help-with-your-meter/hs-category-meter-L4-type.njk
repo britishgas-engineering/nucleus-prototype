@@ -1,0 +1,55 @@
+---
+title: hs-category-meter-L4-type
+---
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My meter help.</span>
+    <span class="h1 enlighten"><b>Which one</b> do you need help with?</span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.L4-type">
+
+      <ns-inputter validation='["isRequired"]' name="inputter-a" class="triple" value="">
+        <ns-selector image="https://user-images.githubusercontent.com/52657167/80400977-80398c00-88b3-11ea-8fa7-ddb2e3b1fc46.jpg">
+          <input type="radio" name="radio" value="gas" id="radio-a">
+          <label for="radio-a">Gas meter</label>
+        </ns-selector>
+        <ns-selector image="https://user-images.githubusercontent.com/52657167/80400974-7e6fc880-88b3-11ea-95f2-ee0c2fc5f9fb.jpg">
+          <input type="radio" name="radio" value="electricity" id="radio-b">
+          <label for="radio-b">Electricity meter</label>
+        </ns-selector>
+        <ns-selector image="https://user-images.githubusercontent.com/52657167/80400978-80398c00-88b3-11ea-8656-aa6086ab68fa.jpg">
+          <input type="radio" name="radio" value="energy" id="radio-c">
+          <label for="radio-c">Smart energy monitor</label>
+          <div slot="description">
+            <p>You will probably have one of these if you've had a smart meter installed.</p>
+          </div>
+        </ns-selector>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'gas') {
+      return '../hs-category-meter-L5-pay/';
+    }
+
+    if (data === 'electricity') {
+      return '../hs-category-meter-L5-pay/';
+    }
+
+    if (data === 'energy') {
+      return '../hs-category-meter-L5-pay-smart/';
+    }
+  }
+</script>

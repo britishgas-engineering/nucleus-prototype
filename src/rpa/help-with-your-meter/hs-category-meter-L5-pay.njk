@@ -1,0 +1,40 @@
+---
+title: hs-category-meter-L5-pay
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My meter help.</span>
+    <span class="h1 enlighten"><b>How do you pay</b> for your <span nf-model="model.L4-type.inputter-a">DATA</span>?</span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.L5-pay">
+
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="What is Pay As You Go?">
+        <div slot="tip-details">
+          <p>You won't receive a bill – you will pay for your energy as you use it.</p>
+        </div>
+        <input type="radio" name="radio" value="radio-a" id="radio-a">
+        <label for="radio-a">Direct Debit, cash or cheque</label>
+        <input type="radio" name="radio" value="Pay As You Go" id="radio-b">
+        <label for="radio-b">Pay As You Go</label>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'Pay As You Go') {
+      return '../hs-category-meter-L6-smart/';
+    }
+  }
+</script>
