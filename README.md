@@ -10,6 +10,9 @@ Open the `/nucleus-prototype` folder using terminal.
 
 Assuming Node.js https://nodejs.org/ is installed.
 
+Please ensure that the latest LTS version of Node is installed.
+* Currently the latest LTS Version is: 12.18.3 (includes npm 6.14.6).
+
 ### Install the npm packages
 
 ```bash
