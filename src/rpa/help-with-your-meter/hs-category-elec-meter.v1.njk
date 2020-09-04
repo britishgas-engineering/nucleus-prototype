@@ -1,0 +1,43 @@
+---
+title: hs-category-fuel-type
+---
+
+<ns-panel>
+  <div class="splash">
+    <a slot="cta" href="../hs-category-fuel-type.v1/">
+      <ns-cta type="text" icon="arrow-left">Back</ns-cta>
+    </a>
+  </div>
+</ns-panel>
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1 enlighten">Which type of <b>electricity meter</b> do you have?</span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <ns-inputter class="triple" validation="[&quot;isRequired&quot;]" heading="How would you prefer to receive updates?" helper="I'm here to provide further detailed information." name="gas" value="gas">
+    <ns-selector decoration="boiler" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
+      <input type="radio" name="question" checked="">
+      <label>Standard (Smart/Non Smart)</label>
+      <div slot="description">
+        <p>If you pay a monthly bill via Direct Debit, cash or cheque for your electricity or gas.</p>
+      </div>
+    </ns-selector>
+    <ns-selector decoration="appliance" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
+      <input type="radio" name="question">
+      <label>Smart Pay As You Go</label>
+      <div slot="description">
+        <p>If you have a Smart monitor and you top up your electricity or gas by key; card; Payzone; Post Office or online.</p>
+      </div>
+    </ns-selector>
+    <ns-selector decoration="gas" image="/aem6/content/dam/britishgas/images/ns/image16_9.png">
+      <input type="radio" name="question">
+      <label>Pay As You Go</label>
+      <div slot="description">
+        <p>If you use a key or card to top up your electricity or gas.</p>
+      </div>
+    </ns-selector>
+  </ns-inputter>
+</ns-panel>
