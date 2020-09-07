@@ -1,52 +1,36 @@
 ---
 title: OAM Manage
 eleventyNavigation:
-  key: Login and register
+  key: login reg
   parent: oam
-  title: Login and register
-  excerpt: Experiment with Login and register
+  title: login reg
+  excerpt: OAM Manage excerpt
 ---
 
-<ns-landmark type="lakeside">
+<ns-landmark type="summit" image="https://user-images.githubusercontent.com/28779/75573555-00c74200-5a55-11ea-86db-66a1ff253b57.jpg">
   <h1 slot="heading">
     <span class="h5">How cool is this.</span>
-    <span class="h1 enlighten">{{teamname}}'s <b>{{title}}</b></span>
+    <span class="h1 enlighten"><b>{{teamname}}</b>, get ready to be awesome</span>
   </h1>
   <div slot="paragraph">
-    <p>This is the index page of <b>{{title}}</b>.</p>
+    <p>This is the index page of <b>{{title}}</b>. When you're ready, move on.</p>
   </div>
 </ns-landmark>
 
-<ns-panel>
-  <div class="splash triple">
-    <ns-card type="support">
-      <h3 slot="heading">Let's register you</h3>
-      <p slot="paragraph">Quisquam debitis sapiente perspiciatis. Omnis qui pariatur nihil animi.</p>
-      <a slot="cta" href="reg-01-landing">
-        <ns-cta type="text">Register online account</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Log in to your account</h3>
-      <p slot="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <a slot="cta" href="login-01-landing">
-        <ns-cta type="text">Log in</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
-
-   
-<ns-caveat>
-<h2 slot="heading">Happy path credentials</h2>
-  <div slot="caveat">
-    <p>Details below will activate logic on the prototype for enabled fields. If any alternative information is entered, unhappy paths will be shown.</p>
-    <ol>
-      <li>Login/Reg Email: known@address.com</li>
-      <li>Login Password: correct</li>
-      <li>Reg mobile: 07831234567</li>
-      <li>Reg Reference number: 85123456789</li>
-    </ol>
-  </div>
-</ns-caveat>
-
+  {% set navPages = collections.all | eleventyNavigation("login-register") | reverse %}
+  <ns-panel>
+    <div class="splash">
+      <h2>{{teamname}} projects</h2>
+    </div>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
+          </a>
+        </ns-card>
+      {%- endfor %}
+    </div>
+  </ns-panel>

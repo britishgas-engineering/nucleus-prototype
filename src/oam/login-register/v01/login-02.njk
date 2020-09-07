@@ -1,0 +1,36 @@
+---
+title: Enter your password
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">Please enter the password for <strong><span nf-model="model.oam-01.email-address">[HERE]</span></strong></p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-01">
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="password" value="">
+      <label slot="label">Password</label>
+      <input type="password">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Log in to my account</ns-cta>
+    <ns-cta type="text" href="../magic-01">Email me a login link</ns-cta>
+  </ns-form>
+</ns-panel>
+
+{% include "./_includes/ns-accordion-login.njk" -%}
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="password"]').value;
+    if (data === 'correct') {
+      return '../login-04-success';
+    }
+    else {
+      return '../login-03-fail';
+    }
+  }
+</script>
