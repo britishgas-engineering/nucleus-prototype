@@ -13,13 +13,20 @@
         <label slot="label">Mobile number (optional)</label>
         <input type="tel" placeholder="e.g. 0798123456">
       </ns-inputter>
-      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
-        <label slot="label">Postcode</label>
-        <input autocomplete="postal-code" type="text">
-      </ns-inputter>
+      
+
+      <main class="ndsn">
+
+    <ns-form>
+      <nsx-address-selector></nsx-address-selector>
+    </ns-form>
+    <ns-cta id="confirm-address-button" href="next-page.html">Send to this address</ns-cta>
+
+</main>
+
     </ns-fieldset>
     <div>
-      <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the enviroment and choose to print at home though.</p>
+      <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the environment and choose to print at home though.</p>
       <p>If you’re a HomeCare customer, you can also ask us to send your policy documents by post from the ‘Service Documents’ area of your account.</p>
     </div>
     <ns-inputter validation="[&quot;isRequired&quot;]" name="terms" value="">
@@ -30,3 +37,30 @@
     <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
   </ns-form>
 </ns-panel>
+
+
+<script>
+  // Hide submit button
+  document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  const addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+<script src="https://www.britishgas.co.uk/nucleus-experiences/nucleus-experiences.js"></script>
