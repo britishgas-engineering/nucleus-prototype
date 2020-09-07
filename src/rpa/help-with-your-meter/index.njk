@@ -10,13 +10,12 @@ eleventyNavigation:
 <ns-landmark type="lakeside">
   <h1 slot="heading">
     <span class="h5">Help and support.</span>
-    <span class="h1 enlighten">How can we <b>help you</b> today?</span>
+    <span id="landmark-heading" class="h1 enlighten">How can we <b>help you</b> today?</span>
   </h1>
   <!-- @drew.jones 2020-04-21 - forcing an inline style as form elements are not designed to belong in the landmark -->
   <ns-form slot="paragraph" style="font-size: 1em;">
     <ns-inputter name="search">
-      <label slot="label" for="search">Search</label>
-      <input id="search" type="text">
+      <input aria-labelledby="landmark-heading" type="text">
     </ns-inputter>
   </ns-form>
 </ns-landmark>
@@ -123,51 +122,8 @@ eleventyNavigation:
         <a href="#!">Boiler and gas annual service</a>
       </li>
       <li>
-        <a href="#!">Where to top up your pay as you go meter</a>
-      </li>
-      <li>
         <a href="#!">Paying your energy bill</a>
       </li>
     </ul>
   </div>
 </ns-panel>
-
-<!-- @drew.jones 2020-04-21 - removing this as `ns-cards` are to include at least a `heading` and a `paragraph` as well as the `cta`.
-<ns-panel decoration="invert-bridge-grey-light">
-  <div class="splash">
-    <h2>Most read articles</h2>
-  </div>
-  <div class="splash triple">
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">View your energy bill or statement</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Accessing your account</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">How to read your credit meter</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Boiler and gas annual service</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Where to top up your pay as you go meter</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="flat">
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Paying your energy bill</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
- -->

@@ -1,6 +1,7 @@
 ---
 title: hs-category-meter-L4-type
 ---
+
 <ns-landmark type="lakeside">
   <h1 slot="heading">
     <span class="h5">My meter help.</span>
@@ -14,15 +15,15 @@ title: hs-category-meter-L4-type
 
       <ns-inputter validation='["isRequired"]' name="inputter-a" class="triple" value="">
         <ns-selector image="https://user-images.githubusercontent.com/52657167/80400977-80398c00-88b3-11ea-8fa7-ddb2e3b1fc46.jpg">
-          <input type="radio" name="radio" value="gas" id="radio-a">
+          <input type="radio" name="radio" value="gas meter" id="radio-a">
           <label for="radio-a">Gas meter</label>
         </ns-selector>
         <ns-selector image="https://user-images.githubusercontent.com/52657167/80400974-7e6fc880-88b3-11ea-95f2-ee0c2fc5f9fb.jpg">
-          <input type="radio" name="radio" value="electricity" id="radio-b">
+          <input type="radio" name="radio" value="electricity meter" id="radio-b">
           <label for="radio-b">Electricity meter</label>
         </ns-selector>
         <ns-selector image="https://user-images.githubusercontent.com/52657167/80400978-80398c00-88b3-11ea-8656-aa6086ab68fa.jpg">
-          <input type="radio" name="radio" value="energy" id="radio-c">
+          <input type="radio" name="radio" value="smart energy monitor" id="radio-c">
           <label for="radio-c">Smart energy monitor</label>
           <div slot="description">
             <p>You will probably have one of these if you've had a smart meter installed.</p>
@@ -40,15 +41,15 @@ title: hs-category-meter-L4-type
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
-    if (data === 'gas') {
+    if (data === 'gas meter') {
       return '../hs-category-meter-L5-pay/';
     }
 
-    if (data === 'electricity') {
+    if (data === 'electricity meter') {
       return '../hs-category-meter-L5-pay/';
     }
 
-    if (data === 'energy') {
+    if (data === 'smart energy monitor') {
       return '../hs-category-meter-L5-pay-smart/';
     }
   }

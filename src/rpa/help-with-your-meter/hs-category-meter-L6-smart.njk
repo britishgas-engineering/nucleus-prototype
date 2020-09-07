@@ -14,14 +14,14 @@ title: hs-category-meter-L6-smart
     <ns-form nf-model="model.L6-smart">
 
       <ns-inputter validation='["isRequired"]' name="inputter-a" class="triple" value="">
-        <ns-selector image="https://user-images.githubusercontent.com/52657167/80401869-f38fcd80-88b4-11ea-8154-8cc0718d38fa.jpg">
+        <ns-selector id="image-a">
           <input type="radio" name="radio" value="smart" id="radio-a">
           <label for="radio-a">Smart Pay As You Go</label>
           <div slot="description">
             <p>If you have a smart meter installed. This would usually come with a smart energy monitor (in home display).</p>
           </div>
         </ns-selector>
-        <ns-selector image="https://user-images.githubusercontent.com/52657167/80401866-f2f73700-88b4-11ea-882b-bd14eebc046b.jpg">
+        <ns-selector id="image-b">
           <input type="radio" name="radio" value="standard" id="radio-b">
           <label for="radio-b">Pay As You Go</label>
           <div slot="description">
@@ -36,6 +36,10 @@ title: hs-category-meter-L6-smart
   </div>
 </ns-panel>
 
+<!-- adding this to avoid the 'is null' error -->
+<div id="image-c"></div>
+<!-- adding this to avoid the 'is null' error -->
+
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
@@ -48,4 +52,5 @@ title: hs-category-meter-L6-smart
       return '../hs-category-meter-L9-summary/';
     }
   }
+
 </script>

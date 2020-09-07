@@ -25,9 +25,11 @@ eleventyNavigation:
       {%- for entry in navPages %}
         <ns-card type="support">
           <h3 slot="heading">{{entry.title}}</h3>
-          <div slot="paragraph">
-            <p><a href="https://2020-04-20-rpa-help-with-your-meter--nucleus-prototype.netlify.app/rpa/help-with-your-meter/">Version 1</a> <small>(2020-04-20)</small></p>
-          </div>
+          <p slot="paragraph">
+            <a href="https://2020-04-20-rpa-help-with-your-meter--nucleus-prototype.netlify.app/rpa/help-with-your-meter/">Version 1</a> <small>(2020-04-20)</small>
+            <br>
+            <a href="https://2020-04-27-rpa-help-with-your-meter--nucleus-prototype.netlify.app/rpa/help-with-your-meter/">Version 2</a> <small>(2020-04-27)</small>
+          </p>
           <a slot="cta" href="{{entry.url | url}}">
             <ns-cta type="text">{{entry.title}}</ns-cta>
           </a>
