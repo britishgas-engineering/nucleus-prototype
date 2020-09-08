@@ -2,7 +2,6 @@
 title: Account details
 eleventyNavigation:
   key: Account details
-  parent: account-details
   title: Account details
   excerpt: Sept 2020 - Simple data table layout
 ---
@@ -16,10 +15,16 @@ eleventyNavigation:
 </ns-landmark>
 
 <ns-panel>
+
   <div class="splash">
   <h3>Personal</h3>
     <dl class="dl-row">
-       <ns-form class="splash" nf-model="model.oam-03">
+      <div>
+        <dt>Name</dt>
+        <dd>
+         <ns-form class="splash" nf-model="model.oam-03">
+          <ns-fieldset>
+         
        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
         <label slot="label">First name</label>
         <input autocomplete="given-name" type="text">
@@ -28,13 +33,20 @@ eleventyNavigation:
         <label slot="label">Surname</label>
         <input autocomplete="family-name" type="text">
       </ns-inputter>
-      <ns-cta nf-href="../">Save name</ns-cta>
-  </ns-form>
+       </ns-fieldset>
+  
+          <ns-cta nf-href="../">Save name</ns-cta>
+
+        </ns-form>        </dd>
+      </div>
+
+
+
       <div>
         <dt>Correspondence address</dt>
         <dd><span nf-model="model.oam-03.postcode">One Infinite Loop<br>Cupertino<br>CA 95014<br>United States</span></dd>
         <dd>
-          <a href="update-address">Change address</a>
+          <a href="../update-address">Change address</a>
         </dd>
       </div>
       <div>
@@ -46,7 +58,7 @@ eleventyNavigation:
           </span>
         </dd>
         <dd>
-          <a href="#!">Update contact details</a>
+          <a href="../update-contact-details">Update contact details</a>
         </dd>
       </div>
       <h3>Account security</h3>
@@ -97,81 +109,3 @@ eleventyNavigation:
   </div>
 </ns-panel>
 
-
-
-<ns-panel>
-  <div class="splash">
-  <h2>Personal</h2>
-    <dl class="dl-row">
-      <div>
-        <dt>Name</dt>
-        <dd>Steve Jobs</dd>
-        <dd>
-          <a href="#!">Update name</a>
-        </dd>
-      </div>
-      <div>
-        <dt>Correspondence address</dt>
-        <dd>One Infinite Loop<br>Cupertino<br>CA 95014<br>United States</dd>
-        <dd>
-          <a href="#!">Change address</a>
-        </dd>
-      </div>
-      <div>
-        <dt>Contact details</dt>
-        <dd>
-          <p>07123 456789</p>
-          <p>01123 456789</p>
-        </dd>
-        <dd>
-          <a href="#!">Update contact details</a>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</ns-panel>
-     <ns-panel>
-  <div class="splash">
-  <h2>Account security</h2>
-    <dl class="dl-row">
-      <div>
-        <dt>Login details</dt>
-        <dd>
-          <p>steve@jobs.com</p>
-          <p>**********</p>
-        </dd>
-        <dd>
-          <a href="#!">Edit login details</a>
-        </dd>
-      </div>
-      <div>
-        <dt>Marketing</dt>
-        <dd>
-          <ul class="ul-ticked">
-            <li>Email</li>
-            <li>SMS</li>
-          </ul>
-        </dd>
-        <dd>
-          <a href="#!">Change marketing preferences</a>
-         </dd>
-      </div>
-    </dl>
-  </div>
-</ns-panel>
-     <ns-panel>
-  <div class="splash">
-  <h2>Your home</h2>
-    <dl class="dl-row">
-      <div>
-        <dt>Household vulnerabilities</dt>
-        <dd>
-          <p>None set</p>
-        </dd>
-        <dd>
-          <a href="#!">Add household vulnerabilities</a>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</ns-panel>

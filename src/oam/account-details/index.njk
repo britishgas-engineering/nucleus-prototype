@@ -1,5 +1,5 @@
 ---
-title: OAM Manage
+title: Account details
 eleventyNavigation:
   key: Account details
   parent: oam
@@ -17,16 +17,21 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-<ns-panel>
-  <div class="splash triple">
-    <ns-card type="support">
-      <h3 slot="heading">Account details v01</h3>
-      <p slot="paragraph">Simple data-table</p>
-      <a slot="cta" href="v01">
-        <ns-cta type="text">Version 01</ns-cta>
-      </a>
-    </ns-card>
-   
+ {% set navPages = collections.all | eleventyNavigation("account-details") %}
+  <ns-panel>
+    <div class="splash">
+      <h2>{{title}} projects</h2>
+    </div>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
+          </a>
+        </ns-card>
+      {%- endfor %}
 
   </div>
 </ns-panel>

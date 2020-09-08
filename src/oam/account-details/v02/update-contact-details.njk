@@ -1,9 +1,9 @@
 ---
 title: Account details
 eleventyNavigation:
-  key: Account details 02
-  title: Account details 02
-  excerpt: Sept 2020 - Chunked data, In-line editing
+  key: Account details
+  title: Account details
+  excerpt: Sept 2020 - Simple data table layout
 ---
 
 <ns-landmark type="lakeside">
@@ -27,28 +27,23 @@ eleventyNavigation:
       </div>
       <div>
         <dt>Correspondence address</dt>
+        <dd><span nf-model="model.oam-03.postcode">One Infinite Loop<br>Cupertino<br>CA 95014<br>United States</span></dd>
         <dd>
-        <ns-form class="splash" nf-model="model.oam-03">
-    <ns-fieldset>
-      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
-        <label slot="label">Postcode</label>
-        <input autocomplete="postal-code" type="text">
-      </ns-inputter>
-    </ns-fieldset>
-    <ns-cta nf-href="../">Save correspondence address</ns-cta>
-  </ns-form>
+          <a href="../update-address">Change address</a>
         </dd>
       </div>
       <div>
         <dt>Contact details</dt>
         <dd>
-          <span nf-model="model.oam-03.mobile-number">
-          <p>07123 456789</p>
-          <p>01123 456789</p>
-          </span>
-        </dd>
-        <dd>
-          <a href="../update-contact-details">Update contact details</a>
+        <ns-form class="splash" nf-model="model.oam-03">
+          <ns-fieldset>
+       <ns-inputter name="mobile-number" value="">
+        <label slot="label">Mobile number (optional)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+       </ns-fieldset>
+          <ns-cta type="text" nf-href="../">Save contact details</ns-cta>
+        </ns-form>
         </dd>
       </div>
       <h3>Account security</h3>
@@ -98,4 +93,3 @@ eleventyNavigation:
     </dl>
   </div>
 </ns-panel>
-

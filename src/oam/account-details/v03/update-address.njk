@@ -1,0 +1,55 @@
+---
+title: Account details
+eleventyNavigation:
+  key: Account details
+  title: Account details
+  excerpt: Sept 2020 - Simple data table layout
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">Account details</span>
+  </h1>
+  <p slot="paragraph">Account management, personal information, password and marketing settings.</p>
+</ns-landmark>
+
+
+
+
+<main class="ndsn">
+  <ns-panel>
+    <ns-form class="splash" nf-model="model.oam-03">
+      <ns-fieldset legend="Your correspondence address">
+      <nsx-address-selector></nsx-address-selector>
+      </ns-fieldset>
+    <ns-cta id="confirm-address-button" href="../">Save correspondence address</ns-cta>
+    </ns-form>
+    
+  </ns-panel>
+</main>
+<script>
+  // Hide submit button
+  document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  const addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+<script src="https://www.britishgas.co.uk/nucleus-experiences/nucleus-experiences.js"></script>
