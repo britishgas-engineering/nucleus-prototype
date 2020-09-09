@@ -3,6 +3,7 @@ title: Account details
 stylehack: style=padding-bottom:20px
 eleventyNavigation:
   key: Account details 02
+  parent: account-details
   title: Account details 02
   excerpt: Sept 2020 - Chunked data, In-line editing
 ---
@@ -16,32 +17,33 @@ eleventyNavigation:
 </ns-landmark>
 
 <ns-panel>
-
-    <div class="splash">
+      <div class="splash">
     <h3>Personal</h3>
     </div>
+
+      <div class="splash">
+
+  <ns-highlighter type="success">
+        <h2 slot="heading">Details saved</h2>
+        <p>You've successfully updated your personal details.</p>
+      </ns-highlighter>
+ </div>
 
       <div class="splash">
     <dl class="dl-row">
       <div>
         <dt>Name</dt>
-        <dd><span nf-model="model.oam-03.first-name">Steve</span> <span nf-model="model.oam-03.surname">Jobs</span></dd>
+        <dd>
+        <span nf-model="model.oam-03.first-name">Steve</span> <span nf-model="model.oam-03.surname">Jobs</span></dd>
         <dd>
           <a href="../update-name">Update name</a>
         </dd>
       </div>
       <div>
         <dt>Correspondence address</dt>
+        <dd><span nf-model="model.oam-03.postcode">One Infinite Loop<br>Cupertino<br>CA 95014<br>United States</span></dd>
         <dd>
-         <ns-form class="splash" {{stylehack}} nf-model="model.oam-03">
-    <ns-fieldset>
-      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
-        <label slot="label">Postcode</label>
-        <input autocomplete="postal-code" type="text">
-      </ns-inputter>
-    </ns-fieldset>
-    <ns-cta  nf-href="../success">Save correspondence address</ns-cta>
-  </ns-form>
+          <a href="../update-address">Change address</a>
         </dd>
       </div>
       <div>
@@ -96,23 +98,27 @@ eleventyNavigation:
 
        <div class="splash">
    <h3>Your home</h3>
+ 
+   <ns-inputter {{stylehack}} validation="[&quot;isRequired&quot;]" heading="Select which home" helper="" name="select-an-option" value="">
+  <label slot="label" for="nsid-po8bsnjnbu-input">Select which home</label>
+  <div slot="tip-details">..........</div>
+  <select name="select" id="nsid-po8bsnjnbu-input">
+    <option value=""><span nf-model="model.oam-03.postcode">One Infinite Loop, Cupertino</span></option>
+    <option value="value-01">Buckingham palace</span></option>
+  </select>
+</ns-inputter>
+
     <dl class="dl-row">
       <div>
         <dt>Smart meter frequency</dt>
         <dd>
-          <p>Every 30 minutes (recommended)</p>
-        </dd>
-        <dd>
-          <a href="../../meter-readings">Change frequency</a>
+          <p>You can <a href="../../../meter-readings">update the frequency</a> of your smart meter readings, though we recommend that you keep it set at every 30 minutes for effectiveness and accuracy. </p> 
         </dd>
       </div>
       <div>
         <dt>Household vulnerabilities</dt>
         <dd>
-          <p>None set</p>
-        </dd>
-        <dd>
-          <a href="#!">Add household vulnerabilities</a>
+          <p>You can join the Priority Services Register and <a href="#!">let us know any specific cuscumstances</a> relating to your household so that we can provide a better service specific to your needs.</p>
         </dd>
       </div>
     </dl>

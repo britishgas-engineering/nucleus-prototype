@@ -1,10 +1,12 @@
 ---
 title: Account details
+stylehack: style=padding-bottom:20px
 eleventyNavigation:
   key: Account details
   title: Account details
   excerpt: Sept 2020 - Simple data table layout
 ---
+
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
@@ -15,16 +17,14 @@ eleventyNavigation:
 </ns-landmark>
 
 <ns-panel>
-
   <div class="splash">
   <h3>Personal</h3>
     <dl class="dl-row">
       <div>
         <dt>Name</dt>
         <dd>
-         <ns-form class="splash" nf-model="model.oam-03">
+         <ns-form class="splash" {{stylehack}} nf-model="model.oam-03">
           <ns-fieldset>
-         
        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
         <label slot="label">First name</label>
         <input autocomplete="given-name" type="text">
@@ -34,14 +34,10 @@ eleventyNavigation:
         <input autocomplete="family-name" type="text">
       </ns-inputter>
        </ns-fieldset>
-  
-          <ns-cta nf-href="../">Save name</ns-cta>
-
-        </ns-form>        </dd>
+          <ns-cta nf-href="../success">Save name</ns-cta>
+        </ns-form>
+        </dd>
       </div>
-
-
-
       <div>
         <dt>Correspondence address</dt>
         <dd><span nf-model="model.oam-03.postcode">One Infinite Loop<br>Cupertino<br>CA 95014<br>United States</span></dd>
@@ -61,7 +57,14 @@ eleventyNavigation:
           <a href="../update-contact-details">Update contact details</a>
         </dd>
       </div>
-      <h3>Account security</h3>
+      </dl>
+      </div>
+
+
+
+  <div class="splash">
+   <h3>Account security</h3>
+    <dl class="dl-row">
       <div>
         <dt>Login details</dt>
         <dd>
@@ -86,8 +89,16 @@ eleventyNavigation:
           <a href="#!">Change marketing preferences</a>
         </dd>
       </div>
-      <h3>Your home</h3>
-       <div>
+      </dl>
+      </div>
+
+
+
+
+       <div class="splash">
+   <h3>Your home</h3>
+    <dl class="dl-row">
+      <div>
         <dt>Smart meter frequency</dt>
         <dd>
           <p>Every 30 minutes (recommended)</p>
@@ -107,5 +118,5 @@ eleventyNavigation:
       </div>
     </dl>
   </div>
-</ns-panel>
 
+</ns-panel>
