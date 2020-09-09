@@ -2,7 +2,7 @@
   "layout": "nucleus",
   "project": "rpa",
   "jquery": false,
-  "script": false,
+  "script": true,
   "style": false,
   "teamname": "Rewards Personalisation Assist"
 }
