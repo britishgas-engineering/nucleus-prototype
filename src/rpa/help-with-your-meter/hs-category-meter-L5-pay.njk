@@ -4,23 +4,33 @@ title: hs-category-meter-L5-pay
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h5">My meter help.</span>
-    <span class="h1 enlighten"><b>How do you pay</b> for your energy?</span>
+    <span class="h5">Help with my meter.</span>
+    <span class="h1">What type of energy customer are you?</b>
   </h1>
+  <div slot="paragraph">
+    <p>If you have different types of energy accounts, then choose the one that you need help with.</p>
+  </div>
 </ns-landmark>
 
 <ns-panel>
   <div class="splash">
     <ns-form nf-model="model.L5-pay">
 
-      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="What is Pay As You Go?">
-        <div slot="tip-details">
-          <p>You won't receive a bill – you will pay for your energy as you use it.</p>
-        </div>
-        <input type="radio" name="radio" value="radio-a" id="radio-a">
-        <label for="radio-a">Direct Debit, cash or cheque</label>
-        <input type="radio" name="radio" value="Pay As You Go" id="radio-b">
-        <label for="radio-b">Pay As You Go</label>
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+        <input type="radio" name="radio" value="Direct Debit" id="radio-a">
+        <label for="radio-a">I pay by Direct Debit</label>
+
+        <input type="radio" name="radio" value="Get Bill And Pay" id="radio-b">
+        <label for="radio-b">I get regular bills and pay</label>
+
+        <input type="radio" name="radio" value="Pay As You Go" id="radio-c">
+        <label for="radio-c">I top up a meter</label>
+
+        <input type="radio" name="radio" value="Energy Payment Card" id="radio-d">
+        <label for="radio-d">I pay with an energy payment card</label>
+
+        <input type="radio" name="radio" value="Fuel Direct" id="radio-e">
+        <label for="radio-e">I use Fuel Direct – my payments are deducted from my benefits</label>
       </ns-inputter>
 
       <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
@@ -34,7 +44,11 @@ title: hs-category-meter-L5-pay
     var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
     if (data === 'Pay As You Go') {
-      return '../hs-category-meter-L6-smart/';
+      return '../hs-category-meter-L6-payg';
+    }
+
+    if (data === 'Get Bill And Pay') {
+      return '../hs-category-meter-L6-get-bill-and-pay';
     }
   }
 </script>

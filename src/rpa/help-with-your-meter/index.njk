@@ -7,123 +7,122 @@ eleventyNavigation:
   excerpt: Help with your meter excerpt
 ---
 
-<ns-landmark type="lakeside">
+<ns-landmark type="hillside" gradient="invert-ramp-blue">
   <h1 slot="heading">
-    <span class="h5">Help and support.</span>
-    <span id="landmark-heading" class="h1 enlighten">How can we <b>help you</b> today?</span>
+    <span class="h5">Help & support.</span>
+    <span class="h1 enlighten">Help with my<b>Meter</b></span>
   </h1>
-  <!-- @drew.jones 2020-04-21 - forcing an inline style as form elements are not designed to belong in the landmark -->
-  <ns-form slot="paragraph" style="font-size: 1em;">
-    <ns-inputter name="search">
-      <input aria-labelledby="landmark-heading" type="text">
-    </ns-inputter>
-  </ns-form>
+  <div slot="paragraph">
+    <p>Help, support and guidance for smart meters, pay as you go meters, standard meters and smart energy monitors.</p>
+  </div>
 </ns-landmark>
 
-<ns-panel>
-  <div class="splash">
-    <ns-card type="flat">
-      <h2 slot="heading">Help and support is better when you log in</h2>
-      <p slot="paragraph">We're able to personalise this page with links and articles that are tailored to you.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="direct">Log in to personalise</ns-cta>
-      </a>
-    </ns-card>
-  </div>
+<ns-panel decoration="circle-yellow-right">
+  <ns-lockup ratio="4x3" type="lockjaw" decoration="home">
+    <h2 slot="heading">
+      <span class="h5">My meter help.</span>
+      <span class="h1 enlighten">Have a <b>problem?</b></span>
+    </h2>
+    <div slot="paragraph">
+      <p>If you have a problem that’s related to your meter or your smart monitor, then answer some simple questions and we’ll provide you with your tailored guidance.</p>
+    </div>
+    <a slot="cta" href="./hs-category-meter-L3-start/">
+      <ns-cta type="direct">Find my guidance</ns-cta>
+    </a>
+    <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/52657167/80398704-f63bf400-88af-11ea-8835-6cb17227bf03.jpg"></ns-image>
+  </ns-lockup>
 </ns-panel>
 
 <ns-panel>
   <div class="splash">
-    <h2>Help categories</h2>
-  </div>
-
-  <div class="splash triple">
-    <ns-card type="support">
-      <h3 slot="heading">Tips and guides</h3>
-      <p slot="paragraph">Includes quick and handy tips to try yourself.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Tips and guides</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Emergencies</h3>
-      <p slot="paragraph">Gas emergency, electrical emergency and other emergencies.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Emergencies</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Bills & payments</h3>
-      <p slot="paragraph">Includes paying your bill, understanding your bill and setting up a Direct Debit.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Bills & payments</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Appliances & engineers</h3>
-      <p slot="paragraph">Includes instructions to repair appliances and how to book annual services.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Appliances & engineers</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Breakdowns</h3>
-      <p slot="paragraph">Includes how to book a repair and what to do if you do not have gas or electricity.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Breakdowns</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Moving home</h3>
-      <p slot="paragraph">Includes moving out, moving in and refunds.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Moving home</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">My account</h3>
-      <p slot="paragraph">Includes changing your details, the British Gas app and closing down your account.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">My account</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Meters</h3>
-      <p slot="paragraph">Smart meters, pay as you go meters and standard meters.</p>
-      <a slot="cta" href="./hs-category-meter-L2-hub/">
-        <ns-cta type="text">Meters</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Hive and Smart home</h3>
-      <p slot="paragraph">Hive products and smart home help.</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Hive and Smart home</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
-
-<!-- @drew.jones 2020-04-21 - a list of links does not feature in the Nucleus documentation, it's been mentioned and could warrant an RFC -->
-<ns-panel>
-  <div class="splash">
-    <h2 class="h4">Most read articles</h2>
-    <ul class="ul-bullet">
-      <li>
-        <a href="#!">View your energy bill or statement</a>
-      </li>
-      <li>
-        <a href="#!">Accessing your account</a>
-      </li>
-      <li>
-        <a href="#!">How to read your credit meter</a>
-      </li>
-      <li>
-        <a href="#!">Boiler and gas annual service</a>
-      </li>
-      <li>
-        <a href="#!">Paying your energy bill</a>
-      </li>
-    </ul>
+    <ns-accordion>
+      <h3 slot="heading">Frequently asked questions</h3>
+      <ns-expander open="false">
+        <h4 slot="heading">Why is the money not showing on my meter, after I’ve topped up?</h4>
+        <p>Please allow one hour for your top-up to show on your meter. If it isn’t showing after an hour, or if you need it straight away, you can manually add it to your meter using the Vend Code on your receipt/payment confirmation.</p>
+        <h2>Gas meter</h2>
+        <ul class="ul-bullet">
+          <li>Press button A to wake the screen then press it twice to get to Credit Entry</li>
+          <li>Press button B, then A to enter code and B to move forward</li>
+          <li>Press and hold button B to submit</li>
+        </ul>
+        <h2>Electricity meter</h2>
+        <ul class="ul-bullet">
+          <li>Press and hold buttons A and B together</li>
+          <li>Use button A to enter code and B to move forward</li>
+          <li>Press and hold B to move back</li>
+          <li>Then, press and hold button A to accept the code</li>
+        </ul>
+        <h2>Top-up on your Smart Energy Monitor</h2>
+        <ul class="ul-bullet">
+          <li>Select Gas or Elec Prepay from menu then Add vend code</li>
+          <li>Use + or - to enter code and press next/del to move forward</li>
+          <li>Hold next/del to move back</li>
+          <li>Select next/del to accept after you've entered the code</li>
+        </ul>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Using Emergency Credit</h4>
+        <p>Each British Gas gas and electricity meter has £5 of Emergency Credit built in for when you run out of gas or electricity and you are unable to top up.</p>
+        <p>To access your Emergency Credit you must have the key or card in the meter.</p>
+        <p>You'll need to pay back the Emergency Credit next time you top up, and any remainder will be put on as credit. If you use all your Emergency Credit and don't top up to replace it, you may not have an energy supply until you have repaid it.</p>
+        <h2>What is Friendly Emergency Credit?</h2>
+        <p>Friendly Emergency Credit is available on newer electricity meters. It is activated automatically if you run out of credit between 5pm and 9am (or 6pm and 10am during British Summer Time). The meter will not cut off until 9am the next morning, when you need to top up to replace the extra credit you used.</p>
+        <p>Key meters manufactured after January 2008 also include Sunday Friendly Credit which covers the full day on Sunday.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Changing between pay as you go and credit meters</h4>
+        <p>You can change from pay as you go to credit meters as long as you're over 18 , you don't owe money to British Gas and you pass a credit check.</p>
+        <h2>How to check</h2>
+        <ul class="ul-bullet">
+          <li>Take a meter reading so we can check that you're in credit and call us on our Pay As You Go enquiry line.</li>
+          <li>We'll then do a credit check to make sure you're eligible.</li>
+          <li>If you pass the credit check, we'll then arrange a date with you to change your meter. We'll also talk you through the different ways you can pay.</li>
+          <li>If you don't pass the credit check we can discuss the other options.</li>
+        </ul>
+        <h2>Changing to Pay As You Go</h2>
+        <p>If you’re thinking about getting a pay as you go meter or you’re unsure if it’s the right option for you, this leaflet has all the information you need to know to help you decide.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">How do I top up for the first time?</h4>
+        <p>If it's your first time topping up, you'll need to activate your key or card in your meter first.</p>
+        <h2>Activating your card</h2>
+        <ul class="ul-bullet">
+          <li>Put your key or card into the meter for at least a minute to activate it.</li>
+          <li>Top up your key or card at a convenient <a>Payzone</a> or <a>Post Office</a>.</li>
+          <li>Put the key or card into your meter. Electricity credit will transfer automatically. For gas, press and hold the red button 'A' to transfer the credit to the meter.</li>
+        </ul>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Where can I find a Payzone to top up?</h4>
+        <p>You’ll find <a>Payzones</a> in newsagents, supermarkets and garages. Just look for the logo – you’ll spot them outside all Payzone outlets.</p>
+        <p>Payzone outlets are often open long hours and some may be open seven days a week. Don’t forget you’ll need to top up by at least £5, and you'll always need to top up to the nearest pound. So you can't add £8.50, but you could add £8 or £9.</p>
+        <p>We will soon be changing our minimum top up policy. <a>Find our more here</a>.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Can I top up at a Post Office?</h4>
+        <p>Yes - <a>look up your local Post Office</a>.</p>
+        <p>You’ll need to top up by at least £5, and you'll always need to top up to the nearest pound. So you can't add £8.50, but you could add £8 or £9. We will soon be changing our minimum top up policy. Find our more <a>here</a>.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Can I top up online?</h4>
+        <p>Yes, Smart Pay As You Go customers can top up from wherever they are:</p>
+        <ul class="ul-bullet">
+          <li>The easiest way to top up is on the British Gas website, just access your account to <a>Top up online</a> now. You don’t need your smart meter number, and if you save your debit/credit card, future top ups will take you just a few clicks.</li>
+          <li>Don’t have an online account? Setting one up is easy and won’t take you long. Simply click <a>here</a> and give us your email address to get things started.</li>
+          <li>Topping up a British Gas smart meter for someone else? Use our <a>guest top up</a></li>
+          <li>On the British Gas app – <a>download</a> it to top up easily, whenever and wherever you want.</li>
+        </ul>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Can I top up over the phone?</h4>
+        <p>Smart Pay As You Go customers can call the <a>automated payment line</a>. Choose option 1, and answer a few automated questions.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Changing your smart appointment</h4>
+        <p>Something come up? You can change or cancel your appointment with us online in a few simple steps, and you don’t need an account to do so.</p>
+        <p><a>Change or cancel your appointment.</a></p>
+      </ns-expander>
+    </ns-accordion>
   </div>
 </ns-panel>
