@@ -1,109 +1,36 @@
 ---
-title: Smart meter settings test page
+title: OAM Manage
+eleventyNavigation:
+  key: Meter readings
+  parent: oam
+  title: Meter readings
+  excerpt: Meter reading journeys
 ---
 
-<ns-landmark type="lakeside">
+<ns-landmark type="summit" image="https://user-images.githubusercontent.com/28779/75573555-00c74200-5a55-11ea-86db-66a1ff253b57.jpg">
   <h1 slot="heading">
-    <span class="h5">Meter readings.</span>
-    <span class="h1">Smart meter settings</span>
+    <span class="h5">How cool is this.</span>
+    <span class="h1 enlighten"><b>{{teamname}}</b>, get ready to be awesome</span>
   </h1>
-  <p slot="paragraph">You can choose how often your smart meters take readings. To get the most out of your online account we recommend that you set your smart meters to take readings half-hourly. Test if this works.</p>
+  <div slot="paragraph">
+    <p>This is the index page of <b>{{title}}</b>. When you're ready, move on.</p>
+  </div>
 </ns-landmark>
 
+  {% set navPages = collections.all | eleventyNavigation("meter-readings") | reverse %}
   <ns-panel>
     <div class="splash">
-      <h2>Gas meter</h2>
+      <h2>{{teamname}} projects</h2>
     </div>
-    <ns-form class="splash">
-
-      <ns-highlighter type="success">
-        <h2 slot="heading">Gastropub prism cold-pressed</h2>
-        <p>Snackwave man braid waistcoat pop-up tacos aesthetic shoreditch helvetica typewriter banjo cardigan wayfarers leggings.</p>
-      </ns-highlighter>
-
-    <ns-inputter class="triple" validation="['isRequired']" heading="How often would you like your smart gas meter to take readings?">
-
-  <ns-selector decoration="gas">
-    <input type="radio" id="item-1" name="question" value="crucifix">
-    <label for="item-1">Half-hourly</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-        <li>Hourly and daily breakdown of your usage</li>
-        <li>Heating, lighting and hot water spend predictions</li>
-        <li>Compare usage against other homes in your area</li>
-        <li>Personalised energy saving tips</li>
-      </ul>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
+          </a>
+        </ns-card>
+      {%- endfor %}
     </div>
-  </ns-selector>
-
-  <ns-selector decoration="gas">
-    <input type="radio" id="item-2" name="question" value="hammock">
-    <label for="item-2">Daily</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-        <li>All of the benefits of half-hourly without an hourly breakdown of usage</li>
-      </ul>
-    </div>
-  </ns-selector>
-
-  <ns-selector decoration="gas">
-    <input type="radio" id="item-2" name="question" value="hammock">
-    <label for="item-2">Monthly</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-      </ul>
-    </div>
-  </ns-selector>
-</ns-inputter>
-<ns-cta>Save gas frequency</ns-cta>
-</ns-form>
-  </ns-panel>
-
-  <ns-panel>
-    <div class="splash">
-      <h2>Electricity meter</h2>
-    </div>
-    <ns-form class="splash">
-    <ns-inputter class="triple" validation="['isRequired']" heading="How often would you like your smart electricity meter to take readings?">
-
-  <ns-selector decoration="bulb">
-    <input type="radio" id="item-1" name="question" value="crucifix">
-    <label for="item-1">Half-hourly</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-        <li>Hourly and daily breakdown of your usage</li>
-        <li>Heating, lighting and hot water spend predictions</li>
-        <li>Compare usage against other homes in your area</li>
-        <li>Personalised energy saving tips</li>
-      </ul>
-    </div>
-  </ns-selector>
-
-  <ns-selector decoration="bulb">
-    <input type="radio" id="item-2" name="question" value="hammock">
-    <label for="item-2">Daily</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-        <li>All of the benefits of half-hourly without an hourly breakdown of usage</li>
-      </ul>
-    </div>
-  </ns-selector>
-
-  <ns-selector decoration="bulb">
-    <input type="radio" id="item-2" name="question" value="hammock">
-    <label for="item-2">Monthly</label>
-    <div slot="description">
-      <ul class="ul-ticked">
-        <li>Accurate bills</li>
-      </ul>
-    </div>
-  </ns-selector>
-</ns-inputter>
-<ns-cta>Save electricity frequency</ns-cta>
-</ns-form>
   </ns-panel>
