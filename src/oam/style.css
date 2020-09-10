@@ -1,0 +1,7 @@
+/* .style-hack
+  add space to the bottom of the inline forms
+*/
+
+.style-hack {
+  padding-bottom: 20px;
+}
