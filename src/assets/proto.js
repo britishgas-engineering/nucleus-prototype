@@ -236,13 +236,15 @@ function setModelData(path, value) {
 
 // Address Finder
 
-const addresses = [{
-    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
-}];
+if(!addresses) {
+    var addresses = [{
+        "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+    }];
+}
 
 var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
@@ -255,7 +257,7 @@ if(addressSelector) {
 
 if(addressSelector) {
     // Hide submit button
-    document.querySelector('#submit-button').setAttribute('style', 'display: none');
+    //document.querySelector('#submit-button').setAttribute('style', 'display: none');
     addressSelector.addEventListener('address-selected', (event) => {
         console.log('Address selected ' + event.detail.address.label);
         //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
@@ -266,11 +268,13 @@ if(addressSelector) {
 }
 
 if(addressSelector) {
-    addressSelector.addEventListener('address-selected', (event) => {
-        if (event.detail.address) {
-            document.querySelector('#submit-button').setAttribute('style', 'display: block');
-        } else {
-            document.querySelector('#submit-button').setAttribute('style', 'display: none');
-        }
-    });
+    if(document.querySelector('#submit-button')) {
+        addressSelector.addEventListener('address-selected', (event) => {
+            if (event.detail.address) {
+                document.querySelector('#submit-button').setAttribute('style', 'display: block');
+            } else {
+                document.querySelector('#submit-button').setAttribute('style', 'display: none');
+            }
+        });
+    }
 }
