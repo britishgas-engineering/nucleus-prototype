@@ -1,0 +1,38 @@
+<ns-inputter class="splash triple" validation="['isRequired']" heading="How often would you like your smart gas meter to take readings?" value="">
+
+  <ns-selector decoration="gas">
+    <input type="radio" id="gas-half-hourly" name="gas-question" value="gas-half-hourly">
+    <label for="gas-half-hourly">Half-hourly</label>
+    <div slot="description">
+      <ul class="ul-ticked">
+        <li>Accurate bills</li>
+        <li>Hourly and daily breakdown of your usage</li>
+        <li>Heating, lighting and hot water spend predictions</li>
+        <li>Compare usage against other homes in your area</li>
+        <li>Personalised energy saving tips</li>
+      </ul>
+    </div>
+  </ns-selector>
+
+  <ns-selector decoration="gas">
+    <input type="radio" id="gas-daily" name="gas-question" value="gas-daily">
+    <label for="gas-daily">Daily</label>
+    <div slot="description">
+      <ul class="ul-ticked">
+        <li>Accurate bills</li>
+        <li>All of the benefits of half-hourly without an hourly breakdown of usage</li>
+      </ul>
+    </div>
+  </ns-selector>
+
+  <ns-selector decoration="gas">
+    <input type="radio" id="gas-monthly" name="gas-question" value="gas-monthly">
+    <label for="gas-monthly">Monthly</label>
+    <div slot="description">
+      <ul class="ul-ticked">
+        <li>Accurate bills</li>
+      </ul>
+    </div>
+  </ns-selector>
+
+</ns-inputter>
