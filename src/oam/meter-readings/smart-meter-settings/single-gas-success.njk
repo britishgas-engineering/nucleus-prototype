@@ -6,15 +6,28 @@ metertype: smart gas meter
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
-  <div class="splash">
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
     <h2>Gas meter</h2>
-  </div>
-  <ns-form nf-model="model.smart-meter-settings">
 
-    {% include "./_includes/ns-highlighter.njk" -%}
-
+    <ns-highlighter type="success">
+      <h2 slot="heading">Your smart frequency has been saved.</h2>
+      <p>Your {{metertype}} have been set to take readings <span nf-model="model.smart-meter-settings.gas-selector">[gas]</span>.</p>
+    </ns-highlighter>
+    
     {% include "./_includes/ns-selector-gas.njk" -%}
 
-    <ns-cta href="../">Save smart frequency</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
   </ns-form>
 </ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
+
+    if (data = 'gas') {
+      return '../single-gas-success';
+    }
+
+  }
+</script>

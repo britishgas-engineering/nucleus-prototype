@@ -1,20 +1,33 @@
 ---
-title: Smart meter settings test page
+title: Smart meter settings - joint meter
 metertype: smart meters
 ---
 
 {% include "./_includes/ns-landmark.njk" -%}
 
 <ns-panel>
-  <div class="splash">
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
     <h2>Gas and electricity meters</h2>
-  </div>
-  <ns-form nf-model="model.smart-meter-settings">
 
-    {% include "./_includes/ns-highlighter.njk" -%}
-
+    <ns-highlighter type="success">
+      <h2 slot="heading">Your smart frequency has been saved.</h2>
+      <p>Your {{metertype}} have been set to take readings <span nf-model="model.smart-meter-settings.joint-selector">[joint]</span>.</p>
+    </ns-highlighter>
+    
     {% include "./_includes/ns-selector-joint.njk" -%}
 
-    <ns-cta href="../">Save smart frequency</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
   </ns-form>
 </ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="joint-selector"]').value;
+
+    if (data = 'gas') {
+      return '../joint-invoice-success';
+    }
+
+  }
+</script>

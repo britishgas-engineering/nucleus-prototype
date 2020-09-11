@@ -1,7 +1,7 @@
-<ns-inputter class="splash triple" validation="['isRequired']" heading="How often would you like your smart meters to take readings?" value="">
+<ns-inputter class="splash triple" name="joint-selector" validation="[&quot;isRequired&quot;]" heading="How often would you like your smart meters to take readings?" value="">
 
   <ns-selector decoration="dualFuel">
-    <input type="radio" id="joint-half-hourly" name="joint-question" value="joint-half-hourly">
+    <input type="radio" id="joint-half-hourly" name="joint-question" value="half-hourly">
     <label for="joint-half-hourly">Half-hourly</label>
     <div slot="description">
       <ul class="ul-ticked">
@@ -15,7 +15,7 @@
   </ns-selector>
 
   <ns-selector decoration="dualFuel">
-    <input type="radio" id="joint-daily" name="joint-question" value="joint-daily">
+    <input type="radio" id="joint-daily" name="joint-question" value="daily">
     <label for="joint-daily">Daily</label>
     <div slot="description">
       <ul class="ul-ticked">
@@ -26,7 +26,7 @@
   </ns-selector>
 
   <ns-selector decoration="dualFuel">
-    <input type="radio" id="joint-monthly" name="joint-question" value="joint-monthly">
+    <input type="radio" id="joint-monthly" name="joint-question" value="monthly">
     <label for="joint-monthly">Monthly</label>
     <div slot="description">
       <ul class="ul-ticked">
