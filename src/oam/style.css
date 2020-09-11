@@ -5,3 +5,41 @@
 .style-hack {
   padding-bottom: 20px;
 }
+
+/* .drop-switch
+  attempt to switch content related to value in previous sibling ns-inputter
+*/
+
+.drop-switch[value="value-01"] ~ .drop-switch-selection .drop-switch-option {
+  display: none;
+}
+
+/* showing the form on checkbox toggle */
+
+.show-checkbox ~ .show-data ~ .show-form {
+  display: none;
+}
+
+.show-checkbox:checked ~ .show-data {
+  display: none;
+}
+
+.show-checkbox:checked ~ .show-data ~ .show-form {
+  display: block;
+}
+
+.show-cta {
+  cursor: pointer;
+  font-family: 'BG Flame Bold',sans-serif;
+  color: #005eb8;
+  text-decoration: underline;
+}
+
+.show-cta:hover {
+  color: #003c71;
+  text-decoration-color: rgba(0,60,113,.25);
+}
+
+.show-cancel {
+  float: right;
+}
