@@ -43,21 +43,15 @@ title: Account details
           <a href="#!">Edit login details</a>
         </dd>
       </div>
-      <div>
-        <dt>Marketing</dt>
-        <dd>
-          <ul class="ul-ticked">
-            <li>Email</li>
-            <li>SMS</li>
-          </ul>
-        </dd>
-        <dd>
-          <a href="#!">Change marketing preferences</a>
-        </dd>
-      </div>
-    </dl>
+    {% include "./_includes/account-marketing.njk" -%}
+</dl>
   </div>
 
   {% include "./_includes/your-home.njk" -%}
 
 </ns-panel>
+
+
+
+
+
