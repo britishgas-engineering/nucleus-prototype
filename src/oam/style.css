@@ -16,10 +16,8 @@
 
 /* showing the form on checkbox toggle */
 
-.show-checkbox ~ .show-data ~ .show-form {
-  display: none;
-}
-
+.show-checkbox,
+.show-checkbox ~ .show-data ~ .show-form,
 .show-checkbox:checked ~ .show-data {
   display: none;
 }
