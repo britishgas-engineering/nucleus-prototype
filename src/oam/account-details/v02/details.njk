@@ -59,3 +59,31 @@ eleventyNavigation:
   {% include "./_includes/your-home.njk" -%}
 
 </ns-panel>
+
+<script>
+  const person = {
+    "oam-02":
+    {
+      "fields": [
+      {
+        "name": "first-name",
+        "value": "Steve"
+      },
+      {
+        "name": "surname",
+        "value": "Jobs"
+      },
+      {
+        "name": "postcode",
+        "value": "SW1A 1AA"
+      },
+      {
+        "name": "mobile-number",
+        "value": "07770123123"
+      }]
+    }
+  }
+  if (localStorage.getItem("nf-model") === null) {
+    localStorage.setItem('nf-model', JSON.stringify(person));
+  }
+</script>
