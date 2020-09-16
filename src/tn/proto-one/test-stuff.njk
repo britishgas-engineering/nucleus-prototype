@@ -1,0 +1,84 @@
+---
+title: test-stuff
+---
+
+<ns-panel>
+  <div class="splash">
+    <h2>Use value of radio buttons</h2>
+  </div>
+  <ns-form class="splash" nf-model="model.test-stuff">
+    <ns-inputter name="inputter-a" heading="Can you answer this question?" validation="[&quot;isRequired&quot;]" value="">
+      <input type="radio" name="radio" id="radio-a" value="No">
+      <label for="radio-a">No</label>
+      <input type="radio" name="radio" id="radio-b" value="Yes">
+      <label for="radio-b">Yes</label>
+      <input type="radio" name="radio" id="radio-c" value="Maybe">
+      <label for="radio-c">Maybe</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+  <div class="splash">
+    <h3 class="enlighten">And the answer is: <b nf-model="model.test-stuff.inputter-a">[DATA]</b></h3>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'No') {
+      return '../test-stuff/';
+    }
+
+    if (data === 'Yes') {
+      return '../test-stuff/';
+    }
+
+    if (data === 'Maybe') {
+      return '../test-stuff/';
+    }
+
+  }
+</script>
+
+<ns-panel>
+  <div class="splash">
+    <h2>Use value of select</h2>
+  </div>
+  <ns-form class="splash" nf-model="model.test-stuff">
+    <ns-inputter name="inputter-b" helper="What are my options?">
+      <div slot="tip-details">
+        <p>We can send you bills, letters and booklets in large print, Braille or on CD. Or we can call you every quarter to talk you through your bills.</p>
+      </div>
+      <label slot="label">How would you like to receive communications for your gas account?</label>
+      <select name="select">
+        <option>Please select</option>
+        <option>Talking Telephone and Large Print</option>
+        <option>Talking Telephone and Bold Print</option>
+        <option>Textphone and Large Print</option>
+        <option>Textphone and Bold Print</option>
+        <option>Bespoke Format</option>
+        <option>CD ROM</option>
+        <option>Email</option>
+        <option>Fax</option>
+        <option>Talking (Telephone)</option>
+        <option>Textphone</option>
+      </select>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+  <div class="splash">
+    <h3 class="enlighten">And the option is: <b nf-model="model.test-stuff.inputter-b">[DATA]</b></h3>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data) {
+      return '';
+    }
+
+  }
+</script>

@@ -1,0 +1,23 @@
+<div>
+  <dt>Correspondence address</dt>
+
+  <input class="show-checkbox" type="checkbox" id="account-address">
+
+  <dd class="show-data">
+    <p><span nf-model="model.oam-02.postcode">[postcode]</span></p>
+    <p><label class="show-cta" for="account-address">Change address</label></p>
+  </dd>
+
+  <dd class="show-form">
+    <label class="show-cta show-cancel" for="account-address">Cancel</label>
+    <ns-form class="splash style-hack" nf-model="model.oam-02">
+      <ns-fieldset>
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
+          <label slot="label">Postcode</label>
+          <input autocomplete="postal-code" type="text">
+        </ns-inputter>
+      </ns-fieldset>
+      <ns-cta nf-href="../success">Save correspondence address</ns-cta>
+    </ns-form>
+  </dd>
+</div>
