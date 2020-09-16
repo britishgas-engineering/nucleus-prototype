@@ -4,7 +4,7 @@
   <input class="show-checkbox" type="checkbox" id="account-address">
 
   <dd class="show-data">
-    <p><span nf-model="model.oam-02.postcode">[postcode]</span></p>
+    <p><span nf-model="model.oam-02.address-selector">[ADDRESS]</span> <span nf-model="model.oam-02.address-selector-postcode">[POSTCODE]</span></p>
     <p><label class="show-cta" for="account-address">Change address</label></p>
   </dd>
 
@@ -12,7 +12,7 @@
     <label class="show-cta show-cancel" for="account-address">Cancel</label>
     <ns-form class="splash style-hack" nf-model="model.oam-02">
       <ns-fieldset>
-        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
+        <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="address-selector-postcode" value="">
           <label slot="label">Postcode</label>
           <input autocomplete="postal-code" type="text">
         </ns-inputter>
