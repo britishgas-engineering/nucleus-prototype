@@ -263,6 +263,8 @@ if(addressSelector) {
         //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
         if(event.target.getAttribute('nf-model-path')) {
             setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
+            setModelData(event.target.getAttribute('nf-model-path') + '-postcode', event.target.postcode);
+            
         }
     });
 }
