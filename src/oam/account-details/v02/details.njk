@@ -1,5 +1,10 @@
 ---
 title: Account details
+eleventyNavigation:
+  key: Account details 02
+  parent: account-details
+  title: Account details 02
+  excerpt: Sept 2020 - Chunked data, In-line editing
 ---
 
 {% include "./_includes/ns-landmark.njk" -%}
@@ -7,13 +12,6 @@ title: Account details
 <ns-panel>
   <div class="splash">
     <h3>Personal</h3>
-  </div>
-
-  <div class="splash">
-    <ns-highlighter type="success">
-      <h2 slot="heading">Details saved</h2>
-      <p>You've successfully updated your personal details.</p>
-    </ns-highlighter>
   </div>
 
   <div class="splash">
@@ -61,3 +59,31 @@ title: Account details
   {% include "./_includes/your-home.njk" -%}
 
 </ns-panel>
+
+<script>
+  const person = {
+    "oam-02":
+    {
+      "fields": [
+      {
+        "name": "first-name",
+        "value": "Steve"
+      },
+      {
+        "name": "surname",
+        "value": "Jobs"
+      },
+      {
+        "name": "postcode",
+        "value": "SW1A 1AA"
+      },
+      {
+        "name": "mobile-number",
+        "value": "07770123123"
+      }]
+    }
+  }
+  if (localStorage.getItem("nf-model") === null) {
+    localStorage.setItem('nf-model', JSON.stringify(person));
+  }
+</script>
