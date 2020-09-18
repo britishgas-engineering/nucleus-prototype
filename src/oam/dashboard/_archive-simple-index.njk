@@ -3,7 +3,7 @@ layout: nucleus-header-logged-in.njk
 title: Welcome to your account
 ---
 
-<ns-landmark type="lakeside" decoration="invert-concave-blue">
+<ns-landmark type="lakeside">
   <h1 slot="heading">
     <span class="h5">Hi <span nf-model="model.oam-02.first-name">Mr</span> <span nf-model="model.oam-02.surname">Known</span>.</span>
     <span class="h1">{{title}}</span>
@@ -21,10 +21,7 @@ title: Welcome to your account
 
 <ns-panel decoration="invert-concave-blue" class="">
   <div class="splash">
-    <h2 slot="heading">
-    <span class="h5">Hi <span nf-model="model.oam-02.first-name">Mr</span> <span nf-model="model.oam-02.surname">Known</span>.</span>
-    <span class="h2">{{title}}</span>
-  </h2>
+    <h2>Hi Alex</h2>
   </div>
   <div class="splash triple">
     <ns-card type="support">
@@ -41,8 +38,6 @@ title: Welcome to your account
     </ns-card>
   </div>
 </ns-panel>
-
-<a href="#your-products">Your products anchor</a>
 
 <ns-tabs>
   <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
