@@ -11,21 +11,21 @@ metertype: smart meters
 
     <h2>Gas meter</h2>
 
+    {% include "./_includes/ns-selector-gas.njk" -%}
+
     <ns-highlighter type="success">
       <h2 slot="heading">Your smart gas frequency has been saved.</h2>
       <p>Your smart gas meter has been set to take readings <span nf-model="model.smart-meter-settings.gas-selector">[gas]</span>.</p>
     </ns-highlighter>
 
-    {% include "./_includes/ns-selector-gas.njk" -%}
-
     <h2>Electricity meter</h2>
+
+    {% include "./_includes/ns-selector-elec.njk" -%}
 
     <ns-highlighter type="success">
       <h2 slot="heading">Your smart electricity frequency has been saved.</h2>
       <p>Your smart electricity meter has been set to take readings <span nf-model="model.smart-meter-settings.elec-selector">[elec]</span>.</p>
     </ns-highlighter>
-
-    {% include "./_includes/ns-selector-elec.njk" -%}
 
     <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
   </ns-form>
