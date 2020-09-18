@@ -41,3 +41,62 @@
 .show-cancel {
   float: right;
 }
+
+
+
+/* navigation subnav */
+
+
+.subnav-top-bar{
+  width: 100% !important;
+float: none !important;
+background-color: #F7F7F7 !important;
+}
+
+.holder{
+  margin-right: auto !important; 
+  margin-left: auto !important; 
+  width: 1570px !important;
+}
+
+.subnav-top-bar ul {
+  list-style-type: none !important;
+  display: contents;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.subnav-top-bar li {
+  float: left !important;
+}
+
+.subnav-top-bar li a {
+  display: block !important;
+  color: #333f48 !important;
+  text-align: center !important;
+  padding: 14px 16px !important;
+  text-decoration: none !important;
+}
+
+.subnav-top-bar li p {
+  display: block !important;
+  color: #333f48 !important;
+  text-align: center !important;
+  padding: 14px 16px !important;
+  text-decoration: none !important;
+  margin: 3px 0px 0px 50px;
+}
+
+/* Change the link on hover */
+.subnav-top-bar li a:hover {
+  background-color: #F1F1F1;
+  text-decoration: underline !important;
+}
+
+
+.subnav-top-bar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
