@@ -1,0 +1,29 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Smart meter settings - joint meter
+metertype: smart meters
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
+    <h2>Gas and electricity meters</h2>
+
+    {% include "./_includes/ns-selector-joint.njk" -%}
+
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="joint-selector"]').value;
+
+    if (data = 'gas') {
+      return '../joint-invoice-success';
+    }
+
+  }
+</script>
