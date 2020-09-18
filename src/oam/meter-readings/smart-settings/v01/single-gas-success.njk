@@ -10,13 +10,13 @@ metertype: smart gas meter
   <ns-form class="splash" nf-model="model.smart-meter-settings">
 
     <h2>Gas meter</h2>
+    
+    {% include "./_includes/ns-selector-gas.njk" -%}
 
     <ns-highlighter type="success">
       <h2 slot="heading">Your smart frequency has been saved.</h2>
       <p>Your {{metertype}} have been set to take readings <span nf-model="model.smart-meter-settings.gas-selector">[gas]</span>.</p>
     </ns-highlighter>
-    
-    {% include "./_includes/ns-selector-gas.njk" -%}
 
     <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
   </ns-form>
