@@ -1,0 +1,34 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Smart meter settings - dual fuel
+metertype: smart meters
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
+    <h2>Gas meter</h2>
+
+    {% include "./_includes/ns-selector-gas.njk" -%}
+
+    <h2>Electricity meter</h2>
+
+    {% include "./_includes/ns-selector-elec.njk" -%}
+
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
+
+    if (data = 'gas') {
+      return '../dual-fuel-success';
+    }
+
+  }
+</script>
