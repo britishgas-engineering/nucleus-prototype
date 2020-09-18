@@ -1,11 +1,10 @@
 ---
-layout: nucleus-header-logged-in.njk
-title: meter reading journeys
+title: Smart meter settings
 eleventyNavigation:
-  key: Meter readings
-  parent: oam
-  title: Meter readings
-  excerpt: Meter reading journeys
+  key: Smart meter settings
+  parent: meter-readings
+  title: Smart meter settings
+  excerpt: Smart meter settings
 ---
 
 <ns-landmark type="lakeside">
@@ -18,7 +17,7 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-  {% set navPages = collections.all | eleventyNavigation("meter-readings") | reverse %}
+  {% set navPages = collections.all | eleventyNavigation("smart-settings") | reverse %}
   <ns-panel>
     <div class="splash">
       <h2>{{teamname}} projects</h2>
