@@ -16,7 +16,7 @@ eleventyNavigation:
 </ns-landmark>
 
 <ns-panel>
-  <ns-form class="splash" nf-model="model.oam-02">
+  <ns-form class="splash" nf-model="model.oam-meter-01">
 
     <ns-fieldset legend="Please enter the Customer's account details:">
         <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="meter-firstname" value="">
@@ -47,6 +47,9 @@ eleventyNavigation:
     var data = document.querySelector('ns-inputter[name="customer-reference-number"]').value;
     if (data === '851234567890') {
       return '../anonymous-input';
+    }
+    else {
+      return '../anonymous-fail';
     }
   }
 </script>
