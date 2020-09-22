@@ -1,0 +1,25 @@
+---
+title: Anonymous meter reading input
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Meter reading submitted
+</span>
+  </h1>
+  <p slot="paragraph">We’re processing your readings and will contact 
+  <strong><span nf-model="model.oam-meter-01.firstname">[HERE]</span>
+  <span nf-model="model.oam-meter-01.surname">[HERE]</span></strong> as soon as the account is updated with the information supplied.</p>
+</ns-landmark>
+
+
+
+<ns-panel>
+  <div class="splash">
+    <ns-highlighter type="success">
+      <h2 slot="heading">You have successfully submitted the following readings:</h2>
+      <p>Gas: <strong><span nf-model="model.oam-meter-01.gas-reading">[HERE]</span></strong></p>
+      <p>Electricity: <strong><span nf-model="model.oam-meter-01.electricity-reading">[HERE]</span></strong></p>
+    </ns-highlighter>
+  </div>
+</ns-panel>
