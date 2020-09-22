@@ -10,9 +10,14 @@ eleventyNavigation:
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h1">Please give us the customer's latest meter readings</span>
+    <span class="h5">Meter readings.</span>
+    <span class="h1">Submit the latest readings
+</span>
   </h1>
-  <p slot="paragraph">If you're not sure, our help and support pages can show you <a>how to read a meter</a>. </p>
+  <p slot="paragraph">Please enter the latest readings from the customer's meters. If you're not sure how to read a meter our help and support pages can guide you through the process.</p>
+  <p slot="paragraph">Account holder: <b>Alex Surname</b></p>
+  <p slot="paragraph">Reference number: <b>851234567890</b></p>
+
 </ns-landmark>
 
 
@@ -20,7 +25,10 @@ eleventyNavigation:
   <div class="splash">
     <ns-form>
 
-      <ns-fieldset legend="Enter the latest readings:">
+      <ns-fieldset legend="Enter the customer's latest readings:">
+
+<span class="h5">Previous reading</span>
+<span class="h6">estinamted on 28th August 2020</span>
 
 <ns-inputter mask="00---" separator="" validation="[&quot;isRequired&quot;]" value="" helper="How do I give my gas meter reading?" name="customer-reference-number">
   <div slot="tip-details">Enter your gas meter reading into the box below, including any zeros at the beginning. Don't worry abou the red numbers or anything after the decimal point.</div>
