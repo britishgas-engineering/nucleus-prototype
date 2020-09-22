@@ -10,10 +10,12 @@
   attempt to switch content related to value in previous sibling ns-inputter
 */
 
-.drop-switch[value="value-01"] ~ .drop-switch-selection .drop-switch-option {
+.drop-switch[value="value-01"] ~ .drop-switch-selection .drop-switch-option-b {
   display: none;
 }
-
+.drop-switch[value="value-02"] ~ .drop-switch-selection .drop-switch-option-a {
+  display: none;
+}
 /* showing the form on checkbox toggle */
 
 .show-checkbox,
@@ -86,6 +88,11 @@ background-color: #F7F7F7 !important;
   padding: 14px 16px !important;
   text-decoration: none !important;
   margin: 3px 0px 0px 50px;
+}
+
+ .subnav-dropdown {
+  margin: 0px 0px 0px 50px;
+    padding: 5px 0px !important;
 }
 
 /* Change the link on hover */

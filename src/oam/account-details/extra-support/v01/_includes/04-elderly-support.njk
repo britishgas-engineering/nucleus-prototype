@@ -1,0 +1,29 @@
+<h3 slot="heading">Elderly and support</h3>
+<ns-form>
+  <ns-inputter validation="[]" heading="Elderly" helper="" name="age">
+    <input type="checkbox" id="age75" value="age75">
+    <label for="age75">Age 75 and over</label>
+    <input type="checkbox" id="pension" value="pension">
+    <label for="pension">Pensionable age</label>
+  </ns-inputter>
+  <ns-inputter validation="[]" heading="Carers and supporting persons" helper="" name="carers">
+    <input type="checkbox" id="carer" value="carer" class="np-toggler not-psr">
+    <label for="carer">I have a carer or, I am a carer</label>
+    {% include "./ns-highlighter-carer.njk" %}
+    <input type="checkbox" id="presence" value="presence">
+    <label for="presence">Additional presence preferred</label>
+    <input type="checkbox" id="nominee" value="nominee" class="not-psr">
+    <label for="nominee">Nominated person on the account</label>
+    <input type="checkbox" id="attorney" value="attorney">
+    <label for="attorney">Power of attorney</label>
+  </ns-inputter>
+  <ns-fieldset legend="Sign up to our password scheme">
+    <ns-inputter validation="[]" helper="What is a password scheme? this is an optional choice" name="password">
+      <div slot="tip-details">
+        <p>You can ask our engineers and meter readers to use a personal password when they visit your home, so you know they're really from British Gas.</p>
+      </div>
+      <label slot="label">Set a password</label>
+      <input type="text">
+    </ns-inputter>
+  </ns-fieldset>
+</ns-form>
