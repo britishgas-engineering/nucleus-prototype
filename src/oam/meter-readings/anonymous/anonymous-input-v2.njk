@@ -1,0 +1,56 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Anonymous meter reading input
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Meter readings.</span>
+    <span class="h1">Submit the latest readings
+</span>
+  </h1>
+  <p slot="paragraph">Account holder:
+  <strong><span nf-model="model.oam-meter-01.firstname">[HERE]</span>
+  <span nf-model="model.oam-meter-01.surname">[HERE]</span></p></strong>
+  <p slot="paragraph">Reference number: <b>851234567890</b></p>
+</ns-landmark>
+
+
+
+
+
+<ns-panel>
+  <div class="splash">
+
+    <ns-highlighter type="info">
+      <h2 slot="heading">Previous meter readings.</h2>
+      <p>Gas: <strong>51874</strong> - Submitted on 6th September 2020</p>
+      <p>Electricity: <strong>02941</strong> - Submitted on 6th September 2020</p>
+    </ns-highlighter>
+  </div>
+  <div class="splash">
+    <ns-form>
+
+      
+<ns-fieldset legend="Enter the customer's readings:">
+
+<ns-inputter mask="00---" separator="" validation="[&quot;isRequired&quot;]" value="" helper="How do I give a gas meter reading?" name="customer-reference-number">
+  <div slot="tip-details">Enter the gas meter reading into the box below, including any zeros at the beginning. Don't worry about the red numbers or anything after the decimal point.</div>
+  <label slot="label">Gas meter</label>
+  <input type="text">
+</ns-inputter>
+
+<ns-inputter mask="00---" separator="" validation="[&quot;isRequired&quot;]" value="" helper="How do I give an electricity meter reading?" name="customer-reference-number">
+  <div slot="tip-details">Enter the electricity meter reading into the box below, including any zeros at the beginning. Don't worry about the red numbers or anything after the decimal point.</div>
+  <label slot="label">Electricity meter</label>
+  <input type="text">
+</ns-inputter>
+
+ </ns-fieldset>
+
+
+
+      <ns-cta onclick="submitForm()">Submit readings</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
