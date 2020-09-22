@@ -16,10 +16,9 @@ eleventyNavigation:
 </ns-landmark>
 
 <ns-panel>
-  <div class="splash">
-    <ns-form>
+  <ns-form class="splash" nf-model="model.oam-01">
 
-      <ns-fieldset legend="Please enter the Customer's account details:">
+    <ns-fieldset legend="Please enter the Customer's account details:">
         <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
           <label slot="label">Customer's first name</label>
           <input autocomplete="given-name" type="text">
@@ -38,7 +37,16 @@ eleventyNavigation:
 
       </ns-fieldset>
 
-      <ns-cta onclick="submitForm()" href="anonymous-input.njk">Continue</ns-cta>
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
     </ns-form>
   </div>
 </ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="customer-reference-number"]').value;
+    if (data === '851234567890') {
+      return '../anonymous-input';
+    }
+  }
+</script>
