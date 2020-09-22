@@ -1,0 +1,66 @@
+---
+layout: nucleus-header-logged-in-variant.njk
+title: Extra Support
+
+---
+
+<ns-landmark type="hillside">
+  <h1 slot="heading">
+    <span class="h5">Here to solve.</span>
+    <span class="h1">Household circumstances</span>
+  </h1>
+  <p slot="paragraph">We're here to solve and provide extra help where we can.</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <h2 class="h2">Your household circumstances</h2>
+    <h3 class="h6 enlighten">We can help all types of customers in a range of ways based on your situation:</h3>
+    <ul class="ul-bullet">
+      <li>You could be deemed as vulnerable if you’re unable to top up your pre-payment meter due to injury or understanding your bill due to mental health</li>
+      <li>Temporary circumstances, where you might need extra support for a limited amount of time such as redundancy or recovering from a hospital stay</li>
+      <li>Connecting you with information from charities like CarersUK and Help the Aged to name just a few</li>
+      <li>Impacted by power outrages if you rely on medical equipment, medicine kept in the fridge or children under the age of 5</li>
+      <li>We could also offer you better communication such as braille, signvideo or translating our letters and website into the language that best suits you</li>
+    </ul>
+  </div>
+
+  <div class="splash">
+    <ns-accordion id="choice-options">
+      <h2 slot="heading">Is anyone in your household affected by any of these?</h2>
+      <ns-expander>
+        {% include "./_includes/01-sensory-mobility-update.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/02-cognitive-learning.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/03-medical-illnesses.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/04-elderly-support-no-password.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/05-communication.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/06-personal-circumstance.njk" %}
+      </ns-expander>
+      <ns-expander>
+        {% include "./_includes/07-personal-password.njk" %}
+      </ns-expander>
+    </ns-accordion>
+  </div>
+</ns-panel>
+
+<ns-panel id="psr-option">
+  <div class="splash continue">
+    <ns-cta>Continue to next step</ns-cta>
+  </div>
+  <div class="splash extra-help">
+    {% include "./_includes/extra-help.njk" %}
+  </div>
+  <div class="splash psr-promise">
+    {% include "./_includes/psr-promise-update.njk" %}
+  </div>
+</ns-panel>

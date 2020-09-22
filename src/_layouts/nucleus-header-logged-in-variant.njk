@@ -125,7 +125,12 @@ layout: base.njk
         <div class="subnav-top-bar">
         <div class="holder">
         <ul class="subnav-top-bar">
-  <li><p><span nf-model="model.oam-02.address-selector">[ADDRESS]</span></p></li>
+ <li class="subnav-dropdown"><ns-inputter name="select-an-option" value="">
+    <select>
+      <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
+      <option value="value-02">Buckingham palace</span></option>
+    </select>
+  </ns-inputter></li>
   <li><a href="/oam/dashboard">Your Summary</a></li>  
   <li><a href="/oam/dashboard#your-products">Your Products</a></li>
   <li><a href="/oam/account-details/v02/details">Account details</a></li>
