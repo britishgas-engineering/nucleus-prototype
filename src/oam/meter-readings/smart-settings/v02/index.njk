@@ -16,7 +16,6 @@ eleventyNavigation:
   <ns-tab icon="gas" slot="tab">Gas meter</ns-tab>
     <ns-panel slot="panel">
       <div class="splash">
-        <h2>Gas meter</h2>
 
     {% include "./_includes/ns-selector-gas.njk" -%}
 
@@ -26,7 +25,6 @@ eleventyNavigation:
     <ns-tab icon="electricity" slot="tab">Electricity meter</ns-tab>
     <ns-panel slot="panel">
       <div class="splash">
-        <h2>Electricity meter</h2>
 
     {% include "./_includes/ns-selector-elec.njk" -%}
 
@@ -40,9 +38,9 @@ eleventyNavigation:
 
 <script>
   function getDynamicURL() {
-    var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
+    var data = document.querySelector('ns-inputter[name="elec-selector"]').value;
 
-    if (data = 'gas') {
+    if (data = 'elec') {
       return 'dual-fuel-success';
     }
 
