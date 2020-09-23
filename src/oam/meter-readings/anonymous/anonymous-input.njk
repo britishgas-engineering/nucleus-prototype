@@ -56,7 +56,10 @@ title: Anonymous meter reading input
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="gas-reading"]').value;
-      if (data === '53000') {
+      if (data === '51948') {
+      return '../anonymous-success';
+    }
+    if (data === '53000') {
       return '../anonymous-tolerance';
     }
     else {
