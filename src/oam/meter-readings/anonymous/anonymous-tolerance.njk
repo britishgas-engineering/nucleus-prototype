@@ -7,10 +7,6 @@ title: Anonymous meter reading input
     <span class="h1">Submit the customer's latest meter readings
 </span>
   </h1>
-  <p slot="paragraph">Account holder:
-  <strong><span nf-model="model.oam-meter-01.firstname">[HERE]</span>
-  <span nf-model="model.oam-meter-01.surname">[HERE]</span></p></strong>
-  <p slot="paragraph">Reference number: <b>851234567890</b></p>
 </ns-landmark>
 
 
@@ -20,11 +16,12 @@ title: Anonymous meter reading input
 <ns-panel>
   <div class="splash">
 
-    <ns-highlighter type="info">
-      <h2 slot="heading">Previous meter readings.</h2>
-      <p>Gas: <strong>51874</strong> - Submitted on 6th September 2020</p>
-      <p>Electricity: <strong>02941</strong> - Submitted on 6th September 2020</p>
-    </ns-highlighter>
+    <ns-highlighter type="warning">
+  <h2 slot="heading">
+    Can you please check that?
+  </h2>
+  <p>Those numbers weren't quite what we're expecting.</p>
+</ns-highlighter>
   </div>
   <div class="splash">
     <ns-form nf-model="model.oam-meter-01">
@@ -45,15 +42,6 @@ title: Anonymous meter reading input
 </ns-inputter>
 
  </ns-fieldset>
-
- <ns-highlighter type="warning">
-  <h2 slot="heading">
-    Can you please check that?
-  </h2>
-  <p>Those numbers weren't quite what we're expecting.</p>
-</ns-highlighter>
-
-
 
       <ns-cta nf-href="DYNAMIC">Submit readings</ns-cta>
     </ns-form>
