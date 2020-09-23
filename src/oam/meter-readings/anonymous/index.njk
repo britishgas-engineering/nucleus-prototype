@@ -40,6 +40,19 @@ eleventyNavigation:
     </ns-form>
 </ns-panel>
 
+<ns-caveat>
+<h2 slot="heading">Happy path credentials</h2>
+  <div slot="caveat">
+    <p>Details below will activate logic on the prototype for enabled fields. If any alternative information is entered, unhappy paths will be shown.</p>
+    <ol>
+      <li>Login/Reg Email: known@address.com</li>
+      <li>Login Password: correct</li>
+      <li>Reg mobile: 07831234567</li>
+      <li>Reg Reference number: 85123456789</li>
+    </ol>
+  </div>
+</ns-caveat>
+
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="reference-number"]').value;
