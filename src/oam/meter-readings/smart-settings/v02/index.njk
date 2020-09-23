@@ -19,6 +19,8 @@ eleventyNavigation:
         <h2>Gas meter</h2>
 
     {% include "./_includes/ns-selector-gas.njk" -%}
+
+    <ns-cta>Save gas frequency</ns-cta>
       </div>
     </ns-panel>
     <ns-tab icon="electricity" slot="tab">Electricity meter</ns-tab>
@@ -28,7 +30,7 @@ eleventyNavigation:
 
     {% include "./_includes/ns-selector-elec.njk" -%}
 
-    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Save electricity frequency</ns-cta>
       </div>
     </ns-panel>
 
@@ -40,8 +42,8 @@ eleventyNavigation:
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
 
-    if (data = 'gas') {
-      return '../dual-fuel-success';
+    if (data = 'half-hourly') {
+      return 'dual-fuel-success';
     }
 
   }
