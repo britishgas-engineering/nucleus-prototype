@@ -1,10 +1,5 @@
 ---
-title: Anonymous meter reading
-eleventyNavigation:
-  key: Anonymous meter reading
-  parent: meter-readings
-  title: Anonymous meter reading
-  excerpt: Anonymous meter reading
+title: Anonymous meter reading error
 ---
 
 <ns-landmark type="hillside" gradient="invert-ramp-cyan">
@@ -14,8 +9,14 @@ eleventyNavigation:
   </h1>
 </ns-landmark>
 
+
 <ns-panel>
   <ns-form class="splash" nf-model="model.oam-meter-01">
+
+  <ns-highlighter type="error">
+      <h2 slot="heading">These details do not match a customer account</h2>
+      <p>Unfortunately there is a problem with some of the information you have submitted. Please check that you have all of the details correct.</p>
+  </ns-highlighter>
 
     <ns-fieldset legend="Please enter the Customer's account details:">
         <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="firstname" value="">
@@ -44,10 +45,10 @@ eleventyNavigation:
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="reference-number"]').value;
     if (data === '851234567890') {
-      return 'anonymous-input';
+      return '../anonymous-input';
     }
     else {
-      return 'anonymous-identity-error';
+      return '../anonymous-identity-error';
     }
   }
 </script>
