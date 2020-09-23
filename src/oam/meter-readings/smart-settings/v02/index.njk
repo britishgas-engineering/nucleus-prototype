@@ -10,37 +10,39 @@ eleventyNavigation:
 
 {% include "./_includes/ns-landmark.njk" -%}
 
+<ns-form class="splash" nf-model="model.smart-meter-settings">
+
 <ns-tabs>
   <ns-tab icon="gas" slot="tab">Gas meter</ns-tab>
-    <ns-panel>
-
-    <h2>Gas meter</h2>
+    <ns-panel slot="panel">
+      <div class="splash">
+        <h2>Gas meter</h2>
 
     {% include "./_includes/ns-selector-gas.njk" -%}
 
     <ns-cta>Save gas frequency</ns-cta>
-
-</ns-panel>
+      </div>
+    </ns-panel>
     <ns-tab icon="electricity" slot="tab">Electricity meter</ns-tab>
-    <ns-panel>
-  <ns-form class="splash" nf-model="model.smart-meter-settings">
-
-    <h2>Electricity meter</h2>
+    <ns-panel slot="panel">
+      <div class="splash">
+        <h2>Electricity meter</h2>
 
     {% include "./_includes/ns-selector-elec.njk" -%}
 
     <ns-cta nf-href="DYNAMIC">Save electricity frequency</ns-cta>
-
-  </ns-form>
-</ns-panel>
+      </div>
+    </ns-panel>
 
 </ns-tabs>
+
+</ns-form>
 
 <script>
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
 
-    if (data = 'half-hourly') {
+    if (data = 'gas') {
       return 'dual-fuel-success';
     }
 
