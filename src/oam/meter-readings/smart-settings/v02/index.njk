@@ -5,49 +5,61 @@ eleventyNavigation:
   key: Smart meter frequency 02
   parent: smart-settings
   title: Smart meter frequency 02
-  excerpt: SEPT 2020 - Alternative Smart meter settings approach
+  excerpt: SEPT 2020 - Dual fuel example using tabs
 ---
 
-<ns-landmark type="lakeside">
-  <h1 slot="heading">
-    <span class="h5">How cool is this.</span>
-    <span class="h1 enlighten">{{teamname}}'s <b>{{title}}</b></span>
-  </h1>
-  <div slot="paragraph">
-    <p>This is the index page of <b>{{title}}</b>.</p>
-  </div>
-</ns-landmark>
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-form class="splash" nf-model="model.smart-meter-settings">
+
+<ns-tabs>
+  <ns-tab icon="gas" slot="tab">Gas meter</ns-tab>
+    <ns-panel slot="panel">
+      <div class="splash">
+        <h2>Gas meter</h2>
+
+    {% include "./_includes/ns-selector-gas.njk" -%}
+      </div>
+    </ns-panel>
+    <ns-tab icon="electricity" slot="tab">Electricity meter</ns-tab>
+    <ns-panel slot="panel">
+      <div class="splash">
+        <h2>Electricity meter</h2>
+
+    {% include "./_includes/ns-selector-elec.njk" -%}
+
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+      </div>
+    </ns-panel>
+
+</ns-tabs>
+
+</ns-form>
 
 <ns-panel>
-  <div class="splash triple">
-    <ns-card type="support">
-      <h3 slot="heading">Joint Invoice Customer</h3>
-      <p slot="paragraph">Quisquam debitis sapiente perspiciatis. Omnis qui pariatur nihil animi.</p>
-      <a slot="cta" href="joint-invoice">
-        <ns-cta type="text">Joint invoice settings</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Dual Fuel Customer</h3>
-      <p slot="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <a slot="cta" href="dual-fuel">
-        <ns-cta type="text">Dual fuel settings</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Single Fuel - Gas Customer</h3>
-      <p slot="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <a slot="cta" href="single-gas">
-        <ns-cta type="text">Single fuel - Gas settings</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Single Fuel - Electricity Customer</h3>
-      <p slot="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <a slot="cta" href="single-elec">
-        <ns-cta type="text">Single fuel - Electricity settings</ns-cta>
-      </a>
-    </ns-card>
-  </div>
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
+    <h2>Gas meter</h2>
+
+    {% include "./_includes/ns-selector-gas.njk" -%}
+
+    <h2>Electricity meter</h2>
+
+    {% include "./_includes/ns-selector-elec.njk" -%}
+
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+
+  </ns-form>
 </ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
+
+    if (data = 'gas') {
+      return 'dual-fuel-success';
+    }
+
+  }
+</script>
 
