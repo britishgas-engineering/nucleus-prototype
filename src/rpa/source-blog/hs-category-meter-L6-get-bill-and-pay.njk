@@ -1,0 +1,51 @@
+---
+title: hs-category-meter-L6-get-bill-and-pay
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Help with my meter.</span>
+    <span class="h1">Which type of meter do you have?</span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.L6-smart">
+
+      <ns-inputter validation='["isRequired"]' name="inputter-a" class="triple" value="">
+        <ns-selector id="image-a">
+          <input type="radio" name="radio" value="smart" id="radio-a">
+          <label for="radio-a">Smart meter</label>
+          <div slot="description">
+            <p>If you have a smart meter installed. This would usually come with a smart energy monitor (in home display).</p>
+          </div>
+        </ns-selector>
+        <ns-selector id="image-b">
+          <input type="radio" name="radio" value="standard" id="radio-b">
+          <label for="radio-b">Standard meter</label>
+          <div slot="description">
+            <p>If you have a standard meter.</p>
+          </div>
+        </ns-selector>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'smart') {
+      return '../hs-category-meter-L8-barcode/';
+    }
+
+    if (data === 'standard') {
+      return '../hs-category-meter-L9-summary/';
+    }
+  }
+</script>
