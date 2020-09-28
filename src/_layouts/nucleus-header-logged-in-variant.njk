@@ -2,13 +2,11 @@
 layout: base.njk
 ---
 
-
 <link rel="stylesheet" href="/mh/style.css">
-
 
 <ns-header logo="https://www.britishgas.co.uk/nucleus/images/logo.svg" alt="British Gas" help="#" business="#">
   <ul>
-    
+
     <li>
       <h2><a href="#">Our Products</a></h2>
       <ul>
@@ -95,18 +93,17 @@ layout: base.njk
             <li><a href="/oam/account-details/v02/details">Account details</a></li>
             <li><a href="#">Payments</a></li>
             <li><a href="#">Documents</a></li>
-            <li><a href="/help-and-support/technical-support/tier2/faq/how-do-i-keep-my-online-account-safe">Keeping your account safe</a></li>            
+            <li><a href="/help-and-support/technical-support/tier2/faq/how-do-i-keep-my-online-account-safe">Keeping your account safe</a></li>
             <li><a href="#">Log out</a></li>
-
 
           </ul>
         </li>
-         <li>
+        <li>
           <h3>Your actions</h3>
           <ul>
             <li><a href="/meterreads">Submit a meter reading</a></li>
             <li><a href="/youraccount/discover/monitor-consumption.html">Compare my energy usage</a></li>
-            <li><a href="/my-account/premises/select/accounts/appointments/track">Book and Track an engineer</a></li>            
+            <li><a href="/my-account/premises/select/accounts/appointments/track">Book and Track an engineer</a></li>
             <li><a href="#">Rewards</a></li>
 
           </ul>
@@ -123,35 +120,24 @@ layout: base.njk
   </ul>
 </ns-header>
 
-
-
-        <div class="subnav-top-bar">
-        <div class="holder">
-        <ul class="subnav-top-bar">
- <li class="subnav-dropdown"><ns-inputter name="select-an-option" value="">
-    <select>
-      <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
-      <option value="value-02">Buckingham palace</span></option>
-    </select>
-  </ns-inputter></li>
-  <li><a href="/oam/dashboard">Your Summary</a></li>  
-  <li><a href="/oam/dashboard#your-products">Your Products</a></li>
-  <li><a href="/oam/account-details/v02/details">Account details</a></li>
-  <li><a href="#">Log out</a></li>
-</ul>
-   </div>       
-   </div>
-
-
-
-<!-- ns-header needs skip links -->
-<div id="content"></div>
-<div id="footer"></div>
-<!-- skip links end -->
-
-
+<nav class="subnav-top-bar">
+  <div class="holder">
+    <a href="/oam/dashboard">Your Summary</a>
+    <a href="/oam/dashboard#your-products">Your Products</a>
+    <a href="/oam/account-details/v02/details">Account details</a>
+    <a href="#">Log out</a>
+    <ns-inputter class="address" name="select-an-option" value="">
+      <label slot="label" class="sr-only">Your addresses</label>
+      <select>
+        <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
+        <option value="value-02">Buckingham palace</span></option>
+      </select>
+    </ns-inputter>
+  </div>
+</nav>
 
 <main id="content">
   {{content | safe}}
 </main>
+
 <nsx-footer id="footer"></nsx-footer>
