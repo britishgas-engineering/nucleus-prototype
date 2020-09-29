@@ -61,27 +61,36 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
-.subnav-top-bar .address {
-  display: block;
-  margin-right: 1em;
-  padding-top: 0.25em;
+.subnav-top-bar .links {
+  float: left;
 }
 
-.subnav-top-bar a {
+.subnav-top-bar .links a {
   margin-right: 1em;
   display: inline-block;
   color: #333f48 !important;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   text-decoration: none !important;
 }
 
 /* Change the link on hover */
-.subnav-top-bar a:hover {
+.subnav-top-bar .links a:hover {
   text-decoration: underline !important;
   text-decoration-color: rgba(0, 60, 113, .25) !important;
+}
+
+.subnav-top-bar .address {
+  float: right;
+}
+
+.subnav-top-bar .address span {
+  display: inherit;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 
 /* rugby pitch and higher */

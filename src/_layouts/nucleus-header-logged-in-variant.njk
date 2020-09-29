@@ -120,12 +120,14 @@ layout: base.njk
   </ul>
 </ns-header>
 
-<nav class="subnav-top-bar">
+<div class="subnav-top-bar">
   <div class="holder">
-    <a href="/oam/dashboard">Your Summary</a>
-    <a href="/oam/dashboard#your-products">Your Products</a>
-    <a href="/oam/account-details/v02/details">Account details</a>
-    <a href="#">Log out</a>
+    <nav class="links">
+      <a href="/oam/dashboard">Your Summary</a>
+      <a href="/oam/dashboard#your-products">Your Products</a>
+      <a href="/oam/account-details/v02/details">Account details</a>
+      <a href="#">Log out</a>
+    </nav>
     <ns-inputter class="address" name="select-an-option" value="">
       <label slot="label" class="sr-only">Your addresses</label>
       <select>
@@ -134,7 +136,7 @@ layout: base.njk
       </select>
     </ns-inputter>
   </div>
-</nav>
+</div>
 
 <main id="content">
   {{content | safe}}

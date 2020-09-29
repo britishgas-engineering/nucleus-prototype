@@ -118,15 +118,19 @@ layout: base.njk
   </ul>
 </ns-header>
 
-<nav class="subnav-top-bar">
+<div class="subnav-top-bar">
   <div class="holder">
-    <a href="/oam/dashboard">Your Summary</a>
-    <a href="/oam/dashboard#your-products">Your Products</a>
-    <a href="/oam/account-details/v02/details">Account details</a>
-    <a href="#">Log out</a>
-    <span class="address" nf-model="model.oam-02.address-selector">[ADDRESS]</span>
-  </div>
-</nav>
+    <nav class="links">
+      <a href="/oam/dashboard">Your Summary</a>
+      <a href="/oam/dashboard#your-products">Your Products</a>
+      <a href="/oam/account-details/v02/details">Account details</a>
+      <a href="#">Log out</a>
+    </nav>
+    <div class="address">
+      <span nf-model="model.oam-02.address-selector">[ADDRESS]</span>
+    </div>
+    </div>
+</div>
 
 <main id="content">
   {{content | safe}}
