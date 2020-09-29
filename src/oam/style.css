@@ -105,7 +105,7 @@
 .np-callout {
   display: block;
   position: relative;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
 .np-callout::after {
@@ -122,9 +122,11 @@
   color: var(--np-callout-colour);
   float: left;
   margin-top: 0.33em;
-  margin-right: 0.33em;
+  margin-right: 0.25em;
 }
 
 .np-callout .content {
   color: initial;
+  display: block;
+  padding-left: 1.25em;
 }
