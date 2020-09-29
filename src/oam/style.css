@@ -100,3 +100,31 @@
     padding-right: 9.31322575em;
   }
 }
+
+/* simple .np-callout */
+.np-callout {
+  display: block;
+  position: relative;
+  padding-left: 1em;
+}
+
+.np-callout::after {
+  position: absolute;
+  background-color: var(--np-callout-colour);
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.25em;
+}
+
+.np-callout ns-icon {
+  color: var(--np-callout-colour);
+  float: left;
+  margin-top: 0.33em;
+  margin-right: 0.33em;
+}
+
+.np-callout .content {
+  color: initial;
+}
