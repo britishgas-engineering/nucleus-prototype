@@ -1,11 +1,9 @@
 ---
-layout: nucleus-header-logged-in.njk
+layout: nucleus-header-logged-in-variant.njk
 title: Welcome to your account
 ---
 
-
-
-<ns-panel decoration="invert-concave-blue" class="">
+<ns-panel decoration="invert-ramp-blue" class="">
   <div class="splash">
     <h5>Hi <span nf-model="model.oam-02.first-name">Mr</span> <span nf-model="model.oam-02.surname">Known</span>.</h5>
     <h1>{{title}}</h1>
@@ -26,7 +24,9 @@ title: Welcome to your account
   </div>
 </ns-panel>
 
-<a href="#your-products">Your products anchor</a>
+<div id="your-products">
+  <!-- Anchor to your-products -->
+</div>
 
 <ns-tabs>
   <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
@@ -34,33 +34,33 @@ title: Welcome to your account
     <ns-panel>
       <div class="splash triple">
         <ns-card type="support">
-        <h2 slot="heading">You have a repair booked</h2>
-        <ul slot="paragraph">
+          <h2 slot="heading">You have a repair booked</h2>
+          <ul slot="paragraph">
             <li>Leaking drain repair on Wednesday 12th February</li>
             <li>Your engineer will arrive between 10am and 2pm.</li>
-            </ul>
-        <a slot="cta" href="#!">
-          <ns-cta type="text">Track my engineer</ns-cta>
-      </a>
-      <a slot="cta" href="#!">
-          <ns-cta type="text">Change the date/time</ns-cta>
-      </a>
-      <a slot="cta" href="#!">
-          <ns-cta type="text">Cancel my appointment</ns-cta>
-      </a>
-</ns-card>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Track my engineer</ns-cta>
+          </a>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Change the date/time</ns-cta>
+          </a>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Cancel my appointment</ns-cta>
+          </a>
+        </ns-card>
         <ns-card type="support">
-        <h2 slot="heading">Need something else fixed?</h2>
-        <p slot="paragraph">Let us know if you need something else repaired. You may be able to add it to your existing appointment, or arrange another engineer visit.</p>
-        <a slot="cta" href="#!">
-    <ns-cta type="text">Add another problem</ns-cta>
-  </a>
-</ns-card>
+          <h2 slot="heading">Need something else fixed?</h2>
+          <p slot="paragraph">Let us know if you need something else repaired.</p>
+          <p slot="paragraph">You may be able to add it to your existing appointment, or arrange another engineer visit.</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add another problem</ns-cta>
+          </a>
+        </ns-card>
       </div>
-</ns-panel>
-    
+    </ns-panel>
 
-<ns-panel>
+    <ns-panel>
       <div class="splash">
         <h2>You have HomeCare Two</h2>
       </div>
@@ -81,7 +81,7 @@ title: Welcome to your account
             <li>Central heating</li>
             <li>+ Plumbing</li>
             <li>+ Drains</li>
-            </ul>
+          </ul>
           <a slot="cta" href="#!">
             <ns-cta type="text">Change your cover</ns-cta>
           </a>
@@ -94,10 +94,9 @@ title: Welcome to your account
           </a>
         </ns-card>
       </div>
-</ns-panel>
+    </ns-panel>
 
-
-<ns-panel decoration="" class="">
+    <ns-panel decoration="" class="">
       <ns-lockup type="lockbox">
         <h2 slot="heading">
           <span class="h5">Upgrade your cover</span>
@@ -112,11 +111,10 @@ title: Welcome to your account
     </ns-panel>
   </div>
 
-<ns-tab icon="energy" slot="tab">Energy</ns-tab>
+  <ns-tab icon="energy" slot="tab">Energy</ns-tab>
   <div slot="panel">
-    
 
-<ns-panel>
+    <ns-panel>
       <div class="splash">
         <h2>Gas and electricity</h2>
       </div>
@@ -144,8 +142,7 @@ title: Welcome to your account
           </a>
         </ns-card>
       </div>
-</ns-panel>
-
+    </ns-panel>
 
     <ns-panel decoration="" class="">
       <ns-lockup type="lockbox">
@@ -161,8 +158,8 @@ title: Welcome to your account
       </ns-lockup>
     </ns-panel>
   </div>
-  
-<ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
+
+  <ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
   <ns-panel slot="panel">
     <div class="splash">
       Rewards content
