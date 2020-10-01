@@ -7,6 +7,16 @@
 }
 
 
+/* .meter-readings-table
+  add space to the bottom of the inline forms
+*/
+
+.service-docs-table {
+  @media (max-width: @screen-xs-min) {
+    overflow-x: scroll;
+  }
+}
+
 /* .drop-switch
   attempt to switch content related to value in previous sibling ns-inputter
 */
@@ -137,15 +147,15 @@
 /* experiment with ns-card for notification */
 
 .np-card.type-a {
-  color: #FFC72C;
+  color: #23D160;
 }
 
 .np-card.type-b {
-  color: #862633;
+  color: #219CEE;
 }
 
 .np-card.type-c {
-  color: #009639;
+  color: #fff;
 }
 
 .np-card {
@@ -194,6 +204,22 @@
   float: right;
   width: 2.0736em;
   height: 2.0736em;
+}
+
+.np-card.notification .img-holder {
+  margin-top: -.16666667em;
+  width: 10.0736em;
+  height: 5.0736em;
+  margin-top: -.25em;
+  margin-right: 0;
+  margin-left: -.25em;
+  float: none;
+  -webkit-transform: none;
+  transform: none;
+  grid-area: a;
+  float: right;
+  width: 10.0736em;
+  height: 5.0736em;
 }
 
 .np-card.notification .content {

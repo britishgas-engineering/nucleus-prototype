@@ -45,18 +45,18 @@ title: Welcome to your account
     </div>
 
     <div class="np-card notification type-c">
-      <div class="icon-holder">
-        <ns-icon type="info" aria-hidden="true"></ns-icon>
+      <div class="img-holder">
+        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73546218-c0b07780-4434-11ea-8063-dd45d2dbbbad.jpg"></ns-image>
       </div>
       <div class="content">
         <div class="heading-holder">
-          <h3 class="heading">Heading</h3>
+          <h3 class="heading">Add Pluming & Drains</h3>
         </div>
         <div class="paragraph-holder">
-          <p class="paragraph">Paragraph</p>
+          <p class="paragraph">For just £4 per month</p>
         </div>
         <div class="cta-holder">
-          <ns-cta class="cta" type="text">Call to action</ns-cta>
+          <ns-cta class="cta" type="text">Upgrade cover</ns-cta>
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@ title: Welcome to your account
         <ns-card type="support">
           <h2 slot="heading">Meter readings</h2>
           <p slot="paragraph">It's time to give us your meter reading.</p>
-          <a slot="cta" href="#!">
+          <a slot="cta" href="../meter-readings/smart-settings/readings/">
             <ns-cta type="text">Submit now</ns-cta>
           </a>
         </ns-card>
@@ -202,7 +202,17 @@ title: Welcome to your account
   <ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
   <ns-panel slot="panel">
     <div class="splash">
-      Rewards content
+     <ns-lockup type="lockjaw" decoration="">
+  <h2 slot="heading">
+    <span class="h5">Your Rewards.</span>
+    <span class="h1 enlighten">Wow,<b> look at you go!</b></span>
+  </h2>
+  <p slot="paragraph">Looks like you’ve snapped up all our offers! But don’t worry, we’ll be adding some new ones soon. So be sure to check back.</p>
+  <a slot="cta" href="#!">
+    <ns-cta type="direct">View Rewards</ns-cta>
+  </a>
+  <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/49559070/72909820-84439400-3d2f-11ea-90fa-b23c98d6e3ee.jpg"></ns-image>
+      </ns-lockup>
     </div>
   </ns-panel>
 </ns-tabs>
