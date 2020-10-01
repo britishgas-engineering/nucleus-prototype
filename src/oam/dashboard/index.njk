@@ -9,18 +9,55 @@ title: Welcome to your account
     <h1>{{title}}</h1>
   </div>
   <div class="splash triple">
-    <ns-card type="support">
-      <p slot="paragraph">It's time to book your annual service visit</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Book a slot</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <p slot="paragraph">Your energy bill of £120.41 is ready</p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Pay now</ns-cta>
-      </a>
-    </ns-card>
+
+    <div class="np-card notification type-a">
+      <div class="icon-holder">
+        <ns-icon type="boiler" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Annual service</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">It's time to book your annual service visit</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Book now</ns-cta>
+        </div>
+      </div>
+    </div>
+
+    <div class="np-card notification type-b">
+      <div class="icon-holder">
+        <ns-icon type="bill" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="paragraph-holder">
+          <p class="paragraph">Your energy bill of £120.41 is ready</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Pay now</ns-cta>
+        </div>
+      </div>
+    </div>
+
+    <div class="np-card notification type-c">
+      <div class="icon-holder">
+        <ns-icon type="info" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Heading</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">Paragraph</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Call to action</ns-cta>
+        </div>
+      </div>
+    </div>
+
   </div>
 </ns-panel>
 

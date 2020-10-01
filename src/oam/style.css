@@ -130,3 +130,106 @@
   display: block;
   padding-left: 1.25em;
 }
+
+
+
+/* experiment with ns-card for notification */
+
+.np-card.type-a {
+  color: #FFC72C;
+}
+
+.np-card.type-b {
+  color: #862633;
+}
+
+.np-card.type-c {
+  color: #009639;
+}
+
+.np-card {
+  background-color: #fff;
+}
+
+.np-card.notification {
+  position: relative;
+  border-radius: 0 0 1em;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 .5em 1.5em 0 rgba(51, 63, 72, .15);
+  box-shadow: 0 .5em 1.5em 0 rgba(51, 63, 72, .15);
+  padding: 1em 1em 1em 1.5em;
+  padding-left: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-min-content 1fr;
+  -ms-grid-columns: min-content 1fr;
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas: "a b";
+}
+
+.np-card.notification::before {
+  background-color: currentColor;
+  position: absolute;
+  content: "";
+  width: .5em;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.np-card.notification .icon-holder {
+  margin-top: -.16666667em;
+  width: 2.0736em;
+  height: 2.0736em;
+  margin-top: -.25em;
+  margin-right: 0;
+  margin-left: .71191406em;
+  float: none;
+  -webkit-transform: none;
+  transform: none;
+  grid-area: a;
+  float: right;
+  width: 2.0736em;
+  height: 2.0736em;
+}
+
+.np-card.notification .content {
+  display: grid;
+  -ms-grid-rows: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  color: #333f48;
+  padding-left: .864em;
+  grid-area: b;
+}
+
+.np-card.notification .content .heading-holder .heading {
+  font-size: 1.31453414em;
+  margin-top: 0;
+  letter-spacing: -.01625em;
+  line-height: 1.35;
+  margin-bottom: .9em;
+  max-width: 32em;
+  font-weight: 400;
+  color: inherit;
+}
+
+.np-card.notification .content .paragraph-holder .paragraph {
+  font-family: "BG Flame Light",sans-serif;
+  font-size: 1.2em;
+  margin-top: 0;
+  letter-spacing: -.01625em;
+  line-height: 1.4;
+  margin-bottom: .7em;
+  max-width: 32em;
+  font-weight: 400;
+  color: inherit;
+}
+
+.np-card.notification .content .cta-holder {
+  align-self: end;
+}
