@@ -34,6 +34,11 @@
 </div>
 
 <script>
+  
+  document.querySelector('label[for="account-address"]').addEventListener('click', () => {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  })
+
   // Hide submit button
   // document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
   var addresses = [{
