@@ -8,27 +8,27 @@
     <p><label class="show-cta" for="account-address">Change address</label></p>
   </dd>
 
-  <dd class="show-form">
+  <dd class="show-form style-hack">
     <label class="show-cta show-cancel" for="account-address">Cancel</label>
 
-  <ns-panel>
+    <ns-form class="splash style-hack" nf-model="model.oam-02">
+    
+      <span class="np-callout" style="--np-callout-colour: #209cee">
+        <span class="heading">
+          <ns-icon size="1" type="info"></ns-icon>
+          <h3 class="h6">Are you moving home?</h3>
+        </span>
+        <span class="content">
+          <p>If you want to change the energy supply or services to another home, then please tell us you're <a href="https://britishgas.com/discover/home-move/">moving home</a> </p>
+        </span>
+        </span>
 
-    <ns-highlighter type="info">
-      <h2 slot="heading">Are you moving home?</h2>
-      <p>If you want to change the energy supply or services to another home, then please tell us you're <a href="https://britishgas.com/discover/home-move/">moving home</a> </p>
-    </ns-highlighter>
-
-</ns-panel>
-      <main class="ndsn">
-    <ns-form class="splash style-hack" nf-model="model.oam-02"> <ns-form class="splash style-hack" nf-model="model.oam-02">
-    <ns-fieldset legend="Your correspondence address">
-      <nsx-address-selector></nsx-address-selector>
+      <ns-fieldset legend="Your correspondence address">
+        <nsx-address-selector></nsx-address-selector>
       </ns-fieldset>
     </ns-form>
 
-  <ns-cta id="confirm-address-button" nf-href="../success">Save correspondence address</ns-cta>
-
-</main>
+    <ns-cta id="confirm-address-button" nf-href="../success">Save correspondence address</ns-cta>
 
   </dd>
 </div>

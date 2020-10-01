@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
 ---
 
 
@@ -35,7 +36,7 @@ layout: base.njk
       </ul>
     </li>
     <li>
-      <h2><a href="/home-services.html">Home services</a></h2>
+      <h2><a href="/home-services.html">Home Services</a></h2>
       <ul>
         <li>
           <h3>Boilers and heating</h3>
@@ -65,7 +66,7 @@ layout: base.njk
           </ul>
         </li>
         <li>
-          <h3>Appliances and Electrical</h3>
+          <h3>Appliances and electrical</h3>
           <ul>
             <li><a href="/home-services/appliances-and-electrical/appliances-and-electrical-cover.html">Appliances &amp; electrical cover</a></li>
             <li><a href="/home-services/appliances-and-electrical/appliance-and-home-electrical-repairs.html">Appliances &amp; electrical repair</a></li>
@@ -82,7 +83,7 @@ layout: base.njk
       </ul>
     </li>
     <li>
-      <h2><a href="/smart-home.html">Smart home</a></h2>
+      <h2><a href="/smart-home.html">Smart Home</a></h2>
       <ul>
         <li>
           <h3>Getting started</h3>
@@ -109,7 +110,7 @@ layout: base.njk
         </li>
       </ul>
     </li>
-    <li>
+    <!-- <li>
       <h2><a href="/oam/login-register/v02/login-01-landing">My Account</a></h2>
       <ul>
         <li>
@@ -143,19 +144,19 @@ layout: base.njk
           </ul>
         </li>
       </ul>
-    </li>
+    </li> -->
+  </ul>
+  <ul>
+    <li><a href="/help-and-support">Help &amp; Support</a></li>
+    <li><a href="/business">Business</a></li>
+    <li><a href="/accessibility">Accessibility tools</a></li>
+    <li><a href="/oam/login-register/v02/reg-01-landing">Register</a></li>
+    <li><a href="/oam/login-register/v02/login-01-landing">Log in</a></li>
   </ul>
 </ns-header>
-
-
-<!-- ns-header needs skip links -->
-<div id="content"></div>
-<div id="footer"></div>
-<!-- skip links end -->
-
-
 
 <main id="content">
   {{content | safe}}
 </main>
+
 <nsx-footer id="footer"></nsx-footer>
