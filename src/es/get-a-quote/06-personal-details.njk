@@ -1,0 +1,79 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Place your order.</span>
+    <span class="h1 enlighten">Here is what <b>you've chosen</b></span>
+  </h1>
+  <div slot="paragraph">
+    <dl class="dl-row">
+      <div>
+        <dt>Your tariff</dt>
+        <dd>Energy Plus Protection April 2020</dd>
+      </div>
+      <div>
+        <dt>Estimated price per month</dt>
+        <dd>£99.10</dd>
+      </div>
+      <div>
+        <dt>Estimated price per year</dt>
+        <dd>£1179.37</dd>
+      </div>
+    </dl>
+  </div>
+</ns-landmark>
+
+
+<ns-panel>
+  <div class="splash">
+    <h2>Enter your details</h2>
+  </div>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="personal-title" value="">
+      <label slot="label">Title</label>
+      <input autocomplete="honorific-prefix" type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="personal-first-name" value="">
+      <label slot="label">First name</label>
+      <input autocomplete="given-name" type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="personal-surname" value="">
+      <label slot="label">Surname</label>
+      <input autocomplete="family-name" type="text">
+    </ns-inputter>
+    <ns-inputter mask="DD/MM/YYYY" separator="/" validation="[&quot;isRequired&quot;,&quot;isDate&quot;]' helper="Why do we need this?" name="personal-date-of-birth" value="">
+      <div slot="tip-details">
+        <p>We will use this to identify you for security purposes.</p>
+      </div>
+      <label slot="label">Date of birth</label>
+      <input type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" helper="Why do we need this?" name="personal-telephone" value="">
+      <div slot="tip-details">
+        <p>We might use this to get in touch with you about your order.</p>
+      </div>
+      <label slot="label">Telephone number</label>
+      <input type="tel" placeholder="e.g. 07890123987" autocomplete="tel">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isEmail&quot;]" helper="Why do we need this?" name="personal-email" value="">
+      <div slot="tip-details">
+        <p>We might use this to get in touch with you about your order.</p>
+      </div>
+      <label slot="label">Email address</label>
+      <input type="email" placeholder="e.g. email@address.co.uk">
+    </ns-inputter>
+    <ns-cta nf-href="../07-summary">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<!-- END QUESTION SET #1 -->
+
+<ns-panel decoration="">
+  <div class="splash triple" role="list">
+    <ns-card role="listitem" type="flat">
+      <h3 slot="heading" role="heading" aria-level="3">Not happy with your choice?</h3>
+      <p slot="paragraph">To choose a different type of energy, change your postcode, or payment method, you’ll need to get another quote </p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Get another quote</ns-cta>
+      </a>
+    </ns-card>
+  </div>
+</ns-panel>

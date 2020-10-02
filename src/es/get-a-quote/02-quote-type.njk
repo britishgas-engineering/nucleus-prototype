@@ -1,0 +1,31 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">A bit about you</span>
+  </h1>
+  <p slot="paragraph">Enter some quick details to get the ball rolling.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="What would you like a quote for?" name="quote-type" value="">
+      <input type="radio" id="radio-b-1" name="radio-b" value="Gas and electricity" checked>
+      <label for="radio-b-1">Gas and electricity</label>
+      <input type="radio" id="radio-b-2" name="radio-b" value="Gas">
+      <label for="radio-b-2">Gas</label>
+      <input type="radio" id="radio-b-3" name="radio-b" value="Electricity">
+      <label for="radio-b-3">Electricity</label>
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" value="" helper="We need your postcode as prices may vary by region" name="enter-your-postcode">
+      <label slot="label">Enter your postcode</label>
+      <input type="text" placeholder="e.g. TW18 6PQ" name="postcode" autocomplete="postal-code">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="quote-type"]').value;
+    return '../03-meter-type';
+  }
+</script>

@@ -1,0 +1,8 @@
+{
+  "layout": "nucleus",
+  "project": "es",
+  "jquery": false,
+  "script": true,
+  "style": true,
+  "teamname": "Energy Sales"
+}

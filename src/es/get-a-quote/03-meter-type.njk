@@ -1,0 +1,44 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Your current set up</span>
+  </h1>
+  <p slot="paragraph">Tell us how your energy usage is measured and paid for.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="What type of meter do you have?" helper="Not sure which meter to select?" name="meter-type" value="">
+      <div slot="tip-details">
+        <p>If you are not sure what type of meter you have, select <b>Standard</b></p>
+        <p>If you already have smart meters with another energy supplier, you may lose some smart features when transferring your energy supply to British Gas. We're working on this and will support all smart meters in the near future.</p>
+      </div>
+      <input type="radio" id="radio-c-1" name="radio-c" value="Standard" checked>
+      <label for="radio-c-1">Standard</label>
+      <input type="radio" id="radio-c-2" name="radio-c" value="Economy 7">
+      <label for="radio-c-2">Economy 7</label>
+      <input type="radio" id="radio-c-3" name="radio-c" value="Multi-rate">
+      <label for="radio-c-3">Multi-rate</label>
+      <input type="radio" id="radio-c-4" name="radio-c" value="Smart">
+      <label for="radio-c-4">Smart</label>
+    </ns-inputter>
+    <ns-inputter heading="How do you currently pay for your energy?" helper="Direct Debit will save you money.">
+      <div slot="tip-details">
+        <p>Paying by Direct Debit will save you, on average, <b><ns-price pence="4200"></ns-price></b> per year for gas and <b><ns-price pence="4300"></ns-price></b> per year for electricity. Based on an average consumption of 12,000 kWh for gas and 3,100 kWh for single rate electricity, rounded and VAT.</p>
+      </div>
+      <input type="radio" id="radio-d-1" name="radio-d" value="Monthly Direct Debit" checked>
+      <label for="radio-d-1">Monthly Direct Debit</label>
+      <input type="radio" id="radio-d-2" name="radio-d" value="Quarterly cash or cheque">
+      <label for="radio-d-2">Quarterly cash or cheque</label>
+      <input type="radio" id="radio-d-3" name="radio-d" value="Pay as you go">
+      <label for="radio-d-3">Pay as you go</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="meter-type"]').value;
+    return '../04-energy-type';
+  }
+</script>

@@ -1,0 +1,105 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">How much energy do you use?</span>
+  </h1>
+  <p slot="paragraph">Tell us how much energy you use. If you know, we'll be able to provide a more accurate estimate.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="" heading="Do you know how much energy you use in kiliowatt hours (kWh)?" helper="What is a kWh?" name="energy-type" value="">
+      <div slot="tip-details">
+        <p>A kWh stands for kilowatt hour - the unit used to measure energy use.</p>
+        <p>1 kWh of gas will heat a combi boiler for 2hrs and 1 kWh of electricity will power a 40 watt light bulb for 25 hours.</p>
+      </div>
+      <input type="radio" onchange="swapState(this)" id="radio-e-1" name="radio-e" value="Estimate" checked>
+      <label for="radio-e-1">No</label>
+      <input type="radio" onchange="swapState(this)" id="radio-e-2" name="radio-e" value="kWh">
+      <label for="radio-e-2">Yes</label>
+    </ns-inputter>
+    <ns-fieldset id="radio-e-1Switch" legend="About your home">
+      <ns-inputter validation="" heading="How many bedrooms does your home have?" helper="How does this information help?" name="home-bedrooms" value="">
+        <div slot="tip-details">
+          <p>The size of your home gives us an idea on the volume of energy you use.</p>
+        </div>
+        <label slot="label">How many bedrooms do you have?</label>
+        <select name="select">
+          <option value="">Please Select</option>
+          <option value="value-01">1</option>
+          <option value="value-02">2</option>
+          <option value="value-03">3</option>
+          <option value="value-04">4</option>
+          <option value="value-05">5</option>
+          <option value="value-06">6</option>
+          <option value="value-07">7</option>
+          <option value="value-08">8</option>
+          <option value="value-09">9</option>
+          <option value="value-10">10 or more</option>
+        </select>
+      </ns-inputter>
+      <ns-inputter validation="" heading="How many people live there?" helper="How does this information help?" name="home-people" value="">
+        <div slot="tip-details">
+          <p>The number of people living in your home gives us an indication on the energy use.</p>
+        </div>
+        <label slot="label">How many people live there?</label>
+        <select name="select">
+          <option value="">Please Select</option>
+          <option value="value-01">1</option>
+          <option value="value-02">2</option>
+          <option value="value-03">3</option>
+          <option value="value-04">4</option>
+          <option value="value-05">5</option>
+          <option value="value-06">6</option>
+          <option value="value-07">7</option>
+          <option value="value-08">8</option>
+          <option value="value-09">9</option>
+          <option value="value-10">10 or more</option>
+        </select>
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-fieldset id="radio-e-2Switch" legend="Your annual energy usage" class="pt-hide">
+      <ns-inputter mask="        " separator="" validation="" helper="Where can I find this information?" value="" name="annual-gas">
+        <div slot="tip-details">
+          <p>Your current energy provider will display this information on your statement.</p>
+        </div>
+        <label slot="label">Gas usage in kWh</label>
+        <input type="text">
+      </ns-inputter>
+      <ns-inputter mask="        " separator="" validation="" helper="Where can I find this information?" value="" name="annual-electricity">
+        <div slot="tip-details">
+          <p>Your current energy provider will display this information on your statement.</p>
+        </div>
+        <label slot="label">Electricity usage in kWh</label>
+        <input type="text">
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<ns-panel>
+  <div class="splash">
+    <ns-accordion>
+      <h3 slot="heading">Frequently asked questions</h3>
+      <ns-expander open="false">
+        <h4 slot="heading">What is a kiliowatt hour (kWh)?</h4>
+        <p>A kWh stands for kilowatt hour - the unit used to measure energy use. 1 kWh will power a 40 watt light bulb for 25 hours.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">What is a tariff information label?</h4>
+        <p>The Tariff Information Label (TIL) gives you the key facts about a tariff upfront and in one place. It lets you know any special rewards that may apply to the tariff.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">What is a personal projection?</h4>
+        <p>A Personalised Projection is a personalised quote based on your home and your consumption. It gives you the best estimate on how much you will pay to help you pick the right tariff.</p>
+      </ns-expander>
+    </ns-accordion>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="energy-type"]').value;
+    return '../05-tarriff';
+  }
+</script>

@@ -1,0 +1,39 @@
+---
+title: Get a quote
+eleventyNavigation:
+  key: Get a quote
+  parent: es
+  title: Get a quote journey
+  excerpt: Let's find an energy tariff for you.
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Get a quote</span>
+  </h1>
+  <p slot="paragraph">Let's find an energy tariff for you.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you already a British Gas customer?" helper="If so, you’ll be invited to log in to your account to get a more accurate quote." name="customer" value="">
+      <input type="radio" id="radio-a-1" name="radio-a" value="No" checked>
+      <label for="radio-a-1">No</label>
+      <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
+      <label for="radio-a-2">Yes</label>
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="customer"]').value;
+    if (data === 'No') {
+      return '01-moving-home';
+    }
+    else {
+      return 'https://www.britishgas.co.uk/identity/';
+    }
+  }
+</script>
