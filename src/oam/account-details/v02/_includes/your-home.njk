@@ -1,12 +1,13 @@
 <div class="splash">
   <h3 class="after-value">Your home</h3>
 
-  <ns-inputter class="style-hack drop-switch" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
+  <ns-inputter class="style-hack drop-switch" nf-model="model.oam-02.address-selector" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
     <div slot="tip-details">..........</div>
     <label slot="label">Select which home</label>
     <select>
-      <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
+      <option value="value-01">One Infinite Loop, Cupertino</option>
       <option value="value-02">Buckingham palace</span></option>
+      <option>134 Queenstown Rd, Battersea, London<option>
     </select>
   </ns-inputter>
 
