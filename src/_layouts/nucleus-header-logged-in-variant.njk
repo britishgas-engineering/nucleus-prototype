@@ -135,15 +135,35 @@ branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
       <a href="/oam/dashboard#your-products">Your Products</a>
       <a href="/oam/account-details/v02/details">Account details</a>
     </nav>
-    <ns-inputter class="address" name="select-an-option" value="">
-      <label slot="label" class="sr-only">Your addresses</label>
-      <select>
-        <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
-        <option value="value-02">Buckingham palace</span></option>
-      </select>
-    </ns-inputter>
+    <ns-inputter class=" address" nf-model="model.oam-02.address-selector" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
+    <select class="premise-select">
+      <option>One Infinite Loop, Cupertino</option>
+    </select>
+  </ns-inputter>
   </div>
 </div>
+
+  <script>
+
+    window.addEventListener('load', function () {
+      var obj = getModelData('model.oam-02').fields.find(function(field) {
+        return field.name === 'address-selector';
+      });
+
+      var select = document.querySelector('.premise-select')
+      if(select) {
+        select.options[select.options.length] = new Option(obj.value, obj.value);
+        select.selectedIndex = select.options.length-1;
+      }
+      
+    })
+    
+
+  </script>
+
+
+
+
 
 <main id="content">
   {{content | safe}}

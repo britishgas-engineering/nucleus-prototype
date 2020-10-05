@@ -5,8 +5,8 @@
     <div slot="tip-details">..........</div>
     <label slot="label">Select which home</label>
     <select class="premise-select">
-      <option>One Infinite Loop, Cupertino</option>
-      <option>Buckingham palace</option>
+      <option value="value-01">One Infinite Loop, Cupertino</option>
+      <option value="value-02">Buckingham palace</option>
     </select>
   </ns-inputter>
 
@@ -19,7 +19,7 @@
 
       var select = document.querySelector('.premise-select')
       if(select) {
-        select.options[select.options.length] = new Option(obj.value, obj.value);
+        select.options[select.options.length] = new Option(obj.value-02, obj.value-02);
         select.selectedIndex = select.options.length-1;
       }
       
