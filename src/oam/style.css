@@ -260,3 +260,18 @@
 .np-card.notification .content .cta-holder {
   align-self: end;
 }
+
+
+
+/* .hide-ticks
+  Hide ticks on UL
+*/
+
+.ndsn .ul-ticked li.hide-ticks::before {
+    border-bottom: .15em solid #fff;
+    border-left: .15em solid #fff;
+    width: .75em;
+    height: .45em;
+    -webkit-transform: translate(-55%,-75%) rotate(-45deg);
+    transform: translate(-55%,-75%) rotate(-45deg);
+}
