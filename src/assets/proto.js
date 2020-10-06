@@ -134,7 +134,7 @@ function updateUI() {
     });
 
     // Update text with nf-model
-    var spans = document.querySelectorAll('[nf-model]');
+    var spans = document.querySelectorAll('span[nf-model]');
 
     spans.forEach((span) => {
         var path = span.getAttribute('nf-model').split('.');
@@ -147,8 +147,18 @@ function updateUI() {
         if(text && text.value) {
             span.innerText = text.value;
         }
+    });
 
-
+    //Update select inputs
+    var inputters = document.querySelectorAll('ns-inputter[nf-model]');
+    inputters.forEach((input) => {
+        var path = input.getAttribute('nf-model').split('.');
+        var prop = path.pop();
+        var model = getModelData(path.join('.'));
+        var value = model.fields && model.fields.find((field) => {
+            return field.name === prop;
+        })
+        input.value = value.value;
     });
 }
 

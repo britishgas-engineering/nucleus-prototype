@@ -83,8 +83,8 @@
   margin-right: 1em;
   display: inline-block;
   color: #333f48 !important;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-decoration: none !important;
 }
 
@@ -259,4 +259,19 @@
 
 .np-card.notification .content .cta-holder {
   align-self: end;
+}
+
+
+
+/* .hide-ticks
+  Hide ticks on UL
+*/
+
+.ndsn .ul-ticked li.hide-ticks::before {
+    border-bottom: .15em solid #fff;
+    border-left: .15em solid #fff;
+    width: .75em;
+    height: .45em;
+    -webkit-transform: translate(-55%,-75%) rotate(-45deg);
+    transform: translate(-55%,-75%) rotate(-45deg);
 }

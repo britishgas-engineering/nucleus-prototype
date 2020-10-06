@@ -1,14 +1,32 @@
 <div class="splash">
   <h3 class="after-value">Your home</h3>
 
-  <ns-inputter class="style-hack drop-switch" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
+  <ns-inputter class="style-hack drop-switch" nf-model="model.oam-02.address-selector" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
     <div slot="tip-details">..........</div>
     <label slot="label">Select which home</label>
-    <select>
-      <option value="value-01"><span nf-model="model.oam-02.address-selector">One Infinite Loop, Cupertino</span></option>
-      <option value="value-02">Buckingham palace</span></option>
+    <select class="premise-select">
+      <option value="value-01">One Infinite Loop, Cupertino</option>
+      <option value="value-02">Buckingham palace</option>
     </select>
   </ns-inputter>
+
+  <script>
+
+    window.addEventListener('load', function () {
+      var obj = getModelData('model.oam-02').fields.find(function(field) {
+        return field.name === 'address-selector';
+      });
+
+      var select = document.querySelector('.premise-select')
+      if(select) {
+        select.options[select.options.length] = new Option(obj.value-02, obj.value-02);
+        select.selectedIndex = select.options.length-1;
+      }
+      
+    })
+    
+
+  </script>
 
   <dl class="dl-row drop-switch-selection">
     <div class="drop-switch-option-a">
