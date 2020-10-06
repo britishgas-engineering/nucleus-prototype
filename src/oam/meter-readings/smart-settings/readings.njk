@@ -38,7 +38,7 @@ title: Meter readings
 
 <ns-panel>
 <div class="splash">
-  <ns-table class="service-docs-table">
+  <ns-table class="meter-reads-table">
   <table>
     <caption hidden="">Readings used to create your bills</caption>
     <thead>
@@ -74,28 +74,16 @@ title: Meter readings
         <td>00935</td>
         <td>1596kWh</td>
       </tr>
-      <tr>
-        <td>04/02/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>01/01/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>07/12/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>05/11/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
     </tbody>
   </table>
 </ns-table>
 </div>
 </ns-panel>
+
+<script>
+.meter-reads-table {
+  @media (max-width: 480px {
+    overflow-x: scroll;
+  }
+}
+</script>
