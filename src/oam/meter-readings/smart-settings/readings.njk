@@ -1,5 +1,5 @@
 ---
-layout: nucleus-header-logged-in.njk
+layout: nucleus-header-logged-in-variant.njk
 title: Meter readings
 ---
 
@@ -38,7 +38,7 @@ title: Meter readings
 
 <ns-panel>
 <div class="splash">
-  <ns-table class="service-docs-table">
+  <ns-table class="meter-reads-table">
   <table>
     <caption hidden="">Readings used to create your bills</caption>
     <thead>
@@ -56,46 +56,34 @@ title: Meter readings
       </tr>
       <tr>
         <td>01/06/2020</td>
-        <td>04635</td>
-        <td>1596kWh</td>
+        <td>04624</td>
+        <td>1477kWh</td>
       </tr>
       <tr>
         <td>08/05/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
+        <td>04337</td>
+        <td>1385kWh</td>
       </tr>
       <tr>
         <td>05/04/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
+        <td>04091</td>
+        <td>1294kWh</td>
       </tr>
       <tr>
         <td>03/03/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>04/02/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>01/01/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>07/12/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
-      </tr>
-      <tr>
-        <td>05/11/2020</td>
-        <td>00935</td>
-        <td>1596kWh</td>
+        <td>03847</td>
+        <td>1096kWh</td>
       </tr>
     </tbody>
   </table>
 </ns-table>
 </div>
 </ns-panel>
+
+<script>
+.meter-reads-table {
+  @media (max-width: 480px {
+    overflow-x: scroll;
+  }
+}
+</script>
