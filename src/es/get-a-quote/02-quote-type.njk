@@ -15,13 +15,21 @@
       <input type="radio" id="radio-b-3" name="radio-b" value="Electricity">
       <label for="radio-b-3">Electricity</label>
     </ns-inputter>
-    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" value="" helper="We need your postcode as prices may vary by region" name="enter-your-postcode">
-      <label slot="label">Enter your postcode</label>
-      <input type="text" placeholder="e.g. TW18 6PQ" name="postcode" autocomplete="postal-code">
-    </ns-inputter>
+
+
+
+    
+
+
+
+<ns-fieldset legend="What's your address?">
+  <span>We need your address as prices may vary by region.</span>
+  <nsx-address-selector></nsx-address-selector>
+</ns-fieldset>
+
+
     <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-  </ns-form>
-</ns-panel>
+
 
 <script>
   function getDynamicURL() {

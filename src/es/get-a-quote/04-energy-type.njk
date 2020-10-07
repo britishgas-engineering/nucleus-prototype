@@ -7,11 +7,13 @@
 
 <ns-panel>
   <ns-form class="splash" nf-model="model.get-a-quote">
-    <ns-inputter validation="" heading="Do you know how much energy you use in kiliowatt hours (kWh)?" helper="What is a kWh?" name="energy-type" value="">
+    <ns-inputter validation="" heading="Do you know how much energy you use in kiliowatt hours (kWh)?" 
+    <!--helper="What is a kWh?" name="energy-type" value=""> 
       <div slot="tip-details">
         <p>A kWh stands for kilowatt hour - the unit used to measure energy use.</p>
         <p>1 kWh of gas will heat a combi boiler for 2hrs and 1 kWh of electricity will power a 40 watt light bulb for 25 hours.</p>
       </div>
+      
       <input type="radio" onchange="swapState(this)" id="radio-e-1" name="radio-e" value="Estimate" checked>
       <label for="radio-e-1">No</label>
       <input type="radio" onchange="swapState(this)" id="radio-e-2" name="radio-e" value="kWh">
