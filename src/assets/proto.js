@@ -109,14 +109,6 @@ function updateUI() {
             if(!formData) {
                 console.log('Auto generating model data for ' + path);
             }
-            // Update UI from data
-            // formData.fields.forEach((field) => {
-            //     console.log(field.name, field.value);
-            //     const inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
-            //     if(inputter) {
-            //         inputter.value = field.value;
-            //     }
-            // })
 
             // Or we could update all fields, so you could have duplicate fields????
             var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach((inputter) => {
@@ -267,10 +259,8 @@ if(addressSelector) {
 
 if(addressSelector) {
     // Hide submit button
-    //document.querySelector('#submit-button').setAttribute('style', 'display: none');
     addressSelector.addEventListener('address-selected', (event) => {
         console.log('Address selected ' + event.detail.address.label);
-        //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
         if(event.target.getAttribute('nf-model-path')) {
             setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
             setModelData(event.target.getAttribute('nf-model-path') + '-postcode', event.target.postcode);
