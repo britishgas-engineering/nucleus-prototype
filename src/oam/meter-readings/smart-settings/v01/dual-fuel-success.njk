@@ -17,13 +17,13 @@ metertype: smart meters
 
     <h2>Electricity meter</h2>
 
-    {% include "./_includes/ns-selector-elec.njk" -%}
-
-  
-<div id="update-success">
+   <div id="update-success">
   <!-- Anchor to success highlighter -->
 </div>
 
+ {% include "./_includes/ns-selector-elec.njk" -%}
+
+  
  <ns-highlighter type="success">
       <h2 slot="heading">Your smart electricity frequency has been saved.</h2>
       <p>Your smart electricity meter has been set to take readings <span nf-model="model.smart-meter-settings.elec-selector">[elec]</span>.</p>
