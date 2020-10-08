@@ -12,8 +12,16 @@
     <label class="show-cta show-cancel" for="account-address">Cancel</label>
 
     <ns-form class="splash style-hack" nf-model="model.oam-02">
-    
-      <span class="np-callout" style="--np-callout-colour: #209cee">
+
+      <ns-fieldset legend="Enter new correspondence address">
+        <nsx-address-selector></nsx-address-selector>
+      </ns-fieldset>
+    </ns-form>
+
+    <span class="style-hack"><ns-cta id="confirm-address-button" nf-href="../success">Save correspondence address</ns-cta></span>
+
+ 
+   <span class="np-callout" style="--np-callout-colour: #209cee">
         <span class="heading">
           <ns-icon size="1" type="info"></ns-icon>
           <h3 class="h6">Are you moving home?</h3>
@@ -22,15 +30,8 @@
           <p>If you want to change the energy supply or services to another home, then please tell us you're <a href="https://britishgas.com/discover/home-move/">moving home</a> </p>
         </span>
         </span>
+ </dd>
 
-      <ns-fieldset legend="Your correspondence address">
-        <nsx-address-selector></nsx-address-selector>
-      </ns-fieldset>
-    </ns-form>
-
-    <ns-cta id="confirm-address-button" nf-href="../success">Save correspondence address</ns-cta>
-
-  </dd>
 </div>
 
 <script>
