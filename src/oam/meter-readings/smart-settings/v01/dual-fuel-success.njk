@@ -19,7 +19,12 @@ metertype: smart meters
 
     {% include "./_includes/ns-selector-elec.njk" -%}
 
-    <ns-highlighter type="success">
+  
+<div id="update-success">
+  <!-- Anchor to success highlighter -->
+</div>
+
+ <ns-highlighter type="success">
       <h2 slot="heading">Your smart electricity frequency has been saved.</h2>
       <p>Your smart electricity meter has been set to take readings <span nf-model="model.smart-meter-settings.elec-selector">[elec]</span>.</p>
     </ns-highlighter>
@@ -33,7 +38,7 @@ metertype: smart meters
     var data = document.querySelector('ns-inputter[name="gas-selector"]').value;
 
     if (data = 'gas') {
-      return '../dual-fuel-success';
+      return '../dual-fuel-success#update-success';
     }
 
   }
