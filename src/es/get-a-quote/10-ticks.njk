@@ -1,33 +1,20 @@
-
-
-
-<ns-landmark type="lakeside">
-  <h1 slot="heading">
-    <span class="h5">Place your order.</span>
-    <span class="h1">Your summary</span>
-  </h1>
-  <div slot="paragraph">
-    <dl class="dl-row">
-      <div>
-        <dt>Your marketing preferences</dt>
-        <dd>You have chosen to be contacted by Email</dd>
-      </div>
-    </dl>
+<ns-panel decoration="">
+<div class="splash">
+  <h5>Enter your details</h5>
+    <h1>Important information</h1>
   </div>
-  <a slot="cta" href="#!">
-    <ns-cta href="../09-marketing" icon="arrow-left" type="text">Change these details</ns-cta>
-  </a>
-</ns-landmark>
+<ns-form class="splash" >
+
+
 
 
 
 
 <!-- START QUESTION SET #2 -->
-<ns-panel decoration="">
-<ns-form class="splash" nf-model="model.get-a-quote">
+
 
 <ns-fieldset legend="">
-  <h2>Important information</h2>
+
 
 
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" >
@@ -64,4 +51,143 @@ You’ve got a 14 cooling off period if you change your mind.</span>
 
 <!-- END QUESTION SET #2 -->
 
+<!-- Summary -->
+
+<ns-panel>
+  <div class="splash">
+  <h3>Order summary</h3>
+    <ns-accordion>
+      <ns-expander open="false">
+        <h4 slot="heading">Your selected energy tariff</h4>
+         <dl class="dl-row">
+          <div>
+           <dt>Your tariff</dt>
+
+           <dd>
+           Energy Plus Protection April 2020</dd>
+          </div>
+          <div>
+           <dt>Estimated price per month</dt>
+           <dd>£99.10</dd>
+          </div>
+          <div>
+           <dt>Estimated price per year</dt>
+           <dd>£1179.37</dd>
+          </div>
+         </dl>
+      </ns-expander>
+
+      <ns-expander open="false">
+        <h4 slot="heading">Your personal details</h4>
+         <dl class="dl-row">
+          <div>
+           <dt>Name</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-title">[title]</span>
+          <span nf-model="model.get-a-quote.personal-first-name">[first-name]</span>
+          <span nf-model="model.get-a-quote.personal-surname">[surname]</span>
+        </dd>
+          </div>
+          <div>
+        <dt>Date of birth</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-date-of-birth">[date-of-birth]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Telephone number</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-telephone">[telephone]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Email</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-email">[email]</span>
+        </dd>
+      </div>
+    </dl>
+      <a href="#!">
+    <ns-cta href="../06-personal-details" icon="arrow-left" type="text">Change your details</ns-cta>
+  </a>
+  
+      </ns-expander>
+
+      <ns-expander open="false">
+        <h4 slot="heading">Anything we should know about?</h4>
+         <dl class="dl-row">
+      <div>
+        <dt>Anything we should know about?</dt>
+        <dd>
+          There's someone at risk in your home who could be affected by gas and electricity problems and outages.
+        </dd>
+      </div>
+    </dl>
+      <a href="#!">
+    <ns-cta href="../07-anything" icon="arrow-left" type="text">Change your details</ns-cta>
+  </a>
+  
+      </ns-expander>
+
+       <ns-expander open="false">
+        <h4 slot="heading">Your payment details</h4>
+         <dl class="dl-row">
+          <div>
+           <dt>Account number</dt>
+        <dd>
+          <span nf-model="model.payment.bank-acc-number">[title]</span>
+        </dd>
+          </div>
+          <div>
+        <dt>Sort code</dt>
+        <dd>
+          <span nf-model="model.payment.bank-sort-code">[title]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Name of account holder</dt>
+        <dd>
+          <span nf-model="model.payment.bank-acc-holder">[telephone]</span>
+        </dd>
+      </div>
+      
+    </dl>
+      <a href="#!">
+    <ns-cta href="../06-personal-details" icon="arrow-left" type="text">Change your details</ns-cta>
+  </a>
+</ns-expander>
+
+<ns-expander open="false">
+        <h4 slot="heading">Your marketing preferences</h4>
+         <dl class="dl-row">
+      <div>
+        <dt>How would you like to be contacted?</dt>
+        <dd>
+          Email
+        </dd>
+      </div>
+    </dl>
+      <a href="#!">
+    <ns-cta href="../07-anything" icon="arrow-left" type="text">Change your details</ns-cta>
+  </a>
+      </ns-expander>
+
+    </ns-accordion>
+  </div>
+</ns-panel>
+
+
+
+<!-- Cancel? -->
+<ns-panel decoration="">
+  <div class="splash triple" role="list">
+    <ns-card role="listitem" type="flat">
+      <h3 slot="heading" role="heading" aria-level="3">Not happy with your choice?</h3>
+      <p slot="paragraph">To choose a different type of energy, change your postcode, or payment method, you’ll need to get another quote </p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Get another quote</ns-cta>
+      </a>
+    </ns-card>
+  </div>
+</ns-panel>
 

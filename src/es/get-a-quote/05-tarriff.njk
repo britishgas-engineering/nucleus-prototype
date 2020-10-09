@@ -1,7 +1,7 @@
 <ns-landmark type="hillside">
   <h1 slot="heading">
     <span class="h5">Your quote.</span>
-    <span class="h1 enlighten">We've got <b>3 energy tariffs for you</b></span>
+    <span class="h1 enlighten">We've got <b>4 energy tariffs for you</b></span>
   </h1>
   <p slot="paragraph">The following tariffs are based on the information you provided and show an average cost.</p>
   <p slot="paragraph">This may change depending on your usage.</p>
@@ -9,139 +9,216 @@
 
 
 <ns-panel>
-  <div class="splash triple">
-    <ns-product-card keyline="">  
-      <ns-image slot="image" src="https://user-images.githubusercontent.com/53818498/95077991-5448ef00-070c-11eb-8763-9d623a3c2c49.jpg" alt="Description of image" ratio="16x9"></ns-image>  
-      <h2 slot="name">The Fixed One</h2>  
-      <h3 slot="price-heading">Estimated</h3>  
-      <div slot="price">    <p><b>        <ns-price pence="9400"></ns-price>      </b> / month</p>    <p>      <ns-price pence="112800"></ns-price> / year    </p>  </div>  
-      <ns-expander slot="expander">    
-        <h3 slot="heading">Tariff overview</h3>
-        <dl class="dl-stack">
-        <div>
-          <dt>Lock in your energy unit rates</dt>
-            <dd>
-              <ul class="ul-ticked">
-                <li>Prices guaranteed until Nov 2021</li>
-                <li>We’ll match all the electricity you use with 100% renewable sources</li>
-              </ul>
-            </dd>
-        </div>   
-        </dl> 
-      </ns-expander>  
-      <ns-expander slot="expander">    
-        <h3 slot="heading">Price breakdown</h3>    
-          <dl class="dl-stack">
-          <h4>Gas tariff costs</h4>
+  <div class="splash">
+    <ns-form>
+    
+      <ns-inputter class="triple" heading="Select the energy tariff that best fits your needs" value="" name="tariffs">
+<!-- card start -->
+        <ns-product-card keyline="">  
+          <ns-image slot="image" src="https://user-images.githubusercontent.com/53818498/95592775-03553580-0a41-11eb-8546-4b0bc5758b4e.jpg" alt="Description of image" ratio="16x9"></ns-image>  
+          <h2 slot="name">The Green One</h2>  
+          <h3 slot="price-heading">Estimated</h3>  
+          <div slot="price">    <p><b>        <ns-price pence="9600"></ns-price>      </b> / month</p>    <p>      <ns-price pence="115200"></ns-price> / year    </p>  </div>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Tariff overview</h3>
+            <dl class="dl-stack">
             <div>
-              <dt>Estimated cost per year</dt>
-              <dd>£678</dd>
-              <dt>Estimated cost per quarter</dt>
-              <dd>£169.50</dd>
-              <dt>Estimated cost per month</dt>
-              <dd>£56.50</dd>
-              <dt>Standard unit rate</dt>
-              <dd>3.089p per kWh</dd>
-              <dt>Standing charge</dt>
-              <dd>29.404p per day</dd>
-              <dt>Price guaranteed until</dt>
-              <dd>30/11/2021</dd>
-              <dt>Exit fees</dt>
-              <dd>£30</dd>
-            </div>
-          </dl>
-          <a href="" >Gas tariff information</a></p>
-          <dl class="dl-stack">
-          <h4>Electricity tariff costs</h4>
-            <div>
-              <dt>Estimated cost per year</dt>
-              <dd>£450</dd>
-              <dt>Estimated cost per quarter</dt>
-              <dd>£112.50</dd>
-              <dt>Estimated cost per month</dt>
-              <dd>£37.50</dd>
-              <dt>Standard unit rate</dt>
-              <dd>17.664p per kWh</dd>
-              <dt>Standing charge</dt>
-              <dd>24.789p per day</dd>
-              <dt>Price guaranteed until</dt>
-              <dd>30/11/2021</dd>
-              <dt>Exit fees</dt>
-              <dd>£30</dd>
-            </div>
-          </dl>
-          <a href="" >Electricity tariff information</a></p>
-        </ns-expander>
-        <a href="../06-personal-details" slot="cta" onClick="tarrifOne()">
-          <ns-cta>Select this tariff</ns-cta>
-        </a>
-      </ns-product-card>
+              <dt>Our greenest tariff</dt>
+                <dd>
+                  <ul class="ul-ticked">
+                   <li>Prices guaranteed until Nov 2021</li>
+                   <li>We’ll match 6% of the gas you use and 100% of the electricity you use on this tariff with renewable sources</li>
+                   <li>We’ll offset your gas carbon footprint from 94% of the gas you use on this tariff</li>
+                   <li>We’ll support the growth of up to 5 trees in the UK per fuel for each year you are on this tariff</li>
+                   <li>Help protect the Amazon rainforest and vulnerable species</li>
+                  </ul>
+               </dd>
+           </div>   
+           </dl> 
+          </ns-expander>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Price breakdown</h3>    
+             <dl class="dl-stack">
+              <h4>Gas tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£690</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£172.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£57.50</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>3.089p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>34.293p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>30/11/2021</dd>
+                  <dt>Exit fees</dt>
+                  <dd>£30</dd>
+               </div>
+             </dl>
+             <a href="" >Gas tariff information</a></p>
+             <dl class="dl-stack">
+              <h4>Electricity tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£462</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£115.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£38.50</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>17.664p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>32.721p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>30/11/2021</dd>
+                  <dt>Exit fees</dt>
+                  <dd>£30</dd>
+               </div>
+             </dl>
+             <a href="" >Electricity tariff information</a></p>
+            </ns-expander>
+            <a href="../06-personal-details" slot="cta" onClick="tarrifOne()">
+              <ns-cta>Select this tariff</ns-cta>
+            </a>
+          </ns-product-card>
 
-      <ns-product-card keyline="">  
-      <ns-image slot="image" src="https://user-images.githubusercontent.com/53818498/95101696-5de14f80-072a-11eb-85f6-3704601838f7.jpg" alt="Description of image" ratio="16x9"></ns-image>  
-      <h2 slot="name">The Standard Variable One</h2>  
-      <h3 slot="price-heading">Estimated</h3>  
-      <div slot="price">    <p><b>        <ns-price pence="9100"></ns-price>      </b> / month</p>    <p>      <ns-price pence="109200"></ns-price> / year    </p>  </div>  
-      <ns-expander slot="expander">    
-        <h3 slot="heading">Tariff overview</h3>
-        <dl class="dl-stack">
-        <div>
-          <dt>Enjoy total flexibility with no end date and no exit fees</dt>
-            <dd>
-              <ul class="ul-ticked">
-                <li>No end date or exit fees</li>
-                <li>Prices may go up or down over time</li>
-                <li>You’ll get 30 days’ notice of increases</li>
-                <li>Maximum price capped by Ofgem</li>
-              </ul>
-            </dd>
-        </div>   
-        </dl> 
-      </ns-expander>  
-      <ns-expander slot="expander">    
-        <h3 slot="heading">Price breakdown</h3>    
-          <dl class="dl-stack">
-          <h4>Gas tariff costs</h4>
+
+       <!-- card start -->
+        <ns-product-card keyline="">  
+          <ns-image slot="image" src="https://user-images.githubusercontent.com/53818498/95077991-5448ef00-070c-11eb-8763-9d623a3c2c49.jpg" alt="Description of image" ratio="16x9"></ns-image>  
+          <h2 slot="name">The Fixed One</h2>  
+          <h3 slot="price-heading">Estimated</h3>  
+          <div slot="price">    <p><b>        <ns-price pence="9400"></ns-price>      </b> / month</p>    <p>      <ns-price pence="112800"></ns-price> / year    </p>  </div>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Tariff overview</h3>
+            <dl class="dl-stack">
             <div>
-              <dt>Estimated cost per year</dt>
-              <dd>£658</dd>
-              <dt>Estimated cost per quarter</dt>
-              <dd>£164.50</dd>
-              <dt>Estimated cost per month</dt>
-              <dd>£54.83</dd>
-              <dt>Standard unit rate</dt>
-              <dd>17.664p per kWh</dd>
-              <dt>Standing charge</dt>
-              <dd>24.501p per day</dd>
-              <dt>Price guaranteed until</dt>
-              <dd>Not applicable</dd>
-              <dt>Exit fees</dt>
-              <dd>None</dd>
-            </div>
-          </dl>
-          <a href="" >Gas tariff information</a></p>
-          <dl class="dl-stack">
-          <h4>Electricity tariff costs</h4>
+              <dt>Lock in your energy unit rates</dt>
+                <dd>
+                  <ul class="ul-ticked">
+                   <li>Prices guaranteed until Nov 2021</li>
+                   <li>We’ll match all the electricity you use with 100% renewable sources</li>
+                  </ul>
+               </dd>
+           </div>   
+           </dl> 
+          </ns-expander>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Price breakdown</h3>    
+             <dl class="dl-stack">
+              <h4>Gas tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£678</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£169.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£56.50</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>3.089p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>29.404p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>30/11/2021</dd>
+                  <dt>Exit fees</dt>
+                  <dd>£30</dd>
+               </div>
+             </dl>
+             <a href="" >Gas tariff information</a></p>
+             <dl class="dl-stack">
+              <h4>Electricity tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£450</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£112.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£37.50</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>17.664p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>24.789p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>30/11/2021</dd>
+                  <dt>Exit fees</dt>
+                  <dd>£30</dd>
+               </div>
+             </dl>
+             <a href="" >Electricity tariff information</a></p>
+            </ns-expander>
+            <a href="../06-personal-details" slot="cta" onClick="tarrifTwo()">
+              <ns-cta>Select this tariff</ns-cta>
+            </a>
+          </ns-product-card>
+
+<!-- card start -->
+          <ns-product-card keyline="">  
+          <ns-image slot="image" src="https://user-images.githubusercontent.com/53818498/95101696-5de14f80-072a-11eb-85f6-3704601838f7.jpg" alt="Description of image" ratio="16x9"></ns-image>  
+          <h2 slot="name">The Variable One</h2>  
+          <h3 slot="price-heading">Estimated</h3>  
+          <div slot="price">    <p><b>        <ns-price pence="9100"></ns-price>      </b> / month</p>    <p>      <ns-price pence="109200"></ns-price> / year    </p>  </div>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Tariff overview</h3>
+            <dl class="dl-stack">
             <div>
-              <dt>Estimated cost per year</dt>
-              <dd>£434</dd>
-              <dt>Estimated cost per quarter</dt>
-              <dd>£108.50</dd>
-              <dt>Estimated cost per month</dt>
-              <dd>£36.16</dd>
-              <dt>Standard unit rate</dt>
-              <dd>3.773p per kWh</dd>
-              <dt>Standing charge</dt>
-              <dd>24.708p per day</dd>
-              <dt>Price guaranteed until</dt>
-              <dd>Not applicable</dd>
-              <dt>Exit fees</dt>
-              <dd>None</dd>
-            </div>
-          </dl>
-          <a href="" >Electricity tariff information</a></p>
-        </ns-expander>
-        <a href="../06-personal-details" slot="cta" onClick="tarrifTwo()">
+              <dt>Enjoy total flexibility with no end date and no exit fees</dt>
+                <dd>
+                  <ul class="ul-ticked">
+                   <li>No end date or exit fees</li>
+                   <li>Prices may go up or down over time</li>
+                   <li>You’ll get 30 days’ notice of increases</li>
+                   <li>Maximum price capped by Ofgem</li>
+                  </ul>
+               </dd>
+           </div>   
+           </dl> 
+          </ns-expander>  
+          <ns-expander slot="expander">    
+            <h3 slot="heading">Price breakdown</h3>    
+             <dl class="dl-stack">
+              <h4>Gas tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£658</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£164.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£54.83</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>17.664p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>24.501p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>Not applicable</dd>
+                  <dt>Exit fees</dt>
+                  <dd>None</dd>
+               </div>
+             </dl>
+             <a href="" >Gas tariff information</a></p>
+             <dl class="dl-stack">
+              <h4>Electricity tariff costs</h4>
+                <div>
+                  <dt>Estimated cost per year</dt>
+                  <dd>£434</dd>
+                  <dt>Estimated cost per quarter</dt>
+                  <dd>£108.50</dd>
+                  <dt>Estimated cost per month</dt>
+                  <dd>£36.16</dd>
+                  <dt>Standard unit rate</dt>
+                  <dd>3.773p per kWh</dd>
+                  <dt>Standing charge</dt>
+                  <dd>24.708p per day</dd>
+                  <dt>Price guaranteed until</dt>
+                  <dd>Not applicable</dd>
+                  <dt>Exit fees</dt>
+                  <dd>None</dd>
+               </div>
+             </dl>
+             <a href="" >Electricity tariff information</a></p>
+            </ns-expander>
+        <a href="../06-personal-details" slot="cta" onClick="tarrifThree()">
           <ns-cta>Select this tariff</ns-cta>
         </a>
       </ns-product-card>
@@ -211,7 +288,7 @@
           </dl>
           <a href="" >Electricity tariff information</a></p>
         </ns-expander>
-        <a href="../06-personal-details" slot="cta" onClick="tarrifThree()">
+        <a href="../06-personal-details" slot="cta" onClick="tarrifFour()">
           <ns-cta>Select this tariff</ns-cta>
         </a>
       </ns-product-card>
@@ -881,7 +958,7 @@
       "fields": [
         {
           "name": "tarrif-choice",
-          "value": "The Fixed One"
+          "value": "The Green One"
         }
       ]
     }
@@ -897,7 +974,7 @@
       "fields": [
         {
           "name": "tarrif-choice",
-          "value": "The Standard Variable One"
+          "value": "The Fixed One"
         }
       ]
     }
@@ -913,7 +990,7 @@
       "fields": [
         {
           "name": "tarrif-choice",
-          "value": "The Electric Driver One"
+          "value": "The Variable One"
         }
       ]
     }
@@ -921,6 +998,23 @@
 
   function tarrifThree() {
     localStorage.setItem('nf-model', JSON.stringify(setTarrifThree));
+  }
+
+
+  const setTarrifFour = {
+    "get-a-quote":
+    {
+      "fields": [
+        {
+          "name": "tarrif-choice",
+          "value": "The Electric Driver One"
+        }
+      ]
+    }
+  }
+
+  function tarrifFour() {
+    localStorage.setItem('nf-model', JSON.stringify(setTarrifFour));
   }
 
 </script>
