@@ -16,24 +16,47 @@
       <label for="radio-b-3">Electricity</label>
     </ns-inputter>
 
+    <ns-fieldset legend="What's your address?">
+      <span>We need your address as prices may vary by region.</span>
+      <nsx-address-selector></nsx-address-selector>
+    </ns-fieldset>
 
+    <ns-cta id="confirm-address-button" nf-href="../03-meter-type">Continue</ns-cta>
 
-    
-
-
-
-<ns-fieldset legend="What's your address?">
-  <span>We need your address as prices may vary by region.</span>
-  <nsx-address-selector></nsx-address-selector>
-</ns-fieldset>
-
-
-    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-
+  </ns-form>
+</ns-panel>
 
 <script>
-  function getDynamicURL() {
-    var data = document.querySelector('ns-inputter[name="quote-type"]').value;
-    return '../03-meter-type';
-  }
+  
+  document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+
+  // Hide submit button
+  // document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  var addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "134 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "135 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "136 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "137 Queenstown Rd, Battersea, London"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
 </script>
