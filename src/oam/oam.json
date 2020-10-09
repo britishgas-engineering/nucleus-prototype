@@ -3,6 +3,6 @@
   "project": "oam",
   "jquery": false,
   "script": false,
-  "style": false,
+  "style": true,
   "teamname": "OAM Manage"
 }

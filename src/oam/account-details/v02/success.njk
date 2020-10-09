@@ -1,0 +1,58 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Account details
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <div class="splash">
+    <h3>Personal</h3>
+  </div>
+
+  <div class="splash">
+    <ns-highlighter type="success">
+      <h2 slot="heading">Details saved</h2>
+      <p>You've successfully updated your personal details.</p>
+    </ns-highlighter>
+  </div>
+
+  <div class="splash">
+    <dl class="dl-row">
+
+      {% include "./_includes/account-name.njk" -%}
+
+      {% include "./_includes/account-address.njk" -%}
+
+      {% include "./_includes/account-contact.njk" -%}
+
+    </dl>
+  </div>
+
+  <div class="splash">
+    <h3>Account security</h3>
+    <dl class="dl-row">
+      <div>
+        <dt>Login details</dt>
+        <dd>
+          <span nf-model="model.oam-02.email-address">
+            <p>steve@jobs.com</p>
+          </span>
+          <p>**********</p>
+        </dd>
+        <dd>
+          <a href="#!">Edit login details</a>
+        </dd>
+      </div>
+    {% include "./_includes/account-marketing.njk" -%}
+</dl>
+  </div>
+
+  {% include "./_includes/your-home.njk" -%}
+
+</ns-panel>
+
+
+
+
+
