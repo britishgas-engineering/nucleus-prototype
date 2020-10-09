@@ -1,0 +1,91 @@
+
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Place your order.</span>
+    <span class="h1">Your details summary</span>
+  </h1>
+  <div slot="paragraph">
+    <dl class="dl-row">
+      <div>
+        <dt>Anything we should know about?</dt>
+        <dd>
+          There's someone at risk in your home who could be affected by gas and electricity problems and outages.
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <a slot="cta" href="#!">
+    <ns-cta href="../07-anything" icon="arrow-left" type="text">Change these details</ns-cta>
+  </a>
+</ns-landmark>
+
+
+
+
+<!-- START QUESTION SET #2 -->
+
+
+
+<ns-panel decoration="">
+<ns-form class="splash" nf-model="model.get-a-quote">
+
+<ns-fieldset legend="">
+  <h2>Your payment details</h2>
+
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="What type of Monthly Direct Debit would you like?" helper="" name="yes" value="yes">  <input type="radio" id="question-yes" name="question" value="yes" checked="">  <label for="question-yes">Fixed Direct Debit</label>  <input type="radio" id="question-no" name="question" value="no">  <label for="question-no">Variable Direct Debit</label></ns-inputter>
+<ns-accordion>
+<ns-expander open="false">  <h3 slot="heading">Read more about Direct Debit types</h3> 
+
+With Fixed Monthly Direct Debit your payments will be the same each month and we'll take them from your bank account. We'll assess your payments every 6 months to ensure your payments remain in line with how much energy you use. Your prices are lower with Direct Debit, so if you move to a different payment method your prices will increase.
+</br>
+</br>
+
+
+With Variable Monthly Direct Debit your payments will vary each month - that's because you'll only pay for energy you've used each month. This means you're likely to pay more in the winter and less in summer.
+</br>
+</br>
+<h6>Important information</h6>
+Your prices are lower with Direct Debit, so if you move to a different payment method your prices will increase. Your first payment could be larger than you expect if you are an existing British Gas customer. 
+</ns-expander>
+<ns-expander open="false">  <h3 slot="heading">Read the Direct Debit guarantee</h3> 
+This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits. If there are any changes to the amount, date or frequency of your Direct Debit, British Gas Trading Limited will notify you 10 working days in advance of your account being debited or as otherwise agreed. If you request British Gas Trading Limited to collect a payment, confirmation of the amount and date will be given to you at the time of the request. If an error is made in the payment of your Direct Debit by British Gas Trading Limited or your bank or building society you are entitled to a full and immediate refund of the amount paid from your bank or building society. If you receive a refund you are not entitled to, you must pay it back when British Gas Trading Limited asks you to. You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.
+</ns-expander>
+</ns-accordion>
+  <span>You must be the account holder and authorised to set up a Direct Debit on this account to complete this order</span>
+   <ns-form class="splash" nf-model="model.get-a-quote">
+    
+    <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;,&quot;isNumber&quot;]" value="" helper="" name="how-many-would-you-like?">
+      <label slot="label" for="number-input">Account number</label>
+      <input type="number" id="number-input">
+    </ns-inputter>
+
+
+    <ns-inputter mask="  -  -  " separator="-" ignoreseparator="" validation="[&quot;isRequired&quot;,&quot;minLength(6)&quot;,&quot;isNumber&quot;]" value="" helper="" name="sort-code">
+
+  <label slot="label" for="separator-input">Sort code</label>
+  <input type="text" id="separator-input">
+</ns-inputter>
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" value="" helper="" name="first-name">
+
+  <label slot="label" for="text-input">Name of account holder</label>
+  <input type="text" id="text-input">
+</ns-inputter>
+   
+    <ns-cta nf-href="../09-marketing">Continue</ns-cta>
+
+</ns-fieldset>
+
+  </ns-form>
+ 
+</ns-panel>
+
+
+
+
+<!-- END QUESTION SET #2 -->
+
+

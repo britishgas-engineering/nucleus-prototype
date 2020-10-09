@@ -1,13 +1,44 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Place your order.</span>
+    <span class="h1">Here is what you've chosen</span>
+  </h1>
+  <div slot="paragraph">
+    <dl class="dl-row">
+      <div>
+        <dt>Your tariff</dt>
+        <dd>Energy Plus Protection April 2020</dd>
+      </div>
+      <div>
+        <dt>Estimated price per month</dt>
+        <dd>£99.10</dd>
+      </div>
+      <div>
+        <dt>Estimated price per year</dt>
+        <dd>£1179.37</dd>
+      </div>
+    </dl>
+  </div>
+</ns-landmark>
 
-<!-- FORM -->
 
-
+<!-- Cancel? -->
+<ns-panel decoration="">
+  <div class="splash triple" role="list">
+    <ns-card role="listitem" type="flat">
+      <h3 slot="heading" role="heading" aria-level="3">Not happy with your choice?</h3>
+      <p slot="paragraph">To choose a different type of energy, change your postcode, or payment method, you’ll need to get another quote </p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Get another quote</ns-cta>
+      </a>
+    </ns-card>
+  </div>
+</ns-panel>
 
 
 <ns-panel>
   <div class="splash">
-  <h5>Enter your details</h5>
-    <h1>Your personal details</h1>
+    <h1>Enter your details</h1>
   </div>
   <ns-form class="splash" nf-model="model.get-a-quote">
     <ns-inputter validation="[&quot;isRequired&quot;]" name="personal-title" value="">
@@ -47,51 +78,6 @@
   </ns-form>
 </ns-panel>
 
-<!-- END FORM -->
-
-<!-- Summary -->
-
-<ns-panel>
-  <div class="splash">
-  <h3>Order summary</h3>
-    <ns-accordion>
-   
-      <ns-expander open="false">
-        <h4 slot="heading">Your selected energy tariff</h4>
-        
-    <dl class="dl-row">
-      <div>
-        <dt>Your tariff</dt>
-        <dd>Energy Plus Protection April 2020</dd>
-      </div>
-      <div>
-        <dt>Estimated price per month</dt>
-        <dd>£99.10</dd>
-      </div>
-      <div>
-        <dt>Estimated price per year</dt>
-        <dd>£1179.37</dd>
-      </div>
-    </dl>
-
-      </ns-expander>
-    </ns-accordion>
-  </div>
-</ns-panel>
-
-
-
-<!-- Cancel? -->
-<ns-panel decoration="">
-  <div class="splash triple" role="list">
-    <ns-card role="listitem" type="flat">
-      <h3 slot="heading" role="heading" aria-level="3">Not happy with your choice?</h3>
-      <p slot="paragraph">To choose a different type of energy, change your postcode, or payment method, you’ll need to get another quote </p>
-      <a slot="cta" href="#!">
-        <ns-cta type="text">Get another quote</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
+<!-- END QUESTION SET #1 -->
 
 

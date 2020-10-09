@@ -1,0 +1,70 @@
+
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Place your order.</span>
+    <span class="h1">Your details summary</span>
+  </h1>
+  <div slot="paragraph">
+    <dl class="dl-row">
+      <div>
+        <dt>Name</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-title">[title]</span>
+          <span nf-model="model.get-a-quote.personal-first-name">[first-name]</span>
+          <span nf-model="model.get-a-quote.personal-surname">[surname]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Date of birth</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-date-of-birth">[date-of-birth]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Telephone number</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-telephone">[telephone]</span>
+        </dd>
+      </div>
+      <div>
+        <dt>Email</dt>
+        <dd>
+          <span nf-model="model.get-a-quote.personal-email">[email]</span>
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <a slot="cta" href="#!">
+    <ns-cta href="../06-personal-details" icon="arrow-left" type="text">Change your details</ns-cta>
+  </a>
+</ns-landmark>
+
+
+
+
+<!-- START QUESTION SET #2 -->
+<ns-panel decoration="">
+    <ns-form class="splash" nf-model="model.get-a-quote">
+
+
+<ns-fieldset legend="Anything we should know about?">
+  <span>When we supply your energy, we’ll look out for your safety. We need to know whether there’s anyone at risk in your home who could be affected by gas and electricity problems and outages (like anyone who has mobility or mains powered medical equipment).
+By selecting 'Yes' you consent to us sharing your information - we’ll only share this with those who need to know, like gas transporters and electricity distributors, so if there’s a loss of supply or power outage you may be treated as a priority customer.</span>
+
+<ns-expander open="false">  <h3 slot="heading">Priority Services Register Promise</h3>  We’ve signed up to the Priority Services Register (PSR) Promise.  This has been made by all participating energy companies in the UK. We’ll only share details about your personal situation as agreed with you so that our trusted partners can tailor their services to help you, and you’ll get extra support when you need it. We'll always follow privacy laws and your PSR information will never be used for marketing. Once you’ve joined we may contact you to make sure your details are accurate and up to date. If your situation changes, or you don’t want to be on the PSR anymore, just get in touch and we'll update your details.</ns-expander>
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Is there anything we should be aware of?" helper="" name="yes" value="yes">  <input type="radio" id="question-yes" name="question" value="yes" checked="">  <label for="question-yes">Yes</label>  <input type="radio" id="question-no" name="question" value="no">  <label for="question-no">No</label></ns-inputter>
+
+</ns-fieldset>
+
+<ns-cta nf-href="../08-payment">Continue</ns-cta>
+</ns-form>
+</ns-panel>
+
+
+
+<!-- END QUESTION SET #2 -->
+
+
