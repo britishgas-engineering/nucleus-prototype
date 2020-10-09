@@ -1,10 +1,11 @@
 ---
-title: OAM Manage
+layout: nucleus-header-logged-in.njk
+title: meter reading journeys
 eleventyNavigation:
   key: Meter readings
   parent: oam
   title: Meter readings
-  excerpt: Something with Meter readings
+  excerpt: Meter reading journeys
 ---
 
 <ns-landmark type="lakeside">
@@ -17,36 +18,33 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-<ns-panel>
-  <div class="splash triple">
-    <ns-card type="support">
-      <h3 slot="heading">Let's register you</h3>
-      <p slot="paragraph">Quisquam debitis sapiente perspiciatis. Omnis qui pariatur nihil animi.</p>
-      <a slot="cta" href="reg-01-landing">
-        <ns-cta type="text">Register online account</ns-cta>
-      </a>
-    </ns-card>
-    <ns-card type="support">
-      <h3 slot="heading">Log in to your account</h3>
-      <p slot="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <a slot="cta" href="login-01-landing">
-        <ns-cta type="text">Log in</ns-cta>
-      </a>
-    </ns-card>
-  </div>
-</ns-panel>
+  {% set navPages = collections.all | eleventyNavigation("meter-readings") | reverse %}
+  <ns-panel>
+    <div class="splash">
+      <h2>{{teamname}} projects</h2>
+    </div>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
+          </a>
+        </ns-card>
+      {%- endfor %}
+    </div>
+  </ns-panel>
 
-   
-<ns-caveat>
-<h2 slot="heading">Happy path credentials</h2>
+  <ns-caveat>
+<h2 slot="heading">Anonymous meter reading credentials</h2>
   <div slot="caveat">
     <p>Details below will activate logic on the prototype for enabled fields. If any alternative information is entered, unhappy paths will be shown.</p>
     <ol>
-      <li>Login/Reg Email: known@address.com</li>
-      <li>Login Password: correct</li>
-      <li>Reg mobile: 07831234567</li>
-      <li>Reg Reference number: 85123456789</li>
+      <li>Customer's reference number: 851234567890</li>
+      <li>Gas meter reading: 51948</li>
+      <li>Gas meter reading (Triggers out of tolerance): 53000</li>
+      <li>Electricity meter reading: ANY</li>
     </ol>
   </div>
 </ns-caveat>
-

@@ -1,0 +1,60 @@
+<div class="splash">
+  <h3 class="after-value">Your home</h3>
+
+  <ns-inputter class="style-hack drop-switch" nf-model="model.oam-02.address-selector" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
+    <div slot="tip-details">..........</div>
+    <label slot="label">Select which home</label>
+    <select class="premise-select">
+      <option value="value-01">Swan House, The Causeway, Staines</option>
+      <option value="value-02">Buckingham palace</option>
+    </select>
+  </ns-inputter>
+
+  <script>
+
+    window.addEventListener('load', function () {
+      var obj = getModelData('model.oam-02').fields.find(function(field) {
+        return field.name === 'address-selector';
+      });
+
+      var select = document.querySelector('.premise-select')
+      if(select) {
+        select.options[1] = new Option(obj.value, 'value-02');
+        select.selectedIndex = select.options.length-1;
+      }
+      
+    })
+    
+
+  </script>
+
+  <div class="drop-switch-selection">
+    <dl class="dl-row drop-switch-option-a">
+      <div>
+        <dt>Extra support</dt>
+        <dd>
+          <p>You can join the Priority Services Register and <a href="../../extra-support/v01">let us know any specific circumstances</a> relating to your household so that we can provide a better service specific to your needs.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>Smart meter frequency</dt>
+        <dd>
+          <p>You can <a href="../../../meter-readings/smart-settings/v01/dual-fuel/">update the frequency</a> of your smart meter readings, though we recommend that you keep it set at every 30 minutes for effectiveness and accuracy. </p>
+        </dd>
+      </div>
+    </dl>
+    <dl class="dl-row drop-switch-option-b">
+      <div>
+        <dt>Extra support</dt>
+        <dd>
+          <p>You can update the Priority Services Register and <a href="../../extra-support/v01">let us know any new circumstances</a> relating to your household so that we can provide a better service specific to your needs. Currently you have told us the following:</p>
+          <ul class="ul-ticked">
+            <li>Age 75 or over</li>
+            <li>Sight loss or partially sighted</li>
+            <li>Priority Services Register</li>
+          </ul>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>

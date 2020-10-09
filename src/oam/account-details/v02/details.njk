@@ -1,0 +1,88 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Account details
+eleventyNavigation:
+  key: Account details 02
+  parent: account-details
+  title: Account details 02
+  excerpt: Sept 2020 - Chunked data, In-line editing
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <div class="splash">
+    <h3>Personal</h3>
+  </div>
+
+  <div class="splash">
+    <dl class="dl-row">
+
+      {% include "./_includes/account-name.njk" -%}
+
+      {% include "./_includes/account-address.njk" -%}
+
+      {% include "./_includes/account-contact.njk" -%}
+
+    </dl>
+  </div>
+
+  <div class="splash">
+    <h3>Account security</h3>
+    <dl class="dl-row">
+      <div>
+        <dt>Login details</dt>
+        <dd>
+          <span nf-model="model.oam-02.email-address">
+            <p>steve@jobs.com</p>
+          </span>
+          <p>**********</p>
+        </dd>
+        <dd>
+          <a href="#!">Edit login details</a>
+        </dd>
+      </div>
+      {% include "./_includes/account-marketing.njk" -%}
+    </dl>
+  </div>
+
+  {% include "./_includes/your-home.njk" -%}
+
+</ns-panel>
+
+<script>
+  const person = {
+    "oam-02":
+    {
+      "fields": [
+        {
+          "name": "first-name",
+          "value": "Steve"
+        },
+        {
+          "name": "surname",
+          "value": "Jobs"
+        },
+        {
+          "name": "postcode",
+          "value": "SW1A 1AA"
+        },
+        {
+          "name": "mobile-number",
+          "value": "07770123123"
+        },
+        {
+          "name": "address-selector",
+          "value": "134 Queenstown Rd, Battersea, London"
+        },
+        {
+          "name": "address-selector-postcode",
+          "value": "SW1A 1AA"
+        }
+      ]
+    }
+  }
+  if (localStorage.getItem("nf-model") === null) {
+    localStorage.setItem('nf-model', JSON.stringify(person));
+  }
+</script>

@@ -1,0 +1,72 @@
+<div>
+  <dt>Correspondence address</dt>
+
+  <input class="show-checkbox" type="checkbox" id="account-address">
+
+  <dd class="show-data">
+    <p><span nf-model="model.oam-02.address-selector">[ADDRESS]</span> <span nf-model="model.oam-02.address-selector-postcode">[POSTCODE]</span></p>
+    <p><label class="show-cta" for="account-address">Change address</label></p>
+  </dd>
+
+  <dd class="show-form style-hack">
+    <label class="show-cta show-cancel" for="account-address">Cancel</label>
+
+    <ns-form class="splash style-hack" nf-model="model.oam-02">
+
+      <ns-fieldset legend="Enter new correspondence address">
+        <nsx-address-selector></nsx-address-selector>
+      </ns-fieldset>
+    </ns-form>
+
+    <ns-cta id="confirm-address-button" nf-href="../success">Save correspondence address</ns-cta>
+
+ 
+   <span class="np-callout margin-top" style="--np-callout-colour: #209cee">
+        <span class="heading">
+          <ns-icon size="1" type="info"></ns-icon>
+          <h3 class="h6">Are you moving home?</h3>
+        </span>
+        <span class="content">
+          <p>If you want to change the energy supply or services to another home, then please tell us you're <a href="https://britishgas.com/discover/home-move/">moving home</a> </p>
+        </span>
+        </span>
+ </dd>
+
+</div>
+
+<script>
+  
+  document.querySelector('label[for="account-address"]').addEventListener('click', () => {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  })
+
+  // Hide submit button
+  // document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  var addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "134 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "135 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "136 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "137 Queenstown Rd, Battersea, London"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>

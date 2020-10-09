@@ -1,0 +1,61 @@
+---
+title: Anonymous meter reading input
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Submit a meter reading</span>
+  </h1>
+  <p slot="paragraph">Account holder:
+  <strong><span nf-model="model.oam-meter-01.firstname">[HERE]</span>
+  <span nf-model="model.oam-meter-01.surname">[HERE]</span></p></strong>
+  <p slot="paragraph">Reference number: <b>851234567890</b></p>
+</ns-landmark>
+
+
+<ns-panel>
+  <div class="splash">
+
+    <ns-highlighter type="warning">
+  <h2 slot="heading">
+    Can you please check that?
+  </h2>
+  <p>Those numbers weren't quite what we're expecting.</p>
+</ns-highlighter>
+  </div>
+  <div class="splash">
+    <ns-form nf-model="model.oam-meter-01">
+
+      
+<ns-fieldset legend="Enter the customer's readings:">
+
+<ns-inputter mask="00---" separator="" validation="[&quot;isRequired&quot;]" value="" helper="How do I give a gas meter reading?" name="gas-reading">
+  <div slot="tip-details">Enter the gas meter reading into the box below, including any zeros at the beginning. Don't worry about the red numbers or anything after the decimal point.</div>
+  <label slot="label">Gas meter</label>
+  <input type="text">
+</ns-inputter>
+
+<ns-inputter mask="00---" separator="" validation="[&quot;isRequired&quot;]" value="" helper="How do I give an electricity meter reading?" name="electricity-reading">
+  <div slot="tip-details">Enter the electricity meter reading into the box below, including any zeros at the beginning. Don't worry about the red numbers or anything after the decimal point.</div>
+  <label slot="label">Electricity meter</label>
+  <input type="text">
+</ns-inputter>
+
+ </ns-fieldset>
+
+      <ns-cta nf-href="DYNAMIC">Submit readings</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="gas-reading"]').value;
+    if (data === '51948') {
+      return '../anonymous-success';
+    }
+    else {
+      return '../anonymous-error';
+    }
+  }
+</script>
