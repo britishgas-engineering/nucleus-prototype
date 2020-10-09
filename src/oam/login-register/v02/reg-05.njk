@@ -1,4 +1,5 @@
 ---
+layout: nucleus-header-logged-out.njk
 title: Set your password
 ---
 
@@ -18,9 +19,10 @@ title: Set your password
     </ns-inputter>
     <ul class="ul-ticked" style="margin-bottom: 0;">
       <li>One letter</li>
-      <li>One number</li>
-      <li>8-20 characters</li>
+      <li class="hide-ticks">One number</li>
+      <li class="hide-ticks">8-20 characters</li>
     </ul>
+
     <ns-inputter validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;]" name="confirm-password" value="">
       <label slot="label">Confirm Password</label>
       <input type="password">

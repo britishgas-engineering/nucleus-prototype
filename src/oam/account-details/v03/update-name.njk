@@ -1,0 +1,28 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Account details
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">Account details</span>
+  </h1>
+  <p slot="paragraph">Account management, personal information, password and marketing settings.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+       <ns-fieldset legend="Your name">
+       <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+        <label slot="label">First name</label>
+        <input autocomplete="given-name" type="text">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+        <label slot="label">Surname</label>
+        <input autocomplete="family-name" type="text">
+      </ns-inputter>
+      </ns-fieldset>
+      <ns-cta nf-href="../">Save name</ns-cta>
+  </ns-form>
+</ns-panel>
