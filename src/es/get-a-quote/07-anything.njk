@@ -42,21 +42,19 @@ By selecting 'Yes' you consent to us sharing your information - we’ll only sha
       <ns-expander open="false">
         <h4 slot="heading">Your selected energy tariff</h4>
          <dl class="dl-row">
-          <div>
-           <dt>Your tariff</dt>
-
-           <dd>
-           Energy Plus Protection April 2020</dd>
-          </div>
-          <div>
-           <dt>Estimated price per month</dt>
-           <dd>£99.10</dd>
-          </div>
-          <div>
-           <dt>Estimated price per year</dt>
-           <dd>£1179.37</dd>
-          </div>
-         </dl>
+      <div>
+        <dt>Your tariff</dt>
+        <dd><span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span></dd>
+      </div>
+      <div>
+        <dt>Estimated price per month</dt>
+        <dd>£<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span></dd>
+      </div>
+      <div>
+        <dt>Estimated price per year</dt>
+        <dd>£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span></dd>
+      </div>
+    </dl>
       </ns-expander>
 
       <ns-expander open="false">
