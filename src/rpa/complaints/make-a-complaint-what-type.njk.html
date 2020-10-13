@@ -1,0 +1,121 @@
+---
+title: make-a-complaint-what-type
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Making a complaint.</span>
+    <span class="h1">Choose an option</b>
+    </span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.L5-pay">
+
+      <ns-inputter heading="What is your complaint related to?" validation='["isRequired"]' name="inputter-a" class="triple" value="">
+        <ns-selector image="">
+          <input type="radio" name="radio" value="energy" id="radio-a">
+          <label for="radio-a">Energy</label>
+          <div slot="description">
+            <h3 class="h5 enlighten">Includes:</h3>
+            <ul class="ul-bullet">
+              <li class="list">Gas or electricity bills and payments.</li>
+              <li class="list">Gas or electricity tariffs.</li>
+              <li class="list">Help with your meter.</li>
+              <li class="list">Anything else related to your gas or electricity.</li>
+            </ul>
+          </div>
+        </ns-selector>
+
+        <ns-selector image="">
+          <input type="radio" name="radio" value="services" id="radio-b">
+          <label for="radio-b">Home services</label>
+          <div slot="description">
+            <h3 class="h5 enlighten">Includes:</h3>
+            <ul class="ul-bullet">
+              <li class="list">Boiler and central heating servicing and repairs.</li>
+              <li class="list">Plumbing and drainage and electrical repairs.</li>
+              <li class="list">HomeCare engineer visits.</li>
+              <li class="list">HomeCare billing/payments.</li>
+              <li class="list">Anything else related to HomeCare.</li>
+            </ul>
+          </div>
+        </ns-selector>
+
+        <ns-selector image="">
+          <input type="radio" name="radio" value="installations" id="radio-c">
+          <label for="radio-c">Installations</label>
+          <div slot="description">
+            <h3 class="h5 enlighten">Includes:</h3>
+            <ul class="ul-bullet">
+              <li class="list">Central heating installation.</li>
+              <li class="list">Boiler loans/finance.</li>
+              <li class="list">Boiler sales/quotations.</li>
+            </ul>
+          </div>
+        </ns-selector>
+
+        <ns-selector image="">
+          <input type="radio" name="radio" value="ev" id="radio-d">
+          <label for="radio-d">Electric Vehicle charge point</label>
+          <div slot="description">
+            <h3 class="h5 enlighten">Includes:</h3>
+            <ul class="ul-bullet">
+              <li class="list">Charge point installation.</li>
+            </ul>
+          </div>
+        </ns-selector>
+
+        <ns-selector image="">
+          <input type="radio" name="radio" value="other" id="radio-e">
+          <label for="radio-e">Other</label>
+          <div slot="description">
+            <h3 class="h5 enlighten">Includes:</h3>
+            <ul class="ul-bullet">
+              <li class="list">Poor customer service.</li>
+              <li class="list">If you are not a British Gas customer.</li>
+            </ul>
+          </div>
+        </ns-selector>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+
+
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+<script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
+
+<script>
+function getDynamicURL() {
+  var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+
+  if (data === 'energy') {
+    return 'make-a-complaint-credit-or-payg.html';
+  }
+
+  if (data === 'services') {
+    return 'make-a-complaint-services.html';
+  }
+
+  if (data === 'installations') {
+    return 'make-a-complaint-installations.html';
+  }
+
+  if (data === 'ev') {
+    return 'make-a-complaint-ev.html';
+  }
+
+  if (data === 'other') {
+    return 'make-a-complaint-credit.html';
+  }
+}
+</script>

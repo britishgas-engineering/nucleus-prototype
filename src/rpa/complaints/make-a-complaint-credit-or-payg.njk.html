@@ -1,0 +1,58 @@
+---
+title: credit-or-payg
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Making a complaint.</span>
+    <span class="h1">What type of energy customer are you?</b>
+    </span>
+  </h1>
+  <div slot="paragraph">
+    <p>If you have different types of energy accounts, then please choose the one that your complaint is best related to.</p>
+  </div>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-form nf-model="model.L5-pay">
+
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+        <input type="radio" name="radio" value="credit services" id="radio-a">
+        <label for="radio-a">I get regular bills and pay</label>
+
+        <input type="radio" name="radio" value="payg services" id="radio-b">
+        <label for="radio-b">I top up a meter</label>
+
+        <input type="radio" name="radio" value="credit services" id="radio-c">
+        <label for="radio-c">I pay with an energy payment card</label>
+
+        <input type="radio" name="radio" value="credit services" id="radio-d">
+        <label for="radio-d">I use Fuel Direct – my payments are deducted from my benefits</label>
+      </ns-inputter>
+
+      <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    </ns-form>
+  </div>
+</ns-panel>
+
+
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+<script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
+
+<script>
+function getDynamicURL() {
+  var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+
+  if (data === 'credit services') {
+    return 'make-a-complaint-credit.html';
+  }
+
+  if (data === 'payg services') {
+    return 'make-a-complaint-payg.html';
+  }
+}
+</script>
