@@ -88,34 +88,30 @@ title: make-a-complaint-what-type
 </ns-panel>
 
 
-
-<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
-<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
-<script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
-
 <script>
 function getDynamicURL() {
   var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
 
   if (data === 'energy') {
-    return 'make-a-complaint-credit-or-payg.html';
+    return 'make-a-complaint-credit-or-payg';
   }
 
+
   if (data === 'services') {
-    return 'make-a-complaint-services.html';
+    return 'make-a-complaint-services';
   }
 
   if (data === 'installations') {
-    return 'make-a-complaint-installations.html';
+    return 'make-a-complaint-installations';
   }
 
   if (data === 'ev') {
-    return 'make-a-complaint-ev.html';
+    return 'make-a-complaint-ev';
   }
 
   if (data === 'other') {
-    return 'make-a-complaint-credit.html';
+    return 'make-a-complaint-credit';
   }
 }
 </script>
