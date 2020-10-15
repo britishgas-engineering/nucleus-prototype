@@ -5,11 +5,11 @@ title: make-a-complaint-webform-address
 <ns-landmark type="lakeside">
   <h1 slot="heading">
     <span class="h5">Making a complaint.</span>
-    <span class="h1">Submit a complaint using our online form</b>
+    <span class="h1">A bit about you</b>
     </span>
   </h1>
   <div slot="paragraph">
-    <p>Please complete all fields unless otherwise indicated. This will help us deal with your complaint more efficiently.</p>
+    <p>This will help us deal with your complaint more efficiently.</p>
   </div>
 </ns-landmark>
 
@@ -26,8 +26,13 @@ title: make-a-complaint-webform-address
         <input autocomplete="family-name" type="text">
       </ns-inputter>
       
-      <ns-inputter helper="This will only be used to match you against our records and send you a verification code." name="mobile-number" value="">
-        <label slot="label">Mobile number (optional)</label>
+      <ns-inputter helper="We may use your mobile number to call or text you, so we can resolve things for you as quickly as possible." validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="mobile-number" value="">
+        <label slot="label">Telephone number (mobile preferred)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+
+      <ns-inputter helper="You can provide a textphone or international phone number below. Please note that this number will only be used for this complaint and will not be updated on your British Gas account." name="textphone" value="">
+        <label slot="label">Textphone/international number</label>
         <input type="tel" placeholder="e.g. 0798123456">
       </ns-inputter>
 
@@ -35,8 +40,7 @@ title: make-a-complaint-webform-address
         <nsx-address-selector></nsx-address-selector>
       </ns-form>
     </ns-fieldset>
-    
-    <ns-cta id="confirm-address-button" nf-href="DYNAMIC">Next step</ns-cta>
+    <ns-cta id="confirm-address-button" nf-href="../make-a-complaint-webform-submit">Next step</ns-cta>
   </ns-form>
 </ns-panel>
 
