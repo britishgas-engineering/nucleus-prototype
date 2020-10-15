@@ -26,7 +26,7 @@ title: make-a-complaint-webform-address
         <input autocomplete="family-name" type="text">
       </ns-inputter>
       
-      <ns-inputter helper="We may use your mobile number to call or text you, so we can resolve things for you as quickly as possible." name="mobile-number" value="">
+      <ns-inputter helper="We may use your mobile number to call or text you, so we can resolve things for you as quickly as possible." validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="mobile-number" value="">
         <label slot="label">Telephone number (mobile preferred)</label>
         <input type="tel" placeholder="e.g. 0798123456">
       </ns-inputter>
