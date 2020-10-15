@@ -1,0 +1,41 @@
+---
+title: make-a-complaint-webform-address
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Making a complaint.</span>
+    <span class="h1">Submit a complaint using our online form</b>
+    </span>
+  </h1>
+  <div slot="paragraph">
+    <p>Please complete all fields unless otherwise indicated. This will help us deal with your complaint more efficiently.</p>
+  </div>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-fieldset legend="Enter your details"> 
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+        <label slot="label">First name</label>
+        <input autocomplete="given-name" type="text">
+      </ns-inputter>
+      
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+        <label slot="label">Surname</label>
+        <input autocomplete="family-name" type="text">
+      </ns-inputter>
+      
+      <ns-inputter helper="This will only be used to match you against our records and send you a verification code." name="mobile-number" value="">
+        <label slot="label">Mobile number (optional)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+
+      <ns-form>
+        <nsx-address-selector></nsx-address-selector>
+      </ns-form>
+    </ns-fieldset>
+    
+    <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
+  </ns-form>
+</ns-panel>

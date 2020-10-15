@@ -38,21 +38,17 @@ title: credit-or-payg
 </ns-panel>
 
 
-<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
-<script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
-<script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
-
 <script>
 function getDynamicURL() {
   var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
 
   if (data === 'credit services') {
-    return 'make-a-complaint-credit.html';
+    return '../make-a-complaint-credit';
   }
 
   if (data === 'payg services') {
-    return 'make-a-complaint-payg.html';
+    return '../make-a-complaint-payg';
   }
 }
 </script>
