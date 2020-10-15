@@ -21,12 +21,16 @@
   attempt to switch content related to value in previous sibling ns-inputter
 */
 
-.drop-switch[value="value-01"]~.drop-switch-selection .drop-switch-option-b {
+.drop-switch[value="value-01"] ~ .drop-switch-selection .drop-switch-option-b {
   display: none;
 }
-.drop-switch[value="value-02"]~.drop-switch-selection .drop-switch-option-a {
+
+.drop-switch[value="value-02"] ~ .drop-switch-selection .drop-switch-option-a,
+.drop-switch[value*="Queenstown"] ~ .drop-switch-selection .drop-switch-option-a {
   display: none;
 }
+
+
 /* showing the form on checkbox toggle */
 
 .show-checkbox,
@@ -142,6 +146,9 @@
   padding-left: 1.25em;
 }
 
+.margin-top {
+   margin-top: 3em;
+}
 
 
 /* experiment with ns-card for notification */
