@@ -1,63 +1,38 @@
+---
+title: paying-for-your-energy-bill-L1
+---
 
-<!doctype html>
-<html class="tools-" lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Help and support - pay">
-  <meta name="format-detection" content="telephone=no">
-  <title>Help and support - Paying For Your Energy</title>
-</head>
-<body class="ndsn">
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Paying for your energy.</span>
+    <span class="h1">Payment type</span>
+  </h1>
+</ns-landmark>
 
-  <nsx-header></nsx-header>
+<ns-panel>
+  <ns-form class="splash" nf-model="model.L5-pay">
+    <ns-fieldset legend="Do you pay by Direct Debit?">
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+        <input type="radio" name="radio" value="direct debit" id="radio-a">
+        <label for="radio-a">Yes, I pay by Direct Debit</label>
+        <input type="radio" name="radio" value="Not direct debit" id="radio-b">
+        <label for="radio-b">No, I don't pay by Direct Debit</label>
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
 
-  <main id="content">
+<script>
+function getDynamicURL() {
+  var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
-	<ns-landmark type="lakeside">
-      <h1 slot="heading">
-        <span class="h5">Paying for your energy.</span>
-        <span class="h1 enlighten">Do you pay for your energy by <b>Direct Debit?</b>
-        </span>
-      </h1>
-    </ns-landmark>
-
-    <ns-panel>
-      <div class="splash">
-        <ns-form nf-model="model.L5-pay">
-
-          <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
-            <input type="radio" name="radio" value="direct debit" id="radio-a">
-            <label for="radio-a">Yes, I pay by Direct Debit</label>
-            <input type="radio" name="radio" value="Not direct debit" id="radio-b">
-            <label for="radio-b">No, I don't pay by Direct Debit</label>
-          </ns-inputter>
-
-          <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-
-        </ns-form>
-      </div>
-    </ns-panel>
-
-  </main>
-  <nsx-footer></nsx-footer>
-  <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
-  <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
-  <script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
-
-  <script>
-  function getDynamicURL() {
-    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
-
-    if (data === 'direct debit') {
-      return 'paying-your-energy-bill-summary-direct-debit.html';
-    }
-
-    if (data === 'Not direct debit') {
-      return 'paying-your-energy-bill-L2.html';
-    }
+  if (data === 'direct debit') {
+    return '../paying-your-energy-bill-summary-direct-debit';
   }
-  </script>
 
-</body>
-</html>
+  if (data === 'Not direct debit') {
+    return '../paying-your-energy-bill-L2';
+  }
+}
+</script>

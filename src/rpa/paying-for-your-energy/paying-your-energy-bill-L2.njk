@@ -1,86 +1,54 @@
+---
+title: paying-for-your-energy-bill-L2
+---
 
-<!doctype html>
-<html class="tools-" lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Help and support - pay">
-  <meta name="format-detection" content="telephone=no">
-  <title>Help and support - Paying Your For Energy</title>
-  <style type="text/css">
-    .list {
-      padding-bottom: 8px;
-    }
-  </style>
-</head>
-<body class="ndsn">
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Paying for your energy.</span>
+    <span class="h1">Payment type</b>
+    </span>
+  </h1>
+</ns-landmark>
 
-  <nsx-header></nsx-header>
+<ns-panel>
+  <ns-form nf-model="model.L5-pay">
+    <ns-fieldset legend="How do you pay for your energy?">
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+        <input type="radio" name="radio" value="receive a bill and pay" id="radio-a">
+        <label for="radio-a">I get regular bills and pay them</label>
 
-  <main id="content">
+        <input type="radio" name="radio" value="top-up a meter" id="radio-b">
+        <label for="radio-b">I top up a meter</label>
 
-	<ns-landmark type="lakeside">
-      <h1 slot="heading">
-        <span class="h5">Paying for your energy.</span>
-        <span class="h1 enlighten"><b>How do you pay</b> for your energy?</b>
-        </span>
-      </h1>
-    </ns-landmark>
+        <input type="radio" name="radio" value="payment card" id="radio-c">
+        <label for="radio-c">I pay with an energy payment card</label>
 
-    <ns-panel>
-      <div class="splash">
-        <ns-form nf-model="model.L5-pay">
+        <input type="radio" name="radio" value="fuel direct" id="radio-d">
+        <label for="radio-d">My payments are taken from my benefits via Fuel Direct</label>
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
 
-          <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
-            <input type="radio" name="radio" value="receive a bill and pay" id="radio-a">
-            <label for="radio-a">I get regular bills and pay them</label>
+<script>
+function getDynamicURL() {
+  var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
 
-            <input type="radio" name="radio" value="top-up a meter" id="radio-b">
-            <label for="radio-b">I top up a meter</label>
-
-            <input type="radio" name="radio" value="payment card" id="radio-c">
-            <label for="radio-c">I pay with an energy payment card</label>
-
-            <input type="radio" name="radio" value="fuel direct" id="radio-d">
-            <label for="radio-d">My payments are taken from my benefits via Fuel Direct</label>
-          </ns-inputter>
-
-          <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
-
-        </ns-form>
-      </div>
-    </ns-panel>
-
-
-   
-
-  </main>
-  <nsx-footer></nsx-footer>
-  <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
-  <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
-  <script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
-
-  <script>
-  function getDynamicURL() {
-    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
-
-    if (data === 'receive a bill and pay') {
-      return 'paying-your-energy-bill-summary-receive-a-bill.html';
-    }
-
-    if (data === 'top-up a meter') {
-      return 'paying-your-energy-bill-L3.html';
-    }
-
-    if (data === 'payment card') {
-      return 'paying-your-energy-bill-summary-payment-card.html';
-    }
-
-    if (data === 'fuel direct') {
-      return 'paying-your-energy-bill-summary-fuel-direct.html';
-    }
+  if (data === 'receive a bill and pay') {
+    return '../paying-your-energy-bill-summary-receive-a-bill';
   }
-  </script>
 
-</body>
-</html>
+  if (data === 'top-up a meter') {
+    return '../paying-your-energy-bill-L3';
+  }
+
+  if (data === 'payment card') {
+    return '../paying-your-energy-bill-summary-payment-card';
+  }
+
+  if (data === 'fuel direct') {
+    return '../paying-your-energy-bill-summary-fuel-direct';
+  }
+}
+</script>
