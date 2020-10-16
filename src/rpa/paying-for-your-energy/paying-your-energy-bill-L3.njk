@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html class="tools-" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help and support - pay">
+  <meta name="format-detection" content="telephone=no">
+  <title>Help and support - Paying Your For Energy</title>
+  <style type="text/css">
+    .list {
+      padding-bottom: 8px;
+    }
+  </style>
+</head>
+<body class="ndsn">
+
+  <nsx-header></nsx-header>
+
+  <main id="content">
+
+	<ns-landmark type="lakeside">
+      <h1 slot="heading">
+        <span class="h5">Paying for your energy.</span>
+        <span class="h1 enlighten"><b>Do you have a</b> smart meter?</b>
+        </span>
+      </h1>
+    </ns-landmark>
+
+    <ns-panel>
+      <div class="splash">
+        <ns-form nf-model="model.L5-pay">
+
+          <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+            <input type="radio" name="radio" value="yes" id="radio-a">
+            <label for="radio-a">Yes - I can top up via the British Gas app, website or phone</label>
+
+            <input type="radio" name="radio" value="no" id="radio-b">
+            <label for="radio-b">No - I can only top up using a gas card or electricity key</label>
+
+          </ns-inputter>
+
+          <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+        </ns-form>
+      </div>
+    </ns-panel>
+
+
+   
+
+  </main>
+  <nsx-footer></nsx-footer>
+  <script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+  <script src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+  <script src="https://nucleus-experiments.drew-jones.com/assets/proto.js"></script>
+
+  <script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+    if (data === 'yes') {
+      return 'paying-your-energy-bill-summary-top-up-smart.html';
+    }
+
+    if (data === 'no') {
+      return 'paying-your-energy-bill-summary-top-up-non-smart.html';
+    }
+
+  }
+  </script>
+
+</body>
+</html>
