@@ -1,0 +1,110 @@
+---
+title: rewards-confirm-local
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside" image="https://user-images.githubusercontent.com/52657167/74225986-9e7bec80-4cb3-11ea-83f9-0e2be6901cc2.jpg">>
+  <h1 slot="heading">
+    <span class="h5">Our way of saying thank-you.</span>
+    <span class="h1">Nearly there</span>
+  </h1>
+  <div slot="paragraph">
+    <p>Get 20% off as many jobs as you like, as long as the work is completed and paid for by 4th August 2020.</p>
+    <p>For future use, we've put this into your <b>Claimed offers</b> tab below.</p>
+    <p>Click the link below and enter <b>LOCALHEROES20FEB20002</b> at the checkout to get your discount.</p>
+  </div>
+  <a slot="cta" href="../rewards-hub-v5">
+    <ns-cta type="direct" href="https://www.localheroes.com/?utm_source=Google&utm_medium=cpc&utm_campaign=Brand&gclid=EAIaIQobChMImJXq7vXD5gIVhbTtCh3jNAk1EAAYASAAEgKTkfD_BwE&gclsrc=aw.ds">Visit Local Heroes to use your offer</ns-cta>
+  </a>
+</ns-landmark>
+
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-o2.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+    {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 January 2020</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Wilbur giveaway</h3>
+        <div slot="paragraph">
+          <p><b>Ended 1 Decemeber 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Win 'An evening with Dee' tickets</h3>
+        <div slot="paragraph">
+          <p><b>Ended 15 November 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Buy one get one Dee</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 November 2019</b></p>
+        </div>
+      </ns-card>
+    </div>
+  </ns-panel>
+
+</ns-tabs>
+
+{% include "./_includes/ns-card-leave.njk" -%}

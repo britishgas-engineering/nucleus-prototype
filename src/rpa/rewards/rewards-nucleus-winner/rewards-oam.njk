@@ -1,28 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <title>oam-dashboard.html</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-</head>
-<body>
-  <div class="ndsn">
-    <ns-header></ns-header>
-    <main>
-<!--   ____       _                                _                     -->
-<!--  | __ )  ___| |___      _____  ___ _ __      | |__   ___ _ __ ___   -->
-<!--  |  _ \ / _ \ __\ \ /\ / / _ \/ _ \ '_ \     | '_ \ / _ \ '__/ _ \  -->
-<!--  | |_) |  __/ |_ \ V  V /  __/  __/ | | |    | | | |  __/ | |  __/  -->
-<!--  |____/ \___|\__| \_/\_/ \___|\___|_| |_|    |_| |_|\___|_|  \___|  -->
+---
+title: rewards-oam
+---
 
-
-<!-- NOTE @drew 2020-01-23 this mockup for the OAM header is not to be distributed -->
-<ns-panel class="ns-panel" decoration="invert-concave-blue">
-  <div class="splash">
-    <p>61 Rage Road, Ragefield, R4 6ED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Moving home?</u>&nbsp; | &nbsp;<u>Account overview</u></p>
-  </div>
-</ns-panel>
+{% include "./_includes/account-logged-in.njk" -%}
 
 <ns-tabs>
   <ns-tab icon="gas" slot="tab" selected="true">Gas</ns-tab>
@@ -45,7 +25,7 @@
     <span class="h1 enlighten"> Confetti shower? That means <b> you've won!</b></span>
   </h2>
   <p slot="paragraph">Congrats! You’ve won a prize! You’ll need to claim before you can view any other offers.</p>
-  <a slot="cta" href="rewards-details-wilbur-event-won.html">
+  <a slot="cta" href="../rewards-details-wilbur-event-won">
     <ns-cta type="direct">View my prize</ns-cta>
   </a>
   <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/49559070/74146816-d888b800-4bf9-11ea-9f66-3362ad4814b9.jpg"></ns-image>
@@ -53,25 +33,3 @@
 
   </ns-panel>
 </ns-tabs>
-
-
-
-
-<!--      _              _      _                     -->
-<!--     / \   _ __   __| |    | |__   ___ _ __ ___   -->
-<!--    / _ \ | '_ \ / _` |    | '_ \ / _ \ '__/ _ \  -->
-<!--   / ___ \| | | | (_| |    | | | |  __/ | |  __/  -->
-<!--  /_/   \_\_| |_|\__,_|    |_| |_|\___|_|  \___|  -->
-
-    </main>
-    <ns-footer></ns-footer>
-  </div>
-  <script type="text/javascript" src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
-</body>
-</html>
-
-
-
-
-
-​
