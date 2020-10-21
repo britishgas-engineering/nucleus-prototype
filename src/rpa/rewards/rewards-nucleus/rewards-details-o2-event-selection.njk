@@ -46,35 +46,11 @@ title: rewards-details-o2-event-selection
   </div>
 
   <div class="splash triple">
-    <ns-card image="https://user-images.githubusercontent.com/52657167/74230843-1f8bb180-4cbd-11ea-9b01-e83b02977277.jpg" type="support" class="">
-      <h3 slot="heading">Win a cheque for one year’s worth of energy</h3>
-      <p slot="paragraph">Enter our prize draw today and you could win a cheque worth £1,157.</p>
-      <p slot="paragraph"><b>Ends tomorrow 11:59pm</b></p>
-      <div slot="cta">
-        <ns-cta type="text" href="../rewards-details-cheque">Find out more about one year's worth of energy</ns-cta>
-      </div>
-    </ns-card>
-
-    <ns-card type="support" image="https://user-images.githubusercontent.com/52657167/74230845-20244800-4cbd-11ea-96db-cacf26274105.jpg">
-      <h3 slot="heading">Get free electricity with Loyalty Days</h3>
-      <p slot="paragraph">To thank you for being a customer we're giving you 6 days of free daytime electricity, over a year.</p>
-      <p slot="paragraph"><b>Ends Friday 28 February</b></p>
-      <div slot="cta">
-        <ns-cta type="text" href="../rewards-details-free">Find out more about Loyalty Days</ns-cta>
-      </div>
-    </ns-card>
-
-    <ns-card type="support" image="https://user-images.githubusercontent.com/52657167/75148341-4d2e1d00-56f7-11ea-96a1-a64d9dbef212.jpg">
-      <h3 slot="heading">Get 35% off Hive Active Heating</h3>
-      <p slot="paragraph">We’ll also send one of our trusted British Gas engineers to do your installation.</p>
-      <p slot="paragraph"><b>Ends Thursday 30 April</b></p>
-      <div slot="cta">
-        <ns-cta type="text" href="../rewards-details-hive">Find out more about Hive Heating offer</ns-cta>
-      </div>
-    </ns-card>
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
   </div>
 </ns-panel>
-      ​
 
 <ns-tabs>
   <ns-tab slot="tab">Summary</ns-tab>
@@ -111,18 +87,7 @@ title: rewards-details-o2-event-selection
 
   <ns-panel slot="panel">
     <div class="splash triple" role="list">
-      <ns-card role="listitem" type="support">
-        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
-        <div slot="paragraph">
-          <p><a href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10131-01-TandC-Local-Heroes-20-off.pdf"><ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download"></ns-icon>Terms and conditions (<abbr title="Portable Document Format">PDF</abbr> 32<abbr title="Kilobytes">kB</abbr>)</a></p>
-          <p>Get 20% off as many jobs as you like, as long as the work is completed and paid for by 4th August 2020.</p>
-          <p>Click the link below and enter <b>LOCALHEROES20FEB20002</b> at the checkout to get your discount.</p>
-          <p><b>Ends today 11:59pm</b></p>
-        </div>
-        <a slot="cta" href="https://www.localheroes.com/?utm_source=Google&utm_medium=cpc&utm_campaign=Brand&gclid=EAIaIQobChMImJXq7vXD5gIVhbTtCh3jNAk1EAAYASAAEgKTkfD_BwE&gclsrc=aw.ds">
-          <ns-cta type="text">Visit Local Heroes to use your offer</ns-cta>
-        </a>
-      </ns-card>
+      {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
     </div>
   </ns-panel>
 
@@ -160,13 +125,4 @@ title: rewards-details-o2-event-selection
 </ns-tabs>
 
 
-<ns-panel slot="panel">
-  <ns-card type="flat" alt="">
-    <h3 slot="heading">Want to leave our rewards programme?</h3>
-    <p slot="paragraph">You'll no longer get access to exclusive offers and giveaways.</p>
-    <a slot="cta" href="../rewards-leave">
-      <ns-cta type="text">Yes, I'd like to leave</ns-cta>
-    </a>
-  </ns-card>
-</ns-panel>
-​
+{% include "./_includes/ns-card-leave.njk" -%}
