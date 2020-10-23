@@ -3,7 +3,7 @@ title: Complaints
 eleventyNavigation:
   key: Complaints
   parent: rpa
-  title: Complaints V2
+  title: Complaints V3
   excerpt: Nucleus redesign of the complaints journey
 ---
 
@@ -21,34 +21,38 @@ eleventyNavigation:
   </a>
 </ns-landmark>
 
-<ns-panel decoration="" class="">
+<ns-panel decoration="">
   <div class="splash">
+    <h3>Popular help topics</h3>
   </div>
-  <div class="splash triple">
-    <ns-card id="bank" type="support">
-      <h3 slot="heading">Why has my Direct Debit changed?</h3>
-      <p slot="paragraph">If there’s been any changes to your auto-payments recently, we can help you understand why.</p>
-      <div slot="cta">
-        <ns-cta type="text" href="https://www.britishgas.co.uk/help-and-support/bills-and-payments/changing-your-direct-debit">Why has my Direct Debit changed?</ns-cta>
-      </div>
+  <div class="splash triple" role="list">
+    <ns-card role="listitem" type="support" image="https://user-images.githubusercontent.com/49559070/95085868-ad6a5000-0717-11eb-85ca-3f7883d0ddd0.jpg">
+      <h3 slot="heading" role="heading" aria-level="3">Payments</h3>
+      <p slot="paragraph">Take a look at these handy articles for help with payment questions.</p>
+      <a slot="cta" href="">
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Understanding your new monthly payments</ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Help if you're struggling to pay</ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Your energy bill explained</ns-cta></br>
+      </a>
     </ns-card>
-
-    <ns-card id="payzone" type="support">
-      <h3 slot="heading">Help with your smart meter</h3>
-      <p slot="paragraph">If you have a problem with your smart Pay As You Go meter, our guides and FAQs can help.</p>
-      <div slot="cta">
-        <ns-cta type="text" href="https://www.britishgas.co.uk/help-and-support/meters/help-with-smart-pay-as-you-go">Help with your smart PAYG meter</ns-cta>
-      </div>
+    <ns-card role="listitem" type="support" image="https://user-images.githubusercontent.com/49559070/95085972-d1c62c80-0717-11eb-8329-d35d4b19a070.jpg">
+      <h3 slot="heading" role="heading" aria-level="3">Engineer appointments</h3>
+      <p slot="paragraph">Here's some guidance on how to book, track or cancel an engineer visit.</p>
+       <a slot="cta" href="">
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Book an engineer</ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Track your engineer</ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Get a quote for an engineer</ns-cta></br>
+      </a>
     </ns-card>
-
-    <ns-card id="payzone" type="support">
-      <h3 slot="heading">Book an engineer appointment</h3>
-      <p slot="paragraph">And it’s not just boilers we look after. For help with electricals and heating or plumbing and drains, our expert engineers are here to solve.</p>
-      <div slot="cta">
-        <ns-cta type="text" href="https://www.britishgas.co.uk/home-services/book-engineer">Arrange a callout</ns-cta>
-      </div>
+    <ns-card role="listitem" type="support" image="https://user-images.githubusercontent.com/49559070/95086040-eacedd80-0717-11eb-9ab8-a789b692ca05.jpg">
+      <h3 slot="heading" role="heading" aria-level="3">Tariffs</h3>
+      <p slot="paragraph">Want to get a quote or find out information about your tariff?</p>
+      <a slot="cta" href="">
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Our latest tariffs</ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">Get a quote   </ns-cta></br>
+        <br><ns-cta type="text" href="#!" icon="arrow-right" loading="false" loadingmessage="Loading...">My account</ns-cta></br>
+      </a>
     </ns-card>
-   
   </div>
 </ns-panel>
 
