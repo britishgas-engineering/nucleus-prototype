@@ -1,0 +1,28 @@
+---
+title: make-a-complaint-webform-submit
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Making a complaint.</span>
+    <span class="h1">Tell us your complaint</b>
+    </span>
+  </h1>
+  <div slot="paragraph">
+    <p>To help us respond to your complaint quickly, please give as much detail as you can.</p>
+  </div>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-fieldset legend=""> 
+      <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="Provide further information" helper="" name="provide-further-information" value="">
+
+      <label slot="label" for="textarea-input">Enter your complaint here</label>
+      <textarea id="textarea-input"></textarea>
+      </ns-inputter>
+    </ns-fieldset>
+
+    <ns-cta id="confirm-address-button" nf-href="../make-a-complaint-webform-confirm">Submit your complaint</ns-cta>
+  </ns-form>
+</ns-panel>

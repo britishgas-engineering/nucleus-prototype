@@ -1,0 +1,78 @@
+---
+title: make-a-complaint-webform-address
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Making a complaint.</span>
+    <span class="h1">A bit about you</b>
+    </span>
+  </h1>
+  <div slot="paragraph">
+    <p>We will use these details to respond to your complaint.</p>
+  </div>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-fieldset legend="Enter your details"> 
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+        <label slot="label">First name</label>
+        <input autocomplete="given-name" type="text">
+      </ns-inputter>
+      
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+        <label slot="label">Surname</label>
+        <input autocomplete="family-name" type="text">
+      </ns-inputter>
+      
+      <ns-inputter helper="We may use your mobile number to call or text you, so we can resolve things for you as quickly as possible." validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" name="phone-number" value="">
+        <label slot="label">Telephone number (mobile preferred)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+
+      <ns-inputter helper="You can provide a textphone or international phone number below. Please note that this number will only be used for this complaint and will not be updated on your British Gas account." name="textphone" value="">
+        <label slot="label">Textphone/international number</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+
+      <ns-form>
+        <nsx-address-selector></nsx-address-selector>
+      </ns-form>
+    </ns-fieldset>
+    <ns-cta id="confirm-address-button" nf-href="../make-a-complaint-webform-submit">Next step</ns-cta>
+  </ns-form>
+</ns-panel>
+
+
+<script>
+  // Hide submit button
+  document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  var addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "134 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "135 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "136 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "137 Queenstown Rd, Battersea, London"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>
