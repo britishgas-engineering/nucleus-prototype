@@ -1,0 +1,54 @@
+---
+title: paying-for-your-energy-bill-L2
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Paying for your energy.</span>
+    <span class="h1">Payment type</b>
+    </span>
+  </h1>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form nf-model="model.L5-pay">
+    <ns-fieldset legend="How do you pay for your energy?">
+      <ns-inputter validation='["isRequired"]' name="inputter-a" helper="">
+        <input type="radio" name="radio" value="receive a bill and pay" id="radio-a">
+        <label for="radio-a">I get regular bills and pay them</label>
+
+        <input type="radio" name="radio" value="top-up a meter" id="radio-b">
+        <label for="radio-b">I top up a meter</label>
+
+        <input type="radio" name="radio" value="payment card" id="radio-c">
+        <label for="radio-c">I pay with an energy payment card</label>
+
+        <input type="radio" name="radio" value="fuel direct" id="radio-d">
+        <label for="radio-d">My payments are taken from my benefits via Fuel Direct</label>
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+function getDynamicURL() {
+  var data = document.querySelector('ns-inputter[name="inputter-a"]').value;
+
+  if (data === 'receive a bill and pay') {
+    return '../paying-your-energy-bill-summary-receive-a-bill';
+  }
+
+  if (data === 'top-up a meter') {
+    return '../paying-your-energy-bill-L3';
+  }
+
+  if (data === 'payment card') {
+    return '../paying-your-energy-bill-summary-payment-card';
+  }
+
+  if (data === 'fuel direct') {
+    return '../paying-your-energy-bill-summary-fuel-direct';
+  }
+}
+</script>
