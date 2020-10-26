@@ -1,0 +1,128 @@
+---
+title: rewards-details-o2-event-selection
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">British Gas Rewards.</span>
+    <span class="h1 enlighten"><b>Win tickets to The O2</b> for events this August and September</span>
+  </h1>
+  <div slot="paragraph">
+    <p>Choose the events you want to be in with a chance of winning tickets for.</p>
+  </div>
+  </a>
+</ns-landmark>
+      
+<ns-panel>
+  <div class="splash">
+    <ns-form>
+      <ns-inputter mask="" separator="" heading="Please select at least one event." helper="" name="gas" value="">
+        <input type="checkbox" name="question" id="q-1-a">
+        <label for="q-1-a">Select all</label>
+        <input type="checkbox" name="question" id="q-1-b">
+        <label for="q-1-b">Ariana Grande - 17th Aug 2020</label>
+        <input type="checkbox" name="question" id="q-1-c">
+        <label for="q-1-c">Ariana Grande - 19th Aug 2020</label>
+        <input type="checkbox" name="question" id="q-1-d">
+        <label for="q-1-d">Ariana Grande - 20th Aug 2020</label>
+        <input type="checkbox" name="question" id="q-1-e">
+        <label for="q-1-e">Electric Soul Festival - 7th Sep 2020</label>
+        <input type="checkbox" name="question" id="q-1-f">
+        <label for="q-1-f">Muse - 14th Sep 2020</label>
+        <input type="checkbox" name="question" id="q-1-g">
+        <label for="q-1-g">Muse - 15th Sep 2020</label>
+      </ns-inputter>
+      <ns-cta type="direct" href="../rewards-details-o2-event-confirmation" icon="arrow-right" onclick="action()" loading="false" loadingmessage="Loading...">Enter</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 January 2020</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Wilbur giveaway</h3>
+        <div slot="paragraph">
+          <p><b>Ended 1 Decemeber 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Win 'An evening with Dee' tickets</h3>
+        <div slot="paragraph">
+          <p><b>Ended 15 November 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Buy one get one Dee</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 November 2019</b></p>
+        </div>
+      </ns-card>
+    </div>
+  </ns-panel>
+
+</ns-tabs>
+
+
+{% include "./_includes/ns-card-leave.njk" -%}
