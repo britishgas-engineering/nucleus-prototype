@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>rewards-confirm-cheque-v1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <style>
+  .nav-footer nav { padding-top: 1em; padding-bottom: 1em; }
+  .nav-footer nav span { margin-right: 1em; }
+  .nav-footer nav span a { color: white; text-decoration-color: white; }
+  .nav-footer nav span a:hover { color: white; text-decoration-color: white; }
+  .nav-footer nav span a:visited { color: white; text-decoration-color: white; }
+  .nav-footer nav span a:visited:hover { color: white; text-decoration-color: white; }
+  @media only screen and (max-width: 600px) {
+    .nav-footer nav span.address { display: block; margin: 0; }
+  }
+  ns-panel:not([type="nav"]) a:visited { color: #005eb8 !important; text-decoration-color: #005eb8 !important; }
+  </style>
+</head>
+
+<body>
+  <div class="ndsn">
+    <nsx-header></nsx-header>
+    <main>
+      <!--   ____       _                                _                     -->
+      <!--  | __ )  ___| |___      _____  ___ _ __      | |__   ___ _ __ ___   -->
+      <!--  |  _ \ / _ \ __\ \ /\ / / _ \/ _ \ '_ \     | '_ \ / _ \ '__/ _ \  -->
+      <!--  | |_) |  __/ |_ \ V  V /  __/  __/ | | |    | | | |  __/ | |  __/  -->
+      <!--  |____/ \___|\__| \_/\_/ \___|\___|_| |_|    |_| |_|\___|_|  \___|  -->
+
+
+      <!-- NOTE @drew 2020-02-18 this is a mockup for logged in navigation -->
+      <div class="nav-footer">
+        <ns-panel type="nav" decoration="invert-bridge-blue">
+          <nav class="splash">
+            <span class="address">Alex Jones, 16 Long Close</span>
+            <span><a href="index.html">Account overview</a></span>
+          </nav>
+        </ns-panel>
+      </div>
+
+      <ns-landmark type="summit" image="https://user-images.githubusercontent.com/52657167/74232930-a6428d80-4cc1-11ea-89bb-37e21189a815.jpg">
+        <h1 slot="heading">
+          <span class="h1 enlighten"><b>We’ve entered you</b> into our prize draw!</span>
+        </h1>
+        <div slot="paragraph">
+          <p>You could soon be the lucky winner of a <b>cheque worth £1,157</b> – that’s equivalent to free energy for a whole year.</p>
+          <p>We’ll randomly choose 10 winners after the prize draw closes on 27th February 2020. And if you’re one of them, we’ll contact you by 7th March 2020.</p>
+          <p>We've put this into your <b>Claimed offers</b> tab below.</p>
+        </div>
+      </ns-landmark>
+
+      <ns-panel decoration="" class="">
+        <div class="splash">
+          <h2 class="">All your offers</h2>
+        </div>
+
+        <div class="splash triple">
+          <ns-card type="support" image="https://user-images.githubusercontent.com/52657167/74230845-20244800-4cbd-11ea-96db-cacf26274105.jpg">
+            <h3 slot="heading">Get free electricity with Loyalty Days</h3>
+            <p slot="paragraph">To thank you for being a customer we're giving you 6 days of free daytime electricity, over a year.</p>
+            <p slot="paragraph"><b>Ends Friday 28 February</b></p>
+            <div slot="cta">
+              <ns-cta type="text" href="rewards-details-free-v1.nucleus.html">Find out more about Loyalty Days</ns-cta>
+            </div>
+          </ns-card>
+
+          <ns-card type="support" image="https://user-images.githubusercontent.com/52657167/76956333-b9bdc580-690b-11ea-95c8-fb1b2864d944.jpg">
+            <h3 slot="heading">Win tickets to The O2</h3>
+            <p slot="paragraph">Enter this month's prize draw for your chance to win a pair of tickets to an event of your choice at The O2.</p>
+            <p slot="paragraph"><b>Ends Sunday 1 March</b></p>
+            <div slot="cta">
+              <ns-cta type="text" href="rewards-details-o2.html">Find out more about O2 offer</ns-cta>
+            </div>
+          </ns-card>
+
+          <ns-card type="support" image="https://user-images.githubusercontent.com/52657167/75148341-4d2e1d00-56f7-11ea-96a1-a64d9dbef212.jpg">
+            <h3 slot="heading">Get 35% off Hive Active Heating</h3>
+            <p slot="paragraph">We’ll also send one of our trusted British Gas engineers to do your installation.</p>
+            <p slot="paragraph"><b>Ends Thursday 30 April</b></p>
+            <div slot="cta">
+              <ns-cta type="text" href="rewards-details-hive-v1.nucleus.html">Find out more about Hive Heating offer</ns-cta>
+            </div>
+          </ns-card>
+        </div>
+      </ns-panel>
+      ​
+
+      <ns-tabs>
+        <ns-tab slot="tab">Summary</ns-tab>
+
+        <ns-panel slot="panel">
+          <div class="splash">
+            <ns-table>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Offers you've chosen</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Estimated savings so far</td>
+                    <td>£0</td>
+                  </tr>
+                  <tr>
+                    <td>Free loyalty days</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Prize draws entered</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ns-table>
+          </div>
+        </ns-panel>
+
+
+        <ns-tab slot="tab">Claimed offers</ns-tab>
+
+        <ns-panel slot="panel">
+          <div class="splash triple" role="list">
+
+            <ns-card role="listitem" type="support">
+              <h3 slot="heading">Kickstart the New Year with a cheque worth £1,157</h3>
+              <div slot="paragraph">
+                <p><a href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10131-01-TandC-Local-Heroes-20-off.pdf"><ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download"></ns-icon>Terms and conditions (<abbr title="Portable Document Format">PDF</abbr> 32<abbr title="Kilobytes">kB</abbr>)</a></p>
+                <p>You could soon be the lucky winner of a cheque worth £1,157 – that’s equivalent to free energy for a whole year.</p>
+                <p>We’ll randomly choose 10 winners after the prize draw closes on 27th February 2020. And if you’re one of them, we’ll contact you by 7th March 2020.</p>
+                <p><b>Prize draw entered 26 February</b></p>
+              </div>
+            </ns-card>
+
+            <ns-card role="listitem" type="support">
+              <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+              <div slot="paragraph">
+                <p><a href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10131-01-TandC-Local-Heroes-20-off.pdf"><ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download"></ns-icon>Terms and conditions (<abbr title="Portable Document Format">PDF</abbr> 32<abbr title="Kilobytes">kB</abbr>)</a></p>
+                <p>Get 20% off as many jobs as you like, as long as the work is completed and paid for by 4th August 2020.</p>
+                <p>Click the link below and enter <b>LOCALHEROES20FEB20002</b> at the checkout to get your discount.</p>
+                <p><b>Ends today 11:59pm</b></p>
+              </div>
+              <a slot="cta" href="https://www.localheroes.com/?utm_source=Google&utm_medium=cpc&utm_campaign=Brand&gclid=EAIaIQobChMImJXq7vXD5gIVhbTtCh3jNAk1EAAYASAAEgKTkfD_BwE&gclsrc=aw.ds">
+                <ns-cta type="text">Visit Local Heroes to use your offer</ns-cta>
+              </a>
+            </ns-card>
+
+          </div>
+        </ns-panel>
+
+
+        <ns-tab slot="tab">Expired offers</ns-tab>
+        <ns-panel slot="panel">
+        </ns-panel>
+
+      </ns-tabs>
+
+
+      <!--      _              _      _                     -->
+      <!--     / \   _ __   __| |    | |__   ___ _ __ ___   -->
+      <!--    / _ \ | '_ \ / _` |    | '_ \ / _ \ '__/ _ \  -->
+      <!--   / ___ \| | | | (_| |    | | | |  __/ | |  __/  -->
+      <!--  /_/   \_\_| |_|\__,_|    |_| |_|\___|_|  \___|  -->
+
+    </main>
+    <nsx-footer></nsx-footer>
+  </div>
+  <script type="text/javascript" src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+  <script type="text/javascript" src="https://www.britishgas.co.uk/nucleus-experiences/only.components.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+​

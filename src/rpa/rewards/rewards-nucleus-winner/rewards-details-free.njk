@@ -1,0 +1,120 @@
+---
+title: rewards-details-free
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">British Gas Rewards.</span>
+    <span class="h1 enlighten"><b>Get free electricity</b> with Loyalty Days</span>
+  </h1>
+  <div slot="paragraph">
+    <p>To thank you for being a customer we're giving you <b>6 days</b> of <b>free daytime electricity</b>, over a year.</p>
+  </div>
+  <a slot="cta" href="../rewards-confirm-free">
+    <ns-cta type="direct">Sign up</ns-cta>
+  </a>
+</ns-landmark>
+
+<ns-editorial reverse="" image="https://user-images.githubusercontent.com/52657167/75051132-399b7000-54c5-11ea-933c-06d176b8fbea.jpg">
+  <h2 slot="heading">How we calculate your savings</h2>
+  <p>We'll use the average daily electricity usage between 9am - 5pm and take the cost off your bill.</p>
+
+  <h2>What you get</h2>
+  <ul class="ul-bullet">
+    <li>Covers the cost of your unit rate, not your standing charge</li>
+    <li>Given as a Loyalty Days credit every six months or after 12 months if you are Pay As You Go</li>
+  </ul>
+  <p>Your Loyalty Days are based on how long you've had electricity from us at your current address.</p>
+  <p>Read the terms and conditions for the <a href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10128-01-TandC-Loyalty-Days-Elec.pdf"><ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download"></ns-icon>Loyalty Days (<abbr title="Portable Document Format">PDF</abbr> 46<abbr title="Kilobytes">kB</abbr>)</a></p>
+</ns-editorial>
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-o2.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 January 2020</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Wilbur giveaway</h3>
+        <div slot="paragraph">
+          <p><b>Ended 1 Decemeber 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Win 'An evening with Dee' tickets</h3>
+        <div slot="paragraph">
+          <p><b>Ended 15 November 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Buy one get one Dee</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 November 2019</b></p>
+        </div>
+      </ns-card>
+    </div>
+  </ns-panel>
+
+</ns-tabs>
+
+
+{% include "./_includes/ns-card-leave.njk" -%}

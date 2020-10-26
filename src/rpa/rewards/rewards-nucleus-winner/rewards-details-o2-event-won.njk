@@ -1,0 +1,92 @@
+---
+title: rewards-details-o2-event-won
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+<ns-landmark type="summit" image="https://user-images.githubusercontent.com/52657167/76956338-bb878900-690b-11ea-9267-476d12a1bd73.jpg">
+  <h1 slot="heading">
+    <span class="h5">Congratulations.</span>
+    <span class="h1 enlighten"><b>Whoohoo!</b> You're going to the O2</span>
+  </h1>
+  <div slot="paragraph">
+    <p>You're the lucky winner of two tickets to see <b>Ariana Grande - 17th Aug 2020</b>.</p>
+    <p>As our very special guest, you'll enjoy balcony level views from our terrace, a private bar and inseat food and drinks while you watch the show.</p>
+  <p>Read the terms and conditions for <a href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10130-01-Hive-Active-Heating-35Feb20.pdf"><ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download"></ns-icon>Tickets to The O2 (<abbr title="Portable Document Format">PDF</abbr> 46<abbr title="Kilobytes">kB</abbr>)</a></p>
+  </div>
+  <a slot="cta" href="../rewards-details-o2-event-won-confirmation">
+    <ns-cta type="direct">Get my tickets</ns-cta>
+  </a>
+</ns-landmark>
+
+<ns-panel slot="panel">
+  <ns-card type="flat" alt="">
+    <h3 slot="heading">What if I can't go?</h3>
+    <p slot="paragraph">We're sorry to hear that – please let us know so we can choose another winner.</p>
+    <a slot="cta" href="../rewards-leave">
+      <ns-cta type="text">No thanks, I do not want my tickets to the O2</ns-cta>
+    </a>
+  </ns-card>
+</ns-panel>
+
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+​
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+  </ns-panel>
+
+</ns-tabs>
+
+{% include "./_includes/ns-card-leave.njk" -%}

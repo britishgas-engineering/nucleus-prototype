@@ -1,0 +1,41 @@
+---
+title: rewards-leave
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">British Gas Rewards.</span>
+    <span class="h1 enlighten"><b>We're not sad</b> to see you go</span>
+  </h1>
+  <div slot="paragraph">
+    <p>Before you go, please tell us why you're leaving so we can improve.</p>
+  </div>
+</ns-landmark>
+      
+<ns-panel>
+  <div class="splash">
+    <ns-form>
+      <ns-inputter mask="" separator="" heading="Please select at least one." helper="" name="gas" value="">
+        <input type="checkbox" name="question" id="q-1-a">
+        <label for="q-1-a">I receive too many emails</label>
+        <input type="checkbox" name="question" id="q-1-b">
+        <label for="q-1-b">I am not interested in the bright ideas</label>
+        <input type="checkbox" name="question" id="q-1-c">
+        <label for="q-1-c">I couldn't use the rewards</label>
+        <input type="checkbox" name="question" id="q-1-d">
+        <label for="q-1-d">It's too complicated to get a reward</label>
+        <input type="checkbox" name="question" id="q-1-e">
+        <label for="q-1-e">There aren't enough rewards</label>
+        <input type="checkbox" name="question" id="q-1-f">
+        <label for="q-1-f">The rewards don't feel relevant to me</label>
+      </ns-inputter>
+      <ns-cta type="direct" href="../rewards-leave-confirmation" icon="arrow-right" onclick="action()" loading="false" loadingmessage="Loading...">Yes, I want to leave Rewards</ns-cta>
+      <ns-cta type="text" href="../rewards-hub-v5">No, I want to stay</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
+
+​
