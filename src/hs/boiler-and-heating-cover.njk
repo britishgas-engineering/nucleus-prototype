@@ -1,16 +1,9 @@
 ---
-title: HomeCare product
-branch: b0e3b644030c733578887673b0afdd03d0e0714d
-build: www2
-eleventyNavigation:
-  key: HomeCare product
-  parent: hs
-  title: HomeCare product
-  excerpt: HomeCare product excerpt
+title: boiler-and-heating-cover
 ---
 
-<ns-panel class="banner"> 
-  <ns-lockup ratio="4x3" type="lockjaw" banner="gift-card">
+<ns-panel class="banner">
+  <ns-lockup type="lockjaw" banner="gift-card">
     <h1 slot="heading">
       <span class="h5">HomeCare.</span>
       <span class="h1 enlighten"><b>Boiler and heating cover</b> for your home</span>
@@ -27,13 +20,11 @@ eleventyNavigation:
         <li>Change your cover anytime</li>
       </ul>
     </div>
-    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-4.jpg">
-      Join HomeCare before 24th August and we’ll send you a giftcard worth up to £75
-    </ns-image>
+    <ns-image slot="image" src="/assets/hs/home-care/engineer-4.jpg"></ns-image>
   </ns-lockup>
 </ns-panel>
 
-<ns-panel decoration="invert-concave-grey-light" class="homecare-packages">
+<ns-panel decoration="invert-concave-grey-light">
   <div class="splash">
     <h2>Our HomeCare packages</h2>
   </div>
@@ -47,9 +38,13 @@ eleventyNavigation:
         <p>This is the fee you will pay once for each completed repair. The higher the excess fee you select, the lower the monthly or annual price you pay.</p>
       </div>
       <input type="radio" id="excess-1" name="excess" value="60">
-      <label for="excess-1"><ns-price pence="6000"></ns-price></label>
+      <label for="excess-1">
+        <ns-price pence="6000"></ns-price>
+      </label>
       <input type="radio" id="excess-2" name="excess" value="zero">
-      <label for="excess-2"><ns-price pence="0"></ns-price></label>
+      <label for="excess-2">
+        <ns-price pence="0"></ns-price>
+      </label>
     </ns-inputter>
   </ns-form>
   <div class="splash">
@@ -58,8 +53,12 @@ eleventyNavigation:
         <h2 slot="name">Essentials</h2>
         <h3 slot="price-heading">Estimated price</h3>
         <div slot="price">
-          <p><b><ns-price pence="1400"></ns-price></b><span> / month</span></p>
-          <p><ns-price pence="15600"></ns-price> / year</p>
+          <p><b>
+              <ns-price pence="1400"></ns-price>
+            </b><span> / month</span></p>
+          <p>
+            <ns-price pence="15600"></ns-price> / year
+          </p>
         </div>
         <div slot="description">
           <ul class="ul-ticked">
@@ -96,8 +95,12 @@ eleventyNavigation:
         <h2 slot="name">Standard</h2>
         <h3 slot="price-heading">Estimated price</h3>
         <div slot="price">
-          <p><b><ns-price pence="1700"></ns-price></b><span> / month</span></p>
-          <p><ns-price pence="19200"></ns-price> / year</p>
+          <p><b>
+              <ns-price pence="1700"></ns-price>
+            </b><span> / month</span></p>
+          <p>
+            <ns-price pence="19200"></ns-price> / year
+          </p>
         </div>
         <div slot="description">
           <ul class="ul-ticked">
@@ -134,8 +137,12 @@ eleventyNavigation:
         <h2 slot="name">Plus</h2>
         <h3 slot="price-heading">Estimated price</h3>
         <div slot="price">
-          <p><b><ns-price pence="2100"></ns-price></b><span> / month</span></p>
-          <p><ns-price pence="24000"></ns-price> / year</p>
+          <p><b>
+              <ns-price pence="2100"></ns-price>
+            </b><span> / month</span></p>
+          <p>
+            <ns-price pence="24000"></ns-price> / year
+          </p>
         </div>
         <div slot="description">
           <ul class="ul-ticked">
@@ -177,8 +184,12 @@ eleventyNavigation:
         <h2 slot="name">Premier</h2>
         <h3 slot="price-heading">Estimated price</h3>
         <div slot="price">
-          <p><b><ns-price pence="2350"></ns-price></b><span> / month</span></p>
-          <p><ns-price pence="27000"></ns-price> / year</p>
+          <p><b>
+              <ns-price pence="2350"></ns-price>
+            </b><span> / month</span></p>
+          <p>
+            <ns-price pence="27000"></ns-price> / year
+          </p>
         </div>
         <div slot="description">
           <ul class="ul-ticked">
@@ -224,14 +235,18 @@ eleventyNavigation:
   <div class="splash">
     <h2 class="h4">Some important documents to read</h2>
     <ul class="download-list">
-      <li><ns-download href="//www.britishgas.co.uk/content/dam/british-gas/documents/home_services/HomeCare_Range_Terms_and_Conditions.pdf" filesize="2MB">Terms and Conditions</ns-download></li>
-      <li><ns-download href="//www.britishgas.co.uk/content/dam/british-gas/documents/home_services/About_our_insurance_services.pdf" filesize="113Kb">About our insurance services</ns-download></li>
+      <li>
+        <ns-download href="//www.britishgas.co.uk/content/dam/british-gas/documents/home_services/HomeCare_Range_Terms_and_Conditions.pdf" filesize="2MB">Terms and Conditions</ns-download>
+      </li>
+      <li>
+        <ns-download href="//www.britishgas.co.uk/content/dam/british-gas/documents/home_services/About_our_insurance_services.pdf" filesize="113Kb">About our insurance services</ns-download>
+      </li>
     </ul>
   </div>
 </ns-panel>
 
 <ns-panel decoration="invert-bridge-blue">
-  <ns-lockup reverse ratio="4x3" type="lockbox">
+  <ns-lockup reverse type="lockbox">
     <h2 slot="heading">
       <span class="h5">You're in good hands.</span>
       <span class="h1 enlighten"><b>HomeCare starts with a visit</b></span>
@@ -242,7 +257,7 @@ eleventyNavigation:
     <div slot="paragraph">
       <p>And to make sure that your system continues to run safely and efficiently, we’ll follow up with a Service visit every year that you’re with us.</p>
     </div>
-    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-2.jpg"></ns-image>
+    <ns-image slot="image" src="/assets/hs/home-care/engineer-2.jpg"></ns-image>
   </ns-lockup>
 </ns-panel>
 
@@ -256,7 +271,9 @@ eleventyNavigation:
       <h2 slot="name">Boiler and Controls Breakdown Cover</h2>
       <h3 slot="price-heading">Estimated price (<ns-price pence="9900"></ns-price> excess)</h3>
       <div slot="price">
-        <p><b><ns-price pence="250"></ns-price></b><span> / month</span></p>
+        <p><b>
+            <ns-price pence="250"></ns-price>
+          </b><span> / month</span></p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
@@ -290,7 +307,9 @@ eleventyNavigation:
       <h2 slot="name">Central Heating Breakdown cover</h2>
       <h3 slot="price-heading">Estimated price (<ns-price pence="9900"></ns-price> excess)</h3>
       <div slot="price">
-        <p><b><ns-price pence="550"></ns-price></b><span> / month</span></p>
+        <p><b>
+            <ns-price pence="550"></ns-price>
+          </b><span> / month</span></p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
@@ -323,7 +342,9 @@ eleventyNavigation:
       <h2 slot="name">Boiler Service</h2>
       <h3 slot="price-heading">Estimated price</h3>
       <div slot="price">
-        <p><b><ns-price pence="8500"></ns-price></b></p>
+        <p><b>
+            <ns-price pence="8500"></ns-price>
+          </b></p>
       </div>
       <div slot="description">
         <ul class="ul-bullet">
@@ -354,28 +375,31 @@ eleventyNavigation:
   <div class="splash">
     <h2>What our customers think?</h2>
   </div>
-  <div class="splash triple trustpilot" role="list">
-    <ns-card role="listitem" type="flat" class="five-stars six-mins">
-      <h3 slot="heading" role="heading" aria-level="3">Excellent work.</h3>
-      <p slot="paragraph" class="paragraph">I've always had first class service from British Gas. Appointments are always kept on time and the engineers are friendly and efficient</p>
-      <p slot="paragraph" class="name">Teresa Sykala</p>
-    </ns-card>
-    <ns-card role="listitem" type="flat" class="four-stars six-mins">
-      <h3 slot="heading" role="heading" aria-level="3">Well organised</h3>
-      <p slot="paragraph" class="paragraph">I have been a loyal customer since 1969 and will stay loyal. I have always had excellent service when needed by professional, friendly engineers.</p>
-      <p slot="paragraph" class="name">Mrs Jane Vlitos</p>
-    </ns-card>
-    <ns-card role="listitem" type="flat" class="four-stars twelve-mins">
-      <h3 slot="heading" role="heading" aria-level="3">Great service</h3>
-      <p slot="paragraph" class="paragraph">The service you provide is excellent, as I phoned in the morning re no hot water and your engineer was calling that afternoon</p>
-      <p slot="paragraph" class="name">Jane Pierce</p>
-    </ns-card>
+  <div class="splash triple" role="list">
+    <ns-testimonial role="listitem" author="Teresa Sykala">
+      <div slot="quote">
+        <p>Excellent work</p>
+        <p>I've always had first class service from British Gas. Appointments are always kept on time and the engineers are friendly and efficient</p>
+      </div>
+    </ns-testimonial>
+    <ns-testimonial role="listitem" author="Mrs Jane Vlitos">
+      <h3 slot="heading">Well organised</h3>
+      <div slot="quote">
+        <p>Well organised</p>
+        <p>I have been a loyal customer since 1969 and will stay loyal. I have always had excellent service when needed by professional, friendly engineers.</p>
+      </div>
+    </ns-testimonial>
+    <ns-testimonial role="listitem" author="Jane Pierce">
+      <div slot="quote">
+        <p>Great service</p>
+        <p>The service you provide is excellent, as I phoned in the morning re no hot water and your engineer was calling that afternoon</p>
+      </div>
+    </ns-testimonial>
   </div>
-  <p class="h5 enlighten rating">Rated <b>3.7</b> out of 5 based on <b><u>38,290 reviews</u></b> on <span class="trustpilot-logo"></span></p>
 </ns-panel>
 
 <ns-panel decoration="circle-yellow-left">
-  <ns-lockup reverse ratio="4x3" type="lockjaw">
+  <ns-lockup reverse type="lockjaw">
     <h2 slot="heading">
       <span class="h5">Existing customers.</span>
       <span class="h1 enlighten">Got HomeCare? <b>Book an engineer</b></span>
@@ -386,7 +410,7 @@ eleventyNavigation:
     <a slot="cta" href="/hs">
       <ns-cta type="direct">Book an engineer</ns-cta>
     </a>
-    <ns-image slot="image" ratio="4x3" src="/assets/hs/home-care/engineer-3.jpg"></ns-image>
+    <ns-image slot="image" src="/assets/hs/home-care/engineer-3.jpg"></ns-image>
   </ns-lockup>
 </ns-panel>
 
@@ -449,13 +473,12 @@ eleventyNavigation:
     <ol>
       <li>
         <p>Offer of a Gift Card is available to new domestic homeowners and landlords who buy HomeCare Two or HomeCare Four online
-        from 9th July 2020 and 24th August 2020. In order to qualify we must have received your first payment and your policy must still
-        be active 60 days after purchase. Instructions on how to choose your Gift Card will be emailed 60 days after purchase. Offer
-        excludes HomeCare One and HomeCare Three. Offer is not available with any other offer or promotion, other than Refer A Friend.
-        This offer can be withdrawn at any time. You may not be eligible for the Gift Card if you have had a HomeCare product with
-        similar features in the last 3 months, or more than once in the last 3 years. This is an online only offer. Restrictions apply
-        see <a class=" " aria-label="Opens in new window" href="https://www.amazon.co.uk/gc-legal" target="_blank"
-        data-di-id="di-id-874e82a-30a8097d">www.amazon.co.uk/gc-legal</a></p>
+          from 9th July 2020 and 24th August 2020. In order to qualify we must have received your first payment and your policy must still
+          be active 60 days after purchase. Instructions on how to choose your Gift Card will be emailed 60 days after purchase. Offer
+          excludes HomeCare One and HomeCare Three. Offer is not available with any other offer or promotion, other than Refer A Friend.
+          This offer can be withdrawn at any time. You may not be eligible for the Gift Card if you have had a HomeCare product with
+          similar features in the last 3 months, or more than once in the last 3 years. This is an online only offer. Restrictions apply
+          see <a class=" " aria-label="Opens in new window" href="https://www.amazon.co.uk/gc-legal" target="_blank" data-di-id="di-id-874e82a-30a8097d">www.amazon.co.uk/gc-legal</a></p>
       </li>
     </ol>
   </div>
