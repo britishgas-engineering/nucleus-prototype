@@ -22,6 +22,12 @@ eleventyNavigation:
       <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
       <label for="radio-a-2">Yes</label>
     </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you moving home?" name="moving-home" value="">
+      <input type="radio" id="radio-b-1" name="radio-b" value="No" checked>
+      <label for="radio-b-1">No</label>
+      <input type="radio" id="radio-b-2" name="radio-b" value="Yes">
+      <label for="radio-b-2">Yes</label>
+    </ns-inputter>
     <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
   </ns-form>
 </ns-panel>
@@ -30,7 +36,7 @@ eleventyNavigation:
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="customer"]').value;
     if (data === 'No') {
-      return '01-moving-home';
+      return '02-quote-type';
     }
     else {
       return 'https://www.britishgas.co.uk/identity/';

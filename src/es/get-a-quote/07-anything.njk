@@ -7,8 +7,214 @@
 <ns-panel decoration="">
 <div class="splash">
   <h5>Enter your details</h5>
-    <h1>Anything we should know about?</h1>
+    <h1>Need extra help?</h1>
+    <p class="p-small">Here are some examples of situations you may not have thought we could support you with:</p>
+    <ul class="ul-bullet">
+                    <li>Temporary circumstances, where you might need extra support for a limited amount of time, such as redundancy or recovering from a hospital stay</li>
+                    <li>You’re unable to top up your pre-pay meter due to injury or impairment, or understand your bill because of mental health</li>
+                    <li>We can help you connect to charities such CarersUK and Help the Aged, to name just a few</li>
+            </ul>  
   </div>
+  <div class="splash">
+      <ns-accordion>
+  <h3 slot="heading">Is anyone in your household affected by any of these?
+</h3>
+  <ns-expander open="false">
+    <h4 slot="heading">Sensory</h4>
+      
+                                <div class="splash">
+                                    <ns-form>
+                                        <ns-inputter validation="[]" heading="Sensory" helper="" name="sensory">
+
+                                            <input type="checkbox" id="question-gas" name="question" value="gas">
+                                            <label for="question-gas">Blind</label>
+
+                                            <input type="checkbox" id="question-elec" name="question" value="electricity">
+                                            <label for="question-elec">Sight loss or partially sighted</label>
+                                      
+                                            <input type="checkbox" id="question-deaf" name="question" value="deaf">
+                                            <label for="question-deaf">Deaf</label>
+                                      
+                                            <input type="checkbox" id="question-hearing" name="question" value="hearing">
+                                            <label for="question-hearing">Hearing impaired</label>   
+                                      
+                                            <input type="checkbox" id="question-loss" name="question" value="loss">
+                                            <label for="question-loss">Hearing loss</label>     
+                                      
+                                            <input type="checkbox" id="question-smell" name="question" value="smell">
+                                            <label for="question-smell">Poor sense of smell</label>                                    
+                                        </ns-inputter>
+                                   
+                                    </ns-form>                                                  
+                            </div>
+  </ns-expander>
+  <ns-expander open="false">
+    <h4 slot="heading">Cognitive or learning</h4>
+     <div class="splash">
+                        <ns-form>
+                            <ns-inputter validation="[]" heading="Cognitive or learning" helper="" name="learning">
+
+
+                                <input type="checkbox" id="question-Dementia" name="question" value="Dementia">
+                                <label for="question-Dementia">Dementia</label>
+                                      
+                                <input type="checkbox" id="question-dyslexia" name="question" value="dyslexia">
+                                <label for="question-dyslexia">Developmental disability</label>
+                                      
+                                <input type="checkbox" id="question-MentalHealth" name="question" value="MentalHealth">
+                                <label for="question-MentalHealth">Mental Health</label>       
+                            </ns-inputter>      
+                           
+                         
+                        </ns-form>      
+                    </div>
+  </ns-expander>
+          
+          
+  <ns-expander open="false">
+    <h4 slot="heading">Medical or illness </h4>
+     <div class="splash">
+                            <ns-form>
+                             <ns-inputter validation="[]" heading="Medical conditions or illnesses" helper="" name="Illnesses">
+
+                                <input type="checkbox" id="question-Arthritis" name="question" value="Arthritis">
+                                <label for="question-Arthritis">Arthritis</label>
+
+                                <input type="checkbox" id="question-Asthma" name="question" value="Asthma">
+                                <label for="question-Asthma">Serious/Chronic illness</label>
+                                      
+                                <input type="checkbox" id="question-Breathing" name="question" value="Breathing">
+                                <label for="question-Breathing">Physical wellbeing</label>
+                                      
+                            </ns-inputter>                           
+                        </ns-form>
+                    </div>
+  </ns-expander>
+          
+          
+  <ns-expander open="false">
+    <h4 slot="heading">Elderly or support</h4>
+    <div class="splash">
+                            <ns-form>
+                             <ns-inputter validation="[]" heading="Elderly" helper="" name="Age">
+
+                                <input type="checkbox" id="question-75" name="question" value="75">
+                                <label for="question-75">Age 75 and over</label>
+
+                                <input type="checkbox" id="question-pension" name="question" value="pension">
+                                <label for="question-pension">Pensionable age</label>
+                                 
+                                 
+                                <input type="checkbox" id="question-Nominee" name="question" value="Nominee">
+                                <label for="question-Nominee">You prefer to have a friend or family member present for home visits</label>
+                            </ns-inputter>  
+                        </ns-form>
+      </div>
+  </ns-expander>
+          
+          
+  <ns-expander open="false">
+    <h4 slot="heading">Communication</h4>
+    <div class="splash">
+                            <ns-form>
+                                
+                                <ns-inputter validation="[]" heading="Communication" helper="" name="Language">
+
+                                <input type="checkbox" id="question-speech" name="question-speech" value="speech">
+                                <label for="question-speech">Speech difficulties</label>
+
+                                <input type="checkbox" id="question-sign" name="question-sign" value="sign">
+                                <label for="question-sign">language barrier</label>
+                                
+                                </ns-inputter>
+                                
+                             
+                        </ns-form>
+                     </div>
+  </ns-expander>
+          
+          
+  <ns-expander open="false">
+    <h4 slot="heading">Personal or temporary circumstances</h4>
+   <div class="splash">
+                            <ns-form>
+                             <ns-inputter validation="[]" heading="Personal circumstances" helper="These can include current situations that make you vulnerable or are difficult to cope with, such as bereavement." name="Life events">
+
+                               
+
+                               <input type="checkbox" id="question-Temporary" name="question" value="Temporary">
+                                <label for="question-Temporary">Temporary life changes</label>  
+                                 
+                                <input type="checkbox" id="question-child" name="question" value="child">
+                                <label onclick="toggle2()" for="question-child">Children under five live at the property</label>
+                                 
+                                   <input type="checkbox" id="question-other" name="question-other" value="young">
+                                <label onclick="toggle()" for="question-other">Other</label> 
+                                 
+                            </ns-inputter>  
+                                
+                                
+            <ns-datepicker id="DOB" validation="[&quot;isRequired&quot;]" label="Youngest child’s date of birth" helper="" value="2015-91-01" min="2015-01-01" max="2020-01-01" name="date">
+        </ns-datepicker>  
+                                
+            <ns-inputter id="other" validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+          <label slot="label">Please us any other needs you have</label>
+          <input autocomplete="family-name" type="text">
+        </ns-inputter>
+                        </ns-form>
+                        </div>
+  </ns-expander>
+          
+          
+  
+          
+          
+</ns-accordion>
+<br>
+<ns-cta nf-href="../08-payment">Continue</ns-cta>
+    </div>
+
+      </ns-panel>
+
+      
+      
+      <!-- PSR INFO -->
+<!--
+
+          <ns-panel>
+            <div class="splash", id=PSR>
+            
+                
+                 <ns-form>
+                     
+                      <ns-inputter validation='["isRequired"]' heading="You’re eligible for our Priority Services Register" helper="">
+                        <p class="p-normal">You maybe eligible for <b>additional services and priority treatment</b>. <br> <b>Over two million</b> of our customers have already signed up.</p>    
+                           
+            <ul class="ul-bullet">
+                    <li>Get advanced warning when there's a planned interruption of supply from your electricity network operator</li>
+                    <li>You may be eligible for free gas appliance checks</li>
+                    <li>We can send someone to take quarterly readings, relocate your meter for free or fit a smart meter</li>
+            </ul>        
+    <input id="dd-guarantee" type="checkbox" name="guarantee" value="1">
+    <label for="dd-guarantee">You consent to being added to the Priority Services Register and 
+sharing your information with your electricity network operator.</label>
+                        </ns-inputter>
+                        <p class="p-caption">We'll always follow privacy laws and your Priority Services Register information will <b>never be used for marketing</b>. <br>
+We work with National Trading Standards on a programme called <a>Friends Against Scams</a> to keep you and you loved ones safe from scams and fraud.</p>
+                     
+                        
+                    </ns-form>
+                <br>
+                                       <ns-cta type="direct" href="COE_3.13_confirmation.html" icon="arrow-right" onclick="action()" loading="false" loadingmessage="Loading...">Submit details</ns-cta>
+
+            
+                </div>
+              -->
+
+
+                
+
+  <!--
 
 
     <ns-form class="splash" nf-model="model.get-a-quote">
@@ -27,7 +233,7 @@ By selecting 'Yes' you consent to us sharing your information - we’ll only sha
 <ns-cta nf-href="../08-payment">Continue</ns-cta>
 </ns-form>
 </ns-panel>
-
+-->
 
 
 <!-- END QUESTION SET #2 -->
