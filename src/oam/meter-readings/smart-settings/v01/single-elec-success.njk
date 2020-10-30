@@ -1,0 +1,34 @@
+---
+layout: nucleus-header-logged-in.njk
+title: Smart meter settings - electricity meter
+metertype: smart electricity meter
+---
+
+{% include "./_includes/ns-landmark.njk" -%}
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.smart-meter-settings">
+
+    <h2>Electricity meter</h2>
+    
+    {% include "./_includes/ns-selector-elec.njk" -%}
+
+    <ns-highlighter type="success">
+      <h2 slot="heading">Your smart frequency has been saved.</h2>
+      <p>Your {{metertype}} have been set to take readings <span nf-model="model.smart-meter-settings.elec-selector">[elec]</span>.</p>
+    </ns-highlighter>
+
+    <ns-cta nf-href="DYNAMIC">Save smart frequency</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="elec-selector"]').value;
+
+    if (data = 'gas') {
+      return '../single-elec-success';
+    }
+
+  }
+</script>

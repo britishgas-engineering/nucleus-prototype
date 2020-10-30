@@ -1,0 +1,31 @@
+<h3 slot="heading">Sensory and mobility</h3>
+<ns-form>
+  <ns-inputter validation="[]" heading="Sensory" name="sensory">
+    <input type="checkbox" id="blind" value="blind" class="np-toggler">
+    <label for="blind">Blind</label>
+    {% include "./ns-highlighter-blind.njk" %}
+    <input type="checkbox" id="electricity" value="electricity">
+    <label for="electricity">Sight loss or partially sighted</label>
+    <input type="checkbox" id="deaf" value="deaf" class="np-toggler">
+    <label for="deaf">Deaf</label>
+    {% include "./ns-highlighter-deaf.njk" %}
+    <input type="checkbox" id="hearing" value="hearing">
+    <label for="hearing">Hearing impaired</label>
+    <input type="checkbox" id="loss" value="loss">
+    <label for="loss">Hearing loss</label>
+    <input type="checkbox" id="smell" value="smell">
+    <label for="smell">Restircted sense of smell</label>
+  </ns-inputter>
+  <ns-inputter validation="[]" heading="Mobility" name="mobility">
+    <input type="checkbox" id="bed" value="bed">
+    <label for="bed">Confined to bed</label>
+    <input type="checkbox" id="mobility" value="mobility">
+    <label for="mobility">Restircted mobility</label>
+    <input type="checkbox" id="hand" value="hand">
+    <label for="hand">Restricted hand movement</label>
+    <input type="checkbox" id="door" value="door">
+    <label for="door">Unable to answer the door</label>
+    <input type="checkbox" id="wheel" value="wheel">
+    <label for="wheel">Wheelchair user</label>
+  </ns-inputter>
+</ns-form>

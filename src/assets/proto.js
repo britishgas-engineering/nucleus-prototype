@@ -109,14 +109,6 @@ function updateUI() {
             if(!formData) {
                 console.log('Auto generating model data for ' + path);
             }
-            // Update UI from data
-            // formData.fields.forEach((field) => {
-            //     console.log(field.name, field.value);
-            //     const inputter = form.querySelector(`ns-inputter[name="${field.name}"]`);
-            //     if(inputter) {
-            //         inputter.value = field.value;
-            //     }
-            // })
 
             // Or we could update all fields, so you could have duplicate fields????
             var inputters = form.querySelectorAll('ns-inputter, ns-datepicker').forEach((inputter) => {
@@ -134,7 +126,7 @@ function updateUI() {
     });
 
     // Update text with nf-model
-    var spans = document.querySelectorAll('[nf-model]');
+    var spans = document.querySelectorAll('span[nf-model]');
 
     spans.forEach((span) => {
         var path = span.getAttribute('nf-model').split('.');
@@ -147,8 +139,18 @@ function updateUI() {
         if(text && text.value) {
             span.innerText = text.value;
         }
+    });
 
-
+    //Update select inputs
+    var inputters = document.querySelectorAll('ns-inputter[nf-model]');
+    inputters.forEach((input) => {
+        var path = input.getAttribute('nf-model').split('.');
+        var prop = path.pop();
+        var model = getModelData(path.join('.'));
+        var value = model.fields && model.fields.find((field) => {
+            return field.name === prop;
+        })
+        input.value = value.value;
     });
 }
 
@@ -236,13 +238,15 @@ function setModelData(path, value) {
 
 // Address Finder
 
-const addresses = [{
-    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
-}, {
-    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
-}];
+if(!addresses) {
+    var addresses = [{
+        "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+    }];
+}
 
 var addressSelector = document.querySelector('nsx-address-selector');
 if(addressSelector) {
@@ -255,22 +259,24 @@ if(addressSelector) {
 
 if(addressSelector) {
     // Hide submit button
-    document.querySelector('#submit-button').setAttribute('style', 'display: none');
     addressSelector.addEventListener('address-selected', (event) => {
         console.log('Address selected ' + event.detail.address.label);
-        //document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
         if(event.target.getAttribute('nf-model-path')) {
             setModelData(event.target.getAttribute('nf-model-path'), event.target.value.label);
+            setModelData(event.target.getAttribute('nf-model-path') + '-postcode', event.target.postcode);
+            
         }
     });
 }
 
 if(addressSelector) {
-    addressSelector.addEventListener('address-selected', (event) => {
-        if (event.detail.address) {
-            document.querySelector('#submit-button').setAttribute('style', 'display: block');
-        } else {
-            document.querySelector('#submit-button').setAttribute('style', 'display: none');
-        }
-    });
+    if(document.querySelector('#submit-button')) {
+        addressSelector.addEventListener('address-selected', (event) => {
+            if (event.detail.address) {
+                document.querySelector('#submit-button').setAttribute('style', 'display: block');
+            } else {
+                document.querySelector('#submit-button').setAttribute('style', 'display: none');
+            }
+        });
+    }
 }

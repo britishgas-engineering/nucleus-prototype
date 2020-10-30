@@ -1,0 +1,109 @@
+---
+title: rewards-confirm-hive
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside" image="https://user-images.githubusercontent.com/52657167/74225986-9e7bec80-4cb3-11ea-83f9-0e2be6901cc2.jpg">>
+  <h1 slot="heading">
+    <span class="h5">British Gas Rewards.</span>
+    <span class="h1 enlighten"><b>Great news!</b> Your discount is ready</span>
+  </h1>
+  <div slot="paragraph">
+    <p>Here’s your discount code to get <b>35% off Hive Active Heating</b>.</p>
+    <p>We’ve also popped it in an email to you and added it to your <b>Claimed offers</b> tab below. Remember, this offer is only available until Thursday 30 April 2020, subject to availability.</p>
+    <p>Click the link below and choose the best option for your home on the Hive website, then enter <b>VOUCHERDUMMY19</b> at the checkout to get your discount.</p>
+  </div>
+  <a slot="cta">
+    <ns-cta type="direct" href="https://www.hivehome.com/products/categories/heating">Visit Hive to use your 35% discount</ns-cta>
+  </a>
+</ns-landmark>
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-o2.njk" -%}
+  </div>
+</ns-panel>
+
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+    {% include "./_includes/ns-card-claimed-hive.njk" -%}
+    {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 January 2020</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Wilbur giveaway</h3>
+        <div slot="paragraph">
+          <p><b>Ended 1 Decemeber 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Win 'An evening with Dee' tickets</h3>
+        <div slot="paragraph">
+          <p><b>Ended 15 November 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Buy one get one Dee</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 November 2019</b></p>
+        </div>
+      </ns-card>
+    </div>
+  </ns-panel>
+
+</ns-tabs>
+
+{% include "./_includes/ns-card-leave.njk" -%}

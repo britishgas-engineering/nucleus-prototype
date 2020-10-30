@@ -1,0 +1,284 @@
+/* .style-hack
+  add space to the bottom of the inline forms
+*/
+
+.style-hack {
+  padding-bottom: 20px;
+}
+
+
+/* .meter-readings-table
+  add space to the bottom of the inline forms
+*/
+
+.service-docs-table {
+  @media (max-width: @screen-xs-min) {
+    overflow-x: scroll;
+  }
+}
+
+/* .drop-switch
+  attempt to switch content related to value in previous sibling ns-inputter
+*/
+
+.drop-switch[value="value-01"] ~ .drop-switch-selection .drop-switch-option-b {
+  display: none;
+}
+
+.drop-switch[value="value-02"] ~ .drop-switch-selection .drop-switch-option-a,
+.drop-switch[value*="Queenstown"] ~ .drop-switch-selection .drop-switch-option-a {
+  display: none;
+}
+
+
+/* showing the form on checkbox toggle */
+
+.show-checkbox,
+.show-checkbox~.show-data~.show-form,
+.show-checkbox:checked~.show-data {
+  display: none;
+}
+
+.show-checkbox:checked~.show-data~.show-form {
+  display: block;
+}
+
+.show-cta {
+  cursor: pointer;
+  font-family: 'BG Flame Bold',
+  sans-serif;
+  color: #005eb8;
+  text-decoration: underline;
+}
+
+.show-cta:hover {
+  color: #003c71;
+  text-decoration-color: rgba(0, 60, 113, .25);
+}
+
+.show-cancel {
+  float: right;
+}
+
+
+
+/* navigation subnav */
+
+.subnav-top-bar {
+  background-color: #F7F7F7;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.subnav-top-bar .holder {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.subnav-top-bar .links {
+  float: left;
+}
+
+.subnav-top-bar .links a {
+  margin-right: 1em;
+  display: inline-block;
+  color: #333f48 !important;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-decoration: none !important;
+}
+
+/* Change the link on hover */
+.subnav-top-bar .links a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: rgba(0, 60, 113, .25) !important;
+}
+
+.subnav-top-bar .address {
+  float: right;
+}
+
+.subnav-top-bar .address span {
+  display: inherit;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+/* rugby pitch and higher */
+@media (min-width: 1620px) {
+  .subnav-top-bar .holder {
+    padding-left: 9.31322575em;
+    padding-right: 9.31322575em;
+  }
+}
+
+/* simple .np-callout */
+.np-callout {
+  display: block;
+  position: relative;
+  padding-left: 0.5em;
+}
+
+.np-callout::after {
+  position: absolute;
+  background-color: var(--np-callout-colour);
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.25em;
+}
+
+.np-callout ns-icon {
+  color: var(--np-callout-colour);
+  float: left;
+  margin-top: 0.33em;
+  margin-right: 0.25em;
+}
+
+.np-callout .content {
+  color: initial;
+  display: block;
+  padding-left: 1.25em;
+}
+
+.margin-top {
+   margin-top: 3em;
+}
+
+
+/* experiment with ns-card for notification */
+
+.np-card.type-a {
+  color: #23D160;
+}
+
+.np-card.type-b {
+  color: #219CEE;
+}
+
+.np-card.type-c {
+  color: #fff;
+}
+
+.np-card {
+  background-color: #fff;
+}
+
+.np-card.notification {
+  position: relative;
+  border-radius: 0 0 1em;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 .5em 1.5em 0 rgba(51, 63, 72, .15);
+  box-shadow: 0 .5em 1.5em 0 rgba(51, 63, 72, .15);
+  padding: 1em 1em 1em 1.5em;
+  padding-left: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-min-content 1fr;
+  -ms-grid-columns: min-content 1fr;
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas: "a b";
+}
+
+.np-card.notification::before {
+  background-color: currentColor;
+  position: absolute;
+  content: "";
+  width: .5em;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.np-card.notification .icon-holder {
+  margin-top: -.16666667em;
+  width: 2.0736em;
+  height: 2.0736em;
+  margin-top: -.25em;
+  margin-right: 0;
+  margin-left: .71191406em;
+  float: none;
+  -webkit-transform: none;
+  transform: none;
+  grid-area: a;
+  float: right;
+  width: 2.0736em;
+  height: 2.0736em;
+}
+
+.np-card.notification .img-holder {
+  margin-top: -.16666667em;
+  width: 10.0736em;
+  height: 5.0736em;
+  margin-top: -.25em;
+  margin-right: 0;
+  margin-left: -.25em;
+  float: none;
+  -webkit-transform: none;
+  transform: none;
+  grid-area: a;
+  float: right;
+  width: 10.0736em;
+  height: 5.0736em;
+}
+
+.np-card.notification .content {
+  display: grid;
+  -ms-grid-rows: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  color: #333f48;
+  padding-left: .864em;
+  grid-area: b;
+}
+
+.np-card.notification .content .heading-holder .heading {
+  font-size: 1.31453414em;
+  margin-top: 0;
+  letter-spacing: -.01625em;
+  line-height: 1.35;
+  margin-bottom: .9em;
+  max-width: 32em;
+  font-weight: 400;
+  color: inherit;
+}
+
+.np-card.notification .content .paragraph-holder .paragraph {
+  font-family: "BG Flame Light",sans-serif;
+  font-size: 1.2em;
+  margin-top: 0;
+  letter-spacing: -.01625em;
+  line-height: 1.4;
+  margin-bottom: .7em;
+  max-width: 32em;
+  font-weight: 400;
+  color: inherit;
+}
+
+.np-card.notification .content .cta-holder {
+  align-self: end;
+}
+
+
+
+/* .hide-ticks
+  Hide ticks on UL
+*/
+
+.ndsn .ul-ticked li.hide-ticks::before {
+    border-bottom: .15em solid #fff;
+    border-left: .15em solid #fff;
+    width: .75em;
+    height: .45em;
+    -webkit-transform: translate(-55%,-75%) rotate(-45deg);
+    transform: translate(-55%,-75%) rotate(-45deg);
+}

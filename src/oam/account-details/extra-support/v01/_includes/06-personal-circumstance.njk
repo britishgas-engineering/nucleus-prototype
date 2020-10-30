@@ -1,0 +1,20 @@
+<h3 slot="heading">Personal and temporary circumstances</h3>
+<ns-form>
+  <ns-inputter validation="[]" heading="Personal circumstances" helper="This can include any temporary changes could include bereavement, that could make it hard coping with everyday life situations." name="personal">
+    <input type="checkbox" id="bereavement" value="bereavement" class="not-psr">
+    <label for="bereavement">Bereavement</label>
+    <input type="checkbox" id="child" value="child">
+    <label for="child">Children under 5 live at the property</label>
+    <input type="checkbox" id="covid" value="covid" class="not-psr">
+    <label for="covid">Affected by COVID 19</label>
+    <input type="checkbox" id="hospital" value="hospital" class="not-psr">
+    <label for="hospital">Post hospital recovery</label>
+    <input type="checkbox" id="redundancy" value="redundancy" class="np-toggler not-psr">
+    <label for="redundancy">Redundancy</label>
+    {% include "./ns-highlighter-redundancy.njk" %}
+    <input type="checkbox" id="young" value="young" class="not-psr">
+    <label for="young">Young adult household</label>
+    <input type="checkbox" id="temporary" value="temporary" class="not-psr">
+    <label for="temporary">Other temporary life changes</label>
+  </ns-inputter>
+</ns-form>

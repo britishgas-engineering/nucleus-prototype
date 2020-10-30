@@ -1,0 +1,155 @@
+---
+title: rewards-details-wilbur-event-won
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+<ns-landmark type="summit"
+    image="https://user-images.githubusercontent.com/52657167/77082497-0da3d980-69f4-11ea-994f-42d1e57147f2.jpg">
+    <h1 slot="heading">
+        <span class="h5">Congratulations!</span>
+        <span class="h1 enlighten">You've won a cute, cuddly <b>Wilbur the penguin</b></span>
+    </h1>
+    <div slot="paragraph">
+        <p><b>Accept your prize below</b> by 30th April and we'll send you your Wilbur.</p>
+    </div>
+</ns-landmark>
+
+<ns-panel decoration="">
+    <ns-lockup reverse ratio="1x1" type="lockbox" decoration="">
+        <h2 slot="heading">
+            <span class="h5">Wilbur prize draw.</span>
+            <span class="h1">Accept your prize</span>
+        </h2>
+        <div slot="paragraph">
+            <dl class="dl-stacked">
+                <div>
+                    <dt>Confirm that you'd like your prize sent here:</dt>
+                    <dd>Alex Jones</dd>
+                    <dd>16 Long Close</dd>
+                    <dd>Kingston-upon-Thames</dd>
+                    <dd>Surrey</dd>
+                    <dd>KT2 6ES</dd>
+                </div>
+            </dl>
+        </div>
+        <a slot="cta" href="../rewards-details-wilbur-won-confirmation">
+            <ns-cta>Send to this address</ns-cta>
+        </a>
+        <ns-image slot="image" ratio="4x3"
+            src="https://user-images.githubusercontent.com/52657167/77426475-73b1a780-6dcc-11ea-909e-838688cae347.jpg">
+        </ns-image>
+    </ns-lockup>
+</ns-panel>
+
+<ns-panel>
+    <div class="splash">
+        <h2>Send your prize to a different address</h2>
+        <p class="p-feature">If you do not want your prize to go to the address above, then let us know
+            which address you would prefer it sending to.</p>
+        <ns-form>
+            <nsx-address-selector></nsx-address-selector>
+        </ns-form>
+        <a slot="cta" href="../rewards-details-wilbur-won-confirmation">
+            <ns-cta id="confirm-address-button" style="display:none;">Send to this address</ns-cta>
+        </a>
+    </div>
+</ns-panel>
+
+<ns-panel slot="panel">
+    <ns-card type="flat" alt="">
+      <h3 slot="heading">What if I don't want to claim the prize?</h3>
+      <p slot="paragraph">We're sorry to hear that – please let us know so we can choose another winner.</p>
+      <a slot="cta" href="../rewards-leave">
+        <ns-cta type="text">No thanks, I do not want my prize</ns-cta>
+      </a>
+    </ns-card>
+</ns-panel>
+
+<ns-panel>
+    <div class="splash">
+        <p class="p-feature">Read the terms and conditions for <a
+                href="https://www.britishgas.co.uk/aem6/content/dam/britishgas/downloads/rewards/CLUB10130-01-Hive-Active-Heating-35Feb20.pdf">
+                <ns-icon style="width: 1em; height: 1em; position: relative; top: 0.15em;" type="download">
+                </ns-icon>Wilbur prize draw (<abbr title="Portable Document Format">PDF</abbr> 46<abbr
+                    title="Kilobytes">kB</abbr>)
+            </a>.</p>
+    </div>
+</ns-panel>
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+
+<ns-tabs>
+    <ns-tab slot="tab">Summary</ns-tab>
+    <ns-panel slot="panel">
+        <div class="splash">
+            <ns-table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Offers you've chosen</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Estimated savings so far</td>
+                            <td>£0</td>
+                        </tr>
+                        <tr>
+                            <td>Free loyalty days</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Prize draws entered</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ns-table>
+        </div>
+    </ns-panel>
+
+    <ns-tab slot="tab">Claimed offers</ns-tab>
+    <ns-panel slot="panel">
+        <div class="splash triple" role="list">
+          {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+        </div>
+      </ns-panel>
+    <ns-tab slot="tab">Expired offers</ns-tab>
+    <ns-panel slot="panel">
+    </ns-panel>
+
+</ns-tabs>
+
+{% include "./_includes/ns-card-leave.njk" -%}
+
+<script>
+    const addresses = [{
+        "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+    }, {
+        "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+    }];
+    document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+        setTimeout(() => {
+            event.target.addresses = addresses;
+        }, 200);
+    });
+    document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+        if (event.detail.address) {
+            document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+        } else {
+            document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+        }
+    });
+</script>

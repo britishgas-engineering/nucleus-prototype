@@ -18,28 +18,22 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-<ns-panel>
-  <ns-card type="flat">
-    <p slot="paragraph">
-      <a href="heavy-snowfall">How to prepare for heavy snowfall</a> 
-      <br>
-      <a href="helping-those-in-need">Helping those that need it most this winter</a>
-      <br>
-      <a href="frozen-pipes">How to avoid frozen and burst pipes</a>
-      <br>
-      <a href="deal-with-frozen-pipes">How to deal with frozen pipes</a>
-      <br>
-      <a href="winter-proof-home">Now’s the best time to winter-proof your home</a>
-      <br>
-      <a href="bleed-a-radiator">How to bleed a radiator</a> <span style="background: #FFC72C;display: inline-block;padding: 0em .25em; border-radius: 0.25em 0.25em 0.25em 0;color: #000;">new</span>
-      <br>
-      <a href="worcester-boiler">How to re-pressurise your Worcester Bosch boiler</a> <span style="background: #FFC72C;display: inline-block;padding: 0em .25em; border-radius: 0.25em 0.25em 0.25em 0;color: #000;">new</span>
-      <br>
-      <a href="re-pressurise-boiler">How to re-pressurise your boiler</a> <span style="background: #FFC72C;display: inline-block;padding: 0em .25em; border-radius: 0.25em 0.25em 0.25em 0;color: #000;">new</span>
-      <br>
-      <a href="hive-thermostat">How to troubleshoot your Hive thermostat</a> <span style="background: #FFC72C;display: inline-block;padding: 0em .25em; border-radius: 0.25em 0.25em 0.25em 0;color: #000;">new</span>           
-    </p>
-  </ns-card>
-</ns-panel>
+{% set navPages = collections.all | eleventyNavigation("source-blog") | reverse %}
+  <ns-panel>
+    <div class="splash">
+      <h2>The Source blog</h2>
+    </div>
+    <div class="splash triple">
+      {%- for entry in navPages %}
+        <ns-card type="support">
+          <h3 slot="heading">{{entry.title}}</h3>
+          <p slot="paragraph">{{entry.excerpt}}</p>
+          <a slot="cta" href="{{entry.url | url}}">
+            <ns-cta type="text">{{entry.title}}</ns-cta>
+          </a>
+        </ns-card>
+      {%- endfor %}
+    </div>
+  </ns-panel>
 
 
