@@ -2,7 +2,7 @@
   "layout": "nucleus",
   "project": "hs",
   "jquery": false,
-  "script": false,
+  "script": true,
   "style": false,
   "teamname": "Home Services"
 }

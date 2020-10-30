@@ -1,0 +1,58 @@
+---
+title: add-address
+---
+
+<ns-panel>
+  <div class="splash">
+    <h1>Your address</h1>
+    <p class="p-feature"> Where you live can make a difference to the cost of your cover - pop your postcode in the box below and we'll confirm your price.</p>
+    <ns-form>
+      <nsx-address-selector name="address-selector"></nsx-address-selector>
+      <ns-cta id="confirm-address-button" href="../add-phone/">Confirm address</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
+
+<ns-panel>
+  <div class="splash">
+    <ns-accordion>
+      <h3 slot="heading">Frequently asked questions</h3>
+      <ns-expander open="false">
+        <h4 slot="heading">How Covid-19 rules are affecting our services?</h4>
+        <p>We're once again offering our full range of appointments. But in line with official guidance, please don't book a non-emergency visit if there's anyone in your home who's shielding, self-isolating or has Covid-19 symptoms. See our Covid-19 FAQs for full details.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Why am I getting a different price after entering my address?</h4>
+        <p>We use information about your location to tailor the price you pay for HomeCare cover. Factors such as water hardness and property type may influence claims costs, which is reflected in your price.</p>
+      </ns-expander>
+      <ns-expander open="false">
+        <h4 slot="heading">Can I speak to someone if I have a question?</h4>
+        <p>You can call us on 0333 202 9604, Monday to Friday 8am - 8pm, Saturday 8am - 6pm. We may record calls to help improve our service to you. Calls to 0330/0333 numbers will cost you no more than 01 or 02 numbers from landlines or mobiles. If you get 'inclusive minutes' with your package, calls to 0330/0333 numbers will be a part of these.</p>
+      </ns-expander>
+    </ns-accordion>
+  </div>
+</ns-panel>
+
+<script>
+  // Hide submit button
+  document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  const addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London SW8 3RH"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London SW8 3RH"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>
