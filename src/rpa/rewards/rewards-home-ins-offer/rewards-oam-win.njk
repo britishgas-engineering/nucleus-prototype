@@ -1,0 +1,35 @@
+---
+title: rewards-oam-win
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+<ns-tabs>
+  <ns-tab icon="gas" slot="tab" selected="true">Gas</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash">
+      Gas content
+    </div>
+  </ns-panel>
+  <ns-tab icon="electricity" slot="tab">Electricity</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash">
+      Electricity content
+    </div>
+  </ns-panel>
+  <ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
+  <ns-panel slot="panel">
+      <ns-lockup type="locknut" decoration="">
+  <h2 slot="heading">
+    <span class="h5">Your Rewards.</span>
+    <span class="h1 enlighten"> Confetti shower? That means <b> you've won!</b></span>
+  </h2>
+  <p slot="paragraph">Congrats! You’ve won a prize! You’ll need to claim before you can view any other offers.</p>
+  <a slot="cta" href="../rewards-home-ins-win">
+    <ns-cta type="direct">View my prize</ns-cta>
+  </a>
+  <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/49559070/74146816-d888b800-4bf9-11ea-9f66-3362ad4814b9.jpg"></ns-image>
+      </ns-lockup>
+
+  </ns-panel>
+</ns-tabs>
