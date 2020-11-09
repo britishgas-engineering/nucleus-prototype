@@ -28,15 +28,22 @@ eleventyNavigation:
   <select name="select" id="nsid-xof8h6ihrj-input">    
     <option value="">Mill House, Fire Bell Alley, Ewell Road, Surbiton, Surrey, KT6 6JB</option>    
   </select></ns-inputter>
+<br>
+<h4>Your current tariff</h4>  
+<dl class="dl-row">      
+              <div>        
+                <dt>Gas</dt>        
+                <dd>Energy Plus Protection Jan 2022</dd>      
+              </div>          
+              <div>        
+                <dt>Electricity</dt>        
+                <dd>Energy Plus Protection Jan 2022</dd>      
+              </div>       
+</dl>  
 
 
-    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Your address" helper="This should be the property you'd like us to supply energy to" name="moving-home" value="">
-      <input type="radio" id="radio-b-1" name="radio-b" value="No" checked>
-      <label for="radio-b-1">No</label>
-      <input type="radio" id="radio-b-2" name="radio-b" value="Yes">
-      <label for="radio-b-2">Yes</label>
-    </ns-inputter>
-    <ns-cta nf-href="DYNAMIC">Continue</ns-cta>
+
+    <ns-cta nf-href="DYNAMIC">Update quote</ns-cta>
   </ns-form>
 </ns-panel>
 
@@ -44,7 +51,7 @@ eleventyNavigation:
   function getDynamicURL() {
     var data = document.querySelector('ns-inputter[name="customer"]').value;
     if (data === 'No') {
-      return '02-quote-type';
+      return '02-tariff';
     }
     else {
       return 'https://www.britishgas.co.uk/identity/';
