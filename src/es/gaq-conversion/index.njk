@@ -9,20 +9,20 @@ eleventyNavigation:
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h1">Get a quote</span>
+    <span class="h1">Hi Firstname Lastname</span>
   </h1>
   <p slot="paragraph">Let's find an energy tariff for you.</p>
 </ns-landmark>
 
 <ns-panel>
   <ns-form class="splash" nf-model="model.get-a-quote">
-    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you already a British Gas customer?" helper="If so, you’ll be invited to log in to your account to get a more accurate quote." name="customer" value="">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Which address is your quote for?" name="customer" value="">
       <input type="radio" id="radio-a-1" name="radio-a" value="No" checked>
-      <label for="radio-a-1">No</label>
+      <label for="radio-a-1">An existing address</label>
       <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
-      <label for="radio-a-2">Yes</label>
+      <label for="radio-a-2">A new address</label>
     </ns-inputter>
-    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Are you moving home?" name="moving-home" value="">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Your address" helper="This should be the property you'd like us to supply energy to" name="moving-home" value="">
       <input type="radio" id="radio-b-1" name="radio-b" value="No" checked>
       <label for="radio-b-1">No</label>
       <input type="radio" id="radio-b-2" name="radio-b" value="Yes">
