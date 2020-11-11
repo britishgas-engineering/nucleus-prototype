@@ -1,0 +1,70 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Register for your online account
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Online account registration.</span>
+    <span class="h1">Ooops! Please change your details</span>
+  </h1>
+  <p slot="paragraph">We can’t find your existing account using the information that you’ve just provided.</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-highlighter type="warning">
+      <h2 slot="heading">Details need to be consistent</h2>
+      <p>To help us find your account, please ensure your information appears exactly as it’s shown on any bills or letter we’ve sent you. For security reasons we can't tell you what information is wrong. You can edit your information below.</p>
+    </ns-highlighter>
+  </div>
+</ns-panel>
+
+<ns-panel>
+  <div class="splash">
+    <dl class="dl-row">
+      <div>
+        <dt>Email address</dt>
+        <dd><span nf-model="model.oam-02.email-address">un-known@address.com</span></dd>
+        <dd>
+          <a href="../reg-01-landing">Edit email</a>
+        </dd>
+      </div>
+      <div>
+        <dt>First name</dt>
+        <dd><span nf-model="model.oam-02.first-name">Manage</span></dd>
+        <dd>
+          <a href="../reg-02a">Edit first name</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Surname</dt>
+        <dd><span nf-model="model.oam-02.surname">Known</span></dd>
+        <dd>
+          <a href="../reg-02a">Edit surname</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Mobile number</dt>
+        <dd><span nf-model="model.oam-02.mobile-number">Unavailable</span></dd>
+        <dd>
+          <a href="../reg-02a">Edit mobile number</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Address</dt>
+        <dd><span nf-model="model.oam-02.address-selector">[ADDRESS]</span> <span nf-model="model.oam-02.address-selector-postcode">[POSTCODE]</span></dd>
+        <dd>
+          <a href="../reg-02a">Edit address</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Reference number</dt>
+        <dd><span nf-model="model.oam-02.reference-number">W1W 1WW</span></dd>
+        <dd>
+          <a href="../reg-03">Edit reference number</a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</ns-panel>

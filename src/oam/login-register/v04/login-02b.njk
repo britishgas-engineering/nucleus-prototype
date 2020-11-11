@@ -1,0 +1,31 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Log in to your account
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">Welcome back! It looks like you have an account for <strong>k****@a*****s.com</strong> Please log in.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-fieldset>
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="email-address" value="">
+        <label slot="label">Email address</label>
+        <input type="email">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="password" value="">
+        <label slot="label">Password</label>
+        <input type="password">
+      </ns-inputter>
+    </ns-fieldset>
+    <ns-cta href="../login-03-fail">Log in to my account</ns-cta>
+    <ns-cta type="text" href="../magic-01">Email me a login link</ns-cta>
+  </ns-form>
+</ns-panel>
+
+{% include "./_includes/ns-accordion-login.njk" -%}

@@ -1,0 +1,119 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Please register
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account online.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+ 
+
+  <p slot="paragraph">We couldn’t find the email <strong><span nf-model="model.oam-02.email-address">[HERE]</span></strong>.</p>
+  <ns-cta slot="cta" type="text" href="../login-01-landing">Login with a different email</ns-cta>
+</ns-landmark>
+
+ <ns-panel>
+ <div class="splash">
+    <ns-highlighter type="info">
+       <h2 slot="heading">You'll need to login with a different email address</h2>
+       <h2 slot="heading"></h2>
+      <p>Please <a href="../login-01-landing">login with a different email</a>. <br> Alternatively register <strong><span nf-model="model.oam-02.email-address">[HERE]</span></strong> for an account by entering your details as they appear on any bills or correspondence we've sent. </p>
+    </ns-highlighter>
+  </div>
+  </ns-panel>
+
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-fieldset legend="Enter your details">
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="first-name" value="">
+        <label slot="label">First name</label>
+        <input autocomplete="given-name" type="text">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+        <label slot="label">Surname</label>
+        <input autocomplete="family-name" type="text">
+      </ns-inputter>
+      <ns-inputter helper="This will only be used to match you against our records and send you a verification code." name="mobile-number" value="">
+        <label slot="label">Mobile number (optional)</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+      
+
+      <main class="ndsn">
+    <ns-form>
+    <ns-fieldset legend="Your address">
+      <nsx-address-selector></nsx-address-selector>
+      </ns-fieldset>
+    </ns-form>
+    <!--<ns-cta id="confirm-address-button" href="next-page.html">Send to this address</ns-cta>-->
+
+</main>
+
+    </ns-fieldset>
+    <div>
+      <p>Once you access your account online, you’ll go paper free. We’ll still send documents to you by email, and you can always request paper copies at a later date. You might consider the environment and choose to print at home though.</p>
+      <p>If you’re a HomeCare customer, you can also ask us to send your policy documents by post from the ‘Service Documents’ area of your account.</p>
+    </div>
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="terms" value="">
+      <input type="checkbox" id="terms-agree" value="true">
+      <label for="terms-agree">Please check to state that you agree to the terms and conditions</label>
+    </ns-inputter>
+    <ns-cta type="text" href="#!" icon="info-outline">Terms and conditions</ns-cta>
+    <ns-cta nf-href="DYNAMIC">Continue with registration</ns-cta>
+  </ns-form>
+</ns-panel>
+
+
+{% include "./_includes/ns-accordion-login.njk" -%}
+
+
+<script>
+  // Hide submit button
+  // document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+  var addresses = [{
+    "label": "129 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "131 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "133 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "134 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "135 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "136 Queenstown Rd, Battersea, London"
+  }, {
+    "label": "137 Queenstown Rd, Battersea, London"
+  }];
+  document.querySelector('nsx-address-selector').addEventListener('postcode-selected', (event) => {
+    setTimeout(() => {
+      event.target.addresses = addresses;
+    }, 200);
+  });
+  document.querySelector('nsx-address-selector').addEventListener('address-selected', (event) => {
+    if (event.detail.address) {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: block');
+    } else {
+      document.querySelector('#confirm-address-button').setAttribute('style', 'display: none');
+    }
+  });
+</script>
+<script src="https://www.britishgas.co.uk/nucleus/nucleus.min.js"></script>
+<script src="https://www.britishgas.co.uk/nucleus-experiences/nucleus-experiences.js"></script>
+
+
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="mobile-number"]').value;
+    if (data === '07831234567') {
+      return '../reg-04b-sms';
+    }
+    else {
+      return '../reg-03';
+    }
+  }
+</script>

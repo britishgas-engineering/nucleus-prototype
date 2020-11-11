@@ -1,0 +1,23 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Check your email
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Registration step 2 of 3.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">We’ve sent an email to <strong><span nf-model="model.oam-02.email-address">[HERE]</span></strong></p>
+  <p slot="paragraph">Please check your inbox (and spam folder) for an email from us and click on the link inside to access your account.</p>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+    <ns-card type="flat">
+      <h2 slot="heading">The link will only be available for 10 minutes.</h2>
+      <p slot="paragraph">If you haven't received the email, you can resend it.</p>
+      <ns-cta slot="cta" type="text" href="../email-confirmation">Resend email</ns-cta>
+    </ns-card>
+  </div>
+</ns-panel>
