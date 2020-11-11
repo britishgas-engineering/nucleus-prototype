@@ -1,0 +1,107 @@
+
+
+
+
+
+
+<!-- FORM -->
+
+<ns-panel>
+  <div class="splash">
+  <h5>Change your energy tariff.</h5>
+    <h1>Check your details</h1>
+
+
+<!-- Summary -->
+  <h3>Order summary</h3>
+    <ns-accordion>
+   
+      <ns-expander open="false">
+        <h4 slot="heading">Your selected energy tariff</h4>
+          <dl class="dl-stack">
+            <div>
+              <dt>Your tariff</dt>
+              <dd>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</dd>
+            </div>
+            <div>
+              <dt>Estimated price</dt>
+              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
+            </div>
+            <div>
+              <dd>To choose a different type of energy, You'll need to <a href="../">get another quote</a></dd>
+            </div>
+          </dl>
+      </ns-expander>
+
+      <ns-expander open="false">
+        <h4 slot="heading">Your address</h4>
+          <dl class="dl-stack">
+            <div>
+              <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
+            </div>
+          </dl>
+      </ns-expander>
+
+    </ns-accordion>
+    <!-- End of summary -->
+  
+  </div>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="personal-title" value="Ms">
+      <label slot="label">Title</label>
+      <input autocomplete="honorific-prefix" type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="personal-first-name" value="Rebecca">
+      <label slot="label">First name</label>
+      <input autocomplete="given-name" type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="personal-surname" value="Robinson">
+      <label slot="label">Surname</label>
+      <input autocomplete="family-name" type="text">
+    </ns-inputter>
+    <ns-inputter mask="DD/MM/YYYY" separator="/" validation="[&quot;isRequired&quot;,&quot;isDate&quot;]' helper="Why do we need this?" name="personal-date-of-birth" value="10101999">
+      <div slot="tip-details">
+        <p>We will use this to identify you for security purposes.</p>
+      </div>
+      <label slot="label">Date of birth</label>
+      <input type="text">
+    </ns-inputter>
+   
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" value="" helper="We might use this to get in touch with you about your order" name="telephone-number">
+  <label slot="label" for="text-input">Telephone number</label>
+  <input type="tel" id="text-input">
+</ns-inputter>
+
+
+
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isEmail&quot;]" helper="We might use your details to get in touch with you about your order" name="personal-email" value="lts_addon4@bgdigitaltest.co.uk">
+
+      <label slot="label">Email address</label>
+      <input type="email" placeholder="e.g. email@address.co.uk">
+    </ns-inputter>
+
+<br>
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="gas" value="">
+
+
+  <input type="checkbox" id="question-gas" name="question" value="tick">
+  <label for="question-gas">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with</label>
+
+</ns-inputter>
+
+<p>
+  Make sure you've double-checked all your details before you place your order
+<br>
+  <b>You've got a 14 day cooling off period if you change your mind</b>
+</p>
+
+
+<ns-cta nf-href="../05-confirmation">Continue</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<!-- END FORM -->
+
+
