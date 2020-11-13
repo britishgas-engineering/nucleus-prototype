@@ -75,13 +75,61 @@ title: Welcome to your account
 
 
 
+<!-- Products using columns -->
+
+   <ns-panel>
+      <div class="splash">
+        <h4>Your Home Services</h4>
+        <h2>HomeCare Two</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="4" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 0123456789</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" href="#">Book an engineer</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">Your cover</h3>
+          <p slot="paragraph"><strong>What's covered</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+          <p slot="paragraph"><strong>What's not covered</strong></p>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
+
+        </ns-card>
+        
+
+</ns-column>
+</ns-panel>
+
+
+
+<!-- Products using splash triple on old branch -->
+
 
     <ns-panel>
       <div class="splash">
         <h4>Your Home Services</h4>
-        <h2 slot="heading" role="heading" aria-level="2">
-    <span class="h3">HomeCare Two</span>
-  </h2>
+        <h2>HomeCare Two</h2>
       </div>
       <div class="splash triple">
         <ns-card type="flat">
@@ -92,7 +140,7 @@ title: Welcome to your account
             <ns-cta type="text">Your invoices</ns-cta>
            </a>
         
-           <p slot="cta"><ns-cta slot="cta" href="../reg-01-landing">Book an engineer</ns-cta></p>
+           <p slot="cta"><ns-cta slot="cta" href="#">Book an engineer</ns-cta></p>
         </ns-card>
         <ns-card type="flat">
           <h2 slot="heading">Your cover</h2>
