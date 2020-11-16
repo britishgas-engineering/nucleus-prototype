@@ -1,6 +1,6 @@
 {
   "layout": "nucleus",
-  "project": "tn",
+  "project": "tn/pete/editorial",
   "jquery": false,
   "script": false,
   "style": true,
