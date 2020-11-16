@@ -1,0 +1,69 @@
+/*** EDITORIAL STYLES ***/
+
+
+
+.editorial_2 {
+  width: 100%;
+  padding: 48px 5%;
+  margin: 0 auto;
+}
+
+.tldr {
+  background: #F7F7F7;
+  border-radius: 1.5em 1.5em 1.5em 0px;
+  margin-bottom: 48px;
+}
+
+
+.intro p:first-child:first-letter,
+.tldr p:first-child:first-letter {
+
+  float: left;
+  font-size: 80px;
+  line-height: 60px;
+  padding-top: 8px;
+  padding-right: 8px;
+
+}
+
+/*** STOLEN RESPONSIVE IFRAME CODE ***/
+
+.editorial_2 .video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.editorial_2 .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*** TO MAKE THE IMAGES RESPONSIVE ***/
+
+.editorial_2 img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+@media screen and (min-width: 720px) {
+
+  /*** SETTING A MAX WIDTH OVER 720PX ***/
+
+  .editorial_2 {
+    max-width: 680px;
+    padding: 48px 0;
+  }
+
+  .tldr {
+    padding: 48px;
+  }
+}
