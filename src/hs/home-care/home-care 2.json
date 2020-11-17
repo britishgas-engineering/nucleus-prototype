@@ -1,0 +1,7 @@
+{
+  "layout": "nucleus",
+  "project": "hs/home-care",
+  "jquery": false,
+  "script": true,
+  "style": true
+}
