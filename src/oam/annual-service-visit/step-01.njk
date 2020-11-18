@@ -1,0 +1,50 @@
+---
+title: Step 1
+step: 1
+heading: Let's book your annual service
+---
+
+{% include "./_includes/ns-landmark.njk" %}
+
+<ns-panel>
+  {% if hasBookingCodeError %}
+    <div class="splash">
+      <ns-highlighter type="warning" class="error-msg-panel" name="data-error-panel">
+        <h2 slot="heading">
+        Please check your booking code
+      </h2>
+        <p>{{errors.bookingCode}}</p>
+      </ns-highlighter>
+    </div>
+  {% endif %}
+  <ns-form class="splash">
+    <ns-inputter mask="A------" validation="[&quot;isRequired&quot;]" helper="You'll find your booking code on either your reminder letter or email" name="booking-reference">
+      <div slot="tip-details">
+        <p>Your booking reference format starts with a letter followed by six numbers.</p>
+        <p>An example would be <b>A123456</b>.</p>
+      </div>
+      <label slot="label">Booking reference</label>
+      <input type="text" pattern="(?=.*\d)(?=.*[a-zA-Z]).{7,}">
+    </ns-inputter>
+    <ns-inputter value="{{postcode}}" name="postcode" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]">
+      <label slot="label" for="postcode-input">Confirm postcode</label>
+      <input type="text" id="postcode-input" autocomplete="postal-code" placeholder="e.g. TW18 3AR" value="{{postcode}}">
+    </ns-inputter>
+    <ns-cta href="../step-02" class="cta-book-service" type="direct" loading="{{isLoading}}"
+      loadingmessage="Please wait...">
+      Confirm
+    </ns-cta>
+  </ns-form>
+</ns-panel>
+
+<ns-panel>
+  <div class="splash">
+    <ns-card type="flat">
+      <h3 slot="heading">Don't have a booking code?</h3>
+      <p slot="paragraph">You can access your online account to book an engineer and return here with your booking code.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Book an engineer</ns-cta>
+      </a>
+    </ns-card>
+  </div>
+</ns-panel>

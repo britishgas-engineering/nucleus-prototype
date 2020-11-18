@@ -75,38 +75,51 @@ title: Welcome to your account
 
 
 
+
+
+
+
 <!-- Products using columns -->
+
 
    <ns-panel>
       <div class="splash">
-        <h4>Your Home Services</h4>
-        <h2>HomeCare Two</h2>
+        <h2>Your HomeCare</h2>
       </div>
 
 
-      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="4" role="list">
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
     <ns-card role="listitem" type="flat">
           <h2 slot="heading">£21.00 monthly</h2>
-          <p slot="paragraph"># 0123456789</p>
+          <p slot="paragraph"># 012345678912</p>
           <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
           <a slot="cta" href="#!">
             <ns-cta type="text">Your invoices</ns-cta>
           </a>
-             <p slot="cta"><ns-cta slot="cta" href="#">Book an engineer</ns-cta></p>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book repair or service</ns-cta></p>
         </ns-card>
     <ns-card role="listitem" type="flat">
-          <h3 slot="heading">Your cover</h3>
-          <p slot="paragraph"><strong>What's covered</strong></p>
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
           <ul slot="paragraph" class="ul-ticked"> 
             <li>Annual boiler service</li>
             <li>Boiler and controls</li>
             <li>Central heating</li>
           </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
           <a slot="cta" href="#!">
             <ns-cta type="text">View policy documents</ns-cta>
           </a>
 
-          <p slot="paragraph"><strong>What's not covered</strong></p>
+        </ns-card>
+
+
+         <ns-card role="listitem" type="support">
+          <h3 slot="heading">What's not covered</h3>
           <ul slot="paragraph">
             <li>Plumbing</li>
             <li>Drains</li>
@@ -114,7 +127,35 @@ title: Welcome to your account
           <a slot="cta" href="#!">
             <ns-cta type="text">Add / remove cover</ns-cta>
           </a>
+        </ns-card>
 
+
+
+</ns-column>
+</ns-panel>
+
+
+
+
+<!-- Products using columns -->
+
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your Home Insurance</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£12.00 monthly</h2>
+          <p slot="paragraph"># 012345678923</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <p slot="paragraph">You are covered until the end of 21st July 2020</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your policy documents</ns-cta>
+          </a>
+            
         </ns-card>
         
 
@@ -123,81 +164,24 @@ title: Welcome to your account
 
 
 
-<!-- Products using splash triple on old branch -->
 
 
-    <ns-panel>
-      <div class="splash">
-        <h4>Your Home Services</h4>
-        <h2>HomeCare Two</h2>
-      </div>
-      <div class="splash triple">
-        <ns-card type="flat">
-          <h2 slot="heading">£21.00 monthly</h2>
-          <p slot="paragraph">Renewal date: 22nd July 2020</p>
-          <p slot="paragraph">Account Number: 0123456789</p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">Your invoices</ns-cta>
-           </a>
-        
-           <p slot="cta"><ns-cta slot="cta" href="#">Book an engineer</ns-cta></p>
-        </ns-card>
-        <ns-card type="flat">
-          <h2 slot="heading">Your cover</h2>
-          <ul slot="paragraph">
-            <li>Annual boiler service</li>
-            <li>Boiler and controls</li>
-            <li>Central heating</li>
-            <li>+ Plumbing</li>
-            <li>+ Drains</li>
-          </ul>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">Change your cover</ns-cta>
-          </a>
-        </ns-card>
-        
-      </div>
+
+    <ns-panel decoration="" class="">
+      <ns-lockup type="lockbox">
+        <h2 slot="heading">
+          <span class="h5">Upgrade your cover</span>
+          <span class="h1 enlighten"><b>Add home electrical cover</b> from just £2.50 a month</span>
+        </h2>
+        <p slot="paragraph">Repairs to electrical wiring, fuse boards and electrical fittings inside and outside your property</p>
+        <a slot="cta" href="#!">
+          <ns-cta type="direct">Upgrade your cover</ns-cta>
+        </a>
+        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73546218-c0b07780-4434-11ea-8063-dd45d2dbbbad.jpg"></ns-image>
+      </ns-lockup>
     </ns-panel>
+    
 
-
-
-
-
-    <ns-panel>
-      <div class="splash">
-        <h2>Plumbing and drains</h2>
-      </div>
-      <div class="splash triple">
-        <ns-card type="flat">
-          <h2 slot="heading">£21.00 monthly</h2>
-          <p slot="paragraph">Renewal date: 22nd July 2020</p>
-          <p slot="paragraph">Account Number: 0123456789</p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">View policy documents</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="flat">
-          <h2 slot="heading">Your cover</h2>
-          <ul slot="paragraph">
-            <li>Annual boiler service</li>
-            <li>Boiler and controls</li>
-            <li>Central heating</li>
-            <li>+ Plumbing</li>
-            <li>+ Drains</li>
-          </ul>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">Change your cover</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="support">
-          <h2 slot="heading">Service visit due</h2>
-          <p slot="paragraph">It's time to book your annual service visit</p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">Book a slot</ns-cta>
-          </a>
-        </ns-card>
-      </div>
-    </ns-panel>
 
 
 

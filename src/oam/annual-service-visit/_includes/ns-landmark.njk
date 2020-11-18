@@ -1,0 +1,12 @@
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Step {{step}} of {{steps}}</span>
+    <span class="h1">{{heading}}</span>
+  </h1>
+  {% if paragraph1 -%}
+  <p slot="paragraph">{{paragraph1}}</p>
+  {%- endif %}
+  {% if paragraph2 -%}
+  <p slot="paragraph">{{paragraph2}}</p>
+  {%- endif %}
+</ns-landmark>
