@@ -10,7 +10,7 @@ title: Welcome to your account
   </div>
   <div class="splash triple">
 
- <div class="np-card notification type-b">
+    <div class="np-card notification type-b">
       <div class="icon-holder">
         <ns-icon type="bill" aria-hidden="true"></ns-icon>
       </div>
@@ -55,16 +55,50 @@ title: Welcome to your account
   <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
   <div slot="panel">
     
-    <ns-panel>
-  <div class="splash">
-        <h4>Your Home Services</h4>
-    <ns-highlighter type="error">
-      <h2 slot="heading">Information is unavailable right now</h2>
-      <p>Please try again later or <a href="#">refresh now</a>.</p>
-    </ns-highlighter>
-  </div>
-  
+
+
+
+
+
+<!-- Products using columns -->
+
+   
+   <ns-panel>
+      <div class="splash">
+        <h2>5 Year Warranty</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 012345678912</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+        </ns-card>
+
+      
+
+        <ns-card type="support" alt="">
+  <h3 slot="heading">
+    Your next service visit
+  </h3>
+  <p slot="paragraph">We’ll be in touch when you need to book your annual boiler service.</p>
+</ns-card>
+</ns-column>
 </ns-panel>
+
+
+
+
+
+
+
+
+   {% include "./_includes/upsell-electrical-cover.njk" -%}
+    
+
+
+
 
   </div>
 

@@ -1,0 +1,35 @@
+<ns-tab icon="energy" slot="tab">Energy</ns-tab>
+  <div slot="panel">
+
+    <ns-panel>
+      <div class="splash">
+        <h2>Gas and electricity</h2>
+      </div>
+      <div class="splash triple">
+        <ns-card type="flat">
+          <h2 slot="heading">Your bill of £120.41 is due for payment</h2>
+          <p slot="paragraph">To change the way you pay for your energy see your <a>payment options.</a></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="direct">Pay now</ns-cta>
+          </a>
+        </ns-card>
+        <ns-card type="flat">
+          <h2 slot="heading">Your tariffs</h2>
+          <p slot="paragraph"><b>Gas:</b> HomeEnergy Fix April 2020</p>
+          <p slot="paragraph"><b>Electricity:</b> HomeEnergy Fix April 2020</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">See tariff details</ns-cta>
+          </a>
+        </ns-card>
+        <ns-card type="support">
+          <h2 slot="heading">Meter readings</h2>
+          <p slot="paragraph">Manage your smart meter settings and see your readings.</p>
+          <a slot="cta" href="../meter-readings/smart-settings/readings/">
+            <ns-cta type="text">View smart meter readings</ns-cta>
+          </a>
+        </ns-card>
+      </div>
+    </ns-panel>
+
+    {% include "./upsell-smart-meters.njk" -%}
+  </div>

@@ -78,7 +78,7 @@ title: Welcome to your account
    <h2 slot="heading" role="heading" aria-level="2">Annual Service booked</h2>
    <h2 class="h1 enlighten">Mon 9th December</h2>
    <ns-column basketballcourt="2">
-     <div>Your engineer will arrive between 10am and 2pm.
+     <div><p slot="paragraph">Your engineer will arrive between <strong>10am</strong> and <strong>2pm</strong>.</p>
      <a slot="cta" href="#!">
             <ns-cta type="text">Change appointment</ns-cta>
           </a>
@@ -106,33 +106,45 @@ title: Welcome to your account
 
    <ns-panel>
       <div class="splash">
-        <h4>Your Home Services</h4>
-        <h2>HomeCare Two</h2>
+        <h2>Your HomeCare</h2>
       </div>
 
 
-      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+      <ns-column class="splash" basketballcourt="3" hockeypitch="3" rugbypitch="3" role="list">
     <ns-card role="listitem" type="flat">
           <h2 slot="heading">£21.00 monthly</h2>
-          <p slot="paragraph"># 0123456789</p>
+          <p slot="paragraph"># 012345678912</p>
           <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
           <a slot="cta" href="#!">
             <ns-cta type="text">Your invoices</ns-cta>
           </a>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
         </ns-card>
     <ns-card role="listitem" type="flat">
-          <h3 slot="heading">Your cover</h3>
-          <p slot="paragraph"><strong>What's covered</strong></p>
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
           <ul slot="paragraph" class="ul-ticked"> 
             <li>Annual boiler service</li>
             <li>Boiler and controls</li>
             <li>Central heating</li>
           </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
           <a slot="cta" href="#!">
             <ns-cta type="text">View policy documents</ns-cta>
           </a>
 
-          <p slot="paragraph"><strong>What's not covered</strong></p>
+        </ns-card>
+    
+        
+        <ns-card type="support" alt="">
+  <h3 slot="heading">
+    <ns-pill colour="slate" icon="">Upgrade?</ns-pill>
+    What's not covered
+  </h3>
           <ul slot="paragraph">
             <li>Plumbing</li>
             <li>Drains</li>
@@ -140,13 +152,7 @@ title: Welcome to your account
           <a slot="cta" href="#!">
             <ns-cta type="text">Add / remove cover</ns-cta>
           </a>
-
-        </ns-card>
-        <ns-card role="listitem" type="support">
-          <h2 slot="heading">Your next service visit</h2>
-          <p slot="paragraph">We’ll be in touch when you need to book your next annual boiler service</p>
-        
-        </ns-card>
+</ns-card>
 
 </ns-column>
 </ns-panel>
@@ -154,83 +160,9 @@ title: Welcome to your account
 
 
 
-    <ns-panel decoration="" class="">
-      <ns-lockup type="lockbox">
-        <h2 slot="heading">
-          <span class="h5">Upgrade your cover</span>
-          <span class="h1 enlighten"><b>Add home electrical cover</b> from just £2.50 a month</span>
-        </h2>
-        <p slot="paragraph">Repairs to electrical wiring, fuse boards and electrical fittings inside and outside your property</p>
-        <a slot="cta" href="#!">
-          <ns-cta type="direct">Upgrade your cover</ns-cta>
-        </a>
-        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73546218-c0b07780-4434-11ea-8063-dd45d2dbbbad.jpg"></ns-image>
-      </ns-lockup>
-    </ns-panel>
+   {% include "./_includes/upsell-electrical-cover.njk" -%}
   </div>
 
-  <ns-tab icon="energy" slot="tab">Energy</ns-tab>
-  <div slot="panel">
+  {% include "./_includes/energy-tab.njk" -%}
 
-    <ns-panel>
-      <div class="splash">
-        <h2>Gas and electricity</h2>
-      </div>
-      <div class="splash triple">
-        <ns-card type="flat">
-          <h2 slot="heading">Your bill of £120.41 is due for payment</h2>
-          <p slot="paragraph">To change the way you pay for your energy see your <a>payment options.</a></p>
-          <a slot="cta" href="#!">
-            <ns-cta type="direct">Pay now</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="flat">
-          <h2 slot="heading">Your tariffs</h2>
-          <p slot="paragraph"><b>Gas:</b> HomeEnergy Fix April 2020</p>
-          <p slot="paragraph"><b>Electricity:</b> HomeEnergy Fix April 2020</p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">See tariff details</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="support">
-          <h2 slot="heading">Meter readings</h2>
-          <p slot="paragraph">Manage your smart meter settings and see your readings.</p>
-          <a slot="cta" href="../meter-readings/smart-settings/readings/">
-            <ns-cta type="text">View smart meter readings</ns-cta>
-          </a>
-        </ns-card>
-      </div>
-    </ns-panel>
-
-    <ns-panel decoration="" class="">
-      <ns-lockup type="lockbox">
-        <h2 slot="heading">
-          <span class="h5">Smart meters</span>
-          <span class="h1 enlighten"><b>Start saving</b> on energy with smart meters</span>
-        </h2>
-        <p slot="paragraph">Smart meters automatically send your meter readings to us, so you’ll get more accurate bills without having to lift a finger.</p>
-        <a slot="cta" href="#!">
-          <ns-cta type="direct">Get your smart meters</ns-cta>
-        </a>
-        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73614886-4bdb6a00-45fb-11ea-9438-b4669f93d917.jpg"></ns-image>
-      </ns-lockup>
-    </ns-panel>
-  </div>
-
-  <ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
-  <ns-panel slot="panel">
-    <div class="splash">
-     <ns-lockup type="lockjaw" decoration="">
-  <h2 slot="heading">
-    <span class="h5">Your Rewards.</span>
-    <span class="h1 enlighten">Wow,<b> look at you go!</b></span>
-  </h2>
-  <p slot="paragraph">Looks like you’ve snapped up all our offers! But don’t worry, we’ll be adding some new ones soon. So be sure to check back.</p>
-  <a slot="cta" href="#!">
-    <ns-cta type="direct">View Rewards</ns-cta>
-  </a>
-  <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/49559070/72909820-84439400-3d2f-11ea-90fa-b23c98d6e3ee.jpg"></ns-image>
-      </ns-lockup>
-    </div>
-  </ns-panel>
-</ns-tabs>
+  {% include "./_includes/rewards-tab.njk" -%}

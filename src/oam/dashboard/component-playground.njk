@@ -73,7 +73,7 @@ title: Welcome to your account
   <div slot="panel">
     
 
-<!-- GENERAL MARKUP -->
+<!-- GENERAL MARKUPS -->
 <span class="markup-style markup-style-general">*** GENERAL MARKUP *** </br>
 Primary CTA: 25px top-margin added to components 01-04 below. The others are un-modified.</br>
 Unfortunately nucleus cards are disabling the list ticks class</br>
@@ -497,68 +497,6 @@ The card on the right with drop shadow (support type) is inhheriting the height 
 
   </div>
 
-  <ns-tab icon="energy" slot="tab">Energy</ns-tab>
-  <div slot="panel">
+  {% include "./_includes/energy-tab.njk" -%}
 
-    <ns-panel>
-      <div class="splash">
-        <h2>Gas and electricity</h2>
-      </div>
-      <div class="splash triple">
-        <ns-card type="flat">
-          <h2 slot="heading">Your bill of £120.41 is due for payment</h2>
-          <p slot="paragraph">To change the way you pay for your energy see your <a>payment options.</a></p>
-          <a slot="cta" href="#!">
-            <ns-cta type="direct">Pay now</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="flat">
-          <h2 slot="heading">Your tariffs</h2>
-          <p slot="paragraph"><b>Gas:</b> HomeEnergy Fix April 2020</p>
-          <p slot="paragraph"><b>Electricity:</b> HomeEnergy Fix April 2020</p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">See tariff details</ns-cta>
-          </a>
-        </ns-card>
-        <ns-card type="support">
-          <h2 slot="heading">Meter readings</h2>
-          <p slot="paragraph">Manage your smart meter settings and see your readings.</p>
-          <a slot="cta" href="../meter-readings/smart-settings/readings/">
-            <ns-cta type="text">View smart meter readings</ns-cta>
-          </a>
-        </ns-card>
-      </div>
-    </ns-panel>
-
-    <ns-panel decoration="" class="">
-      <ns-lockup type="lockbox">
-        <h2 slot="heading">
-          <span class="h5">Smart meters</span>
-          <span class="h1 enlighten"><b>Start saving</b> on energy with smart meters</span>
-        </h2>
-        <p slot="paragraph">Smart meters automatically send your meter readings to us, so you’ll get more accurate bills without having to lift a finger.</p>
-        <a slot="cta" href="#!">
-          <ns-cta type="direct">Get your smart meters</ns-cta>
-        </a>
-        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73614886-4bdb6a00-45fb-11ea-9438-b4669f93d917.jpg"></ns-image>
-      </ns-lockup>
-    </ns-panel>
-  </div>
-
-  <ns-tab icon="rewards" slot="tab">Rewards</ns-tab>
-  <ns-panel slot="panel">
-    <div class="splash">
-     <ns-lockup type="lockjaw" decoration="">
-  <h2 slot="heading">
-    <span class="h5">Your Rewards.</span>
-    <span class="h1 enlighten">Wow,<b> look at you go!</b></span>
-  </h2>
-  <p slot="paragraph">Looks like you’ve snapped up all our offers! But don’t worry, we’ll be adding some new ones soon. So be sure to check back.</p>
-  <a slot="cta" href="#!">
-    <ns-cta type="direct">View Rewards</ns-cta>
-  </a>
-  <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/49559070/72909820-84439400-3d2f-11ea-90fa-b23c98d6e3ee.jpg"></ns-image>
-      </ns-lockup>
-    </div>
-  </ns-panel>
-</ns-tabs>
+  {% include "./_includes/rewards-tab.njk" -%}
