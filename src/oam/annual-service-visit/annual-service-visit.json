@@ -8,5 +8,5 @@
   "errors": {
     "bookingCode": "Booking code starts with a letter and six numbers."
   },
-  "steps": 4
+  "steps": 2
 }

@@ -1,22 +1,35 @@
 ---
-branch: 173f13eae5c6ee2409d61680ce63ba0f537081e2
+layout: nucleus-header-logged-in-journey.njk
 title: Step 2
 step: 2
-heading: Pick a time slot that suits you
+heading: Review your details
+paragraph1: "Please check your happy with the date and time for the appointment, and amend as necessary."
 ---
 
 {% include "./_includes/ns-landmark.njk" %}
 
 <ns-panel>
-  <div class="splash triple">
-    <ns-calendar month="7" year="2020" mindate="2020-07-24" maxdate="2020-09-11"></ns-calendar>
-  </div>
-</ns-panel>
-
-<ns-panel>
   <div class="splash">
-    <a href="../step-03">
-      <ns-cta type="direct">Continue to next step</ns-cta>
+    <dl class="dl-row">
+      <div>
+        <dt>Date</dt>
+        <dd>Thur 10th December</dd>
+        <dd>
+          <a href="#!">Change the date</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Time slot</dt>
+        <dd>between <b>10am and 2pm</b></dd>
+        <dd>
+          <a href="#!">Amend your time slot</a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <div class="splash">
+    <a slot="cta" href="../step-03">
+      <ns-cta type="direct">Confirm &amp; Book</ns-cta>
     </a>
   </div>
 </ns-panel>

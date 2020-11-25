@@ -3,40 +3,11 @@ layout: base.njk
 branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
 ---
 
-
-<ns-header logo="https://www.britishgas.co.uk/nucleus/images/logo.svg" alt="British Gas" help="/help-and-support" business="/business" account="/oam/login-register/v04/login-01-landing">
+<ns-header logo="https://www.britishgas.co.uk/nucleus/images/logo.svg" alt="British Gas" help="#" business="#">
   <ul>
+
     <li>
-      <h2><a href="/energy.html">Energy</a></h2>
-      <ul>
-        <li>
-          <h3>Gas &amp; electricity</h3>
-          <ul>
-            <li><a href="/energy.html">Gas &amp; electricity services</a></li>
-            <li><a href="/energy/gas-and-electricity.html">Our gas &amp; electricity tariffs</a></li>
-            <li><a href="/GetAQuote/">Get a quote</a></li>
-            <li><a href="/energy/gas-and-electricity/new-connections.html">Connections for new builds</a></li>
-            <li><a href="/energy/energy-saving/warm-home-discount.html">Warm Home Discount</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Existing energy customers</h3>
-          <ul>
-            <li><a href="/energy/manage-your-energy.html">Manage your energy</a></li>
-            <li><a href="/discover/home-move/">Moving home</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Save energy</h3>
-          <ul>
-            <li><a href="/energy/energy-saving/energy-saving-tips.html">Energy saving tips</a></li>
-            <li><a href="/energy/guides.html">Energy guides &amp; advice</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2><a href="/home-services.html">Home Services</a></h2>
+      <h2><a href="#">Our Products</a></h2>
       <ul>
         <li>
           <h3>Boilers and heating</h3>
@@ -66,7 +37,7 @@ branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
           </ul>
         </li>
         <li>
-          <h3>Appliances and electrical</h3>
+          <h3>Appliances and Electrical</h3>
           <ul>
             <li><a href="/home-services/appliances-and-electrical/appliances-and-electrical-cover.html">Appliances &amp; electrical cover</a></li>
             <li><a href="/home-services/appliances-and-electrical/appliance-and-home-electrical-repairs.html">Appliances &amp; electrical repair</a></li>
@@ -82,8 +53,8 @@ branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
         </li>
       </ul>
     </li>
-    <li>
-      <h2><a href="/smart-home.html">Smart Home</a></h2>
+   <!-- <li>
+      <h2><a href="#">Help & Support</a></h2>
       <ul>
         <li>
           <h3>Getting started</h3>
@@ -109,15 +80,52 @@ branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
           </ul>
         </li>
       </ul>
+    </li> -->
+    <li>
+      <h2><a href="/oam/dashboard">Your Account</a></h2>
+      <ul>
+         <li>
+          <h3>Your home</h3>
+          <ul>
+            <li><a href="#">Moving home</a></li>
+            <li><a href="/oam/account-details/extra-support/v01/">Household circumstances</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Frequent actions</h3>
+          <ul>
+            <li><a href="/oam/meter-readings/smart-settings/readings/">Meter readings</a></li>
+            <li><a href="#">Compare my energy usage</a></li>
+            <li><a href="#">Book and Track an engineer</a></li>
+            
+
+          </ul>
+        </li>
+       <li>
+          <h3>Your account</h3>
+          <ul>
+            <li><a href="/oam/dashboard#your-products">Rewards</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Documents</a></li>
+            <li><a href="#">Keeping your account safe</a></li>
+            <li><a href="/oam/homepage">Log out</a></li>
+
+          </ul>
+        </li>
+
+      </ul>
     </li>
   </ul>
   <ul>
     <li><a href="/help-and-support">Help &amp; Support</a></li>
     <li><a href="/business">Business</a></li>
     <li><a href="/accessibility">Accessibility tools</a></li>
-    <li><a href="/oam/login-register/v04/login-01-landing">Log in</a></li>
+    <!--<li><a href="/my-account">My Account</a></li>-->
+    <li><a href="/oam/homepage">Log out</a></li>
   </ul>
 </ns-header>
+
 
 <main id="content">
   {{content | safe}}

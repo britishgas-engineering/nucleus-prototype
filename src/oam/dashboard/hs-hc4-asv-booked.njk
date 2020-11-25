@@ -22,7 +22,7 @@ title: Welcome to your account
           <p class="paragraph">Your appointment is booked</p>
         </div>
         <div class="cta-holder">
-          <ns-cta class="cta" type="text">View details</ns-cta>
+          <ns-cta class="cta" type="text" href="#appointment-detail">View details</ns-cta> 
         </div>
       </div>
     </div>
@@ -73,10 +73,14 @@ title: Welcome to your account
   <div slot="panel">
     <ns-panel>
 
+<div id="appointment-detail">
+  <!-- Anchor to your-products -->
+</div>
+
       <div class="splash">
       <ns-highlighter type="success" role="alert">
    <h2 slot="heading" role="heading" aria-level="2">Annual Service booked</h2>
-   <h2 class="h1 enlighten">Mon 9th December</h2>
+   <h2 class="h1 enlighten">Thur 10th December</h2>
    <ns-column basketballcourt="2">
      <div><p slot="paragraph">Your engineer will arrive between <strong>10am</strong> and <strong>2pm</strong>.</p>
      <a slot="cta" href="#!">
