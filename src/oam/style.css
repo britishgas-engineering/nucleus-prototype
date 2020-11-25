@@ -118,7 +118,7 @@
 
 /* hide subnav links on mobile */
 @media (max-width: 768px) {
-.subnav-top-bar.links {
+.subnav-top-bar .links {
 display: none;
 }
 }
