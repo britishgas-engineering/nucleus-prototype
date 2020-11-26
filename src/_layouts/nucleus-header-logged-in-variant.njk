@@ -205,11 +205,13 @@ layout: base.njk
       <a href="/oam/dashboard#your-products">Your Products</a>
       <a href="/oam/account-details/v02/details">Account details</a>
     </nav>
-    <ns-inputter class=" address" nf-model="model.oam-02.address-selector" validation="[&quot;isRequired&quot;]" heading="Select which home" name="select-an-option" value="">
-    <select class="premise-select">
+    <form>
+    <ns-inputter class=" address" nf-model="model.oam-02.address-selector" heading="Select which home" name="select-an-option" value="">
+    <select class="premise-select" aria-label="Select which home">
       <option>Swan House, The Causeway, Staines</option>
     </select>
   </ns-inputter>
+  </form>
   </div>
 </div>
 
