@@ -1,0 +1,55 @@
+
+<ns-landmark type="valley" image="https://user-images.githubusercontent.com/53818498/99809992-00b72700-2b3b-11eb-98b8-570a5ec9f2fb.jpg">
+  <h1 slot="heading">
+    <span class="h5">Change your energy tariff.</span>
+    <span class="h1 enlighten"><b>Something you might be interested in</b></span>
+  </h1>
+  <p slot="paragraph">Get peace of mind by covering your home against accidental damage and breakdowns</p>
+</ns-landmark>
+
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.get-a-quote">
+   <div>
+     <h3 slot="name">Boiler & Controls Breakdown Cover</h3>   
+     <h1>£2.50 / month</h1>
+     <h3><ns-price pence="115200"></ns-price> / year</h3> 
+     <p>Avoid the cost of future repairs if your boiler and controls break down <b>(£99 excess)</b></p>
+
+     <ns-expander open="false" colour="">
+       <h3 slot="heading">Things we cover</h3>
+       <p>Repairs to your gas boiler and controls , including your thermostat and programmer</p> 
+        <p>All parts and labour</p> 
+        <p>Up to £1,000 to gain access and make good for each repair</p>
+     </ns-expander>
+     <ns-expander open="false" colour="">
+       <h3 slot="heading">Things we don't cover</h3>
+        <p>Removing sludge or scale or repairing the damage it causes if we tell you it might be a problem for your system or boiler</p> 
+        <p>Showers or taps</p> 
+        <p>Annual service of your boiler to make sure it's running safely and efficiently</p> 
+        <p>Accidental damage</p> 
+        <p>Repairs to the central heating system, including radiators</p> 
+        <p>Faults caused by someone else you used for repairs or design faults</p> 
+        
+     </ns-expander>
+   </div>
+
+    <ns-inputter validation="[&quot;isRequired&quot;]" name="customer" value="">
+      <input type="radio" id="radio-a-1" name="radio-a" value="No" checked>
+      <label for="radio-a-1">Don’t add this cover to my order </label>
+      <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
+      <label for="radio-a-2">Add this cover to my order </label>
+    </ns-inputter>
+    <a href="../03-personal-details" slot="cta" onClick="tarrifOne()">
+              <ns-cta>Continue</ns-cta>
+        </a>
+    <ns-cta nf-href="../03-personal-details"><onClick="AddOn()">Continue</onClick="AddOn()"></ns-cta>
+    <br>
+  </ns-form>
+</ns-panel>      
+
+
+
+
+
+

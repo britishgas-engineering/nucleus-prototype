@@ -9,7 +9,7 @@
 <ns-panel>
   <div class="splash">
   <h5>Change your energy tariff.</h5>
-    <h1>Check your details</h1>
+    <h1>Please complete your details</h1>
 
 
 <!-- Summary -->
@@ -28,13 +28,15 @@
             <div>
               <dd>To choose a different type of energy, You'll need to <a href="../">get another quote</a></dd>
             </div>
+          
+          </dl>
+      </ns-expander>
+
+      <ns-expander open="false">
+        <h4 slot="heading">Your Home Service Cover</h4>
+          <dl class="dl-stack">
             <div> 
-            <h4>Home Service Cover</h4>
-          <dl class="dl-stack">  
-           
-            <div> 
-              <dd>over-text",
-          "value": "Boiler & Controls Breakdown Cover (worth £30.00 per year) with repairs to your gas boiler and controls, including your thermostat and programmer, with an excess of £99 for each repair.</dd>
+              <dd>Boiler & Controls Breakdown Cover (worth £30.00 per year) with repairs to your gas boiler and controls, including your thermostat and programmer, with an excess of £99 for each repair.</dd>
             </div>
             <div>  
               <h5>Things we cover</h5>
@@ -53,26 +55,44 @@
               <dd>We'll use your bank account details to set up two Direct Debits, one for your energy tariff and one for your Services Cover. Your Services Cover is at an introductory price of (£0.00) for the ﬁrst 12 months. After this it will automatically renew,  we'll contact you before your renewal date to tell you your new price. If your renewal price isn't right for you, you can change or cancel your contract.</dd>
             </div>
             <div>   
-              <dd><a href="">About our insurance services (PDF 545KB)</a></dd>
-              <dd><a href=""><span nf-model="model.add-on.link2"></span></a></dd>
+              
+              <dd><ul class="download-list">  <li>    <ns-download href="this-text-gets-ignored.pdf" filesize="545KB">About our insurance services</ns-download>  </li>  <li>    <ns-download href="this-text-gets-ignored.xls" filesize="545KB">Boiler & Controls Breakdown Cover Insurance Product Information Document</ns-download>  </li> </ul></dd>
 
             </div>
-
-          </div>
           </dl>
-          </dl>
-
-
-
-
       </ns-expander>
 
       <ns-expander open="false">
-        <h4 slot="heading">Your address</h4>
+        <h4 slot="heading">Your personal details</h4>
           <dl class="dl-stack">
+            <div>        
+                <dt>Title</dt>        
+                <dd>Ms</dd>      
+              </div>          
+              <div>        
+                <dt>First name</dt>        
+                <dd>Rebecca</dd>      
+              </div>   
+              <div>        
+                <dt>First name</dt>        
+                <dd>Rebecca</dd>      
+              </div>  
+              <div>        
+                <dt>Surname</dt>        
+                <dd>Robinson</dd>      
+              </div> 
             <div>
+              <dt>Address</dt> 
               <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
             </div>
+            <div>        
+                <dt>Date of birth</dt>        
+                <dd>10/10/1999</dd>      
+              </div>  
+              <div>        
+                <dt>Email address</dt>        
+                <dd>email@address.co.uk</dd>      
+              </div>  
           </dl>
       </ns-expander>
 
@@ -80,43 +100,27 @@
     <!-- End of summary -->
   
   </div>
-  <ns-form class="splash" nf-model="model.get-a-quote">
-    <ns-inputter validation="[&quot;isRequired&quot;]" name="personal-title" value="Ms">
-      <label slot="label">Title</label>
-      <input autocomplete="honorific-prefix" type="text">
-    </ns-inputter>
-    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="personal-first-name" value="Rebecca">
-      <label slot="label">First name</label>
-      <input autocomplete="given-name" type="text">
-    </ns-inputter>
-    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="personal-surname" value="Robinson">
-      <label slot="label">Surname</label>
-      <input autocomplete="family-name" type="text">
-    </ns-inputter>
-    <ns-inputter mask="DD/MM/YYYY" separator="/" validation="[&quot;isRequired&quot;,&quot;isDate&quot;]' helper="Why do we need this?" name="personal-date-of-birth" value="10101999">
-      <div slot="tip-details">
-        <p>We will use this to identify you for security purposes.</p>
-      </div>
-      <label slot="label">Date of birth</label>
-      <input type="text">
-    </ns-inputter>
-   
+    <ns-form class="splash" nf-model="model.get-a-quote">
+
 
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" value="" helper="We might use this to get in touch with you about your order" name="telephone-number">
   <label slot="label" for="text-input">Telephone number</label>
   <input type="tel" id="text-input">
 </ns-inputter>
 
+               
+                  
+
+   
+   
 
 
-    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isEmail&quot;]" helper="We might use your details to get in touch with you about your order" name="personal-email" value="lts_addon4@bgdigitaltest.co.uk">
 
-      <label slot="label">Email address</label>
-      <input type="email" placeholder="e.g. email@address.co.uk">
-    </ns-inputter>
+
+    
 
 <br>
-
+<!--
 <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="gas" value="">
 
 
@@ -125,16 +129,18 @@
 
 </ns-inputter>
 
-<p>
+<div>
   Make sure you've double-checked all your details before you place your order
 <br>
   <b>You've got a 14 day cooling off period if you change your mind</b>
-</p>
+</div>
 
+-->
+<ns-cta nf-href="../04-bank">Continue</ns-cta>
 
-<ns-cta nf-href="../05-confirmation">Continue</ns-cta>
   </ns-form>
 </ns-panel>
+<br>
 
 <!-- END FORM -->
 
