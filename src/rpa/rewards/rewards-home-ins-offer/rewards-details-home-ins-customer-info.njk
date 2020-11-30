@@ -1,0 +1,144 @@
+---
+title: rewards-details-home-ins-customer-info
+---
+
+{% include "./_includes/account-logged-in.njk" -%}
+
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">British Gas Rewards.</span>
+    <span class="h1 enlighten"><b>Enter</b> for your chance to win</span>
+  </h1>
+  <div slot="paragraph">
+    <p>It only takes a minute to enter. Tell us your home insurance renewal date and select 'Enter to win'. This means we can send you our best offers at a time that's right for you.</p>
+  </div>
+  </a>
+</ns-landmark>
+
+<ns-panel>
+  <div class="splash">
+  <h3>Your details</h3>
+  <dl class="dl-row">
+  <div>
+    <dt>Name</dt>
+    <dd>Lauren Ipsum<dd>
+  </div>
+  <div>
+    <dt>Email</dt>
+    <dd>lauren.ipsum@gmail.com</dd>
+  </dl>
+</div>
+      
+  <div class="splash">
+    <ns-form>
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="title" value="">
+        <label slot="label" for="nsid-gsw8gnph8lv-input">Your current home insurance renewal month</label>
+
+        <select autocomplete="honorific-prefix" name="select" id="nsid-gsw8gnph8lv-input">
+          <option value="">Please select a month</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+      </ns-inputter>
+      <ns-cta type="direct" href="../rewards-details-home-ins-confirmation" icon="arrow-right" onclick="action()" loading="false" loadingmessage="Loading...">Enter</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
+
+<ns-panel decoration="" class="">
+  <div class="splash">
+    <h2 class="">All your offers</h2>
+  </div>
+
+  <div class="splash triple">
+  {% include "./_includes/ns-card-cheque.njk" -%}
+  {% include "./_includes/ns-card-loyalty.njk" -%}
+  {% include "./_includes/ns-card-hive.njk" -%}
+  </div>
+</ns-panel>
+
+<ns-tabs>
+  <ns-tab slot="tab">Summary</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash">
+      <ns-table>
+        <table>
+          <tbody>
+            <tr>
+              <td>Offers you've chosen</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Estimated savings so far</td>
+              <td>£0</td>
+            </tr>
+            <tr>
+              <td>Free loyalty days</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Prize draws entered</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </ns-table>
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Claimed offers</ns-tab>
+
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      {% include "./_includes/ns-card-claimed-local-heroes.njk" -%}
+    </div>
+  </ns-panel>
+
+
+  <ns-tab slot="tab">Expired offers</ns-tab>
+  <ns-panel slot="panel">
+    <div class="splash triple" role="list">
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">20% discount on Local Heroes jobs</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 January 2020</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Wilbur giveaway</h3>
+        <div slot="paragraph">
+          <p><b>Ended 1 Decemeber 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Win 'An evening with Dee' tickets</h3>
+        <div slot="paragraph">
+          <p><b>Ended 15 November 2019</b></p>
+        </div>
+      </ns-card>
+      <ns-card role="listitem" type="support">
+        <h3 slot="heading">Buy one get one Dee</h3>
+        <div slot="paragraph">
+          <p><b>Ended 3 November 2019</b></p>
+        </div>
+      </ns-card>
+    </div>
+  </ns-panel>
+
+</ns-tabs>
+
+
+{% include "./_includes/ns-card-leave.njk" -%}
