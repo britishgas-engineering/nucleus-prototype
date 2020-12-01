@@ -12,6 +12,79 @@
     <h1>Your payment details</h1>
 
 
+
+  
+  </div>
+  
+  <div>
+    <br>
+  </div>
+
+  <ns-form class="splash" nf-model="model.get-a-quote">
+    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Please select the bank account from which you like to make payments from:" name="customer" value="">
+      <input type="radio" id="radio-a-1" name="radio-a" value="No" checked>
+      <label for="radio-a-1">Account holder name, Account ****1234, Sort code ****34</label>
+      <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
+      <label for="radio-a-2">Account holder name, Account ****6789, Sort code ****12</label>
+    </ns-inputter>
+
+<div>
+  <p>
+  We'll use the bank details you gave us for your energy account to set up a second Direct Debit for your services cover. Your services cover first payment will be taken within 14 days of submitting your order. All future services cover payments will be taken on the 1st of every month. You can change your Direct Debit at a later date if needed.
+</p>
+</div>
+
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="imp1" value="">
+  <input type="checkbox" id="imp1" name="question" value="tick">
+  <label for="imp1">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with British Gas, and I agree with all of them</label>
+</ns-inputter>
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" helper="" name="imp2" value="">
+  <input type="checkbox" id="imp2" name="question" value="tick">
+  <label for="imp2">Yes, I have read the <a href"">Terms and Conditions</a> and about our <a href"">Insurance Product Information Document</a> </label>
+</ns-inputter>
+
+<ns-accordion>
+   
+      <ns-expander open="false">
+        <h4 slot="heading">Cancelling your cover</h4>
+        <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
+          <dl class="dl-stack">
+            <div>
+              <dt>Estimated price</dt>
+              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
+            </div>
+          </dl>
+      </ns-expander>
+
+      <ns-expander open="false">
+        <h4 slot="heading">Useful documents</h4>
+        <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
+          <dl class="dl-stack">
+            <div>
+              <dt>Estimated price</dt>
+              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
+            </div>
+          </dl>
+      </ns-expander>
+
+     
+
+    </ns-accordion>
+
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" helper="" name="imp3" value="">
+  <input type="checkbox" id="imp3" name="question" value="tick">
+  <label for="imp3">I have read and agree the <a href"">Direct Debit Guarantee</a>and confirm that I am the account holder and the only person required to authorise Direct Debits on this account.</label>
+</ns-inputter>
+
+<div>
+ <p> Make sure you've double-checked all your details before you place your order.
+<br>
+  <b>You've got a 14 day cooling off period if you change your mind.</b>
+</p>
+</div>
+
 <!-- Summary -->
   <h3>Order summary</h3>
     <ns-accordion>
@@ -102,76 +175,7 @@
 
     </ns-accordion>
     <!-- End of summary -->
-  
-  </div>
-  
-  <div>
-    <br>
-  </div>
 
-  <ns-form class="splash" nf-model="model.get-a-quote">
-    <ns-inputter validation="[&quot;isRequired&quot;]" heading="Please select the bank account from which you like to make payments from:" name="customer" value="">
-      <input type="radio" id="radio-a-1" name="radio-a" value="No" checked>
-      <label for="radio-a-1">Account holder name, Account ****1234, Sort code ****34</label>
-      <input type="radio" id="radio-a-2" name="radio-a" value="Yes">
-      <label for="radio-a-2">Account holder name, Account ****6789, Sort code ****12</label>
-    </ns-inputter>
-
-<div>
-  <p>
-  We'll use the bank details you gave us for your energy account to set up a second Direct Debit for your services cover. Your services cover first payment will be taken within 14 days of submitting your order. All future services cover payments will be taken on the 1st of every month. You can change your Direct Debit at a later date if needed.
-</p>
-</div>
-
-
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="imp1" value="">
-  <input type="checkbox" id="imp1" name="question" value="tick">
-  <label for="imp1">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with British Gas, and I agree with all of them</label>
-</ns-inputter>
-
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" helper="" name="imp2" value="">
-  <input type="checkbox" id="imp2" name="question" value="tick">
-  <label for="imp2">Yes, I have read the <a href"">Terms and Conditions</a> and about our <a href"">Insurance Product Information Document</a> </label>
-</ns-inputter>
-
-<ns-accordion>
-   
-      <ns-expander open="false">
-        <h4 slot="heading">Cancelling your cover</h4>
-        <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
-          <dl class="dl-stack">
-            <div>
-              <dt>Estimated price</dt>
-              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
-            </div>
-          </dl>
-      </ns-expander>
-
-      <ns-expander open="false">
-        <h4 slot="heading">Useful documents</h4>
-        <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
-          <dl class="dl-stack">
-            <div>
-              <dt>Estimated price</dt>
-              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
-            </div>
-          </dl>
-      </ns-expander>
-
-     
-
-    </ns-accordion>
-
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" helper="" name="imp3" value="">
-  <input type="checkbox" id="imp3" name="question" value="tick">
-  <label for="imp3">I have read and agree the <a href"">Direct Debit Guarantee</a>and confirm that I am the account holder and the only person required to authorise Direct Debits on this account.</label>
-</ns-inputter>
-
-<div>
-  Make sure you've double-checked all your details before you place your order.
-<br>
-  <b>You've got a 14 day cooling off period if you change your mind.</b>
-</div>
 
 
 <ns-cta nf-href="../05-confirmation">Place order</ns-cta>

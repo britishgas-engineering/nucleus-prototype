@@ -12,10 +12,77 @@
     <h1>Please complete your details</h1>
 
 
-<!-- Summary -->
-  <h3>Order summary</h3>
-    <ns-accordion>
+
+  
+  </div>
+    <ns-form class="splash" nf-model="model.get-a-quote">
+
+
+
+<ns-form class="splash" nf-model="model.get-a-quote">
+          <dl class="dl-row">
+            <div>        
+                <dt>Name</dt>        
+                <dd>Ms Rebecca Robinson</dd>      
+              </div>          
+
+            <div>
+              <dt>Address</dt> 
+              <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
+            </div>
+            <div>        
+                <dt>Date of birth</dt>        
+                <dd>10/10/1999</dd>      
+              </div>  
+              <div>        
+                <dt>Email address</dt>        
+                <dd>email@address.co.uk</dd>      
+              </div>  
+          </dl>
+    <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" value="" helper="We might use this to get in touch with you about your order" name="telephone-number">
+  <label slot="label" for="text-input">Telephone number</label>
+  <input type="tel" id="text-input">
+</ns-inputter>
+
+<br>
+                  
+
    
+   
+
+
+
+
+    
+
+<br>
+<!--
+<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="gas" value="">
+
+
+  <input type="checkbox" id="question-gas" name="question" value="tick">
+  <label for="question-gas">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with</label>
+
+</ns-inputter>
+
+<div>
+  Make sure you've double-checked all your details before you place your order
+<br>
+  <b>You've got a 14 day cooling off period if you change your mind</b>
+</div>
+
+-->
+<ns-cta nf-href="../04-bank">Continue</ns-cta>
+
+  </ns-form>
+</ns-panel>
+<br>
+
+<!-- Summary -->
+
+  <ns-panel class="splash">
+    <ns-accordion>
+   <h3>Order summary</h3>
       <ns-expander open="false">
         <h4 slot="heading">Your selected energy tariff</h4>
         <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
@@ -61,87 +128,14 @@
             </div>
           </dl>
       </ns-expander>
-
-      <ns-expander open="false">
-        <h4 slot="heading">Your personal details</h4>
-          <dl class="dl-stack">
-            <div>        
-                <dt>Title</dt>        
-                <dd>Ms</dd>      
-              </div>          
-              <div>        
-                <dt>First name</dt>        
-                <dd>Rebecca</dd>      
-              </div>   
-              <div>        
-                <dt>First name</dt>        
-                <dd>Rebecca</dd>      
-              </div>  
-              <div>        
-                <dt>Surname</dt>        
-                <dd>Robinson</dd>      
-              </div> 
-            <div>
-              <dt>Address</dt> 
-              <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
-            </div>
-            <div>        
-                <dt>Date of birth</dt>        
-                <dd>10/10/1999</dd>      
-              </div>  
-              <div>        
-                <dt>Email address</dt>        
-                <dd>email@address.co.uk</dd>      
-              </div>  
-          </dl>
-      </ns-expander>
-
     </ns-accordion>
+
     <!-- End of summary -->
-  
-  </div>
-    <ns-form class="splash" nf-model="model.get-a-quote">
 
-
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" value="" helper="We might use this to get in touch with you about your order" name="telephone-number">
-  <label slot="label" for="text-input">Telephone number</label>
-  <input type="tel" id="text-input">
-</ns-inputter>
-
-               
-                  
-
-   
-   
-
-
-
-
-    
-
-<br>
-<!--
-<ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;]" heading="The important information" helper="" name="gas" value="">
-
-
-  <input type="checkbox" id="question-gas" name="question" value="tick">
-  <label for="question-gas">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with</label>
-
-</ns-inputter>
-
-<div>
-  Make sure you've double-checked all your details before you place your order
-<br>
-  <b>You've got a 14 day cooling off period if you change your mind</b>
-</div>
-
--->
-<ns-cta nf-href="../04-bank">Continue</ns-cta>
-
-  </ns-form>
 </ns-panel>
 <br>
 
 <!-- END FORM -->
+
 
 

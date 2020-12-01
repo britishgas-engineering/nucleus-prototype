@@ -16,6 +16,25 @@
   
   </div>
   <ns-form class="splash" nf-model="model.get-a-quote">
+          <dl class="dl-row">
+            <div>        
+                <dt>Name</dt>        
+                <dd>Ms Rebecca Robinson</dd>      
+              </div>          
+
+            <div>
+              <dt>Address</dt> 
+              <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
+            </div>
+            <div>        
+                <dt>Date of birth</dt>        
+                <dd>10/10/1999</dd>      
+              </div>  
+              <div>        
+                <dt>Email address</dt>        
+                <dd>email@address.co.uk</dd>      
+              </div>  
+          </dl>
     <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" value="" helper="We might use this to get in touch with you about your order" name="telephone-number">
   <label slot="label" for="text-input">Telephone number</label>
   <input type="tel" id="text-input">
@@ -30,26 +49,17 @@
   <label for="question-gas">I have read the <a href"">Terms and Conditions</a> of signing up to this tariff with</label>
 
 </ns-inputter>
-
+<div>
 <p>
   Make sure you've double-checked all your details before you place your order
 <br>
   <b>You've got a 14 day cooling off period if you change your mind</b>
-  <br>
-
 </p>
-  <ns-cta nf-href="../05-confirmation">Place order</ns-cta>
-
-
-  </ns-form>
-
-</ns-panel>
-
-
+</div>
+<br>
 <!-- Summary -->
 
-  <ns-panel class="splash">
-    <ns-accordion>
+<ns-accordion>
    <h3>Order summary</h3>
       <ns-expander open="false">
         <h4 slot="heading">Your selected energy tariff</h4>
@@ -100,50 +110,20 @@
 
 
       </ns-expander>
-
-      <ns-expander open="false">
-        <h4 slot="heading">Your address</h4>
-          <dl class="dl-stack">
-            <div>        
-                <dt>Title</dt>        
-                <dd>Ms</dd>      
-              </div>          
-              <div>        
-                <dt>First name</dt>        
-                <dd>Rebecca</dd>      
-              </div>   
-              <div>        
-                <dt>First name</dt>        
-                <dd>Rebecca</dd>      
-              </div>  
-              <div>        
-                <dt>Surname</dt>        
-                <dd>Robinson</dd>      
-              </div> 
-            <div>
-              <dt>Address</dt> 
-              <dd>22, Vincent Road, Chertsey, Surrey, KT16 9JA</dd>
-            </div>
-            <div>        
-                <dt>Date of birth</dt>        
-                <dd>10/10/1999</dd>      
-              </div>  
-              <div>        
-                <dt>Email address</dt>        
-                <dd>email@address.co.uk</dd>      
-              </div>  
-              <div>        
-                <dt>Phone number</dt>        
-                <dd>07776123456</dd>      
-              </div> 
-          </dl>
-      </ns-expander>
-
     </ns-accordion>
-
+<br>
     <!-- End of summary -->
 
+  <ns-cta nf-href="../05-confirmation">Place order</ns-cta>
+
+
+  </ns-form>
+
 </ns-panel>
+
+
+
+
 <br>
 
 <!-- END FORM -->
