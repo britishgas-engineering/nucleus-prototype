@@ -48,7 +48,32 @@
   </ns-form>
 </ns-panel>      
 
+<!-- Summary -->
 
+  <ns-panel class="splash">
+    <ns-accordion>
+   <h3>Order summary</h3>
+      <ns-expander open="false">
+        <h4 slot="heading">Your selected energy tariff</h4>
+        <h4>You have chosen <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span> tariff</h4>
+          <dl class="dl-stack">
+  
+            <div>
+              <dt>Estimated price</dt>
+              <dd>Based on the details you gave us, it should cost £<span nf-model="model.get-a-quote.tarrif-price-month">[PRICE]</span> per month (£<span nf-model="model.get-a-quote.tarrif-price-annual">[YEAR]</span> per year)</dd>
+            </div>
+            <div>
+              <dd>To choose a different type of energy, You'll need to <a href="../">get another quote</a></dd>
+            </div>
+          
+          </dl>
+      </ns-expander>
+
+    </ns-accordion>
+
+    <!-- End of summary -->
+
+</ns-panel>
 
 
 
