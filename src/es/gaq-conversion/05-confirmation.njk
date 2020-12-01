@@ -1,26 +1,32 @@
-<ns-landmark gradient="invert-ramp-cyan" type="hillside">
-                <h1 slot="heading">
-                    <span class="h5">Good news!</span>
-                    <span class="h2 enlighten"><b>Your order is now confirmed</b></span>
-                </h1>
-                <p slot="paragraph">
-We’re so pleased you’ve chosen us. <br>We’ll soon send a confirmation email to <b>email@address.co.uk</b>.
-<!-- You’ve got a 14 day cooling off period if you change your mind.-->
-                </p>
-            </ns-landmark>
 
-<ns-editorial image="https://user-images.githubusercontent.com/2879249/95381056-852d4d80-08df-11eb-90eb-bd90bdc4c434.jpg">  
-<h2 slot="heading">Your Gas and Electricity</h2>  
-<h3>You've picked <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span></h3>
+<ns-landmark image="https://user-images.githubusercontent.com/53818498/100122940-e7331980-2e71-11eb-965d-7648c8aa7f07.jpg" type="summit">
+  <h1 slot="heading">
+    <span class="h5">Good news!</span>
+    <span class="h1 enlighten"><b>Your order is now confirmed</b></span>
+  </h1>
+  <p slot="paragraph">We’re so pleased you’ve chosen us. <br>We’ll soon send a confirmation email to <b>email@address.co.uk</b></p>
+
+</ns-landmark>
+
+
+<ns-panel>
+  <ns-form class="splosh" nf-model="model.get-a-quote">
+
+     <h1 slot="heading"><b>Your Gas and Electricity</b></h1>  
+   <div>
+<h2>You've picked <span nf-model="model.get-a-quote.tarrif-choice">[TARRIF]</span></h2>
 <p>Your order number is: <b>1000289943-1000289944</b></p>
 <p>You've got a 14 day cooling off period if you change your mind</p>
+
 <h2><span nf-model="model.get-a-quote.conf-cover-title"></span></h2>
 <p><span nf-model="model.get-a-quote.conf-cover-text-a"></span></p>
-<p><span nf-model="model.get-a-quote.conf-cover-text-b"></span><b><span nf-model="model.get-a-quote.conf-cover-text-c"></span></b></p>
-<!--
-<p class="caveat">Please note: If this Direct Debit is for a home in Scotland, everything we send you will say Scottish Gas rather than British Gas.</p>
--->
-</ns-editorial>
+<p><span nf-model="model.get-a-quote.conf-cover-text-b"></span><b><span nf-model="model.get-a-quote.conf-cover-text-c"></span></b>
+
+    </div>
+   
+
+</ns-form>
+</ns-panel>
 
 
 
