@@ -8,9 +8,66 @@ eleventyNavigation:
 
 <ns-landmark type="lakeside">
   <h1 slot="heading">
-    <span class="h1">{{teamname}} homepage</span>
+    <span class="h1 enlighten">Introducing British Gas Evolve</span>
   </h1>
   <div slot="paragraph">
-    <p>This is the index page for {{title}}.</p>
+    <p>Simple, affordable, green energy that you control online.</p>
+  </div>
+  <div slot="cta">
+    <ns-form onsubmit="submittedForm(event)">
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode">
+        <label for="postcode" slot="label">Your postcode</label>
+        <input id="postcode" type="text" autocomplete="postal-code" placeholder="e.g. TW18 4NG" maxlength="10">
+      </ns-inputter>
+      <ns-cta type="direct">Get a quote</ns-cta>
+    </ns-form>
   </div>
 </ns-landmark>
+
+<ns-panel>
+  <ns-lockup type="lockbox">
+    <h2 slot="heading">
+      <span class="h1 enlighten">Something new from British Gas</span>
+    </h2>
+    <div slot="paragraph">
+      <p>We’re doing things differently by offering simple, green energy tariffs, easy online access and a UK team to help you.</p>
+    </div>
+    <a slot="cta" href="#!">
+      <ns-cta type="text">Learn more</ns-cta>
+    </a>
+    <ns-image slot="image" src="https://www.britishgasevolve.co.uk/uploads/images/two-people-on-tablet.png"></ns-image>
+  </ns-lockup>
+</ns-panel>
+
+<ns-panel>
+  <ns-column class="splush" basketballcourt="2" footballfield="4">
+    <ns-card type="flat">
+      <h3 slot="heading">Need help?</h3>
+      <p slot="paragraph">Web chat with our UK-based support team.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Chat with us</ns-cta>
+      </a>
+    </ns-card>
+    <ns-card type="flat">
+      <h3 slot="heading">100% renewable electricity</h3>
+      <p slot="paragraph">This is our way of helping you do your bit for the planet.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">See our fuel mix</ns-cta>
+      </a>
+    </ns-card>
+    <ns-card type="flat">
+      <h3 slot="heading">Moved house?</h3>
+      <p slot="paragraph">If your new home is already on supply with British Gas Evolve, it’s even easier to get you set up.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Let us know</ns-cta>
+      </a>
+    </ns-card>
+    <ns-card type="flat">
+      <h3 slot="heading">Have your say</h3>
+      <p slot="paragraph">At British Gas Evolve, we’re big on collaboration. If you’ve got an idea to make things better, let us know.</p>
+      <a slot="cta" href="#!">
+        <ns-cta type="text">Get in touch</ns-cta>
+      </a>
+    </ns-card>
+  </ns-column>
+</ns-panel>
