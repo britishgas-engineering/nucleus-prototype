@@ -1,0 +1,107 @@
+---
+layout: base.njk
+---
+<ns-header logo="https://www.britishgasevolve.co.uk/uploads/images/logos/bgevolve-logo-blue.png" alt="British Gas Evolve" primary='[
+  {
+    "heading": "Home",
+    "href": "#!",
+    "subheadings": [
+      {
+        "heading": "Subheading",
+        "links": [
+          {
+            "text": "Link",
+            "href": "#!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "About British Gas Evolve",
+    "href": "#!",
+    "subheadings": [
+      {
+        "heading": "Subheading",
+        "links": [
+          {
+            "text": "Link",
+            "href": "#!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "Contact us",
+    "href": "#!",
+    "subheadings": [
+      {
+        "heading": "Subheading",
+        "links": [
+          {
+            "text": "Link",
+            "href": "#!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "FAQs",
+    "href": "#!",
+    "subheadings": [
+      {
+        "heading": "Subheading",
+        "links": [
+          {
+            "text": "Link",
+            "href": "#!"
+          }
+        ]
+      }
+    ]
+  }
+  ]' secondary='[
+  {
+    "text":"Log in",
+    "href":"#!"
+  }
+  ]'>
+</ns-header>
+
+<main id="content">
+  {{content | safe}}
+</main>
+
+<ns-footer company="British Gas Evolve" id="footer" hidelogo>
+  <ns-card slot="section" type="nav">
+    <h2 slot="heading">Heading</h2>
+    <ul slot="paragraph">
+      <li><a href="https://www.britishgasevolve.co.uk/emergencies">Emergencies</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/home-move">Home move</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/energy-saving">Energy saving</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/ways-we-can-help">Ways we can help</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/covid19">Covid-19</a></li>
+    </ul>
+  </ns-card>
+  <ns-card slot="section" type="nav">
+    <h2 slot="heading">Information</h2>
+    <ul slot="paragraph">
+      <li><a href="https://www.britishgasevolve.co.uk/fuel-mix">Fuel mix</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/performance-standards">Performance standards</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/evolve-terms">Terms and conditions</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/terms">Website terms</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/privacy">Privacy policy</a></li>
+    </ul>
+  </ns-card>
+  <ns-card slot="section" type="nav">
+    <h2 slot="heading">Support</h2>
+    <ul slot="paragraph">
+      <li><a href="https://www.britishgasevolve.co.uk/cookie-policy">Cookies policy</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/about">About British Gas Evolve</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/contact-us">Contact us</a></li>
+      <li><a href="https://www.britishgasevolve.co.uk/faqs">FAQs</a></li>
+    </ul>
+  </ns-card>
+</ns-footer>
