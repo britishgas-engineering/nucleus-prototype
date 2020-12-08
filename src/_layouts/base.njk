@@ -11,7 +11,7 @@ build: www5
     <meta name="format-detection" content="telephone=no">
 
     {%- if local %}
-    <link rel="stylesheet" href="/nucleus/styles.min.css">
+    <link rel="stylesheet" href="/nucleus/dist/styles.min.css">
     {%- elif branch %}
     <link rel="stylesheet" href="https://{{build}}.bgo.bgdigitaltest.co.uk/nucleus/{{branch}}/styles.min.css">
     {%- endif -%}
@@ -31,8 +31,8 @@ build: www5
     {{content | safe}}
 
     {%- if local %}
-    <script src="/nucleus/polyfill.js"></script>
-    <script src="/nucleus/components.js"></script>
+    <script src="/nucleus/dist/polyfill.js"></script>
+    <script src="/nucleus/dist/components.js"></script>
     {%- elif branch %}
     <script type="text/javascript" src="https://{{build}}.bgo.bgdigitaltest.co.uk/nucleus/{{branch}}/nucleus.min.js"></script>
     <script src="https://www.britishgas.co.uk/nucleus-experiences/components.min.js"></script>

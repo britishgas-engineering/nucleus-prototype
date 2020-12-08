@@ -1,72 +1,31 @@
 ---
 layout: base.njk
+branch: fb79a52e25aa3e4199e6eff6d2d830c9965016ae
 ---
-<ns-header logo="https://www.britishgasevolve.co.uk/uploads/images/logos/bgevolve-logo-blue.png" alt="British Gas Evolve" primary='[
-  {
-    "heading": "Home",
-    "href": "#!",
-    "subheadings": [
-      {
-        "heading": "Subheading",
-        "links": [
-          {
-            "text": "Link",
-            "href": "#!"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "heading": "About British Gas Evolve",
-    "href": "#!",
-    "subheadings": [
-      {
-        "heading": "Subheading",
-        "links": [
-          {
-            "text": "Link",
-            "href": "#!"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "heading": "Contact us",
-    "href": "#!",
-    "subheadings": [
-      {
-        "heading": "Subheading",
-        "links": [
-          {
-            "text": "Link",
-            "href": "#!"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "heading": "FAQs",
-    "href": "#!",
-    "subheadings": [
-      {
-        "heading": "Subheading",
-        "links": [
-          {
-            "text": "Link",
-            "href": "#!"
-          }
-        ]
-      }
-    ]
-  }
-  ]' secondary='[
-  {
-    "text":"Log in",
-    "href":"#!"
-  }
+<ns-header type="simple" logo="https://www.britishgasevolve.co.uk/uploads/images/logos/bgevolve-logo-blue.png" alt="British Gas Evolve"
+  primary='[
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About British Gas Evolve",
+      "href": "/about"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact-us"
+    },
+    {
+      "text": "FAQs",
+      "href": "/faqs"
+    }
+  ]'
+  secondary='[
+    {
+      "text": "Log in",
+      "href": "#!"
+    }
   ]'>
 </ns-header>
 
@@ -74,8 +33,10 @@ layout: base.njk
   {{content | safe}}
 </main>
 
-<ns-footer company="British Gas Evolve" id="footer" hidelogo>
+<ns-footer company="British Gas Evolve" id="footer">
   <ns-card slot="section" type="nav">
+    <!-- NOTE: @drew-jones - 2020-12-08 - potentially reintroduce these headings -->
+    <!-- <h3 slot="heading">Heading</h3> -->
     <ul slot="paragraph">
       <li><a href="https://www.britishgasevolve.co.uk/emergencies">Emergencies</a></li>
       <li><a href="https://www.britishgasevolve.co.uk/home-move">Home move</a></li>
@@ -85,6 +46,8 @@ layout: base.njk
     </ul>
   </ns-card>
   <ns-card slot="section" type="nav">
+    <!-- NOTE: @drew-jones - 2020-12-08 - potentially reintroduce these headings -->
+    <!-- <h3 slot="heading">Heading</h3> -->
     <ul slot="paragraph">
       <li><a href="https://www.britishgasevolve.co.uk/fuel-mix">Fuel mix</a></li>
       <li><a href="https://www.britishgasevolve.co.uk/performance-standards">Performance standards</a></li>
@@ -94,6 +57,8 @@ layout: base.njk
     </ul>
   </ns-card>
   <ns-card slot="section" type="nav">
+    <!-- NOTE: @drew-jones - 2020-12-08 - potentially reintroduce these headings -->
+    <!-- <h3 slot="heading">Heading</h3> -->
     <ul slot="paragraph">
       <li><a href="https://www.britishgasevolve.co.uk/cookie-policy">Cookies policy</a></li>
       <li><a href="https://www.britishgasevolve.co.uk/about">About British Gas Evolve</a></li>
