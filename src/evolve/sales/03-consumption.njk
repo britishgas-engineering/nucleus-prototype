@@ -1,0 +1,40 @@
+---
+title: Evolve - consumption
+---
+
+<ns-panel>
+  {% include "../_includes/go-back.njk" -%}
+  <div class="splash">
+    <h1 class="h2 enlighten">Please tell us your annual consumption</h1>
+    <p class="p-normal">You’ll find your annual estimated consumption on a recent energy bill.</p>
+  </div>
+  <div class="splash">
+    <dl class="dl-stacked">
+      <div>
+        <dt>Address</dt>
+        <dd><span nf-model="model.evolve.address">[ADDRESS]</span>, <span nf-model="model.evolve.postcode">[POSTCODE]</span></dd>
+        <dd>
+          <a href="../">Change your address</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Fuel type</dt>
+        <dd><span nf-model="model.evolve.fuel-type">[FUEL-TYPE]</span></dd>
+        <dd>
+          <a href="../02-fuel-type">Change fuel type</a>
+        </dd>
+      </div>
+    </dl>
+    <ns-form nf-model="model.evolve">
+      <ns-inputter mask="00-----" validation="[&quot;isRequired&quot;]" value="" helper="Enter electricity consumption in kWh" name="meter-read-electric">
+        <label slot="label">Electricity</label>
+        <input type="text">
+      </ns-inputter>
+      <ns-inputter mask="00---" validation="[&quot;isRequired&quot;]" value="" helper="Enter gas consumption in kWh" name="meter-read-gas">
+        <label slot="label">Gas</label>
+        <input type="text">
+      </ns-inputter>
+      <ns-cta nf-href="../04-quote" icon="">Submit</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>

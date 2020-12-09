@@ -10,12 +10,12 @@ title: Evolve Nucleus prototype
     <p>Simple, affordable, green energy that you control online.</p>
   </div>
   <div slot="cta">
-    <ns-form onsubmit="submittedForm(event)">
+    <ns-form nf-model="model.evolve">
       <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode">
         <label for="postcode" slot="label">Your postcode</label>
         <input id="postcode" type="text" autocomplete="postal-code" placeholder="e.g. TW18 4NG" maxlength="10">
       </ns-inputter>
-      <ns-cta type="direct" icon="">Get a quote</ns-cta>
+      <ns-cta nf-href="sales/01-select-address" icon="">Get a quote</ns-cta>
     </ns-form>
   </div>
 </ns-landmark>

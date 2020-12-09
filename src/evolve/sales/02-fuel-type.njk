@@ -1,0 +1,32 @@
+---
+title: Evolve - fuel-type
+---
+
+<ns-panel>
+  {% include "../_includes/go-back.njk" -%}
+  <div class="splash">
+    <h1 class="h2 enlighten">I'm looking for</h1>
+  </div>
+  <div class="splash">
+    <dl class="dl-row">
+      <div>
+        <dt>Address</dt>
+        <dd><span nf-model="model.evolve.address">[ADDRESS]</span>, <span nf-model="model.evolve.postcode">[POSTCODE]</span></dd>
+        <dd>
+          <a href="../">Change your address</a>
+        </dd>
+      </div>
+    </dl>
+    <ns-form nf-model="model.evolve">
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="fuel-type">
+        <input type="radio" id="dual-fuel" name="radio-a" value="Gas &amp; electric">
+        <label for="dual-fuel">Gas &amp; electric</label>
+        <input type="radio" id="electric-only" name="radio-a" value="Electric only">
+        <label for="electric-only">Electric only</label>
+        <input type="radio" id="gas-only" name="radio-a" value="Gas only">
+        <label for="gas-only">Gas only</label>
+      </ns-inputter>
+      <ns-cta nf-href="../03-consumption" icon="">Continue</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>

@@ -3,10 +3,36 @@ title: Evolve - select address
 ---
 
 <ns-panel>
+  {% include "../_includes/go-back.njk" -%}
   <div class="splash">
-    <ns-form>
-      
+    <h1 class="h2 enlighten">Please select your address</h1>
+  </div>
+  <div class="splash">
+    <dl class="dl-row">
+      <div>
+        <dt>Postcode</dt>
+        <dd><span nf-model="model.evolve.postcode">[POSTCODE]</span></dd>
+        <dd>
+          <a href="../">Change your postcode</a>
+        </dd>
+      </div>
+    </dl>
+    <ns-form nf-model="model.evolve">
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="address">
+        <label slot="label">Please pick your address</label>
+        <select name="address">
+          <option>Select an option</option>
+          <option>129 Queenstown Rd, Battersea, London</option>
+          <option>130 Queenstown Rd, Battersea, London</option>
+          <option>131 Queenstown Rd, Battersea, London</option>
+          <option>132 Queenstown Rd, Battersea, London</option>
+          <option>133 Queenstown Rd, Battersea, London</option>
+          <option>134 Queenstown Rd, Battersea, London</option>
+          <option>135 Queenstown Rd, Battersea, London</option>
+          <option>136 Queenstown Rd, Battersea, London</option>
+        </select>
+      </ns-inputter>
+      <ns-cta nf-href="../02-fuel-type" icon="">Continue</ns-cta>
     </ns-form>
-    <h1>Please select your address</h1>
   </div>
 </ns-panel>
