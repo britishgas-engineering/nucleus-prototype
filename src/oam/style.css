@@ -116,6 +116,13 @@
   }
 }
 
+/* hide subnav links on mobile */
+@media (max-width: 768px) {
+.subnav-top-bar .links {
+display: none;
+}
+}
+
 /* simple .np-callout */
 .np-callout {
   display: block;
@@ -281,4 +288,31 @@
     height: .45em;
     -webkit-transform: translate(-55%,-75%) rotate(-45deg);
     transform: translate(-55%,-75%) rotate(-45deg);
+}
+
+
+
+/* DASHBOARD STYLE TWEAKS
+*/
+
+/* Red-line markup
+*/
+
+.markup-style {
+    display:block;
+    background-color:pink;
+    color:999;
+    text-align: center;
+    margin-top: 3em
+}
+
+.markup-style-general {
+  background-color:#FFFDD0;
+}
+
+/* CTA margin
+*/
+
+.product-content-button-margin {
+  margin-top: 25px;
 }

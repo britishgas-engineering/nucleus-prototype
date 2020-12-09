@@ -1,0 +1,502 @@
+---
+layout: nucleus-header-logged-in-variant.njk
+title: Welcome to your account
+---
+
+<ns-panel decoration="invert-ramp-blue" class="">
+  <div class="splash">
+    <h5>Hi <span nf-model="model.oam-02.first-name">Mr</span> <span nf-model="model.oam-02.surname">Known</span>.</h5>
+    <h1>{{title}}</h1>
+  </div>
+  <div class="splash triple">
+
+    <div class="np-card notification type-a">
+      <div class="icon-holder">
+        <ns-icon type="boiler" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Annual service</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">It's time to book your annual service visit</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Book now</ns-cta>
+        </div>
+      </div>
+    </div>
+
+    <div class="np-card notification type-b">
+      <div class="icon-holder">
+        <ns-icon type="bill" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Your bill</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">Your energy bill of £120.41 is ready</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Pay now</ns-cta>
+        </div>
+      </div>
+    </div>
+
+    <div class="np-card notification type-c">
+      <div class="img-holder">
+        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73546218-c0b07780-4434-11ea-8063-dd45d2dbbbad.jpg"></ns-image>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Add plumbing & drains</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">For just £4 per month</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Upgrade cover</ns-cta>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ns-panel>
+
+<div id="your-products">
+  <!-- Anchor to your-products -->
+</div>
+
+<ns-tabs>
+  <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
+  <div slot="panel">
+    
+
+<!-- GENERAL MARKUPS -->
+<span class="markup-style markup-style-general">*** GENERAL MARKUP *** </br>
+Primary CTA: 25px top-margin added to components 01-04 below. The others are un-modified.</br>
+Unfortunately nucleus cards are disabling the list ticks class</br>
+The card on the right with drop shadow (support type) is inhheriting the height of the longest card in the row, which looks poor.</span>
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  01 Removing the pre-header "Your Home Services" enables a generic HomeCare title and then specific products to be specified in what's covered. However, for ASV reminder, a 4 column layout doesnt work well on smaller break points. ↓ ↓ ↓ </span>
+
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your HomeCare</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="4" hockeypitch="4" rugbypitch="4" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 012345678912</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+        </ns-card>
+
+
+         <ns-card role="listitem" type="flat">
+           <h3 slot="heading">
+    <ns-pill colour="slate" icon="">Upgrade?</ns-pill>
+    What's not covered
+  </h3>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
+        </ns-card>
+
+        <ns-card type="support">
+          <h2 slot="heading">Service visit due</h2>
+          <p slot="paragraph">It's time to book your annual service visit</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Book a slot</ns-cta>
+          </a>
+        </ns-card>
+        
+
+</ns-column>
+</ns-panel>
+
+
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  02 In a 3col layout, the third card will have to be switched in and out based upon account status 1. ASV due 2. Upsell.   ↓ ↓ ↓ </span>
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your HomeCare</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="3" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 012345678912</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+        </ns-card>
+    
+        
+        <ns-card type="support" alt="">
+  <h3 slot="heading">
+    <ns-pill colour="slate" icon="">Upgrade?</ns-pill>
+    What's not covered
+  </h3>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
+</ns-card>
+
+</ns-column>
+</ns-panel>
+
+
+
+
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  03 A pill badge can be used in a contrasting colour to draw attention to required action - in case it's missed in hnotifications. Also would work as a stop-gap until notifications is release.   ↓ ↓ ↓ </span>
+
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your HomeCare</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="3" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 012345678912</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+        </ns-card>
+    
+        
+        <ns-card type="support" alt="">
+  <h3 slot="heading">
+    <ns-pill colour="yellow" icon="">Action needed</ns-pill>
+    Service visit is due
+  </h3>
+  <p slot="paragraph">Winter is nearly here, and it's time for your boiler's annual service.</p>
+  <a slot="cta" href="#!">
+    <ns-cta type="text">Book a service</ns-cta>
+  </a>
+</ns-card>
+
+</ns-column>
+</ns-panel>
+
+
+
+
+
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  04  A 3col layout without a card with drop shadow for the third slot could also work to be less 'in-ya-face', but we lose what's not covered when an ASV is due.  The CTA is moved to "book a repair or service" - does the destination page triage in this way? ↓ ↓ ↓ </span>
+
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your HomeCare</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 012345678912</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book repair or service</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">What's covered</h3>
+          <p slot="paragraph"><strong>HomeCare 200</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <p slot="paragraph"><strong>Gas and Kitchen appliances</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Gas</li>
+            <li>Kitchen appliances</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+        </ns-card>
+
+
+         <ns-card role="listitem" type="flat">
+          <h3 slot="heading">What's not covered</h3>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
+        </ns-card>
+        
+
+</ns-column>
+</ns-panel>
+
+
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  05 Balance works with a single card too - when Home insurance for instance is placed beneath HomeCare, or on its' own.  ↓ ↓ ↓ </span>
+
+
+   <ns-panel>
+      <div class="splash">
+        <h2>Your Home Insurance</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£12.00 monthly</h2>
+          <p slot="paragraph"># 012345678923</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <p slot="paragraph">You are covered until the end of 21st July 2020</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your policy documents</ns-cta>
+          </a>
+            
+        </ns-card>
+        
+
+</ns-column>
+</ns-panel>
+
+
+
+
+
+
+<!-- Products using columns -->
+<span class="markup-style splash"> ↓ ↓ ↓  06 This is the pre-header "your home services" which tested well, but we might have to remove and show a generic HomeCare heading to enable us to show multiple product holdings under 'what's covered' as per component 01 ↓ ↓ ↓ </span>
+
+
+   <ns-panel>
+      <div class="splash">
+        <h4>Your Home Services</h4>
+        <h2>HomeCare Two</h2>
+      </div>
+
+
+      <ns-column class="splash" basketballcourt="2" hockeypitch="3" rugbypitch="3" role="list">
+    <ns-card role="listitem" type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph"># 0123456789</p>
+          <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+          </a>
+             <p slot="cta"><ns-cta slot="cta" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+        </ns-card>
+    <ns-card role="listitem" type="flat">
+          <h3 slot="heading">Your cover</h3>
+          <p slot="paragraph"><strong>What's covered</strong></p>
+          <ul slot="paragraph" class="ul-ticked"> 
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+
+          <p slot="paragraph"><strong>What's not covered</strong></p>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
+
+        </ns-card>
+        
+
+</ns-column>
+</ns-panel>
+
+
+
+
+
+
+
+<!-- Products using splash triple on old branch -->
+<span class="markup-style splash"> ↓ ↓ ↓ 07  An early build which we used in testing. It doesnt loo great at only 2 columns when a repair booking is activated (<a href="https://oam-login-register--nucleus-prototype.netlify.app/oam/dashboard/hs-hc4-asv-booked/">see booked</a>)   ↓ ↓ ↓ </span>
+
+ <ns-panel>
+      <div class="splash">
+        <h4>Your Home Services</h4>
+        <h2>HomeCare Two</h2>
+      </div>
+      <div class="splash triple">
+        <ns-card type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph">Renewal date: 22nd July 2020</p>
+          <p slot="paragraph">Account Number: 0123456789</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Your invoices</ns-cta>
+           </a>
+        
+           <p slot="cta"><ns-cta slot="cta" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+        </ns-card>
+        <ns-card type="flat">
+          <h2 slot="heading">Your cover</h2>
+          <ul slot="paragraph">
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+            <li>+ Plumbing</li>
+            <li>+ Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Change your cover</ns-cta>
+          </a>
+        </ns-card>
+        
+      </div>
+    </ns-panel>
+
+
+
+
+<!-- Products using splash triple on old branch -->
+<span class="markup-style splash"> ↓ ↓ ↓  08  Another early route was to give each product it's own heading and content row. But what would we do about links to policy docs, invoices, and book engineer?   ↓ ↓ ↓ </span>
+
+
+
+    <ns-panel>
+      <div class="splash">
+        <h2>Your Plumbing and drains</h2>
+      </div>
+      <div class="splash triple">
+        <ns-card type="flat">
+          <h2 slot="heading">£21.00 monthly</h2>
+          <p slot="paragraph">Renewal date: 22nd July 2020</p>
+          <p slot="paragraph">Account Number: 0123456789</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">View policy documents</ns-cta>
+          </a>
+        </ns-card>
+        <ns-card type="flat">
+          <h2 slot="heading">Your cover</h2>
+          <ul slot="paragraph">
+            <li>Annual boiler service</li>
+            <li>Boiler and controls</li>
+            <li>Central heating</li>
+            <li>+ Plumbing</li>
+            <li>+ Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Change your cover</ns-cta>
+          </a>
+        </ns-card>
+        <ns-card type="support">
+          <h2 slot="heading">Service visit due</h2>
+          <p slot="paragraph">It's time to book your annual service visit</p>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Book a slot</ns-cta>
+          </a>
+        </ns-card>
+      </div>
+    </ns-panel>
+
+
+
+  </div>
+
+  {% include "./_includes/energy-tab.njk" -%}
+
+  {% include "./_includes/rewards-tab.njk" -%}

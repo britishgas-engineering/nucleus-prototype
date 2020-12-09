@@ -1,0 +1,43 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Set your password
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">Set a new password</span>
+  </h1>
+  <p slot="paragraph">Please set a new password which must different from your previous 6 passwords.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash">
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;]" name="password" value="">
+      <label slot="label">Password</label>
+      <input type="password">
+    </ns-inputter>
+   <ul class="ul-ticked" style="margin-bottom: 0;">
+      <li>One letter</li>
+      <li>One number</li>
+      <li class="hide-ticks">8-20 characters</li>
+    </ul>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;minLength(8)&quot;]" name="confirm-password" value="">
+      <label slot="label">Confirm Password</label>
+      <input type="password">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Set password</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="password"]').value;
+    if (data === '') {
+      return '';
+    }
+    else {
+      return '../../../dashboard';
+    }
+  }
+</script>

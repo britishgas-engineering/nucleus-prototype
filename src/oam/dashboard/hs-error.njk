@@ -1,0 +1,73 @@
+---
+layout: nucleus-header-logged-in-variant.njk
+title: Welcome to your account
+---
+
+<ns-panel decoration="invert-ramp-blue" class="">
+  <div class="splash">
+    <h5>Hi <span nf-model="model.oam-02.first-name">Mr</span> <span nf-model="model.oam-02.surname">Known</span>.</h5>
+    <h1>{{title}}</h1>
+  </div>
+  <div class="splash triple">
+
+ <div class="np-card notification type-b">
+      <div class="icon-holder">
+        <ns-icon type="bill" aria-hidden="true"></ns-icon>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Your bill</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">Your energy bill of £120.41 is ready</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Pay now</ns-cta>
+        </div>
+      </div>
+    </div>
+
+    <div class="np-card notification type-c">
+      <div class="img-holder">
+        <ns-image slot="image" ratio="4x3" src="https://user-images.githubusercontent.com/47324496/73546218-c0b07780-4434-11ea-8063-dd45d2dbbbad.jpg"></ns-image>
+      </div>
+      <div class="content">
+        <div class="heading-holder">
+          <h3 class="heading">Add plumbing & drains</h3>
+        </div>
+        <div class="paragraph-holder">
+          <p class="paragraph">For just £4 per month</p>
+        </div>
+        <div class="cta-holder">
+          <ns-cta class="cta" type="text">Upgrade cover</ns-cta>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ns-panel>
+
+<div id="your-products">
+  <!-- Anchor to your-products -->
+</div>
+
+<ns-tabs>
+  <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
+  <div slot="panel">
+    
+    <ns-panel>
+  <div class="splash">
+        <h4>Your Home Services</h4>
+    <ns-highlighter type="error">
+      <h2 slot="heading">Information is unavailable right now</h2>
+      <p>Please try again later or <a href="#">refresh now</a>.</p>
+    </ns-highlighter>
+  </div>
+  
+</ns-panel>
+
+  </div>
+
+  {% include "./_includes/energy-tab.njk" -%}
+
+  {% include "./_includes/rewards-tab.njk" -%}

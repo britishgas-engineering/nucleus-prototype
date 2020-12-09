@@ -1,129 +1,201 @@
 ---
 layout: base.njk
-branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
 ---
 
-<ns-header logo="https://www.britishgas.co.uk/nucleus/images/logo.svg" alt="British Gas" help="#" business="#">
-  <ul>
+<!--*** SAME AS VARIANT, BUT NO PREMISE SELECTOR ***>-->
 
-    <li>
-      <h2><a href="#">Our Products</a></h2>
-      <ul>
-        <li>
-          <h3>Boilers and heating</h3>
-          <ul>
-            <li><a href="/home-services/boilers-and-heating/boiler-and-heating-cover.html">Boiler &amp; heating cover</a></li>
-            <li><a href="/home-services/boilers-and-heating/boiler-and-heating-repair.html">Boiler &amp; heating repair</a></li>
-            <li><a href="/home-services/boilers-and-heating/boiler-and-heating-cover.html#boiler-check-banner">Annual Boiler service</a></li>
-            <li><a href="/home-services/boilers-and-heating/new-boilers.html">New boilers</a></li>
-            <li><a href="/home-services/boilers-and-heating/home-improvements.html">Home improvements</a></li>
-            <li><a href="/home-services/boilers-and-heating/guides.html">Understand your boiler</a></li>
-            <li><a href="/home-services/boilers-and-heating/pricing.html">Understand your price</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Existing customers</h3>
-          <ul>
-            <li><a href="/book-engineer">Book an engineer</a></li>
-            <li><a href="/my-account/premises/select/accounts/appointments/track">Track engineer</a></li>
-            <li><a href="/discover/home-move/">Moving home</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Plumbing and drains</h3>
-          <ul>
-            <li><a href="/home-services/plumbing-and-drains/plumbing-and-drains-cover.html">Plumbing &amp; drains cover</a></li>
-            <li><a href="/home-services/plumbing-and-drains/plumbing-and-drains-repairs.html">Plumbing &amp; drains repair</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Appliances and Electrical</h3>
-          <ul>
-            <li><a href="/home-services/appliances-and-electrical/appliances-and-electrical-cover.html">Appliances &amp; electrical cover</a></li>
-            <li><a href="/home-services/appliances-and-electrical/appliance-and-home-electrical-repairs.html">Appliances &amp; electrical repair</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Landlords</h3>
-          <ul>
-            <li><a href="/home-services/landlords/landlord-cover.html">Landlords cover</a></li>
-            <li><a href="/home-services/landlords/landlord-repairs.html">Landlords repair</a></li>
-            <li><a href="/home-services/landlords/landlord-insurance.html">Landlords insurance</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-   <!-- <li>
-      <h2><a href="#">Help & Support</a></h2>
-      <ul>
-        <li>
-          <h3>Getting started</h3>
-          <ul>
-            <li><a href="/smart-home/technology.html">What is a smart home</a></li>
-            <li><a href="/smart-home/control.html">Controlling your home</a></li>
-            <li><a href="/smart-home/looking-after-your-home.html">Looking after your home</a></li>
-            <li><a href="/smart-home/hive-partnership.html">Hive, a British Gas innovation</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>Smart products</h3>
-          <ul>
-            <li><a href="/smart-home/hive-heating.html">Heating</a></li>
-            <li><a href="/smart-home/smart-meters.html">Smart meters</a></li>
-            <li><a href="/smart-home/fault-detection.html">Fault detection</a></li>
-            <li><a href="/smart-home/smart-sensors.html">Sensors</a></li>
-            <li><a href="/smart-home/smart-lights.html">Lighting</a></li>
-            <li><a href="/smart-home/smart-plugs.html">Plugs</a></li>
-            <li><a href="/smart-home/smart-cameras.html">Cameras</a></li>
-            <li><a href="/smart-home/welcome-home-plan.html">Starter pack</a></li>
-            <li><a href="/smart-home/hive-hubs.html">Hubs</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li> -->
-    <li>
-      <h2><a href="/oam/dashboard">Your Account</a></h2>
-      <ul>
-         <li>
-          <h3>Your home</h3>
-          <ul>
-            <li><a href="#">Moving home</a></li>
-            <li><a href="/oam/account-details/extra-support/v01/">Household circumstances</a></li>
-          </ul>
-        </li>
+<link rel="stylesheet" href="/mh/style.css">
 
-        <li>
-          <h3>Frequent actions</h3>
-          <ul>
-            <li><a href="/oam/meter-readings/smart-settings/readings/">Meter readings</a></li>
-            <li><a href="#">Compare my energy usage</a></li>
-            <li><a href="#">Book and Track an engineer</a></li>
-            
+<ns-header logo="https://www.britishgas.co.uk/nucleus/images/logo.svg" alt="British Gas" primary='[
+  {
+    "heading": "Our Products",
+    "href": "/home-services.html",
+    "subheadings": [
+      {
+        "heading": "Boilers and heating",
+        "links": [
+          {
+            "text": "Boiler &amp; heating cover",
+            "href": "/home-services/boilers-and-heating/boiler-and-heating-cover.html"
+          },
+          {
+            "text": "Boiler &amp; heating repair",
+            "href": "/home-services/boilers-and-heating/boiler-and-heating-repair.html"
+          },
+          {
+            "text": "Annual Boiler service",
+            "href": "/home-services/boilers-and-heating/boiler-and-heating-cover.html#boiler-check-banner"
+          },
+          {
+            "text": "New boilers",
+            "href": "/home-services/boilers-and-heating/new-boilers.html"
+          },
+          {
+            "text": "Home improvements",
+            "href": "/home-services/boilers-and-heating/home-improvements.html"
+          },
+          {
+            "text": "Understand your boiler",
+            "href": "/home-services/boilers-and-heating/guides.html"
+          },
+          {
+            "text": "Understand your price",
+            "href": "/home-services/boilers-and-heating/pricing.html"
+          }
+        ]
+      },
+      {
+        "heading": "Existing customers",
+        "links": [
+          {
+            "text": "Book an engineer",
+            "href": "/book-engineer"
+          },
+          {
+            "text": "Track engineer",
+            "href": "/my-account/premises/select/accounts/appointments/track"
+          },
+          {
+            "text": "Moving home",
+            "href": "/discover/home-move/"
+          }
+        ]
+      },
+      {
+        "heading": "Plumbing and drains",
+        "links": [
+          {
+            "text": "Plumbing &amp; drains cover",
+            "href": "/home-services/plumbing-and-drains/plumbing-and-drains-cover.html"
+          },
+          {
+            "text": "Plumbing &amp; drains repair",
+            "href": "/home-services/plumbing-and-drains/plumbing-and-drains-repairs.html"
+          }
+        ]
+      },
+      {
+        "heading": "Appliances and Electrical",
+        "links": [
+          {
+            "text": "Appliances &amp; electrical cover",
+            "href": "/home-services/appliances-and-electrical/appliances-and-electrical-cover.html"
+          },
+          {
+            "text": "Appliances &amp; electrical repair",
+            "href": "/home-services/appliances-and-electrical/appliance-and-home-electrical-repairs.html"
+          }
+        ]
+      },
+      {
+        "heading": "Landlords",
+        "links": [
+          {
+            "text": "Landlords cover",
+            "href": "/home-services/landlords/landlord-cover.html"
+          },
+          {
+            "text": "Landlords repair",
+            "href": "/home-services/landlords/landlord-repairs.html"
+          },
+          {
+            "text": "Landlords insurance",
+            "href": "/home-services/landlords/landlord-insurance.html"
+          }
+        ]
+      }
+    ]
+  },
+  
+  {
+    "heading": "Your Account",
+    "href": "/oam/dashboard",
+    "subheadings": [
+      {
+        "heading": "Your home",
+        "links": [
+          {
+            "text": "Moving home",
+            "href": "#"
+          },
+          {
+            "text": "Household circumstances",
+            "href": "/oam/account-details/extra-support/v01/"
+          }
+        ]
+      },
+      {
+        "heading": "Frequent actions",
+        "links": [
+          {
+            "text": "Meter readings",
+            "href": "/oam/meter-readings/smart-settings/readings/"
+          },
+          {
+            "text": "Compare my energy usage",
+            "href": "#"
+          },
+          {
+            "text": "Book and Track an engineer",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "heading": "Account",
+        "links": [
+          {
+            "text": "Your summary",
+            "href": "/oam/dashboard",
+            "data-ns-link": "1"
+          },
+          {
+            "text": "Account details",
+            "href": "/oam/account-details/v02/details"
+          },
+          {
+            "text": "Rewards",
+            "href": "/oam/dashboard#your-products"
+          },
+          {
+            "text": "Payments",
+            "href": "#"
+          },
+          {
+            "text": "Documents",
+            "href": "#"
+          },
+          {
+            "text": "Keeping your account safe",
+            "href": "#"
+          },
+          {
+            "text": "Log out",
+            "href": "/oam/homepage"
+          }
 
-          </ul>
-        </li>
-       <li>
-          <h3>Your account</h3>
-          <ul>
-            <li><a href="/oam/dashboard#your-products">Rewards</a></li>
-            <li><a href="#">Payments</a></li>
-            <li><a href="#">Documents</a></li>
-            <li><a href="#">Keeping your account safe</a></li>
-            <li><a href="/oam/homepage">Log out</a></li>
-
-          </ul>
-        </li>
-
-      </ul>
-    </li>
-  </ul>
-  <ul>
-    <li><a href="/help-and-support">Help &amp; Support</a></li>
-    <li><a href="/business">Business</a></li>
-    <li><a href="/accessibility">Accessibility tools</a></li>
-    <!--<li><a href="/my-account">My Account</a></li>-->
-    <li><a href="/oam/homepage">Log out</a></li>
-  </ul>
+        ]
+      }
+    ]
+  }
+  ]' secondary='[
+  {
+    "text":"Accessibility tools",
+    "type":"button"
+  },
+  {
+    "text":"My business",
+    "href":"/business"
+  },
+  {
+    "text":"Help &amp; Support",
+    "href":"/help-and-support"
+  },
+  {
+    "text":"Log out",
+    "href":"/oam/homepage"
+  }
+  ]'>
 </ns-header>
 
 <div class="subnav-top-bar">
@@ -133,11 +205,14 @@ branch: c9b339e2181c3c8f18198185f47f51f30e5c82c4
       <a href="/oam/dashboard#your-products">Your Products</a>
       <a href="/oam/account-details/v02/details">Account details</a>
     </nav>
-    <!--<div class="address">
-      <span nf-model="model.oam-02.address-selector">[ADDRESS]</span>
-    </div>-->
-    </div>
+  </div>
 </div>
+
+
+
+
+
+
 
 <main id="content">
   {{content | safe}}
