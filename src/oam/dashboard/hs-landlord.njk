@@ -10,23 +10,6 @@ title: Welcome to your account
   </div>
   <div class="splash triple">
 
-    <div class="np-card notification type-a">
-      <div class="icon-holder">
-        <ns-icon type="boiler" aria-hidden="true"></ns-icon>
-      </div>
-      <div class="content">
-        <div class="heading-holder">
-          <h2 class="heading">Annual service is due</h2>
-        </div>
-        <div class="paragraph-holder">
-          <p class="paragraph">It's time to book an engineer.</p>
-        </div>
-        <div class="cta-holder">
-          <ns-cta class="cta" type="text" href="../annual-service-visit/step-01/">Book a service</ns-cta>
-        </div>
-      </div>
-    </div>
-
     <div class="np-card notification type-b">
       <div class="icon-holder">
         <ns-icon type="bill" aria-hidden="true"></ns-icon>
@@ -75,7 +58,7 @@ title: Welcome to your account
 
 
 
-
+<span class="markup-style splash"> ↓ ↓ ↓  In the first ns-card, the main CTA is by default placed beneath all paragraph slots, whereas we want to place it beneath the renewal date, and above safety certificates. In order to give spacing between the two blocks, a hyphen has been incluuded as a hack; it's not possible to apply top or bottom margind to paragraph slots.   ↓ ↓ ↓ </span>
 
  <!-- Products using columns -->
 
@@ -91,11 +74,19 @@ title: Welcome to your account
           <h2 slot="heading">£21.00 monthly</h2>
           <p slot="paragraph"># 012345678912</p>
           <p slot="paragraph">Renewal date: <strong>22nd July 2020</strong></p>
-          <a slot="cta" href="#!">
-            <ns-cta type="text">Your invoices</ns-cta>
+      
+       <!-- Line break hack -->
+                  <p slot="paragraph">-</p>
+
+                  <p slot="paragraph"><strong>Gas safety certificate</strong></p>
+                            <p slot="paragraph">Expires: <strong>29th Sept 2021</strong></p>
+        <a slot="cta" href="#!">
+            <ns-cta type="text">Your certificates</ns-cta>
           </a>
-             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
-        </ns-card>
+                       <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="#">Pay your invoice</ns-cta></p>
+
+          </ns-card>
+
     <ns-card role="listitem" type="flat">
           <h3 slot="heading">What's covered</h3>
           <p slot="paragraph"><strong>HomeCare 200</strong></p>
@@ -118,13 +109,9 @@ title: Welcome to your account
         
         <ns-card type="support" alt="">
   <h3 slot="heading">
-    <ns-pill colour="yellow" icon="">Action needed</ns-pill>
-    Service visit is due
+    Your next service visit
   </h3>
-  <p slot="paragraph">Winter is nearly here, and it's time for your boiler's annual service.</p>
-  <a slot="cta" href="../annual-service-visit/step-01/">
-    <ns-cta type="text">Book a service</ns-cta>
-  </a>
+  <p slot="paragraph">We’ll be in touch when you need to book your annual boiler service.</p>
 </ns-card>
 
 </ns-column>

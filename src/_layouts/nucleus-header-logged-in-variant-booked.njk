@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<!--*** INCLUDES THE PREMISE SELECTOR ***>-->
+<!--*** SAME AS LOGGED IN VARIANT, BUT LINK TO SUMMARY LEADS TO THE BOOKED PAGE ***>-->
 
 <link rel="stylesheet" href="/mh/style.css">
 
@@ -146,7 +146,7 @@ layout: base.njk
         "links": [
           {
             "text": "Your summary",
-            "href": "/oam/dashboard",
+            "href": "/oam/dashboard/hs-hc4-asv-booked/",
             "data-ns-link": "1"
           },
           {
@@ -201,11 +201,11 @@ layout: base.njk
 <div class="subnav-top-bar">
   <div class="holder">
     <nav class="links">
-      <a href="/oam/dashboard">Your Summary</a>
+      <a href="/oam/dashboard/hs-hc4-asv-booked/">Your Summary</a>
       <a href="/oam/dashboard#your-products">Your Products</a>
       <a href="/oam/account-details/v02/details">Account details</a>
     </nav>
-    <form>
+   <form>
     <ns-inputter class=" address" nf-model="model.oam-02.address-selector" heading="Select which home" name="select-an-option" value="">
     <select class="premise-select" aria-label="Select which home">
       <option>Swan House, The Causeway, Staines</option>

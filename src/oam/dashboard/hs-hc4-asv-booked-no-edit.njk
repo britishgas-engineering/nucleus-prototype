@@ -16,13 +16,13 @@ title: Welcome to your account
       </div>
       <div class="content">
         <div class="heading-holder">
-          <h2 class="heading">Annual service is due</h2>
+          <h3 class="heading">Annual service</h3>
         </div>
         <div class="paragraph-holder">
-          <p class="paragraph">It's time to book an engineer.</p>
+          <p class="paragraph">Your appointment is booked</p>
         </div>
         <div class="cta-holder">
-          <ns-cta class="cta" type="text" href="../annual-service-visit/step-01/">Book a service</ns-cta>
+          <ns-cta class="cta" type="text">View details</ns-cta>
         </div>
       </div>
     </div>
@@ -71,15 +71,42 @@ title: Welcome to your account
 <ns-tabs>
   <ns-tab icon="home" slot="tab" selected="true">Home Services</ns-tab>
   <div slot="panel">
-  
+    <ns-panel>
 
 
+
+    <span class="markup-style splash"> ↓ ↓ ↓  Three columns are cramped in the ns-highlighter. Would be good to be able to adjust the width of the highlighter at the larger breakpoints  ↓ ↓ ↓ </span>
+
+
+
+      <div class="splash">
+      <ns-highlighter type="success" role="alert">
+   <h2 slot="heading" role="heading" aria-level="2">Annual Service booked</h2>
+   <h2 class="h1 enlighten">Mon 9th December</h2>
+   <ns-column basketballcourt="3" hockeypitch="3" rugbypitch="3">
+     <div><p slot="paragraph">Your engineer will arrive between <strong>10am</strong> and <strong>2pm</strong>.</p>
+          </div>
+
+     <div><ul class="ul-ticked" style="margin-bottom: 0;">
+      <li>Boiler service</li>
+    </ul>
+    <a slot="cta" href="#!">
+            <ns-cta type="text">Add another problem</ns-cta>
+          </a>
+          </div>
+
+      <div><p slot="paragraph">To reschedule or cancel your appointment call us on <strong>03332008899 </strong>  Call costs from mobiles and landlines vary</p>
+          </div>
+   </ns-column>
+</ns-highlighter>
+
+      </div>
+    </ns-panel>
 
 
 
  <!-- Products using columns -->
 
-   
    <ns-panel>
       <div class="splash">
         <h2>Your HomeCare</h2>
@@ -94,7 +121,7 @@ title: Welcome to your account
           <a slot="cta" href="#!">
             <ns-cta type="text">Your invoices</ns-cta>
           </a>
-             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
+             <p slot="cta"><ns-cta slot="cta" class="product-content-button-margin" href="../../annual-service-visit/step-01/">Book an engineer</ns-cta></p>
         </ns-card>
     <ns-card role="listitem" type="flat">
           <h3 slot="heading">What's covered</h3>
@@ -118,18 +145,20 @@ title: Welcome to your account
         
         <ns-card type="support" alt="">
   <h3 slot="heading">
-    <ns-pill colour="yellow" icon="">Action needed</ns-pill>
-    Service visit is due
+    <ns-pill colour="slate" icon="">Upgrade?</ns-pill>
+    What's not covered
   </h3>
-  <p slot="paragraph">Winter is nearly here, and it's time for your boiler's annual service.</p>
-  <a slot="cta" href="../annual-service-visit/step-01/">
-    <ns-cta type="text">Book a service</ns-cta>
-  </a>
+          <ul slot="paragraph">
+            <li>Plumbing</li>
+            <li>Drains</li>
+          </ul>
+          <a slot="cta" href="#!">
+            <ns-cta type="text">Add / remove cover</ns-cta>
+          </a>
 </ns-card>
 
 </ns-column>
 </ns-panel>
-
 
 
 

@@ -1,0 +1,39 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Email me a login link
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph"><strong><span nf-model="model.oam-02.email-address">[HERE]</span></strong> Please confirm your details.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="surname" value="">
+      <label slot="label">Surname</label>
+      <input autocomplete="family-name" type="text">
+    </ns-inputter>
+    <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" name="postcode" value="">
+      <label slot="label">Postcode</label>
+      <input autocomplete="postal-code" type="text">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
+    <ns-cta type="text" href="../login-01-landing">Login using password</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="surname"]').value;
+    if (data === '') {
+      return '';
+    } 
+    else {
+      return '../magic-02';
+    }
+  }
+</script>

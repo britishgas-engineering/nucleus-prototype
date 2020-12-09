@@ -1,0 +1,24 @@
+---
+layout: nucleus-header-logged-in-journey.njk
+title: Step 1
+step: 1
+heading: Pick a time slot that suits you
+paragraph1: "Use the calendar to select a day for your Annual Service Visit."
+
+---
+
+{% include "./_includes/ns-landmark.njk" %}
+
+<ns-panel>
+  <div class="splash triple">
+    <ns-calendar month="11" year="2020" mindate="2020-12-03" maxdate="2021-02-11"></ns-calendar>
+  </div>
+</ns-panel>
+
+<ns-panel>
+  <div class="splash">
+    <a href="../step-02">
+      <ns-cta type="direct">Continue to next step</ns-cta>
+    </a>
+  </div>
+</ns-panel>

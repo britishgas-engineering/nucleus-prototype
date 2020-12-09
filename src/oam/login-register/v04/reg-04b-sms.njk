@@ -1,0 +1,36 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: We’ve sent you a text
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">Registration step 2 of 3.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">We’ve sent a text to <strong>0781234567</strong> so you can confirm your account for the first time.</p>
+  <p slot="paragraph"><strong>Please check your mobile phone and enter the 6-digit code below.</strong> Don’t worry we’ll only ask you to do this once.</p>
+</ns-landmark>
+
+<ns-panel>
+  <ns-form class="splash" nf-model="model.oam-02">
+    <ns-inputter mask="------" separator="" validation="[&quot;isRequired&quot;,&quot;minLength(6)&quot;]" name="text-code" value="">
+      <label slot="label">Text code</label>
+      <input type="text" pattern="^[0-9]+$">
+    </ns-inputter>
+    <ns-cta nf-href="DYNAMIC">Next step</ns-cta>
+    <ns-cta type="text" href="#!">Send the text again</ns-cta>
+  </ns-form>
+</ns-panel>
+
+<script>
+  function getDynamicURL() {
+    var data = document.querySelector('ns-inputter[name="text-code"]').value;
+    if (data === '') {
+      return '';
+    }
+    else {
+      return '../reg-05';
+    }
+  }
+</script>

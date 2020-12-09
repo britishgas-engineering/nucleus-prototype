@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<!--*** INCLUDES THE PREMISE SELECTOR ***>-->
+<!--*** FOR USE IN JOURNEYS WHEN WE DONT WANT USERS TO JUMP OUT VIA THE SUBNAV - (I.E. NO SUBNAV) ***>-->
 
 <link rel="stylesheet" href="/mh/style.css">
 
@@ -198,40 +198,6 @@ layout: base.njk
   ]'>
 </ns-header>
 
-<div class="subnav-top-bar">
-  <div class="holder">
-    <nav class="links">
-      <a href="/oam/dashboard">Your Summary</a>
-      <a href="/oam/dashboard#your-products">Your Products</a>
-      <a href="/oam/account-details/v02/details">Account details</a>
-    </nav>
-    <form>
-    <ns-inputter class=" address" nf-model="model.oam-02.address-selector" heading="Select which home" name="select-an-option" value="">
-    <select class="premise-select" aria-label="Select which home">
-      <option>Swan House, The Causeway, Staines</option>
-    </select>
-  </ns-inputter>
-  </form>
-  </div>
-</div>
-
-  <script>
-
-    window.addEventListener('load', function () {
-      var obj = getModelData('model.oam-02').fields.find(function(field) {
-        return field.name === 'address-selector';
-      });
-
-      var select = document.querySelector('.premise-select')
-      if(select) {
-        select.options[select.options.length] = new Option(obj.value, obj.value);
-        select.selectedIndex = select.options.length-1;
-      }
-      
-    })
-    
-
-  </script>
 
 
 
