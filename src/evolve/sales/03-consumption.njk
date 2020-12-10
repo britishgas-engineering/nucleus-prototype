@@ -10,13 +10,19 @@ title: Evolve - consumption
   </div>
   <div class="splash">
     <ns-form nf-model="model.evolve">
-      <ns-inputter mask="00-----" validation="[&quot;isRequired&quot;]" value="" helper="Enter electricity consumption in kWh" name="meter-read-electric">
+      <ns-inputter mask="        " validation="[&quot;isRequired&quot;]" value="" helper="Enter electricity consumption in kWh" name="meter-read-electric">
+        <div slot="tip-details">
+          <p>Kilowatt hours (or <abbr title="Kilowatt-hour">kWh</abbr>) are the units used to calculate the amount of energy you use. To give you a rough idea, one kilowatt hour is about the amount of energy it would take to boil 10 kettles, run a full cycle of your washing machine, or keep your laptop powered for two days.</p>
+        </div>
         <label slot="label">Electricity</label>
-        <input type="text">
+        <input type="text"> <ns-pill style="display: inline-block;">kWh</ns-pill>
       </ns-inputter>
-      <ns-inputter mask="00---" validation="[&quot;isRequired&quot;]" value="" helper="Enter gas consumption in kWh" name="meter-read-gas">
+      <ns-inputter mask="        " validation="[&quot;isRequired&quot;]" value="" helper="Enter gas consumption in kWh" name="meter-read-gas">
+        <div slot="tip-details">
+          <p>Kilowatt hours (or <abbr title="Kilowatt-hour">kWh</abbr>) are the units used to calculate the amount of energy you use. To give you a rough idea, one kilowatt hour is about the amount of energy it would take to boil 10 kettles, run a full cycle of your washing machine, or keep your laptop powered for two days.</p>
+        </div>
         <label slot="label">Gas</label>
-        <input type="text">
+        <input type="text"> <ns-pill style="display: inline-block;">kWh</ns-pill>
       </ns-inputter>
       <ns-cta nf-href="../04-quote" icon="">Submit</ns-cta>
     </ns-form>
