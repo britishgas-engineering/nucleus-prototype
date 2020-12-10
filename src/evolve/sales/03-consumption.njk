@@ -9,22 +9,6 @@ title: Evolve - consumption
     <p class="p-normal">You’ll find your annual estimated consumption on a recent energy bill.</p>
   </div>
   <div class="splash">
-    <dl class="dl-stacked">
-      <div>
-        <dt>Address</dt>
-        <dd><span nf-model="model.evolve.address">[ADDRESS]</span>, <span nf-model="model.evolve.postcode">[POSTCODE]</span></dd>
-        <dd>
-          <a href="../">Change your address</a>
-        </dd>
-      </div>
-      <div>
-        <dt>Fuel type</dt>
-        <dd><span nf-model="model.evolve.fuel-type">[FUEL-TYPE]</span></dd>
-        <dd>
-          <a href="../02-fuel-type">Change fuel type</a>
-        </dd>
-      </div>
-    </dl>
     <ns-form nf-model="model.evolve">
       <ns-inputter mask="00-----" validation="[&quot;isRequired&quot;]" value="" helper="Enter electricity consumption in kWh" name="meter-read-electric">
         <label slot="label">Electricity</label>
