@@ -1,9 +1,9 @@
 {
   "layout": "evolve",
-  "project": "heisenberg",
+  "project": "evolve",
   "jquery": false,
   "script": false,
-  "style": false,
+  "style": true,
   "teamname": "Evolve",
   "branch": "c39e41f0d44eab680545dcefc1c3962efc9fecb8"
 }
