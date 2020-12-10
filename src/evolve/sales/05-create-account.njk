@@ -1,0 +1,47 @@
+---
+title: Evolve - create-account
+---
+
+<ns-panel class="squish">
+  {% include "../_includes/go-back.njk" -%}
+  <div class="splash">
+    <h1 class="h2 enlighten">Your details</h1>
+  </div>
+  <div class="splash">
+    <dl class="dl-stacked">
+      <div>
+        <dt>Address</dt>
+        <dd><span nf-model="model.evolve.address">[ADDRESS]</span>, <span nf-model="model.evolve.postcode">[POSTCODE]</span></dd>
+        <dd>
+          <a href="../">Change your address</a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <div class="splash">
+    <ns-form nf-model="model.evolve">
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isFirstName&quot;]" name="given-name" value="">
+        <label slot="label">First name</label>
+        <input type="text" autocomplete="given-name">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isLastName&quot;]" name="family-name" value="">
+        <label slot="label">Last name</label>
+        <input type="text" autocomplete="family-name">
+      </ns-inputter>
+        <ns-inputter validation="[&quot;isRequired&quot;]" name="dob" mask="dd/mm/yyyy" separator="/" value="">
+        <label slot="label" for="dob">Date of birth</label>
+        <input type="text" id="dob">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;]" name="email" value="">
+        <label slot="label">Email address</label>
+        <input type="email" placeholder="e.g. email@address.co.uk" autocomplete="email">
+      </ns-inputter>
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isPhoneNumber&quot;]" name="tel" value="">
+        <div slot="tip-details">Some information</div>
+        <label slot="label">Telephone</label>
+        <input type="tel" placeholder="e.g. 07890123987" autocomplete="tel">
+      </ns-inputter>
+      <ns-cta type="direct" nf-href="../06-next" icon="">Create account</ns-cta>
+    </ns-form>
+  </div>
+</ns-panel>
