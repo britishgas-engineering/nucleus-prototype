@@ -1,10 +1,45 @@
 ---
 title: Evolve Account
-layout: evolve-lite
+linkhref: ../sales/02-fuel-type
+linklabel: Change tarrif details
 ---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h1">Hi <span nf-model="model.evolve.given-name">[GIVEN-NAME]</span> <span nf-model="model.evolve.family-name">[FAMILY-NAME]</span></span>
+  </h1>
+  <div slot="paragraph">
+    <p>Welcome to your British Gas Evolve account.</p>
+  </div>
+</ns-landmark>
 
 <ns-panel>
   <div class="splash">
-    <h2>Account</h2>
+    <h2>Your quote</h2>
+  </div>
+  <div class="splash triple">
+    <div>
+      {% include "./_includes/personal-information.njk" -%}
+      <p>
+        <ns-cta type="text" href="../sales" icon="">Change quote details</ns-cta>
+      </p>
+      </div>
+    <div>
+      {% include "./_includes/product.njk" -%}
+    </div>
   </div>
 </ns-panel>
+
+<ns-caveat>
+  <h2 slot="heading">Prototype information</h2>
+  <div slot="caveat">
+    <p>All the data that has been captured is stored locally within your browser.</p>
+    <p>For you piece of mind, feel free to delete all the data that has been stored during this session.</p>
+    <dl>
+      <div>
+        <dt>Remove your personal data</dt>
+        <dd><a onclick="localStorage.clear();" href="">Delete all data</a></dd>
+      </div>
+    </dl>
+  </div>
+</ns-caveat>

@@ -1,4 +1,5 @@
-.squish {
-  max-width: 32em;
-  margin: auto;
+.squish .splash {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
 }
