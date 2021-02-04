@@ -1,0 +1,28 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Security check
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">Please confirm that we have the correct contact details for your account.</p>
+</ns-landmark>
+
+<ns-panel>
+
+  <div class="splash">
+    <dl class="dl-row">
+
+      {% include "./_includes/account-mobile.njk" -%}
+
+      {% include "./_includes/account-home-number.njk" -%}
+
+    </dl>
+
+    <ns-cta nf-href="DYNAMIC">Confirm contact details</ns-cta>
+  </div>
+
+  </ns-panel>
