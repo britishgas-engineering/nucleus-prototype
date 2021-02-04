@@ -1,0 +1,30 @@
+---
+layout: nucleus-header-logged-out-v04.njk
+title: Check your numbers
+---
+
+<ns-landmark type="lakeside">
+  <h1 slot="heading">
+    <span class="h5">My account.</span>
+    <span class="h1">{{title}}</span>
+  </h1>
+  <p slot="paragraph">Please confirm that we've got the right contact numbers for you.</p>
+</ns-landmark>
+
+<ns-panel>
+
+  <div class="splash">
+    <dl class="dl-row">
+
+      {% include "./_includes/account-mobile.njk" -%}
+
+      {% include "./_includes/account-home-number.njk" -%}
+
+    </dl>
+
+    <ns-cta nf-href="DYNAMIC">Confirm contact numbers</ns-cta>
+    <br>
+    <ns-cta type="text" href="" icon="arrow-right">I'll do this later</ns-cta>
+  </div>
+
+  </ns-panel>
