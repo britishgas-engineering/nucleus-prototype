@@ -1,0 +1,22 @@
+<div>
+  <dt>Home phone number</dt>
+
+  <input class="show-checkbox" type="checkbox" id="account-contact">
+
+  <dd class="show-data">
+    <p><span nf-model="model.oam-02.mobile-number">[email]</span></p>
+    <p><label class="show-cta" for="account-contact">Update home number</label></p>
+  </dd>
+
+  <dd class="show-form">
+    <label class="show-cta show-cancel" for="account-contact">Cancel</label>
+    <ns-form class="splash style-hack" nf-model="model.oam-02">
+      <ns-inputter validation="[&quot;isRequired&quot;,&quot;isMobileNumber&quot;]" name="mobile-number" value="">
+        <label slot="label">Mobile number</label>
+        <input type="tel" placeholder="e.g. 0798123456">
+      </ns-inputter>
+      <ns-cta nf-href="../success">Save contact details</ns-cta>
+      <ns-cta type="text" href="#!">Add phone number</ns-cta>
+    </ns-form>
+  </dd>
+</div>
