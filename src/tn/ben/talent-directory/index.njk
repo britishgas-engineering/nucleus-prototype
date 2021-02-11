@@ -1,11 +1,13 @@
 ---
-title: Ben's little corner
+title: BTalent Directory
 eleventyNavigation:
-  key: ben
-  parent: tn
-  title: Ben's folder
+  key: Talent Directory
+  parent: ben
+  title: Talent Directory
   excerpt: This is a where Ben experiments
 ---
+
+
 
 <ns-landmark type="hillside">
   <h1 slot="heading">
@@ -17,7 +19,7 @@ eleventyNavigation:
   </div>
 </ns-landmark>
 
-  {% set navPages = collections.all | eleventyNavigation("ben") | reverse %}
+  {% set navPages = collections.all | eleventyNavigation("talent-directory") | reverse %}
   <ns-panel>
     <div class="splash">
       <h2>Available projects</h2>
