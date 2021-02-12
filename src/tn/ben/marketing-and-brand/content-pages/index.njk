@@ -1,10 +1,10 @@
 ---
-title: Ben's little corner
+title: Content pages
 eleventyNavigation:
   key: ben
-  parent: tn
-  title: Ben's folder
-  excerpt: This is a where Ben experiments
+  parent: marketing-and-brand
+  title: Content pages
+  excerpt: Prototype for content pages for the marketing team
 ---
 
 <ns-landmark type="hillside">
@@ -28,7 +28,7 @@ eleventyNavigation:
           <h3 slot="heading">{{entry.title}}</h3>
           <p slot="paragraph">{{entry.excerpt}}</p>
           <a slot="cta" href="{{entry.url | url}}">
-            <ns-cta type="text">{{entry.title}}</ns-cta>
+            <ns-cta type="text">See {{entry.title}}</ns-cta>
           </a>
         </ns-card>
       {%- endfor %}
