@@ -4,7 +4,7 @@ eleventyNavigation:
   key: Hello World
   parent: ben
   title: Playground
-  excerpt: Free to play sandbox to wuickly test something
+  excerpt: Free to play sandbox to quickly test something
 ---
 
 <ns-landmark type="hillside">
@@ -20,6 +20,15 @@ eleventyNavigation:
 <div>
   <!-- Only here to keep the decoration -->
 </div>
+
+
+
+<ns-panel>
+  <ns-inputter mask="" separator="" validation="[&quot;isRequired&quot;,&quot;isPostcode&quot;]" value="" helper="" name="postcode">
+    <label slot="label" for="text-input">Postcode</label>
+    <input type="text" id="text-input">
+  </ns-inputter>
+</ns-panel>
 
 
 
