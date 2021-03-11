@@ -30,7 +30,19 @@ eleventyNavigation:
           <a slot="cta" href="{{entry.url | url}}">
             <ns-cta type="text">{{entry.title}}</ns-cta>
           </a>
-        </ns-card>
+        </ns-card>        
       {%- endfor %}
+
+        <ns-card type="support">
+          <h3 slot="heading">Test card</h3>
+          <p slot="paragraph">I have manually added this one</p>
+          <div slot="paragraph">
+          <ul>
+          <li><a href="#!">link 1</a></li>
+          <li><a href="#!">link 2</a></li>
+          <li><a href="#!">link 3</a></li>
+          </ul>
+          </div>                                          
+        </ns-card>      
     </div>
   </ns-panel>
